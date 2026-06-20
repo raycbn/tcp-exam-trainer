@@ -1,9 +1,9 @@
 let questions = [];
 let currentQuestion = 0;
 
-let correctAnswers = 0;
-let wrongAnswers = 0;
 let answered = false;
+
+let stats = loadStats();
 
 async function loadQuestions() {
 
@@ -18,6 +18,8 @@ async function loadQuestions() {
         }
 
         questions = await response.json();
+
+        updateStatsUI(stats);
 
         showQuestion();
 
@@ -70,7 +72,8 @@ function showQuestion() {
 
     q.options.forEach((option, index) => {
 
-        const btn = document.createElement('button');
+        const btn =
+            document.createElement('button');
 
         btn.innerText = option;
 
@@ -81,7 +84,9 @@ function showQuestion() {
             answered = true;
 
             const buttons =
-                document.querySelectorAll('#answers button');
+                document.querySelectorAll(
+                    '#answers button'
+                );
 
             buttons.forEach(b => {
                 b.disabled = true;
@@ -89,10 +94,11 @@ function showQuestion() {
 
             if (index === q.correct) {
 
-                correctAnswers++;
+                stats.correct++;
 
-                document.getElementById('correctCount').innerText =
-                    correctAnswers;
+                saveStats(stats);
+
+                updateStatsUI(stats);
 
                 btn.classList.add('correct');
 
@@ -101,14 +107,16 @@ function showQuestion() {
 
             } else {
 
-                wrongAnswers++;
+                stats.wrong++;
 
-                document.getElementById('wrongCount').innerText =
-                    wrongAnswers;
+                saveStats(stats);
+
+                updateStatsUI(stats);
 
                 btn.classList.add('wrong');
 
-                buttons[q.correct].classList.add('correct');
+                buttons[q.correct]
+                    .classList.add('correct');
 
                 document.getElementById('result').innerHTML =
                     '❌ Incorrecto';
@@ -119,7 +127,13 @@ function showQuestion() {
                 'block';
 
             document.getElementById('explanation').innerHTML =
-                `<strong>Explicación:</strong><br>${q.explanation}`;
+            `
+            <span id="explanation-title">
+                ℹ️ Explicación
+            </span>
+
+            ${q.explanation}
+            `;
 
             document.getElementById('nextBtn').disabled =
                 false;
