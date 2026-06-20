@@ -1,4 +1,32 @@
-,
+[
+{
+"id": "NOR-001",
+"subject": "normativa",
+"topic": "oaci",
+"question": "¿Qué significan las siglas OACI?",
+"options": [
+"Organización de Aviación Civil Internacional",
+"Organización Aérea Civil Internacional",
+"Oficina de Aviación Civil Internacional",
+"Organización Aeronáutica Comercial Internacional"
+],
+"correct": 0,
+"explanation": "OACI significa Organización de Aviación Civil Internacional."
+},
+{
+"id": "NOR-002",
+"subject": "normativa",
+"topic": "easa",
+"question": "¿Qué significa EASA?",
+"options": [
+"European Aviation Safety Agency",
+"European Air Security Agency",
+"European Aircraft Safety Association",
+"European Aviation Service Agency"
+],
+"correct": 0,
+"explanation": "EASA es la Agencia Europea de Seguridad Aérea."
+},
 {
 "id": "NOR-003",
 "subject": "normativa",
@@ -86,162 +114,22 @@
 {
 "id": "NOR-009",
 "subject": "normativa",
-"topic": "libertades",
-"question": "La primera libertad del aire permite:",
-"options": [
-"Sobrevolar un país sin aterrizar",
-"Aterrizar para embarcar pasajeros",
-"Transportar carga nacional",
-"Realizar vuelos domésticos"
-],
-"correct": 0,
-"explanation": "La primera libertad permite el sobrevuelo sin aterrizar."
-},
-{
-"id": "NOR-010",
-"subject": "normativa",
-"topic": "libertades",
-"question": "La segunda libertad del aire permite:",
-"options": [
-"Aterrizar por razones técnicas",
-"Transportar pasajeros entre dos países",
-"Operar vuelos domésticos",
-"Transportar mercancías nacionales"
-],
-"correct": 0,
-"explanation": "Permite aterrizar sin fines comerciales."
-},
-{
-"id": "NOR-011",
-"subject": "normativa",
-"topic": "easa",
-"question": "¿Qué ámbito regula principalmente EASA?",
-"options": [
-"La aviación civil europea",
-"La aviación militar",
-"La navegación marítima",
-"La aviación exclusivamente española"
-],
-"correct": 0,
-"explanation": "EASA regula la aviación civil dentro de Europa."
-},
-{
-"id": "NOR-012",
-"subject": "normativa",
-"topic": "tcp",
-"question": "¿Quién emite el certificado TCP en España?",
-"options": [
-"AESA",
-"OACI",
-"IATA",
-"ENAIRE"
-],
-"correct": 0,
-"explanation": "La certificación TCP está supervisada por AESA."
-},
-{
-"id": "NOR-013",
-"subject": "normativa",
 "topic": "matriculas",
-"question": "¿Qué letra identifica las aeronaves matriculadas en España?",
+"question": "¿Qué prefijo identifica las aeronaves matriculadas en España?",
 "options": [
 "EC",
+"EA",
 "ES",
-"SP",
-"IB"
+"SP"
 ],
 "correct": 0,
 "explanation": "Las aeronaves españolas utilizan el prefijo EC."
 },
 {
-"id": "NOR-014",
-"subject": "normativa",
-"topic": "matriculas",
-"question": "¿Qué documento acredita la nacionalidad de una aeronave?",
-"options": [
-"Certificado de matrícula",
-"Licencia de vuelo",
-"Manual de operaciones",
-"Plan de vuelo"
-],
-"correct": 0,
-"explanation": "La matrícula identifica la nacionalidad de la aeronave."
-},
-{
-"id": "NOR-015",
-"subject": "normativa",
-"topic": "montreal",
-"question": "¿Qué convenio regula actualmente la responsabilidad en el transporte aéreo internacional?",
-"options": [
-"Convenio de Montreal",
-"Convenio de Chicago",
-"Convenio de Tokio",
-"Convenio de Roma"
-],
-"correct": 0,
-"explanation": "El Convenio de Montreal regula la responsabilidad del transportista."
-},
-{
-"id": "NOR-016",
-"subject": "normativa",
-"topic": "montreal",
-"question": "¿En qué año se firmó el Convenio de Montreal?",
-"options": [
-"1999",
-"1944",
-"1929",
-"2004"
-],
-"correct": 0,
-"explanation": "El Convenio de Montreal se firmó en 1999."
-},
-{
-"id": "NOR-017",
-"subject": "normativa",
-"topic": "varsovia",
-"question": "¿En qué año se firmó el Convenio de Varsovia?",
-"options": [
-"1929",
-"1944",
-"1999",
-"1936"
-],
-"correct": 0,
-"explanation": "El Convenio de Varsovia fue firmado en 1929."
-},
-{
-"id": "NOR-018",
-"subject": "normativa",
-"topic": "anexos",
-"question": "¿Qué anexo de OACI trata sobre mercancías peligrosas?",
-"options": [
-"Anexo 18",
-"Anexo 17",
-"Anexo 6",
-"Anexo 1"
-],
-"correct": 0,
-"explanation": "El Anexo 18 regula el transporte seguro de mercancías peligrosas."
-},
-{
-"id": "NOR-019",
-"subject": "normativa",
-"topic": "anexos",
-"question": "¿Qué anexo trata sobre seguridad AVSEC?",
-"options": [
-"Anexo 17",
-"Anexo 18",
-"Anexo 1",
-"Anexo 3"
-],
-"correct": 0,
-"explanation": "El Anexo 17 regula la seguridad de la aviación civil."
-},
-{
-"id": "NOR-020",
+"id": "NOR-010",
 "subject": "normativa",
 "topic": "tcp",
-"question": "¿Cuál es una función básica del TCP?",
+"question": "¿Cuál es la principal función del TCP?",
 "options": [
 "Garantizar la seguridad de los pasajeros",
 "Pilotar la aeronave",
@@ -250,74 +138,5 @@
 ],
 "correct": 0,
 "explanation": "La seguridad es la función principal del TCP."
-},
-{
-"id": "NOR-021",
-"subject": "normativa",
-"topic": "oaci",
-"question": "¿La OACI pertenece a qué organismo internacional?",
-"options": [
-"ONU",
-"OTAN",
-"UE",
-"IATA"
-],
-"correct": 0,
-"explanation": "La OACI es un organismo especializado de Naciones Unidas."
-},
-{
-"id": "NOR-022",
-"subject": "normativa",
-"topic": "easa",
-"question": "¿Dónde tiene su sede EASA?",
-"options": [
-"Colonia",
-"Madrid",
-"París",
-"Bruselas"
-],
-"correct": 0,
-"explanation": "La sede de EASA está en Colonia, Alemania."
-},
-{
-"id": "NOR-023",
-"subject": "normativa",
-"topic": "aesa",
-"question": "¿Qué significa AESA?",
-"options": [
-"Agencia Estatal de Seguridad Aérea",
-"Asociación Española de Seguridad Aeronáutica",
-"Agencia Europea de Seguridad Aérea",
-"Autoridad Estatal de Servicios Aéreos"
-],
-"correct": 0,
-"explanation": "AESA significa Agencia Estatal de Seguridad Aérea."
-},
-{
-"id": "NOR-024",
-"subject": "normativa",
-"topic": "libertades",
-"question": "¿Qué libertad permite desembarcar pasajeros procedentes del Estado de matrícula?",
-"options": [
-"Tercera libertad",
-"Primera libertad",
-"Segunda libertad",
-"Quinta libertad"
-],
-"correct": 0,
-"explanation": "La tercera libertad permite transportar pasajeros desde el Estado de matrícula a otro Estado."
-},
-{
-"id": "NOR-025",
-"subject": "normativa",
-"topic": "libertades",
-"question": "¿Qué libertad permite embarcar pasajeros con destino al Estado de matrícula?",
-"options": [
-"Cuarta libertad",
-"Tercera libertad",
-"Primera libertad",
-"Segunda libertad"
-],
-"correct": 0,
-"explanation": "La cuarta libertad permite transportar pasajeros hacia el Estado de matrícula."
 }
+]
