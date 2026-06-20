@@ -16,10 +16,19 @@
 ```
 <h1>TCP Exam Trainer</h1>
 
-<div id="topic"></div>
+<div class="info-card">
 
-<div class="progress-container">
-    <div id="progress-bar"></div>
+    <div id="topic">Tema</div>
+
+    <div id="stats">
+        <span>✅ <span id="correctCount">0</span></span>
+        <span>❌ <span id="wrongCount">0</span></span>
+    </div>
+
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
 </div>
 
 <h3 id="counter">Cargando...</h3>
@@ -28,9 +37,7 @@
 
 <div id="answers"></div>
 
-<br>
-
-<button id="nextBtn">Siguiente</button>
+<button id="nextBtn">Siguiente →</button>
 
 <div id="result"></div>
 
