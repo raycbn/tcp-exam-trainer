@@ -64,6 +64,70 @@ function updateStatsUI(currentStats) {
 }
 
 
+// --- HISTORIAL DE SIMULACROS ---
+
+function renderExamHistory() {
+
+    const history =
+        JSON.parse(
+            localStorage.getItem(
+                EXAM_HISTORY_KEY
+            ) || '[]'
+        );
+
+    const historyList =
+        document.getElementById(
+            'historyList'
+        );
+
+    if (!historyList) return;
+
+    if (history.length === 0) {
+
+        historyList.innerHTML =
+            'No hay simulacros realizados.';
+
+        return;
+    }
+
+    historyList.innerHTML = '';
+
+    history.forEach(item => {
+
+        const row =
+            document.createElement('div');
+
+        row.className =
+            'history-item';
+
+        row.innerHTML =
+        `
+        <div>
+            ${item.date}
+        </div>
+
+        <div class="history-score">
+            ${item.score}%
+        </div>
+
+        <div class="${
+            item.passed
+                ? 'history-apto'
+                : 'history-no-apto'
+        }">
+            ${
+                item.passed
+                    ? '✅ APTO'
+                    : '❌ NO APTO'
+            }
+        </div>
+        `;
+
+        historyList.appendChild(row);
+    });
+}
+
+
 // --- CARGAR PREGUNTAS ---
 
 async function loadQuestions() {
@@ -469,6 +533,8 @@ function finishExam() {
         )
     );
 
+    renderExamHistory();
+
     document.getElementById(
         'examScore'
     ).innerHTML =
@@ -584,4 +650,5 @@ document
 
 // --- INICIO ---
 
+renderExamHistory();
 loadQuestions();
