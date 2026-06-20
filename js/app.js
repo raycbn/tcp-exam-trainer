@@ -1,6 +1,10 @@
 let questions = [];
 let currentQuestion = 0;
 
+let correctAnswers = 0;
+let wrongAnswers = 0;
+let answered = false;
+
 async function loadQuestions() {
 try {
 
@@ -52,6 +56,8 @@ try {
 function showQuestion() {
 
 ```
+answered = false;
+
 const q = questions[currentQuestion];
 
 document.getElementById('counter').innerText =
@@ -61,7 +67,7 @@ document.getElementById('question').innerText =
     q.question;
 
 document.getElementById('topic').innerText =
-    `Tema: ${q.topic}`;
+    `Tema: ${q.topic.toUpperCase()}`;
 
 const progress =
     ((currentQuestion + 1) / questions.length) * 100;
@@ -74,8 +80,10 @@ document.getElementById('result').innerText = '';
 document.getElementById('explanation').style.display =
     'none';
 
-document.getElementById('explanation').innerText =
+document.getElementById('explanation').innerHTML =
     '';
+
+document.getElementById('nextBtn').disabled = true;
 
 const answersDiv =
     document.getElementById('answers');
@@ -91,6 +99,10 @@ q.options.forEach((option, index) => {
 
     btn.onclick = () => {
 
+        if (answered) return;
+
+        answered = true;
+
         const buttons =
             document.querySelectorAll('#answers button');
 
@@ -101,12 +113,22 @@ q.options.forEach((option, index) => {
 
         if (index === q.correct) {
 
+            correctAnswers++;
+
+            document.getElementById('correctCount').innerText =
+                correctAnswers;
+
             btn.classList.add('correct');
 
             document.getElementById('result').innerText =
                 '✅ Correcto';
 
         } else {
+
+            wrongAnswers++;
+
+            document.getElementById('wrongCount').innerText =
+                wrongAnswers;
 
             btn.classList.add('wrong');
 
@@ -123,14 +145,14 @@ q.options.forEach((option, index) => {
         document.getElementById('explanation').innerHTML =
             `<strong>Explicación:</strong><br>${q.explanation}`;
 
+        document.getElementById('nextBtn').disabled =
+            false;
+
     };
 
     answersDiv.appendChild(btn);
 
 });
-
-document.getElementById('nextBtn').disabled = false;
-document.getElementById('nextBtn').style.display = 'block';
 ```
 
 }
