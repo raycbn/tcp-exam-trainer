@@ -11,356 +11,426 @@ let examQuestions = [];
 let examCorrect = 0;
 let examWrong = 0;
 
+const EXAM_HISTORY_KEY = "tcp_exam_history";
+
 let timerInterval = null;
 let examSeconds = 3600;
 
 async function loadQuestions() {
 
-    try {
+```
+try {
 
-        const response = await fetch(
-            './data/questions.json?ts=' + Date.now()
-        );
+    const response = await fetch(
+        './data/questions.json?ts=' + Date.now()
+    );
 
-        if (!response.ok) {
-            throw new Error('HTTP ' + response.status);
-        }
-
-        questions = await response.json();
-
-        updateStatsUI(stats);
-
-        showQuestion();
-
-    } catch (error) {
-
-        console.error(error);
-
-        document.getElementById('question').innerText =
-            'Error cargando preguntas';
+    if (!response.ok) {
+        throw new Error('HTTP ' + response.status);
     }
+
+    questions = await response.json();
+
+    updateStatsUI(stats);
+
+    showQuestion();
+
+} catch (error) {
+
+    console.error(error);
+
+    document.getElementById('question').innerText =
+        'Error cargando preguntas';
+}
+```
+
 }
 
 function startPracticeMode() {
 
-    mode = "practice";
+```
+mode = "practice";
 
-    stopTimer();
+stopTimer();
 
-    document.getElementById('timer').innerHTML =
-        '⏱️ --:--';
+document.getElementById('timer').innerHTML =
+    '⏱️ --:--';
 
-    document.getElementById('examResult').style.display =
-        'none';
+document.getElementById('examResult').style.display =
+    'none';
 
-    currentQuestion = 0;
+document.getElementById('nextBtn').style.display =
+    'block';
 
-    showQuestion();
+currentQuestion = 0;
+
+showQuestion();
+```
+
 }
 
 function startExamMode() {
 
-    mode = "exam";
+```
+mode = "exam";
 
-    examCorrect = 0;
-    examWrong = 0;
+examCorrect = 0;
+examWrong = 0;
 
-    examQuestions = [...questions]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, Math.min(50, questions.length));
+examQuestions = [...questions]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, Math.min(50, questions.length));
 
-    currentQuestion = 0;
+currentQuestion = 0;
 
-    examSeconds = 3600;
+examSeconds = 3600;
 
-    startTimer();
+startTimer();
 
-    document.getElementById('examResult').style.display =
-        'none';
+document.getElementById('examResult').style.display =
+    'none';
 
-    showQuestion();
+document.getElementById('nextBtn').style.display =
+    'block';
+
+showQuestion();
+```
+
 }
 
 function startTimer() {
 
-    stopTimer();
+```
+stopTimer();
+
+updateTimer();
+
+timerInterval = setInterval(() => {
+
+    examSeconds--;
 
     updateTimer();
 
-    timerInterval = setInterval(() => {
+    if (examSeconds <= 0) {
 
-        examSeconds--;
+        finishExam();
 
-        updateTimer();
+    }
 
-        if (examSeconds <= 0) {
+}, 1000);
+```
 
-            finishExam();
-
-        }
-
-    }, 1000);
 }
 
 function stopTimer() {
 
-    if (timerInterval) {
+```
+if (timerInterval) {
 
-        clearInterval(timerInterval);
+    clearInterval(timerInterval);
 
-        timerInterval = null;
+    timerInterval = null;
+}
+```
 
-    }
 }
 
 function updateTimer() {
 
-    const minutes =
-        Math.floor(examSeconds / 60);
+```
+const minutes =
+    Math.floor(examSeconds / 60);
 
-    const seconds =
-        examSeconds % 60;
+const seconds =
+    examSeconds % 60;
 
-    document.getElementById('timer').innerHTML =
-        `⏱️ ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+document.getElementById('timer').innerHTML =
+    `⏱️ ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+```
+
 }
 
 function getCurrentQuestions() {
 
-    return mode === "exam"
-        ? examQuestions
-        : questions;
+```
+return mode === "exam"
+    ? examQuestions
+    : questions;
+```
+
 }
 
 function showQuestion() {
 
-    answered = false;
+```
+answered = false;
 
-    const source =
-        getCurrentQuestions();
+const source =
+    getCurrentQuestions();
 
-    const q =
-        source[currentQuestion];
+const q =
+    source[currentQuestion];
 
-    if (!q) return;
+if (!q) return;
 
-    document.getElementById('counter').innerText =
-        `Pregunta ${currentQuestion + 1} / ${source.length}`;
+document.getElementById('counter').innerText =
+    `Pregunta ${currentQuestion + 1} / ${source.length}`;
 
-    document.getElementById('question').innerText =
-        q.question;
+document.getElementById('question').innerText =
+    q.question;
 
-    if (mode === "practice") {
+if (mode === "practice") {
 
-        document.getElementById('topic').innerText =
-            `Tema: ${(q.topic || 'General').toUpperCase()}`;
+    document.getElementById('topic').innerText =
+        `Tema: ${(q.topic || 'General').toUpperCase()}`;
 
-    } else {
+} else {
 
-        document.getElementById('topic').innerText =
-            '📝 Simulacro AESA';
+    document.getElementById('topic').innerText =
+        '📝 Simulacro AESA';
+}
 
-    }
+const progress =
+    ((currentQuestion + 1) / source.length) * 100;
 
-    const progress =
-        ((currentQuestion + 1) / source.length) * 100;
+document.getElementById('progress-bar').style.width =
+    progress + '%';
 
-    document.getElementById('progress-bar').style.width =
-        progress + '%';
+document.getElementById('result').innerHTML = '';
 
-    document.getElementById('result').innerHTML = '';
+document.getElementById('explanation').style.display =
+    'none';
 
-    document.getElementById('explanation').style.display =
-        'none';
+document.getElementById('nextBtn').disabled =
+    true;
 
-    document.getElementById('nextBtn').disabled =
-        true;
+const answersDiv =
+    document.getElementById('answers');
 
-    const answersDiv =
-        document.getElementById('answers');
+answersDiv.innerHTML = '';
 
-    answersDiv.innerHTML = '';
+q.options.forEach((option, index) => {
 
-    q.options.forEach((option, index) => {
+    const btn =
+        document.createElement('button');
 
-        const btn =
-            document.createElement('button');
+    btn.innerText = option;
 
-        btn.innerText = option;
+    btn.onclick = () => {
 
-        btn.onclick = () => {
+        if (answered) return;
 
-            if (answered) return;
+        answered = true;
 
-            answered = true;
+        const buttons =
+            document.querySelectorAll(
+                '#answers button'
+            );
 
-            const buttons =
-                document.querySelectorAll(
-                    '#answers button'
-                );
+        buttons.forEach(b => {
 
-            buttons.forEach(b => {
+            b.disabled = true;
 
-                b.disabled = true;
+        });
 
-            });
+        const correct =
+            index === q.correct;
 
-            const correct =
-                index === q.correct;
+        if (correct) {
 
-            if (correct) {
-
+            if (mode === "practice") {
                 btn.classList.add('correct');
+            }
 
-                if (mode === "practice") {
+            if (mode === "practice") {
 
-                    stats.correct++;
+                stats.correct++;
 
-                    saveStats(stats);
+                saveStats(stats);
 
-                    updateStatsUI(stats);
-
-                } else {
-
-                    examCorrect++;
-
-                }
+                updateStatsUI(stats);
 
                 document.getElementById('result').innerHTML =
                     '✅ Correcto';
 
             } else {
 
+                examCorrect++;
+            }
+
+        } else {
+
+            if (mode === "practice") {
+
                 btn.classList.add('wrong');
 
                 buttons[q.correct]
                     .classList.add('correct');
-
-                if (mode === "practice") {
-
-                    stats.wrong++;
-
-                    saveStats(stats);
-
-                    updateStatsUI(stats);
-
-                } else {
-
-                    examWrong++;
-
-                }
-
-                document.getElementById('result').innerHTML =
-                    '❌ Incorrecto';
-
             }
 
             if (mode === "practice") {
 
-                document.getElementById('explanation').style.display =
-                    'block';
+                stats.wrong++;
 
-                document.getElementById('explanation').innerHTML =
-                `
-                <span id="explanation-title">
-                    ℹ️ Explicación
-                </span>
+                saveStats(stats);
 
-                ${q.explanation}
-                `;
+                updateStatsUI(stats);
+
+                document.getElementById('result').innerHTML =
+                    '❌ Incorrecto';
+
+            } else {
+
+                examWrong++;
             }
+        }
 
-            document.getElementById('nextBtn').disabled =
-                false;
-        };
+        if (mode === "practice") {
 
-        answersDiv.appendChild(btn);
-    });
+            document.getElementById('explanation').style.display =
+                'block';
+
+            document.getElementById('explanation').innerHTML =
+            `
+            <span id="explanation-title">
+                ℹ️ Explicación
+            </span>
+
+            ${q.explanation}
+            `;
+        }
+
+        document.getElementById('nextBtn').disabled =
+            false;
+    };
+
+    answersDiv.appendChild(btn);
+});
+```
+
 }
 
 function finishExam() {
 
-    stopTimer();
+```
+stopTimer();
 
-    const total =
-        examCorrect + examWrong;
+const total =
+    examCorrect + examWrong;
 
-    const percent =
-        total > 0
+const percent =
+    total > 0
         ? (examCorrect / total) * 100
         : 0;
 
-    const passed =
-        percent >= 75;
+const passed =
+    percent >= 75;
 
-    document.getElementById('examScore').innerHTML =
-    `
-    Correctas: ${examCorrect}<br>
-    Incorrectas: ${examWrong}<br>
-    Nota: ${percent.toFixed(1)}%<br><br>
+const history =
+    JSON.parse(
+        localStorage.getItem(
+            EXAM_HISTORY_KEY
+        ) || '[]'
+    );
 
-    <strong>
-        ${passed ? '✅ APTO' : '❌ NO APTO'}
-    </strong>
-    `;
+history.unshift({
 
-    document.getElementById('examResult').style.display =
-        'block';
+    date: new Date().toLocaleString(),
 
-    document.getElementById('answers').innerHTML = '';
+    score: percent.toFixed(1),
 
-    document.getElementById('question').innerHTML =
-        'Simulacro finalizado';
+    correct: examCorrect,
 
-    document.getElementById('counter').innerHTML = '';
+    wrong: examWrong,
 
-    document.getElementById('nextBtn').style.display =
-        'none';
+    passed
 
-    document.getElementById('explanation').style.display =
-        'none';
+});
 
-    document.getElementById('result').innerHTML = '';
+localStorage.setItem(
+    EXAM_HISTORY_KEY,
+    JSON.stringify(
+        history.slice(0, 20)
+    )
+);
+
+document.getElementById('examScore').innerHTML =
+`
+Correctas: ${examCorrect}<br>
+Incorrectas: ${examWrong}<br>
+Nota: ${percent.toFixed(1)}%<br><br>
+
+<strong class="${
+    passed ? 'apto' : 'no-apto'
+}">
+    ${passed ? '✅ APTO' : '❌ NO APTO'}
+</strong>
+`;
+
+document.getElementById('examResult').style.display =
+    'block';
+
+document.getElementById('answers').innerHTML =
+    '';
+
+document.getElementById('question').innerHTML =
+    'Simulacro finalizado';
+
+document.getElementById('counter').innerHTML =
+    '';
+
+document.getElementById('nextBtn').style.display =
+    'none';
+
+document.getElementById('explanation').style.display =
+    'none';
+
+document.getElementById('result').innerHTML =
+    '';
+```
+
 }
 
 document.getElementById('nextBtn').onclick = () => {
 
-    currentQuestion++;
+```
+currentQuestion++;
 
-    const source =
-        getCurrentQuestions();
+const source =
+    getCurrentQuestions();
 
-    if (currentQuestion >= source.length) {
+if (currentQuestion >= source.length) {
 
-        if (mode === "exam") {
+    if (mode === "exam") {
 
-            finishExam();
-            return;
-
-        }
-
-        currentQuestion = 0;
+        finishExam();
+        return;
     }
 
-    showQuestion();
+    currentQuestion = 0;
+}
+
+showQuestion();
+```
+
 };
 
 document.getElementById('practiceMode')
 .addEventListener(
-    'click',
-    startPracticeMode
+'click',
+startPracticeMode
 );
 
 document.getElementById('examMode')
 .addEventListener(
-    'click',
-    startExamMode
+'click',
+startExamMode
 );
 
 document.getElementById('restartExam')
 .addEventListener(
-    'click',
-    startExamMode
+'click',
+startExamMode
 );
 
 loadQuestions();
