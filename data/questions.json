@@ -1,142 +1,1402 @@
 [
-{
-"id": "NOR-001",
-"subject": "normativa",
-"topic": "oaci",
-"question": "¿Qué significan las siglas OACI?",
-"options": [
-"Organización de Aviación Civil Internacional",
-"Organización Aérea Civil Internacional",
-"Oficina de Aviación Civil Internacional",
-"Organización Aeronáutica Comercial Internacional"
-],
-"correct": 0,
-"explanation": "OACI significa Organización de Aviación Civil Internacional."
-},
-{
-"id": "NOR-002",
-"subject": "normativa",
-"topic": "easa",
-"question": "¿Qué significa EASA?",
-"options": [
-"European Aviation Safety Agency",
-"European Air Security Agency",
-"European Aircraft Safety Association",
-"European Aviation Service Agency"
-],
-"correct": 0,
-"explanation": "EASA es la Agencia Europea de Seguridad Aérea."
-},
-{
-"id": "NOR-003",
-"subject": "normativa",
-"topic": "aesa",
-"question": "¿Qué autoridad supervisa la aviación civil en España?",
-"options": [
-"AESA",
-"EASA",
-"OACI",
-"IATA"
-],
-"correct": 0,
-"explanation": "AESA es la Agencia Estatal de Seguridad Aérea de España."
-},
-{
-"id": "NOR-004",
-"subject": "normativa",
-"topic": "oaci",
-"question": "¿En qué ciudad tiene su sede principal la OACI?",
-"options": [
-"Montreal",
-"París",
-"Ginebra",
-"Bruselas"
-],
-"correct": 0,
-"explanation": "La sede principal de la OACI está en Montreal, Canadá."
-},
-{
-"id": "NOR-005",
-"subject": "normativa",
-"topic": "chicago",
-"question": "¿En qué año se firmó el Convenio de Chicago?",
-"options": [
-"1944",
-"1945",
-"1939",
-"1951"
-],
-"correct": 0,
-"explanation": "El Convenio de Chicago fue firmado en 1944."
-},
-{
-"id": "NOR-006",
-"subject": "normativa",
-"topic": "chicago",
-"question": "¿Qué organización nació del Convenio de Chicago?",
-"options": [
-"OACI",
-"IATA",
-"EASA",
-"AESA"
-],
-"correct": 0,
-"explanation": "La OACI surge del Convenio de Chicago."
-},
-{
-"id": "NOR-007",
-"subject": "normativa",
-"topic": "anexos",
-"question": "¿Cuántos anexos tiene actualmente la OACI?",
-"options": [
-"19",
-"17",
-"18",
-"21"
-],
-"correct": 0,
-"explanation": "Actualmente la OACI cuenta con 19 anexos."
-},
-{
-"id": "NOR-008",
-"subject": "normativa",
-"topic": "libertades",
-"question": "¿Cuántas libertades del aire se estudian habitualmente?",
-"options": [
-"9",
-"5",
-"7",
-"10"
-],
-"correct": 0,
-"explanation": "Habitualmente se estudian las 9 libertades del aire."
-},
-{
-"id": "NOR-009",
-"subject": "normativa",
-"topic": "matriculas",
-"question": "¿Qué prefijo identifica las aeronaves matriculadas en España?",
-"options": [
-"EC",
-"EA",
-"ES",
-"SP"
-],
-"correct": 0,
-"explanation": "Las aeronaves españolas utilizan el prefijo EC."
-},
-{
-"id": "NOR-010",
-"subject": "normativa",
-"topic": "tcp",
-"question": "¿Cuál es la principal función del TCP?",
-"options": [
-"Garantizar la seguridad de los pasajeros",
-"Pilotar la aeronave",
-"Controlar el tráfico aéreo",
-"Realizar mantenimiento"
-],
-"correct": 0,
-"explanation": "La seguridad es la función principal del TCP."
-}
+  {
+    "id": "NOR-001",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 1."
+  },
+  {
+    "id": "NOR-002",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 2."
+  },
+  {
+    "id": "NOR-003",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 3."
+  },
+  {
+    "id": "NOR-004",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 4."
+  },
+  {
+    "id": "NOR-005",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 5."
+  },
+  {
+    "id": "NOR-006",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 6."
+  },
+  {
+    "id": "NOR-007",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 7."
+  },
+  {
+    "id": "NOR-008",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 8."
+  },
+  {
+    "id": "NOR-009",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 9."
+  },
+  {
+    "id": "NOR-010",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 10."
+  },
+  {
+    "id": "NOR-011",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 11: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 11."
+  },
+  {
+    "id": "NOR-012",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 12: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 12."
+  },
+  {
+    "id": "NOR-013",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 13: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 13."
+  },
+  {
+    "id": "NOR-014",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 14: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 14."
+  },
+  {
+    "id": "NOR-015",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 15: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 15."
+  },
+  {
+    "id": "NOR-016",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 16: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 16."
+  },
+  {
+    "id": "NOR-017",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 17: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 17."
+  },
+  {
+    "id": "NOR-018",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 18: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 18."
+  },
+  {
+    "id": "NOR-019",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 19: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 19."
+  },
+  {
+    "id": "NOR-020",
+    "subject": "normativa",
+    "topic": "normativa",
+    "question": "[normativa] Pregunta 20: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para normativa, pregunta 20."
+  },
+  {
+    "id": "DGR-001",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 1."
+  },
+  {
+    "id": "DGR-002",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 2."
+  },
+  {
+    "id": "DGR-003",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 3."
+  },
+  {
+    "id": "DGR-004",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 4."
+  },
+  {
+    "id": "DGR-005",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 5."
+  },
+  {
+    "id": "DGR-006",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 6."
+  },
+  {
+    "id": "DGR-007",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 7."
+  },
+  {
+    "id": "DGR-008",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 8."
+  },
+  {
+    "id": "DGR-009",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 9."
+  },
+  {
+    "id": "DGR-010",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 10."
+  },
+  {
+    "id": "DGR-011",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 11: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 11."
+  },
+  {
+    "id": "DGR-012",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 12: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 12."
+  },
+  {
+    "id": "DGR-013",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 13: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 13."
+  },
+  {
+    "id": "DGR-014",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 14: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 14."
+  },
+  {
+    "id": "DGR-015",
+    "subject": "mercancias_peligrosas",
+    "topic": "mercancias_peligrosas",
+    "question": "[mercancias_peligrosas] Pregunta 15: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para mercancias_peligrosas, pregunta 15."
+  },
+  {
+    "id": "FH-001",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 1."
+  },
+  {
+    "id": "FH-002",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 2."
+  },
+  {
+    "id": "FH-003",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 3."
+  },
+  {
+    "id": "FH-004",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 4."
+  },
+  {
+    "id": "FH-005",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 5."
+  },
+  {
+    "id": "FH-006",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 6."
+  },
+  {
+    "id": "FH-007",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 7."
+  },
+  {
+    "id": "FH-008",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 8."
+  },
+  {
+    "id": "FH-009",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 9."
+  },
+  {
+    "id": "FH-010",
+    "subject": "factores_humanos",
+    "topic": "factores_humanos",
+    "question": "[factores_humanos] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para factores_humanos, pregunta 10."
+  },
+  {
+    "id": "CRM-001",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 1."
+  },
+  {
+    "id": "CRM-002",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 2."
+  },
+  {
+    "id": "CRM-003",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 3."
+  },
+  {
+    "id": "CRM-004",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 4."
+  },
+  {
+    "id": "CRM-005",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 5."
+  },
+  {
+    "id": "CRM-006",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 6."
+  },
+  {
+    "id": "CRM-007",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 7."
+  },
+  {
+    "id": "CRM-008",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 8."
+  },
+  {
+    "id": "CRM-009",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 9."
+  },
+  {
+    "id": "CRM-010",
+    "subject": "crm",
+    "topic": "crm",
+    "question": "[crm] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para crm, pregunta 10."
+  },
+  {
+    "id": "SEC-001",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 1."
+  },
+  {
+    "id": "SEC-002",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 2."
+  },
+  {
+    "id": "SEC-003",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 3."
+  },
+  {
+    "id": "SEC-004",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 4."
+  },
+  {
+    "id": "SEC-005",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 5."
+  },
+  {
+    "id": "SEC-006",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 6."
+  },
+  {
+    "id": "SEC-007",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 7."
+  },
+  {
+    "id": "SEC-008",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 8."
+  },
+  {
+    "id": "SEC-009",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 9."
+  },
+  {
+    "id": "SEC-010",
+    "subject": "seguridad",
+    "topic": "seguridad",
+    "question": "[seguridad] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para seguridad, pregunta 10."
+  },
+  {
+    "id": "EMG-001",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 1."
+  },
+  {
+    "id": "EMG-002",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 2."
+  },
+  {
+    "id": "EMG-003",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 3."
+  },
+  {
+    "id": "EMG-004",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 4."
+  },
+  {
+    "id": "EMG-005",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 5."
+  },
+  {
+    "id": "EMG-006",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 6."
+  },
+  {
+    "id": "EMG-007",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 7."
+  },
+  {
+    "id": "EMG-008",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 8."
+  },
+  {
+    "id": "EMG-009",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 9."
+  },
+  {
+    "id": "EMG-010",
+    "subject": "emergencias",
+    "topic": "emergencias",
+    "question": "[emergencias] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para emergencias, pregunta 10."
+  },
+  {
+    "id": "PA-001",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 1."
+  },
+  {
+    "id": "PA-002",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 2."
+  },
+  {
+    "id": "PA-003",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 3."
+  },
+  {
+    "id": "PA-004",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 4."
+  },
+  {
+    "id": "PA-005",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 5."
+  },
+  {
+    "id": "PA-006",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 6: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 6."
+  },
+  {
+    "id": "PA-007",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 7: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 7."
+  },
+  {
+    "id": "PA-008",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 8: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 8."
+  },
+  {
+    "id": "PA-009",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 9: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 9."
+  },
+  {
+    "id": "PA-010",
+    "subject": "primeros_auxilios",
+    "topic": "primeros_auxilios",
+    "question": "[primeros_auxilios] Pregunta 10: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para primeros_auxilios, pregunta 10."
+  },
+  {
+    "id": "MET-001",
+    "subject": "meteorologia",
+    "topic": "meteorologia",
+    "question": "[meteorologia] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para meteorologia, pregunta 1."
+  },
+  {
+    "id": "MET-002",
+    "subject": "meteorologia",
+    "topic": "meteorologia",
+    "question": "[meteorologia] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para meteorologia, pregunta 2."
+  },
+  {
+    "id": "MET-003",
+    "subject": "meteorologia",
+    "topic": "meteorologia",
+    "question": "[meteorologia] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para meteorologia, pregunta 3."
+  },
+  {
+    "id": "MET-004",
+    "subject": "meteorologia",
+    "topic": "meteorologia",
+    "question": "[meteorologia] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para meteorologia, pregunta 4."
+  },
+  {
+    "id": "MET-005",
+    "subject": "meteorologia",
+    "topic": "meteorologia",
+    "question": "[meteorologia] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para meteorologia, pregunta 5."
+  },
+  {
+    "id": "SUR-001",
+    "subject": "supervivencia",
+    "topic": "supervivencia",
+    "question": "[supervivencia] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para supervivencia, pregunta 1."
+  },
+  {
+    "id": "SUR-002",
+    "subject": "supervivencia",
+    "topic": "supervivencia",
+    "question": "[supervivencia] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para supervivencia, pregunta 2."
+  },
+  {
+    "id": "SUR-003",
+    "subject": "supervivencia",
+    "topic": "supervivencia",
+    "question": "[supervivencia] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para supervivencia, pregunta 3."
+  },
+  {
+    "id": "SUR-004",
+    "subject": "supervivencia",
+    "topic": "supervivencia",
+    "question": "[supervivencia] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para supervivencia, pregunta 4."
+  },
+  {
+    "id": "SUR-005",
+    "subject": "supervivencia",
+    "topic": "supervivencia",
+    "question": "[supervivencia] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para supervivencia, pregunta 5."
+  },
+  {
+    "id": "AVG-001",
+    "subject": "aviacion_general",
+    "topic": "aviacion_general",
+    "question": "[aviacion_general] Pregunta 1: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para aviacion_general, pregunta 1."
+  },
+  {
+    "id": "AVG-002",
+    "subject": "aviacion_general",
+    "topic": "aviacion_general",
+    "question": "[aviacion_general] Pregunta 2: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para aviacion_general, pregunta 2."
+  },
+  {
+    "id": "AVG-003",
+    "subject": "aviacion_general",
+    "topic": "aviacion_general",
+    "question": "[aviacion_general] Pregunta 3: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para aviacion_general, pregunta 3."
+  },
+  {
+    "id": "AVG-004",
+    "subject": "aviacion_general",
+    "topic": "aviacion_general",
+    "question": "[aviacion_general] Pregunta 4: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para aviacion_general, pregunta 4."
+  },
+  {
+    "id": "AVG-005",
+    "subject": "aviacion_general",
+    "topic": "aviacion_general",
+    "question": "[aviacion_general] Pregunta 5: concepto fundamental para examen TCP.",
+    "options": [
+      "Respuesta correcta",
+      "Distractor A",
+      "Distractor B",
+      "Distractor C"
+    ],
+    "correct": 0,
+    "explanation": "Explicación de estudio para aviacion_general, pregunta 5."
+  }
 ]
