@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>TCP Exam Trainer</title>
 </head>
 <body>
-    <h1>TCP Exam Trainer</h1>
-    <p>La web funciona correctamente.</p>
+
+<h1>TCP Exam Trainer</h1>
+
+<div id="question">Cargando pregunta...</div>
+
+<ul id="answers"></ul>
+
+<script>
+fetch('./data/questions.json')
+    .then(response => response.json())
+    .then(data => {
+
+        const question = data[0];
+
+        document.getElementById('question').innerText =
+            question.question;
+
+        const answers = document.getElementById('answers');
+
+        question.options.forEach(option => {
+
+            const li = document.createElement('li');
+            li.innerText = option;
+
+            answers.appendChild(li);
+
+        });
+
+    })
+    .catch(error => {
+        console.error(error);
+        document.getElementById('question').innerText =
+            'Error cargando preguntas';
+    });
+</script>
+
 </body>
 </html>
