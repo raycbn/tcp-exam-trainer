@@ -1,1 +1,31 @@
 
+[
+  {
+    "id": "NOR-001",
+    "subject": "normativa",
+    "topic": "oaci",
+    "question": "¿Qué significan las siglas OACI?",
+    "options": [
+      "Organización de Aviación Civil Internacional",
+      "Organización Aérea Civil Internacional",
+      "Oficina de Aviación Civil Internacional",
+      "Organización Aeronáutica Comercial Internacional"
+    ],
+    "correct": 0,
+    "explanation": "OACI significa Organización de Aviación Civil Internacional."
+  },
+  {
+    "id": "NOR-002",
+    "subject": "normativa",
+    "topic": "easa",
+    "question": "¿Qué significa EASA?",
+    "options": [
+      "European Aviation Safety Agency",
+      "European Air Security Agency",
+      "European Aircraft Safety Association",
+      "European Aviation Service Agency"
+    ],
+    "correct": 0,
+    "explanation": "EASA es la Agencia Europea de Seguridad Aérea."
+  }
+]
