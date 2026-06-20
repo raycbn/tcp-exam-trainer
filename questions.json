@@ -1,1 +1,18 @@
-
+[
+  {
+    "id": 1,
+    "subject": "normativa",
+    "topic": "oaci",
+    "question": "¿Qué significa OACI?",
+    "options": [
+      "Organización de Aviación Civil Internacional",
+      "Organización Aérea Civil Internacional",
+      "Oficina de Aviación Civil Internacional",
+      "Organización Aeronáutica Comercial Internacional"
+    ],
+    "correct": 0,
+    "explanation": "La OACI es la Organización de Aviación Civil Internacional.",
+    "source": "Anexo 1 OACI",
+    "verified": true
+  }
+]
