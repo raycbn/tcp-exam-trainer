@@ -1,1 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
 
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#answers button {
+    width: 100%;
+    text-align: left;
+}
