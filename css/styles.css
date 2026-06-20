@@ -72,12 +72,15 @@ h3 {
     color: var(--accent);
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
 #stats {
     display: flex;
     gap: 25px;
     margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .progress-container {
@@ -90,11 +93,14 @@ h3 {
 #progress-bar {
     height: 100%;
     width: 0%;
+
     background: linear-gradient(
         90deg,
         var(--accent),
         var(--accent-2)
     );
+
+    transition: width .3s ease;
 }
 
 #question {
@@ -120,7 +126,10 @@ h3 {
     color: var(--text);
 
     cursor: pointer;
+
     font-size: 18px;
+
+    transition: .2s;
 }
 
 #answers button:hover {
@@ -161,7 +170,7 @@ h3 {
 }
 
 #nextBtn:disabled {
-    opacity: .5;
+    opacity: .45;
     cursor: not-allowed;
 }
 
@@ -173,15 +182,50 @@ h3 {
 }
 
 #explanation {
+    display: none;
+
     margin-top: 20px;
 
-    padding: 18px;
+    padding: 22px;
 
-    background: var(--card);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56,189,248,.08),
+            rgba(96,165,250,.05)
+        );
 
-    border: 1px solid var(--card-border);
+    border: 1px solid rgba(56,189,248,.25);
 
     border-radius: 18px;
 
-    display: none;
+    line-height: 1.8;
+
+    animation: fadeIn .3s ease;
+}
+
+#explanation-title {
+    display: block;
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
