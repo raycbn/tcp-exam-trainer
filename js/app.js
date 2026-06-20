@@ -5,6 +5,15 @@ let answered = false;
 
 let stats = loadStats();
 
+let mode = "practice";
+
+let examQuestions = [];
+let examCorrect = 0;
+let examWrong = 0;
+
+let timerInterval = null;
+let examSeconds = 3600;
+
 async function loadQuestions() {
 
     try {
@@ -29,28 +38,132 @@ async function loadQuestions() {
 
         document.getElementById('question').innerText =
             'Error cargando preguntas';
+    }
+}
+
+function startPracticeMode() {
+
+    mode = "practice";
+
+    stopTimer();
+
+    document.getElementById('timer').innerHTML =
+        '⏱️ --:--';
+
+    document.getElementById('examResult').style.display =
+        'none';
+
+    currentQuestion = 0;
+
+    showQuestion();
+}
+
+function startExamMode() {
+
+    mode = "exam";
+
+    examCorrect = 0;
+    examWrong = 0;
+
+    examQuestions = [...questions]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, Math.min(50, questions.length));
+
+    currentQuestion = 0;
+
+    examSeconds = 3600;
+
+    startTimer();
+
+    document.getElementById('examResult').style.display =
+        'none';
+
+    showQuestion();
+}
+
+function startTimer() {
+
+    stopTimer();
+
+    updateTimer();
+
+    timerInterval = setInterval(() => {
+
+        examSeconds--;
+
+        updateTimer();
+
+        if (examSeconds <= 0) {
+
+            finishExam();
+
+        }
+
+    }, 1000);
+}
+
+function stopTimer() {
+
+    if (timerInterval) {
+
+        clearInterval(timerInterval);
+
+        timerInterval = null;
 
     }
+}
 
+function updateTimer() {
+
+    const minutes =
+        Math.floor(examSeconds / 60);
+
+    const seconds =
+        examSeconds % 60;
+
+    document.getElementById('timer').innerHTML =
+        `⏱️ ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function getCurrentQuestions() {
+
+    return mode === "exam"
+        ? examQuestions
+        : questions;
 }
 
 function showQuestion() {
 
     answered = false;
 
-    const q = questions[currentQuestion];
+    const source =
+        getCurrentQuestions();
+
+    const q =
+        source[currentQuestion];
+
+    if (!q) return;
 
     document.getElementById('counter').innerText =
-        `Pregunta ${currentQuestion + 1} / ${questions.length}`;
+        `Pregunta ${currentQuestion + 1} / ${source.length}`;
 
     document.getElementById('question').innerText =
         q.question;
 
-    document.getElementById('topic').innerText =
-        `Tema: ${(q.topic || 'General').toUpperCase()}`;
+    if (mode === "practice") {
+
+        document.getElementById('topic').innerText =
+            `Tema: ${(q.topic || 'General').toUpperCase()}`;
+
+    } else {
+
+        document.getElementById('topic').innerText =
+            '📝 Simulacro AESA';
+
+    }
 
     const progress =
-        ((currentQuestion + 1) / questions.length) * 100;
+        ((currentQuestion + 1) / source.length) * 100;
 
     document.getElementById('progress-bar').style.width =
         progress + '%';
@@ -60,10 +173,8 @@ function showQuestion() {
     document.getElementById('explanation').style.display =
         'none';
 
-    document.getElementById('explanation').innerHTML =
-        '';
-
-    document.getElementById('nextBtn').disabled = true;
+    document.getElementById('nextBtn').disabled =
+        true;
 
     const answersDiv =
         document.getElementById('answers');
@@ -89,73 +200,167 @@ function showQuestion() {
                 );
 
             buttons.forEach(b => {
+
                 b.disabled = true;
+
             });
 
-            if (index === q.correct) {
+            const correct =
+                index === q.correct;
 
-                stats.correct++;
-
-                saveStats(stats);
-
-                updateStatsUI(stats);
+            if (correct) {
 
                 btn.classList.add('correct');
+
+                if (mode === "practice") {
+
+                    stats.correct++;
+
+                    saveStats(stats);
+
+                    updateStatsUI(stats);
+
+                } else {
+
+                    examCorrect++;
+
+                }
 
                 document.getElementById('result').innerHTML =
                     '✅ Correcto';
 
             } else {
 
-                stats.wrong++;
-
-                saveStats(stats);
-
-                updateStatsUI(stats);
-
                 btn.classList.add('wrong');
 
                 buttons[q.correct]
                     .classList.add('correct');
+
+                if (mode === "practice") {
+
+                    stats.wrong++;
+
+                    saveStats(stats);
+
+                    updateStatsUI(stats);
+
+                } else {
+
+                    examWrong++;
+
+                }
 
                 document.getElementById('result').innerHTML =
                     '❌ Incorrecto';
 
             }
 
-            document.getElementById('explanation').style.display =
-                'block';
+            if (mode === "practice") {
 
-            document.getElementById('explanation').innerHTML =
-            `
-            <span id="explanation-title">
-                ℹ️ Explicación
-            </span>
+                document.getElementById('explanation').style.display =
+                    'block';
 
-            ${q.explanation}
-            `;
+                document.getElementById('explanation').innerHTML =
+                `
+                <span id="explanation-title">
+                    ℹ️ Explicación
+                </span>
+
+                ${q.explanation}
+                `;
+            }
 
             document.getElementById('nextBtn').disabled =
                 false;
-
         };
 
         answersDiv.appendChild(btn);
-
     });
+}
 
+function finishExam() {
+
+    stopTimer();
+
+    const total =
+        examCorrect + examWrong;
+
+    const percent =
+        total > 0
+        ? (examCorrect / total) * 100
+        : 0;
+
+    const passed =
+        percent >= 75;
+
+    document.getElementById('examScore').innerHTML =
+    `
+    Correctas: ${examCorrect}<br>
+    Incorrectas: ${examWrong}<br>
+    Nota: ${percent.toFixed(1)}%<br><br>
+
+    <strong>
+        ${passed ? '✅ APTO' : '❌ NO APTO'}
+    </strong>
+    `;
+
+    document.getElementById('examResult').style.display =
+        'block';
+
+    document.getElementById('answers').innerHTML = '';
+
+    document.getElementById('question').innerHTML =
+        'Simulacro finalizado';
+
+    document.getElementById('counter').innerHTML = '';
+
+    document.getElementById('nextBtn').style.display =
+        'none';
+
+    document.getElementById('explanation').style.display =
+        'none';
+
+    document.getElementById('result').innerHTML = '';
 }
 
 document.getElementById('nextBtn').onclick = () => {
 
     currentQuestion++;
 
-    if (currentQuestion >= questions.length) {
+    const source =
+        getCurrentQuestions();
+
+    if (currentQuestion >= source.length) {
+
+        if (mode === "exam") {
+
+            finishExam();
+            return;
+
+        }
+
         currentQuestion = 0;
     }
 
     showQuestion();
-
 };
+
+document.getElementById('practiceMode')
+.addEventListener(
+    'click',
+    startPracticeMode
+);
+
+document.getElementById('examMode')
+.addEventListener(
+    'click',
+    startExamMode
+);
+
+document.getElementById('restartExam')
+.addEventListener(
+    'click',
+    startExamMode
+);
 
 loadQuestions();
