@@ -2,44 +2,116 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCP Exam Trainer</title>
 </head>
 <body>
 
-<h1>TCP Exam Trainer</h1>
+    <h1>TCP Exam Trainer</h1>
 
-<div id="question">Cargando pregunta...</div>
+    <h3 id="counter">Cargando...</h3>
 
-<ul id="answers"></ul>
+    <h2 id="question">Cargando pregunta...</h2>
 
-<script>
-fetch('./data/questions.json')
-    .then(response => response.json())
-    .then(data => {
+    <div id="answers"></div>
 
-        const question = data[0];
+    <br>
 
-        document.getElementById('question').innerText =
-            question.question;
+    <button id="nextBtn">Siguiente</button>
 
-        const answers = document.getElementById('answers');
+    <p id="result"></p>
 
-        question.options.forEach(option => {
+    <script>
 
-            const li = document.createElement('li');
-            li.innerText = option;
+        let questions = [];
+        let currentQuestion = 0;
 
-            answers.appendChild(li);
+        fetch('./data/questions.json')
+            .then(response => response.json())
+            .then(data => {
 
-        });
+                questions = data;
 
-    })
-    .catch(error => {
-        console.error(error);
-        document.getElementById('question').innerText =
-            'Error cargando preguntas';
-    });
-</script>
+                if (questions.length > 0) {
+                    showQuestion();
+                } else {
+                    document.getElementById('question').innerText =
+                        'No hay preguntas disponibles';
+                }
+
+            })
+            .catch(error => {
+
+                console.error(error);
+
+                document.getElementById('question').innerText =
+                    'Error cargando preguntas';
+
+            });
+
+        function showQuestion() {
+
+            const q = questions[currentQuestion];
+
+            document.getElementById('counter').innerText =
+                `Pregunta ${currentQuestion + 1} / ${questions.length}`;
+
+            document.getElementById('question').innerText =
+                q.question;
+
+            document.getElementById('result').innerText = '';
+
+            const answersDiv =
+                document.getElementById('answers');
+
+            answersDiv.innerHTML = '';
+
+            q.options.forEach((option, index) => {
+
+                const btn =
+                    document.createElement('button');
+
+                btn.innerText = option;
+
+                btn.style.display = 'block';
+                btn.style.margin = '10px 0';
+
+                btn.onclick = () => {
+
+                    if (index === q.correct) {
+
+                        document.getElementById('result').innerText =
+                            '✅ Correcto';
+
+                    } else {
+
+                        document.getElementById('result').innerText =
+                            '❌ Incorrecto';
+
+                    }
+
+                };
+
+                answersDiv.appendChild(btn);
+
+            });
+
+        }
+
+        document.getElementById('nextBtn')
+            .onclick = () => {
+
+                currentQuestion++;
+
+                if (currentQuestion >= questions.length) {
+                    currentQuestion = 0;
+                }
+
+                showQuestion();
+
+            };
+
+    </script>
 
 </body>
 </html>
