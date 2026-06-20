@@ -171,3 +171,47 @@ body > h2 {
         padding: 14px 16px;
     }
 }
+#topic {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 920px;
+    height: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 999px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-2)
+    );
+    transition: width 0.3s ease;
+}
+
+#explanation {
+    max-width: 920px;
+    margin: 15px auto;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text);
+    display: none;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
