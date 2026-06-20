@@ -10,29 +10,14 @@ async function loadQuestions() {
     try {
 
         const response = await fetch(
-            './data/questions.json?ts=' + Date.now(),
-            {
-                cache: 'no-store'
-            }
+            './data/questions.json?ts=' + Date.now()
         );
 
         if (!response.ok) {
             throw new Error('HTTP ' + response.status);
         }
 
-        const text = await response.text();
-
-        if (!text.trim()) {
-            throw new Error('questions.json está vacío');
-        }
-
-        questions = JSON.parse(text);
-
-        if (!Array.isArray(questions) || questions.length === 0) {
-            throw new Error(
-                'questions.json no contiene un array válido de preguntas'
-            );
-        }
+        questions = await response.json();
 
         showQuestion();
 
@@ -41,14 +26,10 @@ async function loadQuestions() {
         console.error(error);
 
         document.getElementById('question').innerText =
-            'Error cargando preguntas: ' + error.message;
+            'Error cargando preguntas';
 
-        document.getElementById('counter').innerText = '';
-
-        document.getElementById('answers').innerHTML = '';
-
-        document.getElementById('nextBtn').style.display = 'none';
     }
+
 }
 
 function showQuestion() {
@@ -72,7 +53,7 @@ function showQuestion() {
     document.getElementById('progress-bar').style.width =
         progress + '%';
 
-    document.getElementById('result').innerText = '';
+    document.getElementById('result').innerHTML = '';
 
     document.getElementById('explanation').style.display =
         'none';
@@ -89,8 +70,7 @@ function showQuestion() {
 
     q.options.forEach((option, index) => {
 
-        const btn =
-            document.createElement('button');
+        const btn = document.createElement('button');
 
         btn.innerText = option;
 
@@ -105,7 +85,6 @@ function showQuestion() {
 
             buttons.forEach(b => {
                 b.disabled = true;
-                b.style.cursor = 'default';
             });
 
             if (index === q.correct) {
@@ -117,7 +96,7 @@ function showQuestion() {
 
                 btn.classList.add('correct');
 
-                document.getElementById('result').innerText =
+                document.getElementById('result').innerHTML =
                     '✅ Correcto';
 
             } else {
@@ -131,7 +110,7 @@ function showQuestion() {
 
                 buttons[q.correct].classList.add('correct');
 
-                document.getElementById('result').innerText =
+                document.getElementById('result').innerHTML =
                     '❌ Incorrecto';
 
             }
@@ -144,11 +123,13 @@ function showQuestion() {
 
             document.getElementById('nextBtn').disabled =
                 false;
+
         };
 
         answersDiv.appendChild(btn);
 
     });
+
 }
 
 document.getElementById('nextBtn').onclick = () => {
@@ -160,6 +141,7 @@ document.getElementById('nextBtn').onclick = () => {
     }
 
     showQuestion();
+
 };
 
 loadQuestions();
