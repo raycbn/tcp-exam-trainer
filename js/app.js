@@ -3,7 +3,6 @@ let currentQuestion = 0;
 
 async function loadQuestions() {
     try {
-
         const response = await fetch('./data/questions.json?ts=' + Date.now(), {
             cache: 'no-store'
         });
@@ -14,81 +13,77 @@ async function loadQuestions() {
 
         const text = await response.text();
 
+        if (!text.trim()) {
+            throw new Error('questions.json está vacío');
+        }
+
         questions = JSON.parse(text);
 
+        if (!Array.isArray(questions) || questions.length === 0) {
+            throw new Error('questions.json no contiene un array válido de preguntas');
+        }
+
         showQuestion();
-
     } catch (error) {
-
         console.error(error);
-
         document.getElementById('question').innerText =
-            'Error cargando preguntas';
-
+            'Error cargando preguntas: ' + error.message;
+        document.getElementById('counter').innerText = '';
+        document.getElementById('answers').innerHTML = '';
+        document.getElementById('nextBtn').style.display = 'none';
     }
 }
 
 function showQuestion() {
-
     const q = questions[currentQuestion];
 
-    document.getElementById("counter").innerText =
+    document.getElementById('counter').innerText =
         `Pregunta ${currentQuestion + 1} / ${questions.length}`;
 
-    document.getElementById("question").innerText =
-        q.question;
+    document.getElementById('question').innerText = q.question;
 
-    document.getElementById("result").innerText = "";
+    document.getElementById('result').innerText = '';
 
-    const answersDiv =
-        document.getElementById("answers");
-
-    answersDiv.innerHTML = "";
+    const answersDiv = document.getElementById('answers');
+    answersDiv.innerHTML = '';
 
     q.options.forEach((option, index) => {
-
-        const btn =
-            document.createElement("button");
-
+        const btn = document.createElement('button');
         btn.innerText = option;
 
-        btn.style.display = "block";
-        btn.style.margin = "10px 0";
-
         btn.onclick = () => {
+            const buttons = document.querySelectorAll('#answers button');
+
+            buttons.forEach(b => {
+                b.disabled = true;
+                b.style.cursor = 'default';
+            });
 
             if (index === q.correct) {
-
-                document.getElementById("result").innerText =
-                    "✅ Correcto";
-
+                btn.classList.add('correct');
+                document.getElementById('result').innerText = '✅ Correcto';
             } else {
-
-                document.getElementById("result").innerText =
-                    "❌ Incorrecto";
-
+                btn.classList.add('wrong');
+                buttons[q.correct].classList.add('correct');
+                document.getElementById('result').innerText = '❌ Incorrecto';
             }
-
         };
 
         answersDiv.appendChild(btn);
-
     });
 
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').style.display = 'block';
 }
 
-document.getElementById("nextBtn").onclick = () => {
-
+document.getElementById('nextBtn').onclick = () => {
     currentQuestion++;
 
     if (currentQuestion >= questions.length) {
-
         currentQuestion = 0;
-
     }
 
     showQuestion();
-
 };
 
 loadQuestions();
