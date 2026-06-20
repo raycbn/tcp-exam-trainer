@@ -229,3 +229,97 @@ h3 {
     }
 
 }
+.mode-selector {
+
+    max-width: 920px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+.mode-selector button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 16px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(15,23,42,.95);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.mode-selector button:hover {
+
+    border-color: var(--accent);
+}
+
+#timer {
+
+    margin-bottom: 15px;
+
+    color: #facc15;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+#examResult {
+
+    display: none;
+
+    max-width: 920px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: var(--card);
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius);
+}
+
+#examScore {
+
+    font-size: 24px;
+
+    margin: 20px 0;
+
+    line-height: 1.8;
+}
+
+#restartExam {
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-2)
+    );
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
