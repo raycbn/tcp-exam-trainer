@@ -323,3 +323,78 @@ h3 {
 
     cursor: pointer;
 }
+/* =========================
+   V0.5 SIMULACRO AESA
+========================= */
+
+.mode-selector button {
+    transition: all .2s ease;
+}
+
+.mode-selector button:hover {
+    transform: translateY(-2px);
+}
+
+#answers button:hover {
+    transform: translateY(-2px);
+}
+
+#restartExam:hover {
+    transform: translateY(-2px);
+}
+
+#examResult h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#examResult strong {
+    font-size: 30px;
+}
+
+.apto {
+    color: var(--good);
+}
+
+.no-apto {
+    color: var(--bad);
+}
+
+#timer {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 12px;
+
+    background: rgba(250, 204, 21, .10);
+
+    border: 1px solid rgba(250, 204, 21, .25);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    #question {
+        padding: 20px;
+    }
+
+    #stats {
+        font-size: 18px;
+    }
+
+    #answers button {
+        font-size: 16px;
+    }
+
+    .mode-selector {
+        flex-direction: column;
+    }
+}
