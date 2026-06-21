@@ -319,6 +319,11 @@ function startReviewErrorsMode() {
         'none';
 
     document.getElementById(
+        'nextBtn'
+    ).style.display =
+        'block';
+
+    document.getElementById(
         'finishExamBtn'
     ).style.display =
         'none';
@@ -999,6 +1004,15 @@ document
 .addEventListener(
     'click',
     startExamMode
+);
+
+document
+.getElementById(
+    'reviewErrorsMode'
+)
+.addEventListener(
+    'click',
+    startReviewErrorsMode
 );
 
 const subjectFilter =
