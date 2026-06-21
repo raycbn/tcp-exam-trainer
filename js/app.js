@@ -390,6 +390,14 @@ function showQuestion() {
 
                 const correct =
                     index === q.correct;
+                
+                if (mode === "exam") {
+
+                    btn.classList.add(
+                        'selected-answer'
+                    );
+
+                }
 
                 if (correct) {
 
