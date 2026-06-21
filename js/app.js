@@ -855,8 +855,9 @@ if (
                 filteredQuestions =
                     questions.filter(
                         q =>
-                            q.subject ===
-                            subject
+                            q.topic &&
+                            q.topic.toLowerCase() ===
+                            subject.toLowerCase()
                     );
             }
 
