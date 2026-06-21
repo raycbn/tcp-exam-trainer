@@ -9,6 +9,7 @@ let mode = "practice";
 let examQuestions = [];
 let examCorrect = 0;
 let examWrong = 0;
+let examAnswers = {};
 
 let timerInterval = null;
 let examSeconds = 3600;
@@ -199,6 +200,7 @@ function startExamMode() {
 
     examCorrect = 0;
     examWrong = 0;
+    examAnswers = {};
 
     currentQuestion = 0;
 
@@ -372,36 +374,41 @@ function showQuestion() {
             btn.innerText =
                 option;
 
-            btn.onclick = () => {
+            if (
+                mode === "exam" &&
+                examAnswers[currentQuestion] === index
+            ) {
 
-                if (answered)
-                    return;
-
-                answered = true;
-
-                const buttons =
-                    document.querySelectorAll(
-                        '#answers button'
-                    );
-
-                buttons.forEach(
-                    b => b.disabled = true
+                btn.classList.add(
+                    'selected-answer'
                 );
 
-                const correct =
-                    index === q.correct;
-                
-                if (mode === "exam") {
+                document.getElementById(
+                    'nextBtn'
+                ).disabled = false;
+            }
 
-                    btn.classList.add(
-                        'selected-answer'
+            btn.onclick = () => {
+
+                if (mode === "practice") {
+
+                    if (answered) return;
+
+                    answered = true;
+
+                    const buttons =
+                        document.querySelectorAll(
+                            '#answers button'
+                        );
+
+                    buttons.forEach(
+                        b => b.disabled = true
                     );
 
-                }
+                    const correct =
+                        index === q.correct;
 
-                if (correct) {
-
-                    if (mode === "practice") {
+                    if (correct) {
 
                         btn.classList.add(
                             'correct'
@@ -411,9 +418,7 @@ function showQuestion() {
 
                         saveStats(stats);
 
-                        updateStatsUI(
-                            stats
-                        );
+                        updateStatsUI(stats);
 
                         document.getElementById(
                             'result'
@@ -421,13 +426,6 @@ function showQuestion() {
                             '✅ Correcto';
 
                     } else {
-
-                        examCorrect++;
-                    }
-
-                } else {
-
-                    if (mode === "practice") {
 
                         btn.classList.add(
                             'wrong'
@@ -442,24 +440,13 @@ function showQuestion() {
 
                         saveStats(stats);
 
-                        updateStatsUI(
-                            stats
-                        );
+                        updateStatsUI(stats);
 
                         document.getElementById(
                             'result'
                         ).innerHTML =
                             '❌ Incorrecto';
-
-                    } else {
-
-                        examWrong++;
                     }
-                }
-
-                if (
-                    mode === "practice"
-                ) {
 
                     document.getElementById(
                         'explanation'
@@ -476,12 +463,36 @@ function showQuestion() {
 
                     ${q.explanation || 'Sin explicación'}
                     `;
-                }
 
-                document.getElementById(
-                    'nextBtn'
-                ).disabled =
-                    false;
+                    document.getElementById(
+                        'nextBtn'
+                    ).disabled =
+                        false;
+
+                } else {
+
+                    examAnswers[currentQuestion] =
+                        index;
+
+                    document
+                        .querySelectorAll(
+                            '#answers button'
+                        )
+                        .forEach(b =>
+                            b.classList.remove(
+                                'selected-answer'
+                            )
+                        );
+
+                    btn.classList.add(
+                        'selected-answer'
+                    );
+
+                    document.getElementById(
+                        'nextBtn'
+                    ).disabled =
+                        false;
+                }
             };
 
             answersDiv.appendChild(
@@ -497,6 +508,26 @@ function showQuestion() {
 function finishExam() {
 
     stopTimer();
+
+    examCorrect = 0;
+    examWrong = 0;
+
+    examQuestions.forEach(
+        (question, idx) => {
+
+            if (
+                examAnswers[idx] ===
+                question.correct
+            ) {
+
+                examCorrect++;
+
+            } else {
+
+                examWrong++;
+            }
+        }
+    );
 
     const total =
         examCorrect + examWrong;
