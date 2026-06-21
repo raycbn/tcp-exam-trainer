@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TCP Exam Trainer</title>
 
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
@@ -30,6 +33,7 @@
         </div>
 
         <div id="stats">
+
             <span>
                 ✅ <span id="correctCount">0</span>
             </span>
@@ -37,19 +41,16 @@
             <span>
                 ❌ <span id="wrongCount">0</span>
             </span>
+
         </div>
 
         <div id="timer">
             ⏱️ --:--
         </div>
 
-        <div id="examProgress">
-            Respondidas: 0/50
-        </div>
+        <div id="examProgress"></div>
 
-        <div id="examMissing">
-            Sin responder: 50
-        </div>
+        <div id="examMissing"></div>
 
         <select id="subjectFilter">
 
@@ -65,7 +66,7 @@
                 CRM
             </option>
 
-            <option value="mercancias">
+            <option value="mercancias_peligrosas">
                 Mercancías Peligrosas
             </option>
 
@@ -92,7 +93,9 @@
         </select>
 
         <div class="progress-container">
+
             <div id="progress-bar"></div>
+
         </div>
 
     </div>
@@ -109,7 +112,10 @@
 
     <div class="navigation-buttons">
 
-        <button id="prevBtn">
+        <button
+            id="prevBtn"
+            style="display:none;"
+        >
             ← Anterior
         </button>
 
@@ -119,7 +125,10 @@
 
     </div>
 
-    <button id="finishExamBtn">
+    <button
+        id="finishExamBtn"
+        style="display:none;"
+    >
         🏁 Finalizar examen
     </button>
 
