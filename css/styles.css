@@ -503,3 +503,148 @@ h3 {
         #e5e7eb;
 
 }
+/* =========================
+   V0.8 NUEVAS FUNCIONES
+========================= */
+
+#examProgress,
+#examMissing {
+
+    margin-top: 10px;
+
+    font-weight: 600;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+#subjectFilter {
+
+    width: 100%;
+
+    max-width: 920px;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 16px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(15,23,42,.95);
+
+    color: var(--text);
+
+    font-size: 16px;
+}
+
+#subjectFilter:focus {
+
+    outline: none;
+
+    border-color: var(--accent);
+}
+
+.navigation-buttons {
+
+    max-width: 920px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+#prevBtn,
+#nextBtn {
+
+    flex: 1;
+}
+
+#prevBtn {
+
+    padding: 18px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    background: rgba(15,23,42,.95);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+#prevBtn:hover {
+
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
+}
+
+#finishExamBtn {
+
+    width: 100%;
+
+    max-width: 920px;
+
+    display: block;
+
+    margin: 15px auto 0;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #dc2626,
+        #ef4444
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+#finishExamBtn:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+}
+
+@media (max-width: 768px) {
+
+    .navigation-buttons {
+
+        flex-direction: column;
+    }
+
+    #prevBtn,
+    #nextBtn,
+    #finishExamBtn {
+
+        width: 100%;
+    }
+}
