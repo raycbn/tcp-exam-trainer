@@ -648,3 +648,78 @@ h3 {
         width: 100%;
     }
 }
+
+.navigation-buttons {
+
+    max-width: 920px;
+
+    margin: 25px auto;
+
+    display: flex;
+
+    gap: 16px;
+}
+
+.navigation-buttons button {
+
+    flex: 1;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#prevBtn {
+
+    background: linear-gradient(
+        135deg,
+        #fbbf24,
+        #f59e0b
+    );
+
+    color: #111827;
+}
+
+#nextBtn {
+
+    margin-top: 0;
+}
+
+#finishExamBtn {
+
+    display: block;
+
+    max-width: 920px;
+
+    width: 100%;
+
+    margin: 20px auto 0;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
