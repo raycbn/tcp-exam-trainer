@@ -304,12 +304,22 @@ function startExamMode() {
 
 function startReviewErrorsMode() {
 
+    const errors = loadErrors();
+
+    if (errors.length === 0) {
+
+        alert(
+            'No tienes errores pendientes.'
+        );
+
+        return;
+    }
+
     mode = "review";
 
     stopTimer();
 
-    filteredQuestions =
-        loadErrors();
+    filteredQuestions = errors;
 
     currentQuestion = 0;
 
@@ -435,6 +445,13 @@ function showQuestion() {
             'topic'
         ).innerText =
             `Tema: ${(q.topic || 'General').toUpperCase()}`;
+
+    } else if (mode === "review") {
+
+        document.getElementById(
+            'topic'
+        ).innerText =
+            '🧠 Repaso de errores';
 
     } else {
 
