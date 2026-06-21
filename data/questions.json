@@ -9240,19 +9240,19 @@
     "explanation": ""
   },
   {
-    "id": "TCP-0661",
-    "subject": "general",
-    "topic": "tcp",
-    "question": "En caso de accidente aéreo, los servicios de rescate y socorrismo atenderán primero a: a. Fallecidos. [X] b. Heridos con posibilidades de vida. c. Heridos ancianos graves. d. Heridos muy leves. 33. En una situación de humo negro en cabina de pasaje los TCPs deben:",
-    "options": [
-      "Echarse al suelo, taparse nariz y boca.",
-      "Informar al CMTE, coger botella de oxígeno con mascarilla en toma HI.",
-      "Informar al CMTE, utilizar PBE, cerrar aireadores, gritar a los pax si posible: “agáchense y tápense la nariz y la boca”.",
-      "Solicitar al comandante el despliegue de las máscaras de O2 de los PSUs."
-    ],
-    "correct": 2,
-    "explanation": ""
-  },
+  "id": "TCP-0661",
+  "subject": "general",
+  "topic": "tcp",
+  "question": "En una situación de humo negro en cabina de pasaje los TCPs deben:",
+  "options": [
+    "Echarse al suelo, taparse nariz y boca.",
+    "Informar al CMTE, coger botella de oxígeno con mascarilla en toma HI.",
+    "Informar al CMTE, utilizar PBE, cerrar aireadores, gritar a los pax si posible: “agáchense y tápense la nariz y la boca”.",
+    "Solicitar al comandante el despliegue de las máscaras de O2 de los PSUs."
+  ],
+  "correct": 2,
+  "explanation": ""
+},
   {
     "id": "TCP-0662",
     "subject": "general",
