@@ -10,6 +10,7 @@ let examQuestions = [];
 let examCorrect = 0;
 let examWrong = 0;
 let examAnswers = {};
+let filteredQuestions = [];
 
 let timerInterval = null;
 let examSeconds = 3600;
@@ -148,6 +149,7 @@ async function loadQuestions() {
         }
 
         questions = await response.json();
+        filteredQuestions = questions;
 
         updateStatsUI(stats);
 
@@ -188,8 +190,33 @@ function startPracticeMode() {
         'nextBtn'
     ).style.display =
         'block';
+    
+    document.getElementById(
+        'prevBtn'
+    ).style.display =
+        'none';
 
     currentQuestion = 0;
+    document.getElementById(
+        'finishExamBtn'
+    ).style.display =
+        'none';
+
+    const progressElement =
+        document.getElementById(
+            'examProgress'
+        );
+
+    const missingElement =
+        document.getElementById(
+            'examMissing'
+        );
+
+    if (progressElement)
+        progressElement.innerText = '';
+
+    if (missingElement)
+        missingElement.innerText = '';
 
     showQuestion();
 }
@@ -206,13 +233,13 @@ function startExamMode() {
 
     examSeconds = 3600;
 
-    examQuestions = [...questions]
+    examQuestions = [...filteredQuestions]
         .sort(() => Math.random() - 0.5)
         .slice(
             0,
             Math.min(
                 50,
-                questions.length
+                filteredQuestions.length
             )
         );
 
@@ -225,6 +252,16 @@ function startExamMode() {
 
     document.getElementById(
         'nextBtn'
+    ).style.display =
+        'block';
+    
+    document.getElementById(
+        'finishExamBtn'
+    ).style.display =
+        'block';
+
+    document.getElementById(
+        'prevBtn'
     ).style.display =
         'block';
 
@@ -291,7 +328,7 @@ function getCurrentQuestions() {
 
     return mode === "exam"
         ? examQuestions
-        : questions;
+        : filteredQuestions;
 }
 
 
@@ -355,6 +392,41 @@ function showQuestion() {
     document.getElementById(
         'nextBtn'
     ).disabled = true;
+
+    if (
+        mode === "exam"
+    ) {
+
+        const answeredCount =
+            Object.keys(
+                examAnswers
+            ).length;
+
+        const progressElement =
+            document.getElementById(
+                'examProgress'
+            );
+
+        const missingElement =
+            document.getElementById(
+                'examMissing'
+            );
+
+        if (progressElement) {
+
+            progressElement.innerText =
+                `Respondidas: ${answeredCount}/${examQuestions.length}`;
+        }
+
+        if (missingElement) {
+
+            missingElement.innerText =
+                `Sin responder: ${
+                    examQuestions.length -
+                    answeredCount
+                }`;
+        }
+    }
 
     const answersDiv =
         document.getElementById(
@@ -617,11 +689,34 @@ function finishExam() {
         'nextBtn'
     ).style.display =
         'none';
-
+    
+    document.getElementById(
+        'finishExamBtn'
+    ).style.display =
+        'none';
+    
+    document.getElementById(
+        'prevBtn'
+    ).style.display =
+        'none';
+    
     document.getElementById(
         'explanation'
     ).style.display =
         'none';
+
+    document.getElementById(
+        'timer'
+    ).innerHTML =
+        '⏱️ --:--';
+
+    document.getElementById(
+        'examProgress'
+    ).innerText = '';
+
+    document.getElementById(
+        'examMissing'
+    ).innerText = '';
 
     document.getElementById(
         'result'
@@ -659,6 +754,52 @@ document.getElementById(
     showQuestion();
 };
 
+document.getElementById(
+    'prevBtn'
+).onclick = () => {
+
+    if (
+        currentQuestion > 0
+    ) {
+
+        currentQuestion--;
+
+        showQuestion();
+    }
+};
+
+document.getElementById(
+    'finishExamBtn'
+).onclick = () => {
+
+    if (
+        mode !== "exam"
+    ) return;
+
+    const unanswered =
+        examQuestions.length -
+        Object.keys(
+            examAnswers
+        ).length;
+
+    if (
+        unanswered > 0
+    ) {
+
+        const confirmFinish =
+            confirm(
+                `Todavía quedan ${unanswered} preguntas sin responder.\n\n¿Deseas finalizar igualmente?`
+            );
+
+        if (
+            !confirmFinish
+        ) return;
+    }
+
+    finishExam();
+};
+
+
 document
 .getElementById(
     'practiceMode'
@@ -685,6 +826,46 @@ document
     'click',
     startExamMode
 );
+
+const subjectFilter =
+    document.getElementById(
+        'subjectFilter'
+    );
+
+if (
+    subjectFilter
+) {
+
+    subjectFilter.addEventListener(
+        'change',
+        e => {
+
+            const subject =
+                e.target.value;
+
+            if (
+                subject === 'all'
+            ) {
+
+                filteredQuestions =
+                    questions;
+
+            } else {
+
+                filteredQuestions =
+                    questions.filter(
+                        q =>
+                            q.subject ===
+                            subject
+                    );
+            }
+
+            currentQuestion = 0;
+
+            showQuestion();
+        }
+    );
+}
 
 
 // --- INICIO ---
