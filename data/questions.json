@@ -9912,19 +9912,19 @@
     "explanation": ""
   },
   {
-    "id": "TCP-0709",
-    "subject": "general",
-    "topic": "tcp",
-    "question": "Ante un derrame de una sustancia química desconocida o sospechosa en la cabina de pasajeros, el tripulante que intervenga para mitigar el riesgo:",
-    "options": [
-      "Limpiará el líquido directamente con las manos desnudas.",
-      "Utilizará una manta de lana seca para extender el líquido por el pasillo. [X] B. Se colocará una PBE, utilizará guantes protectores del kit de emergencia y cubrirá la zona con bolsas y papel absorbente según la guía de emergencia. D. Esperará a que el líquido se evapore solo sin avisar a nadie. 38. La sustancia colorante fluorescente (marcador de agua) que se incluye en los kits de supervivencia de las balsas salvavidas se utiliza: [X] A. Cuando queramos ser vistos desde el aire, echándola al agua donde se diluirá dejando una gran mancha de color llamativo para los aviones de rescate. B. Como desinfectante de heridas abiertas.",
-      "Para purificar el agua del mar y hacerla potable.",
-      "Para pintar el suelo de la balsa por dentro."
-    ],
-    "correct": 1,
-    "explanation": ""
-  },
+  "id": "TCP-0709",
+  "subject": "general",
+  "topic": "tcp",
+  "question": "Ante un derrame de una sustancia química desconocida o sospechosa en la cabina de pasajeros, el tripulante que intervenga para mitigar el riesgo:",
+  "options": [
+    "Limpiará el líquido directamente con las manos desnudas.",
+    "Utilizará una manta de lana seca para extender el líquido por el pasillo.",
+    "Se colocará una PBE, utilizará guantes protectores del kit de emergencia y cubrirá la zona con bolsas y papel absorbente según la guía de emergencia.",
+    "Esperará a que el líquido se evapore solo sin avisar a nadie."
+  ],
+  "correct": 2,
+  "explanation": ""
+},
   {
     "id": "TCP-0710",
     "subject": "general",
