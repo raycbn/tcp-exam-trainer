@@ -17,6 +17,7 @@ let examSeconds = 3600;
 
 const EXAM_HISTORY_KEY = "tcp_exam_history";
 const STATS_KEY = "tcp_practice_stats";
+const ERRORS_KEY = "tcp_error_questions";
 
 let stats = loadStats();
 
@@ -44,6 +45,39 @@ function loadStats() {
         return defaultStats;
 
     }
+}
+
+function loadErrors() {
+
+    return JSON.parse(
+        localStorage.getItem(
+            ERRORS_KEY
+        ) || '[]'
+    );
+}
+
+function saveErrors(errors) {
+
+    localStorage.setItem(
+        ERRORS_KEY,
+        JSON.stringify(errors)
+    );
+
+    updateErrorCounter();
+}
+
+function updateErrorCounter() {
+
+    const count =
+        loadErrors().length;
+
+    const el =
+        document.getElementById(
+            'errorCount'
+        );
+
+    if (el)
+        el.innerText = count;
 }
 
 function saveStats(newStats) {
@@ -268,6 +302,40 @@ function startExamMode() {
     showQuestion();
 }
 
+function startReviewErrorsMode() {
+
+    mode = "review";
+
+    stopTimer();
+
+    filteredQuestions =
+        loadErrors();
+
+    currentQuestion = 0;
+
+    document.getElementById(
+        'examResult'
+    ).style.display =
+        'none';
+
+    document.getElementById(
+        'finishExamBtn'
+    ).style.display =
+        'none';
+
+    document.getElementById(
+        'prevBtn'
+    ).style.display =
+        'none';
+
+    document.getElementById(
+        'timer'
+    ).innerHTML =
+        '🧠 Repaso de errores';
+
+    showQuestion();
+}
+
 
 // --- TEMPORIZADOR ---
 
@@ -462,7 +530,10 @@ function showQuestion() {
 
             btn.onclick = () => {
 
-                if (mode === "practice") {
+                if (
+                    mode === "practice" ||
+                    mode === "review"
+                ) {
 
                     if (answered) return;
 
@@ -496,6 +567,19 @@ function showQuestion() {
                             'result'
                         ).innerHTML =
                             '✅ Correcto';
+                        
+                        if (mode === "review") {
+
+                            let errors =
+                                loadErrors();
+
+                            errors =
+                                errors.filter(
+                                    e => e.id !== q.id
+                                );
+
+                            saveErrors(errors);
+                        }
 
                     } else {
 
@@ -686,6 +770,33 @@ function finishExam() {
             history.slice(0,20)
         )
     );
+
+    let savedErrors =
+        loadErrors();
+
+    examQuestions.forEach(
+        (question, idx) => {
+
+            if (
+                examAnswers[idx] !==
+                question.correct
+            ) {
+
+                if (
+                    !savedErrors.some(
+                        q => q.id === question.id
+                    )
+                ) {
+
+                    savedErrors.push(
+                        question
+                    );
+                }
+            }
+        }
+    );
+
+    saveErrors(savedErrors);
 
     renderExamHistory();
 
@@ -935,4 +1046,5 @@ if (
 // --- INICIO ---
 
 renderExamHistory();
+updateErrorCounter();
 loadQuestions();
