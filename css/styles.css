@@ -479,3 +479,15 @@ h3 {
         gap: 6px;
     }
 }
+.selected-answer {
+
+    background:
+        rgba(56,189,248,.18);
+
+    border-color:
+        var(--accent) !important;
+
+    color:
+        #e5e7eb;
+
+}
