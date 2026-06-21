@@ -25,16 +25,71 @@
 
     <div class="info-card">
 
-        <div id="topic">Tema</div>
+        <div id="topic">
+            Tema
+        </div>
 
         <div id="stats">
-            <span>✅ <span id="correctCount">0</span></span>
-            <span>❌ <span id="wrongCount">0</span></span>
+            <span>
+                ✅ <span id="correctCount">0</span>
+            </span>
+
+            <span>
+                ❌ <span id="wrongCount">0</span>
+            </span>
         </div>
 
         <div id="timer">
             ⏱️ --:--
         </div>
+
+        <div id="examProgress">
+            Respondidas: 0/50
+        </div>
+
+        <div id="examMissing">
+            Sin responder: 50
+        </div>
+
+        <select id="subjectFilter">
+
+            <option value="all">
+                Todas las asignaturas
+            </option>
+
+            <option value="normativa">
+                Normativa
+            </option>
+
+            <option value="crm">
+                CRM
+            </option>
+
+            <option value="mercancias">
+                Mercancías Peligrosas
+            </option>
+
+            <option value="seguridad">
+                Seguridad
+            </option>
+
+            <option value="emergencias">
+                Emergencias
+            </option>
+
+            <option value="primeros_auxilios">
+                Primeros Auxilios
+            </option>
+
+            <option value="factores_humanos">
+                Factores Humanos
+            </option>
+
+            <option value="supervivencia">
+                Supervivencia
+            </option>
+
+        </select>
 
         <div class="progress-container">
             <div id="progress-bar"></div>
@@ -42,14 +97,30 @@
 
     </div>
 
-    <h3 id="counter">Cargando...</h3>
+    <h3 id="counter">
+        Cargando...
+    </h3>
 
-    <h2 id="question">Cargando pregunta...</h2>
+    <h2 id="question">
+        Cargando pregunta...
+    </h2>
 
     <div id="answers"></div>
 
-    <button id="nextBtn">
-        Siguiente →
+    <div class="navigation-buttons">
+
+        <button id="prevBtn">
+            ← Anterior
+        </button>
+
+        <button id="nextBtn">
+            Siguiente →
+        </button>
+
+    </div>
+
+    <button id="finishExamBtn">
+        🏁 Finalizar examen
     </button>
 
     <div id="result"></div>
@@ -58,7 +129,9 @@
 
     <div id="examResult">
 
-        <h2>Simulacro finalizado</h2>
+        <h2>
+            Simulacro finalizado
+        </h2>
 
         <div id="examScore"></div>
 
@@ -70,7 +143,9 @@
 
     <div id="examHistory">
 
-        <h2>Historial de simulacros</h2>
+        <h2>
+            Historial de simulacros
+        </h2>
 
         <div id="historyList">
             No hay simulacros realizados.
