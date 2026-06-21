@@ -611,6 +611,49 @@ function finishExam() {
 
     const passed =
         percent >= 75;
+    
+    let failedQuestionsHtml = '';
+
+    examQuestions.forEach((question, idx) => {
+
+        if (
+            examAnswers[idx] !==
+            question.correct
+        ) {
+
+            const selectedAnswer =
+                examAnswers[idx] !== undefined
+                    ? question.options[
+                        examAnswers[idx]
+                    ]
+                    : 'Sin responder';
+
+            const correctAnswer =
+                question.options[
+                    question.correct
+                ];
+
+            failedQuestionsHtml += `
+                <div class="failed-question">
+
+                    <strong>
+                        ${question.question}
+                    </strong>
+
+                    <br><br>
+
+                    ❌ Tu respuesta:
+                    ${selectedAnswer}
+
+                    <br>
+
+                    ✅ Correcta:
+                    ${correctAnswer}
+
+                </div>
+            `;
+        }
+    });
 
     const history =
         JSON.parse(
@@ -892,49 +935,4 @@ if (
 // --- INICIO ---
 
 renderExamHistory();
-
-let failedQuestionsHtml = '';
-
-examQuestions.forEach((question, idx) => {
-
-    if (
-        examAnswers[idx] !==
-        question.correct
-    ) {
-
-        const selectedAnswer =
-            examAnswers[idx] !== undefined
-                ? question.options[
-                    examAnswers[idx]
-                ]
-                : 'Sin responder';
-
-        const correctAnswer =
-            question.options[
-                question.correct
-            ];
-
-        failedQuestionsHtml +=
-        `
-        <div class="failed-question">
-
-            <strong>
-                ${question.question}
-            </strong>
-
-            <br><br>
-
-            ❌ Tu respuesta:
-            ${selectedAnswer}
-
-            <br>
-
-            ✅ Correcta:
-            ${correctAnswer}
-
-        </div>
-        `;
-    }
-});
-
 loadQuestions();
