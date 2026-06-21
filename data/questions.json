@@ -9666,11 +9666,11 @@
     "question": "El código internacional utilizado en el manifiesto de pasajeros para identificar a un pasajero con movilidad reducida severa, que está completamente incapacitado para moverse y requiere ser transportado en silla hasta su asiento de la cabina es:",
     "options": [
       "WCHR.",
-      "WCHS. [X] D. WCHC (Wheelchair Cabin). D. BLND. 19. Un pasajero al que las autoridades gubernamentales le han denegado formalmente la entrada a un país y debe ser devuelto a su punto de origen en un vuelo comercial se identifica con las siglas: A. DEPA. B. DEPU.",
+      "WCHC.",
       "UM.",
       "INAD (Inadmissible Passenger)."
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": ""
   },
   {
