@@ -12528,5 +12528,3631 @@
     ],
     "correct": 2,
     "explanation": ""
+  },
+  {
+    "id": "TCP-0896",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es IATA?",
+    "options": [
+      "La Asociación Internacional de Transporte Aéreo.",
+      "La Institución Americana de Transporte Aéreo.",
+      "El Instituto de Aviación y Transporte Aeronáutico.",
+      "La Asociación Internacional de Transporte Americano"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0897",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EASA y AESA son respectivamente autoridades en materia de seguridad:",
+    "options": [
+      "En Europa y España.",
+      "En Europa y América.",
+      "A nivel mundial y en España.",
+      "Únicamente en España."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0898",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué sistema del avión proporciona la presurización interior de la cabina",
+    "options": [
+      "Sistema neumático.",
+      "Sistema hidráulico.",
+      "Sistema eléctrico.",
+      "Sistema de aire acondicionado."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0899",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El Certificado de Tripulante de Cabina de Pasajeros se emitirá por un período máximo de …",
+    "options": [
+      "Un año.",
+      "Tres años.",
+      "No tiene fecha de caducidad, estará vigente tres años desde la última hora de vuelo o emisión de este.",
+      "No tiene fecha de caducidad, estará vigente cinco años desde la última hora de vuelo o emisión de este."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0900",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El límite de horas de vuelo es de…",
+    "options": [
+      "1100 horas en un año natural.",
+      "100 horas en 28 días.",
+      "80 horas en 28 días.",
+      "120 horas en 28 días."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0901",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué entendemos por fases críticas del vuelo?",
+    "options": [
+      "En tierra, las operaciones de despegue y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10.000 pies.",
+      "En tierra, las operaciones de rodaje y despegue y, en vuelo, las operaciones realizadas con las señales de “abróchense el cinturón” encendidas.",
+      "En tierra, las operaciones de rodaje, despegue y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10.000 pies y con las señales de “abróchense el cinturón” encendidas.",
+      "En tierra, las operaciones de rodaje y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10.000 pies y con las señales de “abróchense el cinturón” encendidas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0902",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las superficies auxiliares que se encuentran alojadas en el borde de ataque del ala, y que es un elemento hipersustentador, se denomina:",
+    "options": [
+      "Flaps.",
+      "Slats.",
+      "Spoilers.",
+      "Alerones."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0903",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De entre los instrumentos básicos del avión, el altímetro es un instrumento que mide:",
+    "options": [
+      "El régimen de velocidad vertical.",
+      "La variación de velocidad en crucero.",
+      "El régimen de variación de potencia de motores.",
+      "La altitud a la que vuela un avión."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0904",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué explica el teorema de Bernoulli acerca de la presión y la velocidad?",
+    "options": [
+      "Si disminuye la presión, disminuye la velocidad.",
+      "Si aumenta la densidad, disminuye la presión.",
+      "Si aumenta la presión, aumenta la velocidad.",
+      "Si disminuye la presión, aumenta la velocidad."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0905",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El engelamiento de una aeronave puede generar:",
+    "options": [
+      "Pérdida de potencia en los motores y disminución de la sustentación.",
+      "No es una circunstancia a tener en cuenta.",
+      "Incomodidad para los pasajeros por un descenso de la temperatura en cabina.",
+      "Hipoxia entre los pasajeros y la tripulación."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0906",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El elemento fundamental para que se produzca la sustentación de una aeronave es:",
+    "options": [
+      "La potencia que generan los motores.",
+      "El conjunto de la aeronave.",
+      "El ala.",
+      "La velocidad."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0907",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La atmósfera contiene…",
+    "options": [
+      "Un 21% de oxígeno.",
+      "Un 33% de oxígeno.",
+      "Un 50% de oxígeno.",
+      "Un 75% de oxígeno."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0908",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de fuego, ¿cuál es el tripulante que debe localizar el origen y atacarlo inmediatamente?",
+    "options": [
+      "El Sobrecargo.",
+      "El comandante.",
+      "El TCP que lo descubre en primer lugar.",
+      "El TCP responsable de la zona afectada."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0909",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué material en caso de enfrentarnos con un fuego eléctrico, utilizaremos líquidos no inflamables tras haber descargado un extintor?",
+    "options": [
+      "Cableado del avión.",
+      "C.B de los galleys.",
+      "Baterías de litio.",
+      "Sistema de entretenimiento de los aviones."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0910",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué anexo de la OACI se refiere a las MMPP?",
+    "options": [
+      "Anexo 18.",
+      "Anexo 17.",
+      "Anexo 19.",
+      "Anexo 12."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0911",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿De qué color son las etiquetas de la clase 1?",
+    "options": [
+      "Blanca.",
+      "Rojo.",
+      "Naranja.",
+      "Verde"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0912",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué reflejan las clases en que se dividen las mercancías peligrosas?",
+    "options": [
+      "Corresponden a capítulos de las Instrucciones técnicas.",
+      "El riesgo que representan.",
+      "Cómo deben ser manipuladas de forma segura.",
+      "Su número atómico."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0913",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Completa la frase: “El hielo seco es una sustancia considerada mercancía peligrosa”…",
+    "options": [
+      "Cuyo uso está prohibido en la aviación comercial.",
+      "De clase 1.",
+      "Cuyo transporte por vía aérea está permitido a los pasajeros para la conservación de productos perecederos.",
+      "Que los pasajeros pueden transportar siempre que el embalaje no permita la salida del dióxido de carbono."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0914",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "“(…) Combinación de medidas, medios humanos, recursos materiales para proteger la aviación civil de actos de interferencia ilícita (…)” corresponde con la definición de:",
+    "options": [
+      "Aviation Safety.",
+      "Actos de interferencia ilícita.",
+      "Zona restringida de seguridad.",
+      "Aviation Security."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0915",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Entre otros, ¿a quién afecta la normativa de seguridad?",
+    "options": [
+      "Solamente a los empleados de líneas aéreas a las Fuerzas y Seguridad del Estado.",
+      "Solamente a los pasajeros y trabajadores de las compañías aéreas.",
+      "Solamente a las empresas de carga y mantenimiento.",
+      "A los empleados de líneas aéreas y a las empresas de carga."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0916",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Señala el orden correcto de nuestras prioridades en una situación de supervivencia:",
+    "options": [
+      "Localización, comida, agua, protección.",
+      "Comida, agua, protección, localización.",
+      "Protección, localización, agua, comida.",
+      "Agua, localización, protección, comida."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0917",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El código de señal tierra-aire con la letra “V” significa:",
+    "options": [
+      "Necesitamos ayuda.",
+      "Sí o afirmativo.",
+      "No o negativo.",
+      "Necesitamos ayuda médica."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0918",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Durante una situación de supervivencia los TCP deben:",
+    "options": [
+      "Establecer liderazgo.",
+      "Permitir que sean los pasajeros quienes organicen la situación.",
+      "Actuar rápidamente.",
+      "No es necesario que los TCP actúen ya que ya no están dentro del avión."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0919",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A qué tipo de PMR hacen referencia las siglas BLND?",
+    "options": [
+      "Pasajero en camilla.",
+      "Caso médico.",
+      "Pasajero invidente.",
+      "Pasajero sordo."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0920",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué entendemos por cabina de vuelo estéril?",
+    "options": [
+      "Cuando no es posible el acceso a la cabina de vuelo.",
+      "Cuando la comunicación entre cockpit y TCP se limita a la información relativa a la seguridad operacional.",
+      "Cuando el acceso a la cabina de vuelo está limitado.",
+      "Cuando se ha precintado el acceso a la cabina de vuelo."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0921",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sillas de ruedas, señale la afirmación correcta:",
+    "options": [
+      "WCHC (cabin), pasajeros privados de movilidad y no autosuficientes, deben ser acompañados a su asiento.",
+      "WCHR (ramp), pasajeros privados de movilidad y no autosuficientes, deben ser acompañados a su asiento.",
+      "WCHS (stair), pasajeros privados de movilidad y no autosuficientes, deben ser acompañados a su asiento.",
+      "WCHC (cabin), pasajeros que necesitan asistencia para subir y bajar escaleras."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0922",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Puede interrumpirse una evacuación de emergencia una vez iniciada?",
+    "options": [
+      "Sí, siempre.",
+      "No, nunca.",
+      "Siempre que lo ordene el comandante.",
+      "Siempre que lo ordene un miembro de la tripulación."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0923",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las rampas de evacuación de los aviones:",
+    "options": [
+      "Se arman en el momento que se recibe la necesidad de evacuar.",
+      "Disponen de un tirador de inflado manual en caso de fallo del sistema automático.",
+      "Sólo se inflan si se arman en cockpit previamente.",
+      "Disponen de un botón verde para inflar la rampa."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0924",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Tras una emergencia ¿hasta cuándo se mantendrá la postura de impacto?",
+    "options": [
+      "Hasta que hay pasado el primer impacto.",
+      "Hasta que el avión se haya parado completamente.",
+      "Hasta que se apague la señal de cinturones.",
+      "Hasta que se enciendan las luces de emergencia."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0925",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de una evacuación en tierra, los TCP ordenarán a los pasajeros que abandonen el avión a través de los planos",
+    "options": [
+      "Por el borde de escape.",
+      "Por el borde de salida.",
+      "Por el borde de fuga.",
+      "Por el borde de ataque."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0926",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se activa el flujo de oxígeno de los generadores de O2 de la cabina?",
+    "options": [
+      "Tirando de una de las mascarillas.",
+      "Tirando de las 4 mascarillas.",
+      "Se activa desde cockpit.",
+      "Con el MRT."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0927",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Entendemos por hipoxia en sentido estricto:",
+    "options": [
+      "Al déficit de oxígeno a nivel celular y tisular.",
+      "A la disminución de oxígeno en el ambiente atmosférico.",
+      "A la disminución de la presión parcial de oxígeno en los alveolos.",
+      "A la dificultad respiratoria producida por la baja presión atmosférica."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0928",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué pasos se deben llevar a cabo durante una reanimación cardiopulmonar en un adulto?",
+    "options": [
+      "Realizar 30 compresiones torácicas, seguidas de 2 insuflaciones boca a boca.",
+      "Compruebe el pulso.",
+      "Coloque al paciente en posición vertical.",
+      "Coloque al paciente en posición lateral de seguridad."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0929",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La maniobra de Heimlich se utiliza en caso de…?",
+    "options": [
+      "La introducción de sonda vesical.",
+      "Como medida de desinfección.",
+      "Que un pasajero esté inconsciente.",
+      "De obstrucción total de la vía aérea por un cuerpo extraño."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0930",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si una persona ha sufrido una lipotimia o mareo, en qué postura le colocaremos?",
+    "options": [
+      "Decúbito lateral izquierdo.",
+      "Posición lateral derecho.",
+      "Decúbito prono.",
+      "Decúbito supino con piernas elevadas."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0931",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Señala los síntomas de la epilepsia:",
+    "options": [
+      "Fiebre y dolor de cabeza.",
+      "Dolor abdominal.",
+      "Rigidez, convulsiones, pérdida de conciencia.",
+      "Dolor de oídos."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0932",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica los síntomas producidos por un ataque al corazón:",
+    "options": [
+      "Pérdida de consciencia.",
+      "Convulsiones y dolor abdominal.",
+      "Dolor u opresión en el pecho, sudoración, disnea, ansiedad y palidez entre otros…",
+      "Solo dolor abdominal."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0933",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los barotraumatismos son:",
+    "options": [
+      "Lesiones producidas por aire atrapado en cavidades semicerradas.",
+      "Lesiones producidas por el déficit de oxígeno tisular.",
+      "Lesiones producidas en cavidades que contienen líquidos corporales.",
+      "Lesiones producidas por politraumatismos."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0934",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de una despresurización explosiva nuestra primera acción será:",
+    "options": [
+      "Administrar oxígeno al comandante inmediatamente.",
+      "Obtener oxígeno para evitar la hipoxia.",
+      "Ayudar a los pasajeros.",
+      "Bloquear los lavabos."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0935",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo está indicada la maniobra de Valsalva?",
+    "options": [
+      "En caso de mareo.",
+      "En caso de insuficiencia respiratoria.",
+      "En descenso si sentimos molestias en el oído.",
+      "En caso de vómitos."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0936",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fuerza de la sustentación sobre un aeroplano en vuelo es producida:",
+    "options": [
+      "Cuando la velocidad en el extradós es mayor que en el intradós.",
+      "Cuando la velocidad en el intradós es mayor que en el extradós.",
+      "Por la forma alargada de las alas.",
+      "Por la potencia de los motores."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0937",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica como se llama la parte señalada en el dibujo:",
+    "options": [
+      "Slat.",
+      "Flaps.",
+      "Spoiler.",
+      "Cuerda"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0938",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La normativa de actividad y descanso que afecta a las tripulaciones de:",
+    "options": [
+      "El Manual de Operaciones de la compañía.",
+      "EL CCOM.",
+      "La Subparte Q de las EU-OPS.",
+      "El reglamento ORO-FTL."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0939",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De acuerdo con las reglas establecidas referentes al número y composición de las tripulaciones de cabina de pasajeros que conformarán la tripulación de la aeronave:",
+    "options": [
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 asientos de pasajeros o fracción de 50.",
+      "En casos excepcionales, la Autoridad no podrá exigir a un operador que aumente el número de miembros de la tripulación de cabina de pasajeros.",
+      "Nunca se podrá reducir el número mínimo exigido de miembros de la tripulación de cabina de pasajeros, aunque algún TCP caiga incapacitado.",
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 pasajeros que en el vuelo ese día."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0940",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El curso de entrenamiento periódico de los TCP dentro del operador se hará como máximo en un plazo de:",
+    "options": [
+      "8 meses.",
+      "10 meses.",
+      "9 meses.",
+      "12 meses."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0941",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sí te activan un STBY, ¿cómo se llamaría el periodo, desde que te llaman hasta que finalizas tu servicio como TCP?",
+    "options": [
+      "Periodo de actividad.",
+      "Duty hour.",
+      "imaginaria.",
+      "Block Hour."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0942",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las coordenadas de latitud se miden respecto a:",
+    "options": [
+      "Los polos.",
+      "El Ecuador.",
+      "Meridiano de Greenwich.",
+      "Local, desde el que se está midiendo."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0943",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "(…) “Combinación de medidas, medios humanos, recursos materiales para proteger la aviación civil de interferencia ilícita (…)”, corresponde con la definición de:",
+    "options": [
+      "Aviation Safety.",
+      "Actos de interferencia ilícita.",
+      "Zona restringida de seguridad.",
+      "Aviation Security."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0944",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las zonas restringidas de seguridad:",
+    "options": [
+      "Son de acceso libre.",
+      "Es la terminal de los pasajeros.",
+      "Control de seguridad.",
+      "Control de seguridad más estricto."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0945",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué requisitos se deben cumplir para ser sobrecargo en una compañía aérea?",
+    "options": [
+      "Llevar más de tres años en la compañía y haber pasado un curso específico.",
+      "Llevar más de un año ejerciendo como TCP y haber superado un curso específico con su correspondiente verificación.",
+      "Llevar más de un año en la compañía y tener buenas evaluaciones.",
+      "Cumplir los requisitos que la compañía establezca después de haber volado como mínimo dos años."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0946",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipos de turbulencias se pueden dar durante el crucero de un vuelo?",
+    "options": [
+      "Light o severa.",
+      "Ligera a moderada y severa - fuerte.",
+      "Ligera y fuerte.",
+      "Fuerte y severa."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0947",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica las acciones en caso de fuego en una batería de litio",
+    "options": [
+      "Mover el dispositivo electrónico.",
+      "Echar hielo sobre el aparato y desconectar.",
+      "Alejar a los pasajeros de la zona afectada, apagar el fuego y enfriar el dispositivo con agua o líquidos no inflamables.",
+      "Extinguir el fuego y nunca echar agua al ser un aparato eléctrico."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0948",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuando hablamos de la gran decisión nos referimos a…",
+    "options": [
+      "Abandonar el avión tras haber pasado 48h del impacto o la duración de las radiobalizas.",
+      "Dejar a los heridos junto a los restos de la aeronave y partir en busca de ayuda.",
+      "Organizarse en grupos y nombrar un líder.",
+      "Determinar las rutas y organizar los grupos para ir en busca de ayuda."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0949",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En una turbulencia, ¿qué asegura el TCP, en la cabina de los pasajeros?",
+    "options": [
+      "Asegura que los pasajeros tengan los cinturones de seguridad abrochados, mesita plegada y reposabrazos bajados.",
+      "Asegura que los pasajeros tengan los cinturones de seguridad abrochados, mesita plegada, reposabrazos bajados y aparatos electrónicos pesados apagados y asegurados.",
+      "Asegura que los pasajeros tengan el cinturón de seguridad abrochado, aparatos electrónicos pesados apagados y asegurados, racks cerrados. Se pondrá el anuncio correspondiente al pasaje.",
+      "Asegura que los pasajeros tengan el cinturón abrochado y los aparatos electrónicos tanto ligeros como pesados apagados."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0950",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los aviones comerciales están certificados para ser evacuados en:",
+    "options": [
+      "90 segundos utilizando todas las salidas de emergencia disponibles.",
+      "90 segundos utilizando la mitad de las puertas de emergencia.",
+      "120 segundos utilizando todas las salidas de emergencia disponibles.",
+      "120 segundos utilizando la mitad de las puertas de emergencia."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0951",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo es obligatorio evacuar?",
+    "options": [
+      "En amerizaje siempre.",
+      "En cualquier situación.",
+      "En una imprevista.",
+      "En caso de que lo ordene el sobrecargo."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0952",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de humo en cabina, ¿Podrán desplegarse las mascarillas de oxígeno de la cabina de pasajeros?",
+    "options": [
+      "Si, ya que así los pasajeros podrán protegerse del humo.",
+      "No, nunca.",
+      "Si, lo harán los pilotos desde el panel de oxígeno de Cockpit “mask man on”",
+      "Si, los TCPs lo activaran desde el FAP."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0953",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En una despresurización explosiva, la primera acción a tomar por parte de los TCP:",
+    "options": [
+      "Coger una mascarilla de oxígeno.",
+      "Adoptar postura de seguridad y prepararse para el descenso de emergencia.",
+      "Sentarse en un asiento y esperar ordenes de Cockpit.",
+      "Entrar inmediatamente en cockpit para asegurarnos que tengan las máscaras colocadas."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0954",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Chequeo pre-vuelo de botellas de oxígeno.",
+    "options": [
+      "Manómetro nunca por debajo de 500 PSI, asa transportadora y anclaje.",
+      "Manómetro nunca por debajo de 1500 PS, asa transportadora y anclaje.",
+      "Sólo hay que chequear que el manómetro esté en zona verde.",
+      "Manómetro nunca por debajo de los 2300 PSI, asa transportadora y anclaje."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0955",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cúal es la primera acción a tomar por parte de los TCPs antes de evacuar?",
+    "options": [
+      "Entrar en cockpit y seguir instrucciones.",
+      "Chequear que todos mis compañeros estén bien.",
+      "Chequear condiciones exteriores.",
+      "Abrir la puerta para evacuar lo antes posible."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0956",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Postura de protección cuando vamos en sentido contrario en un jump seat:",
+    "options": [
+      "Agacharse y agarrarse los tobillos.",
+      "Mentón pegado al pecho y las manos agarrando la cabeza.",
+      "Cabeza pegada al respaldo del jump seat.",
+      "Mentón pegado al pecho y las manos debajo de las piernas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0957",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es la heaving line?",
+    "options": [
+      "Cuerda para asegurar una línea de amarre de una balsa, con un pequeño peso en un extremo.",
+      "La respuesta a es correcta añadiendo que con el acercamiento de las balsas, se puede formar una flotilla muy recomendada para la supervivencia.",
+      "Es una cuerda situada en cockpit que sirve para que los pilotos evacuen la aeronave.",
+      "Es una cuerda situada en la bodega de la aeronave, con el objetivo de asegurar la carga durante el vuelo."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0958",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Se puede facturar munición deportiva?",
+    "options": [
+      "No, está prohibido.",
+      "Si, siempre facturada y con la etiqueta ZZ.",
+      "Se puede facturar, pero también están permitidos a bordo con un permiso de la compañía y aprobado por la Autoridad.",
+      "Si, puede ir facturada en una maleta, siempre que el cargador vaya separado del arma."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0959",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿De que color es la etiqueta que indica “sustancia que al contacto con el agua desprende gases inflamables?",
+    "options": [
+      "Azul.",
+      "Naranja.",
+      "Roja.",
+      "Verde."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0960",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Completa la frase: “El hielo seco es una sustancia considerada mercancía peligrosa…”",
+    "options": [
+      "Cuyo uso está prohibido en la aviación comercial.",
+      "De clase 1.",
+      "Cuyo transporte por vía aérea está permitido a los pasajeros para la conservación de productos perecederos.",
+      "Que los pasajeros no puedan transportar."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0961",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las etiquetas de Mercancías peligrosas pueden ser de dos clases:",
+    "options": [
+      "De clase y división.",
+      "De grupo y transporte.",
+      "De manipulación y riesgo.",
+      "De manipulación y transporte."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0962",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Hablando de Mercancías Peligrosas, ¿de qué color son las etiquetas de clase 1?",
+    "options": [
+      "Blanca.",
+      "Rojo.",
+      "Naranja.",
+      "Verde."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0963",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo podemos prevenir la fiebre amarilla?",
+    "options": [
+      "A través de una vacuna que protege durante 10 años.",
+      "A través de una quimioprofilaxis suministrada por pastillas.",
+      "Únicamente tomando medidas higiénicas y de protección.",
+      "No hay forma de prevenirla"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0964",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sí un pasajero se queja de dolor torácico irradiado al brazo izquierdo acompañado de signos vegetativos como mareos, sudoración y palidez, puede estar padeciendo:",
+    "options": [
+      "Un cuadro de hiperventilación.",
+      "Un ataque de histeria.",
+      "Un infarto agudo de miocardio.",
+      "Una úlcera de duodeno complicada."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0965",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué debemos hacer en caso de que un paciente sufra una hemorragia?",
+    "options": [
+      "Administrar medicación del First Aid Kit (FAK).",
+      "Aplicar presión directa hasta que la hemorragia ceda y no retirar las gasas.",
+      "Abrir inmediatamente el EMK.",
+      "Colocar al paciente en la posición lateral de seguridad."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0966",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La hiperventilación se produce:",
+    "options": [
+      "Aumento de CO2 en sangre.",
+      "Aumento de N2 en sangre.",
+      "Disminución de CO2 en sangre.",
+      "Disminución de N2 en sangre."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0967",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Dónde se encuentra la Trompa de Eustaquio?",
+    "options": [
+      "En el oído interno.",
+      "En el oído externo.",
+      "Fosas nasales.",
+      "En el oído medio."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0968",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las siglas ABC, en el protocolo de actuación en caso de primeros auxilios, significa:",
+    "options": [
+      "Ver, oír, sentir.",
+      "Ver, actuar, llamar emergencia.",
+      "Ver, oír, actuar.",
+      "Oír, ver, sobrevivir."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0969",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué pasos se deben llevar a cabo durante una reanimación cardiopulmonar?",
+    "options": [
+      "Realizar 30 compresiones torácicas, seguidas de 2 insuflaciones boca a boca.",
+      "Compruebe el pulso.",
+      "Coloque el paciente en posición vertical.",
+      "Coloque al paciente en posición lateral de seguridad."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0970",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La amenaza principal en caso de un amerizaje es:",
+    "options": [
+      "El cansancio.",
+      "La falta de agua dulce.",
+      "Los tiburones.",
+      "La hipotermia."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0971",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de catástrofe aérea, ¿a partir de cuántas horas viajamos en busca de ayuda?",
+    "options": [
+      "24 horas.",
+      "72 horas.",
+      "Lo que se considere oportuno.",
+      "48 horas."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0972",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Tras un amerizaje pudiendo usar rampas-balsas:",
+    "options": [
+      "Se debe lanzar el ancla y colocar el toldo de la balsa cuanto antes.",
+      "Mantener el suelo de la balsa seco no es tan importante.",
+      "Es recomendable beber agua salada.",
+      "Se deben lanzar bengalas cada 2 horas."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0973",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Lo primero que hará el TCP durante el “TUC” (Tiempo de consciencia útil) será:",
+    "options": [
+      "Obtener oxígeno para la compañera más cercana.",
+      "Ponerle inmediatamente O2 al comandante.",
+      "Obtener O2 para evitar la incapacitación por hipoxia.",
+      "Mejor no poner oxígeno a los pasajeros para evitar que se tranquilicen."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0974",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El tipo de hipoxia más frecuente en el medio aéreo:",
+    "options": [
+      "Histotóxica.",
+      "Anemia.",
+      "Hipóxica.",
+      "Por estancamiento"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0975",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es el ámbito de la OACI?",
+    "options": [
+      "Nacional",
+      "Europeo",
+      "Mundial",
+      "Estados Unidos"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0976",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La OACI tiene su origen en el Convenio para la Aviación Civil Internacional firmado en:",
+    "options": [
+      "Varsovia en el año 1929",
+      "Roma, en el año 1952",
+      "Conferencia de Chicago, en el año 1944",
+      "Conferencia de Yalta, en el año 1945"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0977",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fuerza de la sustentación sobre un aeroplano en vuelo es:",
+    "options": [
+      "Cuando la velocidad en el extradós es mayor que en el intradós",
+      "Cuando la velocidad en el intradós es mayor que en el extradós",
+      "Por la forma alargada de las alas",
+      "Por la potencia de los motores"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0978",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué entendemos por tripulación reforzada?",
+    "options": [
+      "Aquella formada por tripulantes adicionales",
+      "Aquella formada por tripulantes requeridos",
+      "Aquella por tripulantes extra",
+      "Aquella formada por tripulantes de servicio"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0979",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Como regla general, el despegue se hará:",
+    "options": [
+      "En la misma dirección del viento",
+      "A favor del viento, si nos encontramos en el hemisferio norte",
+      "En contra del viento",
+      "En contra del viento si nos encontramos en el hemisferio norte"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0980",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A qué nos referimos cuando hablamos de cizalladura (WINDSHEAR)?",
+    "options": [
+      "A un equipo del avión para apertura de lugares inaccesibles",
+      "A una variante del plano inclinado de un paralelo con el ecuador",
+      "Un cambio brusco y repentino de la dirección e intensidad del viento, tanto en el plano horizontal como en el vertical",
+      "A aquella turbulencia que se produce en la atmósfera sin estar asociada a nubes convectivas Opción 5"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0981",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La capa de la atmósfera donde normalmente tienen lugar los fenómenos meteorológicos es:",
+    "options": [
+      "Estratosfera",
+      "Tropopausa",
+      "Troposfera",
+      "Mesosfera"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0982",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los movimientos del avión se realizan en torno a tres ejes, produciéndose tres tipos de movimientos en la aeronave, ¿cuáles son dichos movimientos?",
+    "options": [
+      "Horizontal, oblicuo, transversal",
+      "Guiñada, longitudinal, vertical",
+      "Avance, giro, estabilización",
+      "Guiñada, alabeo, cabeceo"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0983",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El número mach es una medida de velocidad que indica la velocidad del avión:",
+    "options": [
+      "Respecto al suelo",
+      "En relación con la atmósfera",
+      "En relación con la del sonido",
+      "En relación con la de la luz"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0984",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué material en un fuego eléctrico, utilizaremos líquidos no inflamables tras haber descargado un extintor?",
+    "options": [
+      "Cableado del avión",
+      "C.B. de los galleys",
+      "Baterías de litio",
+      "Sistema de entretenimiento de los aviones"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0985",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La reglamentación sobre MMPP de la IATA, es un manual basado en: *",
+    "options": [
+      "El Real decreto 30072008",
+      "La circular operativa 30/01/1994 sobre MMPP",
+      "El Convenio de Varsovia",
+      "Las instrucciones técnicas de la OACI"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0986",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Hablando de MMPP, ¿de qué color son las etiquetas de la clase 1?",
+    "options": [
+      "Blanca",
+      "Rojo",
+      "Naranja",
+      "Verde"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0987",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Completa la frase: “El hielo seco es una sustancia considerada mercancía peligrosa” *",
+    "options": [
+      "Cuyo uso está prohibido en la aviación comercial",
+      "De clase 1",
+      "Cuyo transporte por vía aérea está permitido a los pasajeros para la conservación de productos perecederos",
+      "Que los pasajeros no pueden transportar"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0988",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Durante una situación de supervivencia los TCPs deben: *",
+    "options": [
+      "Establecer liderazgo",
+      "Permitir que sean los pasajeros quienes organicen la situación",
+      "Actuar rápidamente sin considerar los recursos",
+      "No es necesario que los TCPs actúen ya que ya no están dentro del avión"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0989",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuando hablamos de señal de protección en situación de emergencia, ¿a qué nos referimos?",
+    "options": [
+      "A la señal convenida para comenzar la instrucción a los PMRs",
+      "A la señal convenida para la evacuación",
+      "A la señal convenida con el Comandante para adoptar la postura de protección",
+      "A la señal convenida para comenzar la instrucción a los ABPs"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0990",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El briefing de la tripulación:",
+    "options": [
+      "Es un manual disponible en las oficinas del operador con carácter consultivo",
+      "Es una reunión previa al vuelo donde se repasan aspectos relacionados con la seguridad y el servicio",
+      "Es una reunión que se programa a cada tripulante periódicamente",
+      "Es un informe que se realiza después de cada vuelo"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0991",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Puede interrumpirse una evacuación de emergencia una vez iniciado?",
+    "options": [
+      "Sí, siempre",
+      "No, nunca",
+      "Siempre que lo ordene el comandante",
+      "Siempre que lo ordene un miembro de la tripulación"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0992",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La maniobra de Heimlich se utiliza en caso de …",
+    "options": [
+      "La introducción de sonda vesical",
+      "Como medida de desinfección",
+      "Que un pasajero esté inconsciente",
+      "Obstrucción total de la vía aérea por un cuerpo extraño"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0993",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los barotraumatismos son lesiones producidas:",
+    "options": [
+      "Por aire atrapado en cavidades semicerradas",
+      "Por el déficit de oxígeno tisular",
+      "En cavidades que contienen líquidos corporales",
+      "Por politraumatismos"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0994",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica el tratamiento correcto en caso de hiperventilación:",
+    "options": [
+      "Calmar al pasajero e indicarle que respire con normalidad",
+      "Administrar O2 al pasajero",
+      "Animar al pasajero a respirar más rápido",
+      "Asegurarse de conectar la mascarilla en HI antes de administrar O2"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0995",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se llama la línea imaginaria que atraviesa la tierra de polo a polo, alrededor de la cual se realiza un movimiento? *",
+    "options": [
+      "Ecuador",
+      "Eje",
+      "Paralelo",
+      "Eclíptica"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0996",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La definición de “...Distancia angular que hay desde un punto de la superficie terrestre de la Tierra hasta el paralelo del ecuador….” corresponde a: *",
+    "options": [
+      "Latitud",
+      "Longitud",
+      "Meridiano",
+      "Hemisferio"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0997",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A cuanto equivale una milla náutica? *",
+    "options": [
+      "1852m",
+      "1609m",
+      "3,3km",
+      "1000m"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0998",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De entre los instrumentos básicos de un avión, el altímetro es un instrumento que mide: *",
+    "options": [
+      "El régimen de velocidad vertical",
+      "La variación de velocidad en crucero",
+      "El régimen de variación de potencia de motores",
+      "La altitud a la que vuela un avión"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0999",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En un aeropuerto, ¿Cuál de estas zonas corresponde al lado aire? *",
+    "options": [
+      "Terminal de pasajeros",
+      "Terminal de carga",
+      "Zona industrial",
+      "Área de rodadura"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1000",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A que nos referimos cuando hablamos de cizalladura (windshear)? *",
+    "options": [
+      "A un equipo del avión para apertura de lugares inaccesibles",
+      "A una variante del plano inclinado de un paralelo con el ecuador",
+      "Un cambio brusco y repentino de la dirección e intensidad del viento, tanto en el plano horizontal como en el vertical",
+      "Al perímetro de un circulo máximo"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1001",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se clasifica la turbulencia en sus diferentes niveles? *",
+    "options": [
+      "Débil, moderada, fuerte",
+      "Débil, moderada, fuerte o severa",
+      "Débil, moderada, fuerte o muy fuerte",
+      "Inapreciable, débil o fuerte"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1002",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las partes de una rampa de evacuación en una puerta son: *",
+    "options": [
+      "Barra de sujeción, válvula Venturi, tirador de inflado y tirador de separación",
+      "Válvula Venturi, tirador de inflado y barra de separación",
+      "Tirador de inflado, tirador de apertura y tirador de separación",
+      "Válvula Venturi, tirador de inflado, barra de separación y tirador de apertura"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1003",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es la altura para que una salida de emergencia venga dotada con una rampa de evacuación? *",
+    "options": [
+      "5 pies (1,53m)",
+      "6 pies (1,53m)",
+      "6 pies (1,83m)",
+      "5 pies (1,83m)"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1004",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EASA y AESA son respectivamente autoridades en materia de seguridad: *",
+    "options": [
+      "En Europa y España",
+      "En América y la UE",
+      "A nivel mundial y en España",
+      "Únicamente en Europa"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1005",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El convenio sobre aviación civil internacional consta de: *",
+    "options": [
+      "15 anexos",
+      "19 anexos",
+      "16 anexos",
+      "21 anexos"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1006",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De acuerdo con las normas establecidas referentes al número y composición de las tripulaciones de cabina de pasajeros que conformarán la tripulación de una aeronave…: *",
+    "options": [
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 asientos de pasajeros o fracción de 50",
+      "En casos excepcionales, la autoridad no podrá exigir a un operador que aumente el número de miembros de la tripulación de cabina de pasajeros",
+      "Nunca se podrán reducir el número mínimo exigido de miembros de la tripulación de cabina de pasajeros aunque algún TCP caiga incapacitado",
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 pasajeros que haya en el vuelo de ese día"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1007",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La normativa de actividad y descanso que afecta a las tripulaciones se recoge entre otros documentos: *",
+    "options": [
+      "El manual de operaciones de la compañía",
+      "El CCOM",
+      "La Subparte Q de la EU ‐ OPS",
+      "El reglamento ORO.FTL"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1008",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El estado en el que el ritmo circadiano esta sincronizado con la zona horaria en la que se encuentra, se denomina: *",
+    "options": [
+      "Periodo de actividad",
+      "Sincronización horaria",
+      "Horario irregular",
+      "Aclimatado"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1009",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Durante el repostado de combustible con pasaje a bordo, los pasajeros deberán: *",
+    "options": [
+      "Permanecer sentados con los cinturones de seguridad abrochados",
+      "Levantarse para estar más cómodos, sobre todo en escalas largas",
+      "Permanecer sentados, con los cinturones de seguridad desabrochados y no utilizar aparatos electrónicos",
+      "No se puede repostar combustible con pasaje a bordo en ninguna circunstancia"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1010",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuáles son los puntos del briefing correlativos que le daría el comandante al sobrecargo en una emergencia prevista: *",
+    "options": [
+      "Lugar de aterrizaje, tiempo para el aterrizaje, tipo de emergencia, señal convenida de evacuación e instrucciones especiales",
+      "Tipo de emergencia, tiempo estimado para la llegada, lugar de aterrizaje, señal convenida e instrucciones especiales",
+      "Tiempo estimado para la llegada, lugar de aterrizaje, señal convenida para la protección, instrucciones especiales y tipo de emergencia",
+      "Instrucciones especiales, señales convenidas para la protección, lugar de aterrizaje, tipo de emergencia y tiempo estimado para la llegada"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1011",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En una situación con humo intenso en cabina de pasaje durante el vuelo. ¿el CMTE bajará manualmente desde CKPT las mascarillas de O2? *",
+    "options": [
+      "Si, para poder respirar",
+      "Si, y un TCP avisará al cockpit una vez hayan aparecido las mascarillas",
+      "No, porque la utilización del oxígeno de emergencia no evita inhalar humo",
+      "Sí, porque mascarilla de los pasajeros no permite la entrada de humo"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1012",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El chequeo pre vuelo de las botellas de oxígeno consiste en comprobar *",
+    "options": [
+      "Presencia, anclaje, fecha de caducidad y precinto",
+      "Presencia, anclaje y manómetro en zona verde",
+      "Presencia, anclaje, dos mascarillas compatibles, cuerda de transporte y manómetro mínimo indica 1500 psi.",
+      "Presencia, anclaje, precinto de plomo y manómetro por encima de 500 psi."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1013",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las máscaras de O2 aparecen automáticamente: *",
+    "options": [
+      "Cuando la altitud interior de la cabina supere los 14.000 pies",
+      "Cuando la altitud exterior de la cabina supere los 14.000 pies",
+      "Cuando la altitud de cabina supere los 11.300 pies",
+      "Cuando el sobrecargo presione le botón correspondiente"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1014",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Tras una emergencia, ¿Hasta cuándo se mantendrá la postura de impacto? *",
+    "options": [
+      "Hasta que haya pasado el primer impacto",
+      "Hasta que el avión se haya parado completamente",
+      "Hasta que se apague la señal de cinturones",
+      "Hasta que se enciendan las luces de emergencia"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1015",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sillas de ruedas, señale la afirmación correcta *",
+    "options": [
+      "WCHC (Cabin) pasajeros privados de movilidad y no autosuficientes deben ser acompañados a su asiento",
+      "WCHR (Ramp) pasajeros privados de movilidad y no autosuficientes deben ser acompañados a su asiento",
+      "WCHS (Stair) pasajeros privados de movilidad y no autosuficientes deben ser acompañados a su asiento",
+      "WCCH (Cabin) pasajeros privados de movilidad y no autosuficientes deben ser acompañados a su asiento"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1016",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué caso podemos utilizar líquidos no inflamables para enfriar un fuego y prevenir su reignición? *",
+    "options": [
+      "Si el combustible es solido",
+      "Si el combustible es líquido",
+      "Si el combustible es eléctrico",
+      "Si el combustible es metálico"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1017",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De qué manera se activan los extintores de los lavabos: *",
+    "options": [
+      "Al activarse el detector automático de humo de cada lavabo",
+      "Al fundirse las boquillas de descarga",
+      "Mediante in disparador situado en la cabina de mando",
+      "Mediante un disparador situado en el galley mas próximo"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1018",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En que material en un fuego eléctrico, utilizaremos líquidos no inflamables tras haber descargado un extintor? *",
+    "options": [
+      "Cableado del avión",
+      "CB de los galleys",
+      "Baterías de litio",
+      "Sistema de entretenimiento de los aviones"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1019",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica cual es el explosivo (clase 1) que pueden transportar los pasajeros siempre fact urado a bordo de una aeronave: *",
+    "options": [
+      "Fuegos artificiales",
+      "Munición de guerra",
+      "Está totalmente prohibido transportar explosivos",
+      "Munición deportiva, de la división 1.4S (máx. 5kg)"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1020",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las etiquetas de las mercancías peligrosas pueden ser de dos clases: *",
+    "options": [
+      "De clase y división",
+      "De grupo y de transporte",
+      "De manipulación y transporte",
+      "De riesgo y manipulación"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1021",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es una mercancía peligrosa “oculta”? *",
+    "options": [
+      "Una mercancía peligrosa no declarada con la intención de ser estibada a bordo de un avión",
+      "Material de emergencia del avión",
+      "Las MMPP que aparecen en el NOTOC",
+      "El extintor automático de los lavabos"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1022",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El hielo seco es una sustancia considerada mercancía peligrosa…: *",
+    "options": [
+      "Falso, ya que se transporta frecuentemente a bordo de los aviones",
+      "De clase 1",
+      "Cuyo transporte por vía aérea está permitido a los pasajeros para la conservación de productos perecederos",
+      "Los pasajeros no pueden transportar hielo seco"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1023",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué precaución debemos tomar ante un incidente con mercancías peligrosas en el q ue haya fuego, emanaciones o humo? *",
+    "options": [
+      "Usar como agente de extinción agua",
+      "Cubrir la zona con bolsas de plástico",
+      "No se debe tocar nada",
+      "Siempre deberá llevarse puesto un equipo respiratoria hermético anti gases para identificar la fuente que origina dicha anormalidad"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1024",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "“Combinación de medidas, medios humanos, recursos materiales para proteger la aviaci on civil de actos de interferencia ilícita” corresponde con la definición de: *",
+    "options": [
+      "Programa nacional de seguridad",
+      "Actos de interferencia ilícita",
+      "Zona restringida de seguridad",
+      "Aviation security"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1025",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es un pasajero deportado? *",
+    "options": [
+      "Un pasajero conflictivo",
+      "Un pasajero con discapacidad auditiva",
+      "Un pasajero al cual instruiremos en caso de una emergencia prevista",
+      "Un pasajero al cual las autoridades ordenan la salida del mismo"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1026",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La comunicación de información falsa que compromete a la seguridad de una aeronave e n vuelo se denomina: *",
+    "options": [
+      "Secuestro aéreo",
+      "Apoderamiento ilícito",
+      "Atentado terrorista",
+      "Acto de interferencia ilícita"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1027",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las señales de localización tierra ‐ aire deben ser: *",
+    "options": [
+      "El tamaño no es importante, solo debemos buscar un lugar despejado del terreno",
+      "Se realizarán en colores que contrasten con el terreno, el tamaño mínimo aconsejado es de 2,5m. hacer fuego es también un buen recurso",
+      "Se buscará material reflectante preferentemente para que sean visibles también de noche",
+      "Solo confeccionamos señales de localización si disponemos de un Kit de señales a tal efecto en el avión"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1028",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La amenaza principal en el caso de un amaraje es: *",
+    "options": [
+      "La falta de agua dulce",
+      "El cansancio",
+      "La hipotermia",
+      "Los tiburones"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1029",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Tras un amaraje pudiendo utilizar rampas ‐ balsas: *",
+    "options": [
+      "Se debe lanzar el ancla y colocar el toldo de la balsa cuanto antes",
+      "Mantener el suelo de la balsa seco no es tan importante",
+      "Es recomendable beber agua salada",
+      "Se deben lanzar bengalas cada 2 horas"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1030",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si un pasajero está inconsciente pero respira y tiene pulso, ¿Qué haremos? *",
+    "options": [
+      "Dejarle tranquilo y taparle con una manta",
+      "Ponerle en posición lateral de seguridad",
+      "Tumbarle en el suelo y levantarle las piernas",
+      "Proporcionarle oxigeno"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1031",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué maniobra se debe realizar en caso de que un pasajero sufra una obstrucción tota l de las vías aéreas? *",
+    "options": [
+      "La maniobra de Valsalva",
+      "Comprobar si respira y tiene pulso",
+      "Cinco golpes secos inter ‐ escapulares y si no se resuelve, maniobra de Heimlich",
+      "Colocar al pasajero en posición lateral de seguridad"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1032",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica los síntomas producidos por un ataque al corazón: *",
+    "options": [
+      "Pérdida de consciencia",
+      "Convulsiones y dolor abdominal",
+      "Dolor u opresión en el pecho, sudoración, disnea, ansiedad y palidez entre otros",
+      "Solo dolor abdominal"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1033",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de una despresurización explosiva nuestra primera acción será: *",
+    "options": [
+      "Administrar oxígeno al comandante inmediatamente",
+      "Obtener oxígeno para evitar la hipoxia",
+      "Ayudar a los pasajeros",
+      "Bloquear los lavabos"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1034",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica el tratamiento correcto en caso de hiperventilación: *",
+    "options": [
+      "Calmar al pasajero e indicarle que respire con normalidad",
+      "Administrar O2 al pasajero",
+      "Animar al pasajero a respirar más rápido",
+      "Asegurarse de conectar la mascarilla en HI antes de administrarle el O2"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1035",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué debemos hacer en el caso de que un paciente sufra una hemorragia? *",
+    "options": [
+      "Administrar medicación de Fisrt Aid Kit (FAK)",
+      "Aplicar presión directa hasta que la hemorragia ceda y no retirar las gasas",
+      "Colocar al paciente en la posición lateral de seguridad",
+      "Abrir inmediatamente el Emergency Medical Kit (EMK)"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1036",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El tipo de hipoxia más frecuente en el medio aéreo es la: *",
+    "options": [
+      "Histotoxica",
+      "Anemia",
+      "Hipoxica",
+      "Hipoxia por estancamiento"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1037",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La única vacuna recomendable para tripulación aérea es: *",
+    "options": [
+      "Hepatitis B",
+      "Tuberculosis",
+      "Fiebre amarilla",
+      "Meningitis"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1038",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las cuatro fuerzas que intervienen en el vuelo de una aeronave son:",
+    "options": [
+      "Peso, resistencia, aerodinámica y sustentación.",
+      "Empuje, intensidad, gravedad y resistencia.",
+      "Peso, resistencia, sustentación y empuje.",
+      "Empuje, sustentación, propulsión y gravedad."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1039",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se comporta la presión atmosférica con el incremento de la altura?",
+    "options": [
+      "Aumenta.",
+      "Disminuye.",
+      "No se puede predecir.",
+      "No varía."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1040",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "A qué parte del ala nos referimos con la línea del dibujo:",
+    "options": [
+      "Ángulo de ataque.",
+      "Cuerda.",
+      "Extradós.",
+      "Borde de salida."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1041",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál de los documentos que debe llevarse a bordo de la aeronave indica la cantidad de pasajeros que llevará el vuelo?",
+    "options": [
+      "El certificado de matrícula.",
+      "El certificado de aeronavegabilidad.",
+      "La hoja de carga y centrado.",
+      "La hoja de características técnicas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1042",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La definición de “…Distancia angular que hay entre un punto y el Meridiano Cero siempre señalando si es hacia el Este o el Oeste…” corresponde a:",
+    "options": [
+      "Latitud.",
+      "Longitud.",
+      "Meridiano.",
+      "Hemisferio."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1043",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En Aeronáutica la velocidad a la que vuela un avión se mide en:",
+    "options": [
+      "Nudos.",
+      "Millas náuticas.",
+      "Kilómetros por hora.",
+      "Pies por horas."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1044",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En un aeropuerto, ¿cuál de estas zonas corresponde al lado tierra?",
+    "options": [
+      "Área de aterrizaje.",
+      "Terminal de pasajeros.",
+      "Área de rodadura.",
+      "Plataforma."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1045",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es la altura para que una salida de emergencia venga dotada con una rampa de evacuación?",
+    "options": [
+      "5 pies (1,53m)",
+      "6 pies (1,53m)",
+      "6 Pies (1,83m)",
+      "5 pies (1,83m)"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1046",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La Autoridad Aeronáutica que se encarga en España de la emisión y tramitación de los certificados de los Tripulantes de Cabina de Pasajeros es: *",
+    "options": [
+      "LA DGAC",
+      "AESA",
+      "AENA",
+      "SENASA"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1047",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El curso de entrenamiento periódico de los TCPs dentro del operador se hará como m áximo en un plazo de: *",
+    "options": [
+      "8 meses.",
+      "10 meses.",
+      "9 meses.",
+      "12 meses."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1048",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De acuerdo con las reglas establecidas referentes al número y composición de las tripulaciones de cabina de pasajeros que conformarán la tripulación de una aeronave…",
+    "options": [
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 asientos de pasajeros o fracción de 50.",
+      "En casos excepcionales, la Autoridad no podrá exigir a un operador que aumente el número de miembros de la tripulación de cabina de pasajeros.",
+      "Nunca se podrá reducir el número mínimo exigido de miembros de la tripulación de cabina de pasajeros, aunque algún TCP caiga incapacitado.",
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 pasajeros que haya en el vuelo de ese día."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1049",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El estado en el que el ritmo circadiano está sincronizado con la zona horaria en la que se encuentra, se llama:",
+    "options": [
+      "Periodo de actividad.",
+      "Sincronización horaria.",
+      "Horario irregular.",
+      "Aclimatado."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1050",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fase de ritmo circadiano de mínimo rendimiento es el periodo comprendido entre:",
+    "options": [
+      "Las 4 y las 5.59.",
+      "Las 3 y las 5.59.",
+      "Las 2 y las 5.59.",
+      "La 1 y las 5.59."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1051",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los aviones comerciales están certificados para ser evacuados en…",
+    "options": [
+      "90 segundos utilizando todas las salidas de emergencia disponibles¨.",
+      "90 segundos utilizando la mitad de las puertas de emergencia¨.",
+      "120 segundos utilizando todas las salidas de emergencia disponibles¨.",
+      "120 segundos utilizando la mitad de las puertas de emergencia¨."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1052",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo es obligatorio llevar a bordo chalecos salvavidas?",
+    "options": [
+      "No es obligatorio llevarlos, depende del operador.",
+      "Cuando esté previsto volar a más de 50 NM de la costa o cuando se opere en un aeropuerto cuya trayectoria de despegue o aproximación esté situada por encima del agua.",
+      "Cuando esté previsto volar a más de 400 NM de la costa o el despegue o el aterrizaje sea cerca de la costa.",
+      "Cuando se vaya a volar a más de 150 NM de la costa."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1053",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las máscaras de O2 aparecen automáticamente:",
+    "options": [
+      "Cuando la altitud interior de la cabina supere los 14.000 pies.",
+      "Cuando la altitud en el exterior del avión es de 14.000 pies.",
+      "Cuando la altitud de cabina supere los 11.300 pies.",
+      "Cuando el sobrecargo presione el botón correspondiente."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1054",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En un amerizaje previsto los TCP instruirán a los pasajeros entre otras cosas sobre:",
+    "options": [
+      "Colocación del chaleco, salidas de emergencia y uso de mascarillas.",
+      "Colocación del chaleco, salidas de emergencia y postura de protección.",
+      "Salidas de emergencia, postura de protección y material a evacuar.",
+      "Colocación del chaleco, uso de mascarillas y postura de protección."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1055",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué momento el Sobrecargo distribuye los puestos a los Tripulantes de Cabina de Pasajeros?",
+    "options": [
+      "Durante el Briefing pre-vuelo.",
+      "En una emergencia prevista.",
+      "Durante el De-briefing.",
+      "Cuando lo ordene el Comandante."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1056",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Lo primero que hará el TCP en caso de despresurización explosiva será:",
+    "options": [
+      "Ponerle inmediatamente oxígeno al Comandante.",
+      "Obtener oxígeno para evitar la incapacitación por hipoxia.",
+      "Controlar la respiración para evitar hiperventilación.",
+      "Avisar a cockpit."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1057",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuando hablamos de señal de protección, ¿a qué nos referimos?",
+    "options": [
+      "A la señal convenida para comenzar la instrucción a los PMR’s.",
+      "A la señal convenida para la evacuación.",
+      "A la señal convenida con el Comandante para adoptar la postura de protección.",
+      "A la señal convenida para comenzar la instrucción a los ABP’s."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1058",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Dentro de las condiciones para iniciar una evacuación uno de los puntos sería:",
+    "options": [
+      "En un amerizaje siempre se evacúa.",
+      "Calentamiento anómalo de una batería de litio.",
+      "Amenaza de bomba.",
+      "Despresurización explosiva."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1059",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué significan las siglas PBE?:",
+    "options": [
+      "Preserver Breathing Equipment.",
+      "Preventing Breathing Equipment.",
+      "Protective Breathing Equipment.",
+      "Promoting Breathing Equipment."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1060",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es la zona restringida de seguridad en un aeropuerto?",
+    "options": [
+      "Zona de acceso abierto a todos.",
+      "Zona de acceso a personal autorizado sin medidas de seguridad.",
+      "Zona de acceso a pasajeros y personal autorizado con medidas de seguridad.",
+      "Zona de acceso a pasajeros y personal autorizado con medidas de seguridad más estrictas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1061",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es un pasajero deportado?",
+    "options": [
+      "Un pasajero conflictivo.",
+      "Un pasajero con discapacidad auditiva.",
+      "Un pasajero al cual instruiremos en caso de una emergencia prevista.",
+      "Un pasajero al cual las autoridades del país ordenan formalmente la salida del mismo."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1062",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de que un pasajero quiera llevar un arma deportiva a bordo debe:",
+    "options": [
+      "Advertir a la tripulación cuando embarque de tal circunstancia.",
+      "Facturarla siempre etiquetada y marcada (ZZ).",
+      "No puede transportarla en una aeronave bajo ningún concepto.",
+      "Sólo se pueden transportar a bordo rifles de fogueo o de aire comprimido debido a su baja peligrosidad."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1063",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las bebidas alcohólicas, perfumes y colonias para consumo o venta a bordo durante el vuelo:",
+    "options": [
+      "Deben ir etiquetadas.",
+      "Deben ir en embalajes adecuados.",
+      "Estarán clasificadas.",
+      "Son mercancías peligrosas exentas."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1064",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las etiquetas de las Mercancías Peligrosas pueden ser de dos clases:",
+    "options": [
+      "De clase y división.",
+      "De grupo y de transporte.",
+      "De manipulación y transporte.",
+      "De riesgo y manipulación."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1065",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de detectar un humo procedente de un producto tóxico en la cabina de pasaje, la tripulación:",
+    "options": [
+      "Se colocará las botellas portátiles de O2 y respirará a través de la mascarilla.",
+      "Se colocará una PBE.",
+      "Se colocará una PBE y se accionará el sistema fijo de O2 para los pasajeros.",
+      "Se actuará según procedimiento de despresurización explosiva."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1066",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La heaving line se utiliza:",
+    "options": [
+      "Para tintar el agua del mar tras un amerizaje.",
+      "Para rescatar personas en el mar desde la balsa tras un amerizaje.",
+      "Para mandar señales reflejando la luz solar.",
+      "Para potabilizar el agua"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1067",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La función de la trompa de Eustaquio es:",
+    "options": [
+      "Controlar las presiones del oído interno.",
+      "Controlar las presiones del oído externo.",
+      "Controlar las presiones del oído medio.",
+      "Es una membrana elástica que comunica el canal auditivo externo con el oído medio."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1068",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La siguiente afirmación: “a temperatura constante el volumen ocupado por una masa de gas es inversamente proporcional a la presión que se ejerce sobre el mismo”, corresponde a la ley física de:",
+    "options": [
+      "Henry.",
+      "Boyle-Mariotte.",
+      "Dalton.",
+      "Graham."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1069",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Hablamos de hipoxia cuando:",
+    "options": [
+      "Disminuye el O2 en la atmósfera.",
+      "Disminuye el O2 en la sangre.",
+      "Disminuye la oxigenación a nivel de tejidos y células.",
+      "Aumenta la presión parcial de oxígeno en la atmósfera."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1070",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El reajuste de los ritmos biológicos tras un desfase horario es más difícil:",
+    "options": [
+      "Tras un desplazamiento hacia el Este.",
+      "Tras un desplazamiento hacia el Oeste.",
+      "Tras un desplazamiento hacia el Norte.",
+      "Tras un desplazamiento hacia el Sur."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1071",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuánto tiempo es recomendable dejar pasar entre la donación de sangre y el vuelo?",
+    "options": [
+      "8 horas.",
+      "12 horas.",
+      "48 horas.",
+      "72 horas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1072",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En el caso de que un pasajero sufra un ataque epiléptico en pleno vuelo, la prioridad del TCP será:",
+    "options": [
+      "Inmovilizar al sujeto.",
+      "Suministrar medicación urgente.",
+      "Evitar que se lesione.",
+      "Tranquilizarle."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1073",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fuerza de la sustentación es producida por:",
+    "options": [
+      "La forma alargada de las alas.",
+      "La diferencia de presión en la parte superior e inferior del fuselaje.",
+      "La diferencia de presión en la parte superior e inferior del ala.",
+      "La potencia de los motores."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1074",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se comporta la presión atmosférica con el incremento de la altura? *",
+    "options": [
+      "Aumenta.",
+      "Disminuye.",
+      "No se puede predecir.",
+      "Por efecto de la presurización no varía."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1075",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El timón de profundidad de una aeronave va situado en:",
+    "options": [
+      "Bajo las bodegas.",
+      "En el compartimento de electrõnica de la cabina de mando.",
+      "En las alas.",
+      "En la cola."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1076",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La definición de “. ..Distancia angular que hay desde un punto de la superficie de la Tierra hasta el paralelo del ecuador. ..” corresponde a:",
+    "options": [
+      "Latitud",
+      "Longitud",
+      "Meridiano.",
+      "Hemisferio."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1077",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En un aeropuerto, ¿cuál de estas zonas corresponde al lado aire?",
+    "options": [
+      "Terminal de pasajeros.",
+      "Terminal de carga.",
+      "Zona industrial",
+      "Área de rodadura"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1078",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se clasifica la turbulencia en sus diferentes niveles?",
+    "options": [
+      "Débil, moderada, fuerte.",
+      "Débil, moderada, fuerte o severa.",
+      "Débil, moderada, fuerte o muy fuerte.",
+      "Inapreciable, débil o fuerte"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1079",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es la altura para que una salida de emergencia venga dotada con una rampa de evacuación? CTG 4.2 *",
+    "options": [
+      "5 pies (1,53m)",
+      "6 pies (1,53m)",
+      "6 Pies (1,83m)",
+      "5 pies (1,83m)"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1080",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuáles son los requisitos básicos para ser nombrado sobrecargo en una compañía aérea?",
+    "options": [
+      "Ser disciplinado, tener como mínimo dos años de experiencia como TCP y haber superado satisfactoriamente el curso adecuado.",
+      "Tener como mínimo un año de experiencia como TCP.",
+      "Haber superado satisfactoriamente el curso adecuado.",
+      "Tener como mínimo un año de experiencia como miembro operativo de una tripulación y haber superado satisfactoriamente el curso adecuado."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1081",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De acuerdo con las reglas establecidas referentes al número y composición de las trip ulaciones de cabina de pasajeros que conformarán la tripulación de una aeronave...",
+    "options": [
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 asientos de pasajeros o fracción de 50.",
+      "En casos excepcionales, la Autoridad no podrá exigir a un operador que aumente el número de miembros de la tripulación de cabina de pasajeros.",
+      "Nunca se podrá reducir el número mínimo exigido de miembros de la tripulación de cabina de pasajeros, aunque algún TCP caiga incapacitado.",
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 pasajeros que haya en el vuelo de ese día."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1082",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El periodo que comienza cuando un miembro de la tripulación es requerido para presentarse a un servicio, que incluye un sector o sectores, y termina cuando el avión se detiene completamente y se apagan los motores, al final del sector en el que la persona actúa como miembro de la tripulación operativa, se denomina:",
+    "options": [
+      "Periodo de actividad.",
+      "Actividad.",
+      "Flight duty period (FDP).",
+      "Flight time limit period"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1083",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "”Los aviones comerciales están certificados para ser evacu’ados en. ..",
+    "options": [
+      "90 segundos utilizando todas las salidas de emergencia disponibles”.",
+      "90 segundos utilizando la mitad de las puertas de emergencia“.",
+      "120 segundos utilizando todas las salidas de emergencia disponibles“.",
+      "120 segundos utilizando la mitad de las puertas de emergencia\"."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1084",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En una situación con humo intenso en cabina de pasaje durante el vuelo. ¿El comandante bajará manualmente desde la cabina de vuelo las mascarillas de 02? *",
+    "options": [
+      "Si, para poder respirar.",
+      "Si, y un TCP avisará a Cockpít una vez hayan aparecido las mascarillas.",
+      "No, porque la utilización del oxígeno de emergencia no evita inhalar humo.",
+      "Sí, porque mascarilla de los pasajeros no permite la entrada del humo."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1085",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuál será la primera acción que realizará un TCP antes de abrir una salida de emergencia en una evacuación? *",
+    "options": [
+      "lnflar la rampa.",
+      "Valorar condiciones exteriores.",
+      "Esperarã una orden del Comandante para abrir la puerta.",
+      "Desarmará las balsas"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1086",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es la zona restringida de seguridad en un aeropuerto? *",
+    "options": [
+      "Zona de acceso abierto a todos.",
+      "Zona de acceso a personal autorizado sin medidas de seguridad.",
+      "Zona de acceso a pasajeros y personal autorizado con medidas de seguridad.",
+      "Zona de acceso a pasajeros y personal autorizado con medidas de seguridad más estrictas."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1087",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "“Combinación de medidas, medios humanos, recursos materiales para proteger la aviación civi/ de actos de interferencia ilícita” corresponde con la definición de: *",
+    "options": [
+      "Programa Nacional de Seguridad.",
+      "Actos de interferencia ilícita.",
+      "Zona restringida de seguridad.",
+      "Aviation Security"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1088",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué personas están sujetas a los controles de seguridad?",
+    "options": [
+      "Solamente los pasajeros.",
+      "Los miembros de las Fuerzas y Cuerpos de Seguridad del Estado.",
+      "Tanto los pasajeros como los trabajadores del aeropuerto.",
+      "Los trabajadores que acceden a las zonas restringidas de seguridad."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1089",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de que un pasajero quiera llevar un arma deportiva a bordo debe: *",
+    "options": [
+      "Advertir a la tripulación cuando embarque de tal circunstancia.",
+      "Facturarla siempre etiquetada y marcada (ZZ).",
+      "No puede transportarla en una aeronave bajo ningún concepto.",
+      "Sólo se pueden transportar a bordo rifles de fogueo o de aire comprimido debido a su baja peligrosidad."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1090",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿De qué color son las etiquetas son las etiquetas de riesgo que identifican los productos que en contacto con el agua emiten gases inflamables?",
+    "options": [
+      "Rojo.",
+      "Azul.",
+      "Naranja.",
+      "Verde"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1091",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El hielo seco es una sustancia considerada mercancía peligrosa...",
+    "options": [
+      "Falso, ya que se transporta frecuentemente a bordo de los aviones.",
+      "De clase 1.",
+      "Cuyo transporte por via aérea está permitido a los pasajeros para la conservación de productos perecederos.",
+      "Los pasajeros no pueden transportar hielo seco."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1092",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La amenaza principal en el caso de un amaraje es:",
+    "options": [
+      "La falta de agua dulce.",
+      "El cansancio.",
+      "La hipotermia.",
+      "Los tiburones."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1093",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La función de la trompa de Eustaquio es: *",
+    "options": [
+      "Controlar las presiones del oído interno.",
+      "Controlar las presiones del oído externo.",
+      "Controlar las presiones del oído medio.",
+      "Es una membrana elástica que comunica el canal auditivo externo con el oído medio."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1094",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuándo está indicada la maniobra de Valsalva? *",
+    "options": [
+      "En caso de mareo.",
+      "En caso de insuficiencia respiratoria.",
+      "En descenso si sentimos molestias en el oído.",
+      "En caso de vómitos."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1095",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La forma más fácil y segura de cohibir una hemorragia es:",
+    "options": [
+      "La presión directa.",
+      "Levantar la zona afectada.",
+      "Realizar un torniquete.",
+      "Presionar sobre los puntos de control."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1096",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En la hiperventilación se produce: *",
+    "options": [
+      "Aumento CO2 en sangre.",
+      "Aumento de N2 en sangre.",
+      "Disminución de CO2 en sangre.",
+      "Disminución de N2 en sangre."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1097",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La única vacuna recomendable para tripulaciones aéreas es:",
+    "options": [
+      "Hepatitis B.",
+      "Tuberculosis.",
+      "Fiebre amarilla.",
+      "Meningitis."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1098",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué sistema del avión proporciona la presurización interior de la cabina?",
+    "options": [
+      "Sistema neumático.",
+      "Sistema hidráulico.",
+      "Sistema eléctrico.",
+      "Sistema de aire acondicionado"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1099",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A cuánto equivale una milla náutica?",
+    "options": [
+      "1.852 m.",
+      "1.609 m.",
+      "3.3km.",
+      "1.000m."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1100",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La normativa de actividad y descanso que afecta a las tripulaciones surge de:",
+    "options": [
+      "El Manual de Operaciones de la compañía.",
+      "EI CCOM.",
+      "La Subparte Q de la EU-OPS.",
+      "El reglamento ORO.FTL."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1101",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "De acuerdo con las reglas establecidas referentes al número y composición de las tripulaciones de cabina de pasajeros que conformarán la tripulación de una aeronave:",
+    "options": [
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 asientos de pasajeros o fracción de 50.",
+      "En casos excepcionales, la Autoridad no podrá exigir a un operador que aumente el número de miembros de la tripulación de cabina de pasajeros.",
+      "Nunca se podrá reducir el número mínimo exigido de miembros de la tripulación de cabina de pasajeros, aunque a algún TCP caiga incapacitado.",
+      "Debe haber un miembro de la tripulación de cabina de pasajeros por cada 50 pasajeros que haya en el vuelo de ese día."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1102",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EI curso de entrenamiento periódico de los TCPs dentro del operador se hará como máximo en un plazo de:",
+    "options": [
+      "8 meses.",
+      "10 meses.",
+      "9 meses.",
+      "12 meses."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1103",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de una evacuación en tierra los TCPs ordenarán a los pasajeros que abandonen el avión a través de los planos:",
+    "options": [
+      "Por el borde de escape.",
+      "Por el borde de salida.",
+      "Por el borde de flotación.",
+      "Por el borde de ataque."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1104",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La mejor forma de moverse por la cabina de pasaje en caso mucho humo negro es:",
+    "options": [
+      "Con los ojos cerrados para que no nos lloren y tanteando con las manos.",
+      "Andando a gatas y con la nariz lo más pegada al suelo.",
+      "Por encima de los asientos, desde donde tendremos mayor campo de visión.",
+      "No debemos movernos debemos ponemos la PBE, sentarnos y atarnos."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1105",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo debe un TCP comprobar de forma correcta el material de emergencia asignado?",
+    "options": [
+      "De memoria, agilizando así la comprobación de éste.",
+      "Comprobando todo con la lista de chequeo de material de emergencia.",
+      "En compai\\fa del sobrecargo para sí dar fe de su correcta comprobación.",
+      "Rápido para no retrasar el embarque."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1106",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los C/B se pueden resetear:",
+    "options": [
+      "1 vez.",
+      "2 veces.",
+      "Antes de resetear un C/B debemos informar al Comandante.",
+      "Tantas veces como sea necesario."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1107",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Combatiendo el fuego tras una puerta:",
+    "options": [
+      "Soltaremos la puerta para poder coger mejor el extintor.",
+      "Nos protegeremos con la puerta como si fuera un escudo sin soltarla.",
+      "No tiene importancia.",
+      "Bloquearemos la puerta con una botella de 02 para tener más movilidad."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1108",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si volamos en situación con billete aéreo, en el equipaje de mano podremos transportar líquidos en envases no superiores a:",
+    "options": [
+      "300 mililitros.",
+      "100 mililitros.",
+      "90 mililitros.",
+      "150 mililitros."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1109",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El documento base de la seguridad en aviación en España que recoge la nueva normativa es:",
+    "options": [
+      "El Reglamento 300/2008.",
+      "La Ley de Navegación Aérea de 1960.",
+      "La Ley Penal y Procesal de Navegación Aérea.",
+      "El Convenio de Tokio."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1110",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es el NOTOC?",
+    "options": [
+      "Un documento en el que el Comandante recibe toda la información referente a MMPP que lleva en la aeronave.",
+      "Un documento en el que se enumera qué mercancías no pueden ser cargadas en ese vuelo.",
+      "Un informe técnico de MM.PP.",
+      "Un documento que indica los PMRs."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1111",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es la cantidad de alcohol permitida a cada pasajero?",
+    "options": [
+      "2 litros, en recipientes de 0,5 litros.",
+      "3 litros en recipientes de 1 litro.",
+      "5 litros en recipientes de 5 litros, o inferiores.",
+      "10 litros en recipientes de 2 litros."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1112",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En el caso de emanación de humos por derrame de mercancía peligrosa, ¿cómo actuaremos con los pasajeros?",
+    "options": [
+      "Retiraremos a los pasajeros de la zona, y distribuiremos tallas o paños húmedos.",
+      "Haremos uso de las botellas portátiles de O2 para los pasajeros que se encuentren en la zona.",
+      "Desde cabina de vuelo se activará el sistema fijo de O2 para que los pasajeros puedan respirar.",
+      "Les informaremos de que se trata de humo del aire acondicionado para tranquilizarlos."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1113",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Tras un amaraje pudiendo usar rampas-balsas:",
+    "options": [
+      "Se debe lanzar el ancla y colocar el toldo de la balsa cuanto antes.",
+      "Mantener el suelo de la balsa seco no es tan importante.",
+      "Es recomendable beber agua salada.",
+      "Se deben lanzar bengalas cada 2 horas."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1114",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EI tipo de hipoxia más frecuente en el medio aéreo:",
+    "options": [
+      "Histotóxica.",
+      "Anémica.",
+      "Hipóxica",
+      "Por estancamiento."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1115",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La función principal de los glóbulos rojos es:",
+    "options": [
+      "Participare en el proceso de coagulación de la sangre.",
+      "La defensa celular del organismo.",
+      "Colaborar a la respuesta inmune del organismo.",
+      "Transportar oxígeno."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1116",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La maniobra de Heimlich se utiliza en caso de..",
+    "options": [
+      "La introducción de sonda vesical.",
+      "Como medida de desinfección.",
+      "Que un pasajero esté Inconsciente.",
+      "Obstrucción total de la vía aérea por un cuerpo extraño."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1117",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Lo primero que hará el TCP durante el “TUC” (Tiempo útil de consciencias) será:",
+    "options": [
+      "Obtener oxígeno para la compañera más cercana.",
+      "Ponerle inmediatamente oxígeno al Comandante.",
+      "Obtener oxígeno para evitar la incapacitación por hipoxia.",
+      "Mejor no poner oxígeno a los pasajeros para evitar que se tranquilicen."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1118",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En la hiperventilación se produce:",
+    "options": [
+      "Aumento C02 en sangre.",
+      "Aumento de N2 en sangre.",
+      "Disminución de C02 en sangre.",
+      "Disminución de N2 en sangre."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1119",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fuerza de la sustentación es producida *",
+    "options": [
+      "Cuando la velocidad en el extradós es mayor que en el intradós.",
+      "Cuando la velocidad en el intradós es mayor que en el extradós.",
+      "Por la forma alargada de las alas.",
+      "Por la potencia de los motores."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1120",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué explica el teorema de Bernoulli acerca de la presión y la velocidad",
+    "options": [
+      "Si disminuye la presión, disminuye la velocidad.",
+      "Si aumenta la densidad, disminuye la presión.",
+      "Si aumenta la presión, aumenta la velocidad.",
+      "Si disminuye la presión, aumenta la velocidad."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1121",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El ¨Movimiento de Cabeceo” se realiza sobre el eje:",
+    "options": [
+      "Transversal",
+      "Longitudinal",
+      "Vertical",
+      "Guiñada."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1122",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El lado del embarque de un avión es el lado",
+    "options": [
+      "Derecho mirando hacia la cabina de vuelo.",
+      "Izquierdo mirando a la cabina de vuelo.",
+      "Derecho mirando a la cola del avión.",
+      "Izquierdo mirando a la cola del avión."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1123",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué organización tiene como misión servir al tráfico en Europa?",
+    "options": [
+      "Eurocontrol.",
+      "CFMU.",
+      "ATC.",
+      "CEAC."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1124",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué situaciones se considera que un TCP está aclimatado?",
+    "options": [
+      "Un TCP se considera aclimatado a una zona horaria con una diferencia de hasta 3 horas en relación con la hora local de su punto de partida.",
+      "Un TCP se considera aclimatado a una zona horaria con una diferencia de hasta 4 horas en relación con la hora local de su punto de partida.",
+      "Un TCP se considera aclimatado a una zona horaria con una diferencia de hasta 5 horas en relación con la hora local de su punto de partida.",
+      "Un TCP se considera aclimatado a una zona horaria con una diferencia de hasta 2 horas en relación con la hora local de su punto de partida."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1125",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La normativa de actividad y descanso que afecta a las tripulaciones se recoge entre otros documentos en:",
+    "options": [
+      "El Manual de Operaciones de la compañía.",
+      "El CCOM.",
+      "La Subparte Q de la EU-OPS.",
+      "El reglamento ORO.FTL."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1126",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo es obligatoria la presencia de balsas a bordo?",
+    "options": [
+      "Cuando la aeronave se aleje más de 60min. o 50NM de un aeropuerto adecuado para realizar un aterrizaje de emergencia.",
+      "Cuando la aeronave se aleje más de 120min. o 400NM de un aeropuerto adecuado para realizar un aterrizaje de emergencia.",
+      "Cuando la aeronave se aleje más de 50min. o 120NM de un aeropuerto adecuado para realizar un aterrizaje de emergencia.",
+      "Cuando la aeronave se aleje más de 400min. o 100NM de un aeropuerto adecuado para realizar un aterrizaje de emergencia."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1127",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¨Los aviones comerciales están certificados para ser evacuados en…",
+    "options": [
+      "90 segundos utilizando todas las salidas de emergencia disponibles¨.",
+      "90 segundos utilizando la mitad de las puertas de emergencia¨.",
+      "120 segundos utilizando todas las salidas de emergencia disponibles¨.",
+      "120 segundos utilizando la mitad de las puertas de emergencia¨."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1128",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En el briefing que el Comandante da al sobrecargo en una emergencia prevista E.T.A significa:",
+    "options": [
+      "Tiempo estimado de llegada.",
+      "Señal de protección.",
+      "Un tipo de instrucción especial.",
+      "Confirmación de la evacuación"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1129",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La finalidad de las mascarillas de oxígeno de los cajetines es",
+    "options": [
+      "Proporcionar oxígeno durante un fuego.",
+      "Proporcionar oxígeno si hay humo en la cabina.",
+      "Proporcionar oxígeno si se produce una despresurización.",
+      "Proporcionar oxígeno exclusivamente a la tripulación de vuelo"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1130",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los extintores BCF actúan sobre el fuego:",
+    "options": [
+      "Enfriándolo.",
+      "Reduciendo el oxígeno de la combustión.",
+      "Reduciendo el combustible presente.",
+      "Bajando la temperatura del combustible."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1131",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "“Combinación de medidas, medios humanos, recursos materiales para proteger la aviación civil de actos de interferencia ilícita” corresponde con la definición de:",
+    "options": [
+      "Programa Nacional de Seguridad.",
+      "Actos de interferencia ilícita.",
+      "Zona restringida de seguridad.",
+      "Aviation Security."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1132",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Según el Programa Nacional de Seguridad para la Aviación Civil la puerta de la cabina de vuelo:",
+    "options": [
+      "Permanecerá cerrada desde el momento en que se cierren puertas y bloqueada en despegue y aterrizaje.",
+      "Permanecerá cerrada y bloqueada desde que se cierran puertas hasta la aproximación, que permanecerá sólo cerrada.",
+      "Permanecerá cerrada y bloqueada sólo en caso de emergencia.",
+      "Permanecerá cerrada y bloqueada desde que se cierran puertas hasta que se paren los motores y se abran puertas."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1133",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Indica cuál es el explosivo (Clase 1) que pueden transportar los pasajeros siempre facturado a bordo de una aeronave.",
+    "options": [
+      "Fuegos artificiales.",
+      "Munición de guerra.",
+      "Está totalmente prohibido transportar explosivos.",
+      "Munición deportiva, de la división 1.4S (máx.5kg)"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1134",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La gran decisión se refiere a…",
+    "options": [
+      "Abandonar el avión tras haber pasado 48 horas del impacto o la duración de la/s radiobalizas.",
+      "Dejar a los heridos junto a los restos de la aeronave y partir en busca de ayuda.",
+      "Organizarse en grupos y nombrar a un líder.",
+      "Determinar las rutas y organizar los grupos para ir en busca de ayuda."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1135",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es la función principal de un glóbulo rojo?:",
+    "options": [
+      "Defensa celular del organismo.",
+      "Participar en la coagulación.",
+      "Inmunizar el cuerpo.",
+      "Transportar oxígeno."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1136",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La fiebre amarilla se previene:",
+    "options": [
+      "A través de una vacuna que protege durante 10 años.",
+      "A través de una quimioprofilaxis suministrada por pastillas.",
+      "Únicamente tomando medidas higiénicas y de protección.",
+      "No hay forma de prevenirla."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1137",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si un pasajero está inconsciente pero respira y tiene pulso, ¿qué haremos?",
+    "options": [
+      "Dejarle tranquilo y taparle con una manta.",
+      "Ponerle en posición lateral de seguridad.",
+      "Tumbarle en el suelo y elevarle las piernas.",
+      "Proporcionarle oxígeno."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1138",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Un pasajero que se queja de dolor torácico irradiado al brazo izquierdo acompañado de signos vegetativos como mareos, sudoración y palidez puede estar padeciendo:",
+    "options": [
+      "Un cuadro de hiperventilación.",
+      "Un ataque de histeria.",
+      "Un infarto agudo de miocardio.",
+      "Una úlcera de duodeno complicada."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1139",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sabemos que una persona necesita una R.C.P cuando…",
+    "options": [
+      "Está inconsciente y no tiene constantes vitales.",
+      "Está inconsciente, pero tiene constantes vitales.",
+      "Respira bien y tiene latido, pero no contesta a nuestras preguntas.",
+      "Está consciente e hiperventila."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1140",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué debemos hacer en el caso de que un paciente sufra una hemorragia?",
+    "options": [
+      "Administrar medicación del First Aid Kit (FAK)",
+      "Aplicar presión directa hasta que la hemorragia ceda y no retirar las gasas.",
+      "Colocar al paciente en la posición lateral de seguridad.",
+      "Abrir inmediatamente el EMK."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1141",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El tipo de hipoxia más frecuente en el medio aéreo es la:",
+    "options": [
+      "Histotóxica",
+      "Anémia",
+      "Hipóxica.",
+      "Hipoxia por estancamiento"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1142",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La definición de “…error en las indicaciones de la brújula producido por disturbios magnéticos originados en el avión…” corresponde a: *",
+    "options": [
+      "Derrota.",
+      "Deriva.",
+      "Desvío.",
+      "Declinación."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1143",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El número mach es una medida de velocidad que indica:",
+    "options": [
+      "Cuando la velocidad del avión respecto al suelo.",
+      "Cuando la velocidad del avión en relación con la atmósfera.",
+      "Por la velocidad del avión en relación con la del sonido.",
+      "Por la velocidad del avión en relación con la de la luz."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1144",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El anexo 18 al Convenio sobre Aviación Civil Internacional es:",
+    "options": [
+      "Búsqueda y salvamento.",
+      "Transporte sin riesgo de Mercancías Peligrosas por vía aérea.",
+      "Operación de aeronaves.",
+      "Cartas aeronáuticas"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1145",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál fue el primer convenio que habla de la responsabilidad del transportista con respecto al pasajero?",
+    "options": [
+      "Convenio de Tokio.",
+      "Convenio de Roma.",
+      "Convenio de Varsovia.",
+      "Convenio de Montreal."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1146",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En la cabina de pasajeros, las máscaras de O2 aparecen automáticamente:",
+    "options": [
+      "Cuando la altitud interior de la cabina supere los 14.000 pies.",
+      "Cuando la altitud en el exterior del avión es de 14.000 pies.",
+      "Cuando la altitud de cabina supere los 11.300 pies.",
+      "Cuando el sobrecargo presione el botón correspondiente."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1147",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuando hablamos de señal de protección, ¿a qué nos referimos? *",
+    "options": [
+      "A la señal convenida para comenzar la instrucción a los PMR’s.",
+      "A la señal convenida para la evacuación.",
+      "A la señal convenida con el Comandante para adoptar la postura de protección.",
+      "A la señal convenida para comenzar la instrucción a los ABP’s."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1148",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál será la primera acción que realizará un TCP antes de abrir una salida de emergencia en una evacuación?",
+    "options": [
+      "Inflar la rampa.",
+      "Valorar condiciones exteriores.",
+      "Esperará una orden del Comandante para abrir la puerta.",
+      "Desarmará las balsas."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1149",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La reglamentación sobre MMPP de la IATA, es un manual basado en:",
+    "options": [
+      "El Real Decreto 300/2008.",
+      "La circular operativa 30/01/1994 sobre MMPP.",
+      "El Convenio de Varsovia",
+      "Las instrucciones técnicas de la OACI."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1150",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué precaución debemos tomar ante un incidente con mercancías peligrosas en el que haya fuego, emanaciones o humo?",
+    "options": [
+      "Usar agua como agente de extinción.",
+      "Cubrir la zona con bolsas de plástico.",
+      "No se debe tocar nada.",
+      "Usar siempre un equipo respiratorio hermético antigases para buscar la fuente."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1151",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las señales de localización tierra-aire deben ser:",
+    "options": [
+      "El tamaño no es importante, sólo debemos buscar un lugar despejado del terreno.",
+      "Se realizarán en colores que contrasten con el terreno, el tamaño mínimo aconsejado es de 2,5 metros. Hacer fuego es también un buen recurso.",
+      "Se buscará material reflectante preferentemente para que sean visibles también de noche.",
+      "Sólo confeccionamos señales de localización si disponemos de un kit de señales a tal efecto en el avión."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1152",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es el SAR?",
+    "options": [
+      "Servicio Aéreo de rescate (search and rescue).",
+      "Servicio Aeronáutico de rescate.",
+      "Salvamento Aéreo.",
+      "Servicio de Recuperación."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1153",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Qué maniobra se debe realizar en caso de que un pasajero sufra una obstrucción total de la vía aérea?",
+    "options": [
+      "La maniobra de Valsalva.",
+      "Comprobar si respira y tiene pulso.",
+      "5 golpes secos inter-escapulares y si no se resuelve, maniobra de Heimlich.",
+      "Colocar al pasajero en posición lateral de seguridad."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1154",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si un pasajero sufre de dolor de oídos ¿qué debemos hacer?",
+    "options": [
+      "Indicar al pasajero que haga movimientos como masticar o bostezar para aliviar la presión.",
+      "Realizarle la maniobra de Heimlich.",
+      "Ofrecerle un calmante.",
+      "Indicarle que mueva la cabeza."
+    ],
+    "correct": 0,
+    "explanation": ""
   }
 ]
