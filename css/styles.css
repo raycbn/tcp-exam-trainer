@@ -1,18 +1,18 @@
 :root {
-    --bg: #0b1220;
+    --bg: #0a0a0a;
     --card: rgba(17, 24, 39, 0.92);
     --card-border: rgba(148, 163, 184, 0.14);
 
     --text: #e5e7eb;
     --muted: #94a3b8;
 
-    --accent: #38bdf8;
-    --accent-2: #60a5fa;
+    --accent: #cf304b;
+    --accent-2: #e14562;
 
     --good: #22c55e;
     --bad: #ef4444;
 
-    --line: #334155;
+    --line: #2d2d2d;
 
     --radius: 24px;
 }
@@ -29,9 +29,9 @@ body {
 
     background:
         radial-gradient(circle at top,
-        rgba(56,189,248,.15),
+        rgba(207,48,75,.15),
         transparent 30%),
-        #08101d;
+        #080808;
 
     color: var(--text);
 }
@@ -191,11 +191,11 @@ h3 {
     background:
         linear-gradient(
             135deg,
-            rgba(56,189,248,.08),
-            rgba(96,165,250,.05)
+            rgba(207,48,75,.08),
+            rgba(225,69,98,.05)
         );
 
-    border: 1px solid rgba(56,189,248,.25);
+    border: 1px solid rgba(207,48,75,.25);
 
     border-radius: 18px;
 
@@ -757,8 +757,8 @@ h3 {
     background:
         linear-gradient(
             135deg,
-            #f59e0b,
-            #fbbf24
+            #cf304b,
+            #e14562
         );
 
     border: none;
