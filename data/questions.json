@@ -16154,5 +16154,915 @@
     ],
     "correct": 0,
     "explanation": ""
+  },
+  {
+    "id": "TCP-1155",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es la IATA?",
+    "options": [
+      "La Asociación Internacional de Transporte Aéreo",
+      "La Institución Americana de Transporte Aéreo",
+      "El Instituto de Aviación y Transporte Aeronáutico.",
+      "La Asociación Internacional de Transporte Aeronáutico."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1156",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué sistema del avión proporciona la presurización interior en cabina?",
+    "options": [
+      "Sistema neumático",
+      "Sistema hidráulico",
+      "Sistema eléctrico",
+      "Sistema aire acondicionado"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1157",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En certificado de tripulante de cabina de pasajeros se emitirá por un periodo máximo de…",
+    "options": [
+      "Un año",
+      "Tres años",
+      "Cinco años",
+      "No tiene caducidad, estará vigente cinco años desde la ultima hora de vuelo."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1158",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué entendemos por fases críticas de vuelo?",
+    "options": [
+      "En tierra, las operaciones de despegue y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10000 pies",
+      "En tierra, las operaciones de rodaje y despegue y, en vuelo, las operaciones realizadas con las señales de “abróchense el cinturón” encendidas",
+      "En tierra, las operaciones de rodaje, despegue y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10000 pies y con las señales de “abróchense el cinturón” encendidas",
+      "En tierra, las operaciones de rodaje y aterrizaje y, en vuelo, las operaciones realizadas por debajo de los 10000 pies y con las señales de “abróchense el cinturón” encendidas"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1159",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El convenio de Tokio trata de:",
+    "options": [
+      "Mercancías peligrosas",
+      "Secuestros y otros actos ilícitos o delitos cometidos a bordo",
+      "Equipo de supervivencia",
+      "Tráfico aéreo"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1160",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué explica el teorema de Bernoulli?",
+    "options": [
+      "Si disminuye la presión, disminuye la velocidad",
+      "Si aumenta la densidad, disminuye la presión",
+      "Si aumenta la presión, aumenta la velocidad",
+      "Si disminuye la presión, aumenta la velocidad"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1161",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El APU se utiliza para:",
+    "options": [
+      "Situaciones de supervivencia",
+      "Para mejorar el repostaje de combustible",
+      "Proporcionar energía eléctrica y/o neumática al avión, principalmente",
+      "Alterar momentáneamente la forma del ala durante el despegue y el aterrizaje para aumentar la sustentación."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1162",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipo de nube asociamos generalmente a una tormenta?",
+    "options": [
+      "Nimbostratos",
+      "Cirrostratos",
+      "Estratocúmulos",
+      "Cumulonimbos"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1163",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué debemos de hacer en caso de fuego en la ropa de un pasajero, además de avisar a la cabina de vuelo?",
+    "options": [
+      "Echarle mucha agua fría",
+      "Utilizar un BCF sobre el pasajero",
+      "Avisar a un aeropuerto",
+      "Impedir que se mueva, apagar el fuego con mantas y abrigos."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1164",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿De que color son las etiquetas de clase 1?",
+    "options": [
+      "Blanca",
+      "Rojo",
+      "Naranja",
+      "Verde"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1165",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Puede un pasajero transportar aerosoles que contengan sustancias discapacitadoras o irritantes?",
+    "options": [
+      "Si, si son transportados como equipaje facturado",
+      "No podría, ya que es una mercancía peligrosa prohibida",
+      "Si, si no hay ninguna limitación expresa a este respecto por parte de la compañía",
+      "Si, si los líquidos son de venta legal, tiene menos de 100ml y van en una bolsa de plástico transparente de 20cm x 20cm"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1166",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los aviones deben de estar previstos de un sistema de presentación automática de O2 cuando vuelen por encima de:",
+    "options": [
+      "10.000 pies",
+      "14.000 pies",
+      "25.000 pies",
+      "33.000 pies"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1167",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de evacuación en tierra, los TCPs ordenaran a los pasajeros que abandonen el avión a través de los planos:",
+    "options": [
+      "Por el borde de escape",
+      "Por el borde de salida",
+      "Por el borde de fuga",
+      "Por el borde de ataque"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1168",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Durante el repostado de combustible con pasajeros a bordo:",
+    "options": [
+      "Las señales de “no fumar” estarán encendidas y las de “abróchense el cinturón” estarán apagadas",
+      "Las señales de “abróchense el cinturón” y de “no fumar” estarán encendidas",
+      "Las señales de “abróchense el cinturón” y de “no fumar” estarán apagadas",
+      "Las señales de “no fumar” estarán apagadas y “abróchense el cinturón” estarán encendidas"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1169",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Si una persona ha sufrido una lipotimia o mareo, en que postura le colocaremos?",
+    "options": [
+      "Decúbito lateral izquierdo",
+      "Posición lateral derecho",
+      "Decúbito prono",
+      "Decúbito supino con piernas elevadas"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1170",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es un aerodino monomotor?",
+    "options": [
+      "Helicóptero",
+      "Avión",
+      "Globo",
+      "Dirigible"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1171",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se manipulan los mandos del timón de profundidad?",
+    "options": [
+      "Moviendo la palanca de izquierda a derecha",
+      "Moviendo la palanca hacia delante o hacia detrás",
+      "Accionando los pedales",
+      "Extendiendo los flaps"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1172",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El anexo 18 de la OACI se refiere a…",
+    "options": [
+      "Seguridad en los aeropuertos",
+      "Mercancías peligrosas",
+      "Facilitación Aeroportuaria",
+      "Formación de TCP"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1173",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En Mercancías Peligrosas, un tubo de ensayo goteando pertenece a la clase",
+    "options": [
+      "Productos Químicos",
+      "Clase 8 Corrosivos",
+      "Clase 9 Varias",
+      "Clase 1 Explosivos"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1174",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo se debe comunicar un accidente o incidente con Mercancías Peligrosas?",
+    "options": [
+      "24 horas",
+      "36 horas",
+      "72 horas",
+      "Lo más pronto posible"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1175",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En España, el organismo encargado de investigar los accidentes e incidentes se llama…",
+    "options": [
+      "AENA",
+      "AESA",
+      "Guardia Civil",
+      "CIAIAC"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1176",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El doc. 30 del CEAC…",
+    "options": [
+      "Regula las Mercancias Peligrosas",
+      "Promueve el transporte aéreo en forma segura a nivel europeo",
+      "Establece los requisitos Para la formación de los pilotos",
+      "No existe tal documento"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1177",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El gradiente de disminución a razón de 6,5 Cº cada 1000 metros ocurre en…",
+    "options": [
+      "Troposfera",
+      "Estratosfera",
+      "Mesosfera",
+      "Termosfera"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1178",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Es obligatorio el paso por el arco metálico para todas las personas?",
+    "options": [
+      "Si, siempre",
+      "Si, salvo que la persona presente justificante",
+      "A criterio del agente",
+      "Según el nivel de seguridad"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1179",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Con temperatura corporal de 32Cº, una persona sufriría…",
+    "options": [
+      "Muerte",
+      "Inconsciencia",
+      "Hipotermia grave",
+      "Sofocación"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1180",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué barreras podemos encontrarnos en la comunicación?",
+    "options": [
+      "Personales, físicas y semánticas",
+      "Sonoras, visuales y psicológicas",
+      "Filológicas, conductuales y no verbales",
+      "Una buena comunicación no tiene barreras"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1181",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A qué distancia se tiene que separar un vuelo de la costa para llevar obligatoriamente chalecos salvavidas?",
+    "options": [
+      "40 millas náuticas",
+      "50 millas náuticas",
+      "75 MN",
+      "100 MN"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1182",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las Mercancías Peligrosas se dividen en…",
+    "options": [
+      "Clases y divisiones",
+      "Peligrosas, muy peligrosas y letales",
+      "Tipos y subdivisiones",
+      "Manifiestas y ocultas"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1183",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Con qué frecuencia debe renovar el certificado médico un TCP?",
+    "options": [
+      "60 meses",
+      "24 meses",
+      "12 meses",
+      "Depende de la edad"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1184",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuántos PMR no ambulatorios pueden ir en un avión?",
+    "options": [
+      "10% de la capacidad del avión",
+      "La mitad que el número de puertas a nivel de suelo",
+      "Los mismos que el número de puertas a nivel de suelo",
+      "No se limitan, sería discriminación"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1185",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Durante el repostaje de combustible, las señales de “prohibido fumar” y “abróchense cinturones” deben estar…",
+    "options": [
+      "Señal “prohibido fumar” apagada y señal “abróchense cinturones” encendida",
+      "Señal “prohibido fumar” encendida y señal “abróchense cinturones” apagada",
+      "Señal “prohibido fumar” encendida y señal “abróchense cinturones” encendida",
+      "Es indiferente"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1186",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Una evacuación por la mitad de las salidas operativas disponibles, debe efectuarse …",
+    "options": [
+      "Antes de que lleguen los bomberos",
+      "En menos de 90 segundos",
+      "Por todas puertas y ventanas del avión",
+      "Con la mayor rapidez posible"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1187",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Efectos/tratamiento de congelación de 3º grado",
+    "options": [
+      "Eritema y comezón intensa – abrigar",
+      "Vesículas o ampollas – evitar el sudor y dar bebidas muy calientes",
+      "Escaras o costras negruzcas y anestesia local – secar sin frotar, envolver en ropas secas",
+      "Suministrar bebidas alcohólicas para entrar en calor"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1188",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La hemoptisis es…",
+    "options": [
+      "Salida de sangre por la boca procedente del aparato respiratorio",
+      "Salida de sangre por la boca procedente del aparato digestivo",
+      "Salida de sangre por la nariz",
+      "Hemorragia interna"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1189",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La sustancia que produce una respuesta inmunitaria es...",
+    "options": [
+      "Antígeno",
+      "Anticuerpo",
+      "Hemoglobina",
+      "Urticaria"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1190",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La hipoxia por intoxicación se llama…",
+    "options": [
+      "Hipóxica",
+      "Anémica",
+      "Por estancamiento o isquémica",
+      "Histotóxica"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1191",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si detectamos humo procedente del aire acondicionado debemos…",
+    "options": [
+      "Avisar al comandante",
+      "Usar el extintor adecuado",
+      "No es peligroso ya que es fruto de la condensación",
+      "Cerramos las salidas de aire"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1192",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El botiquín médico es obligatorio en aviones con una configuración de asientos…",
+    "options": [
+      "uno por cada 50 asientos",
+      "uno por cada 100 asientos",
+      "Superior a 30 asientos",
+      "para vuelos internacionales"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1193",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué factor está relacionado con la aparición de trombos?",
+    "options": [
+      "Edad",
+      "Complexión física",
+      "Género",
+      "Genética"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1194",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La humedad atmosférica con la altura…",
+    "options": [
+      "Permanece constante",
+      "Aumenta",
+      "Disminuye",
+      "aumenta en el Ecuador"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1195",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La distancia de un punto respecto al ecuador es la…",
+    "options": [
+      "Latitud",
+      "Longitud",
+      "Meridiano",
+      "UTC"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1196",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los factores más graves en supervivencia por orden de importancia son…",
+    "options": [
+      "Miedo, frío y sed",
+      "Frio, sed y alimentación",
+      "Deshidratación, desorientación y desconocimiento",
+      "Miedo y la Gran decisión"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1197",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipo de mercancía no se puede llevar a bordo?",
+    "options": [
+      "Hielo seco",
+      "Termómetro médico",
+      "Mechero de combustible líquido no absorbido",
+      "Móviles con pilas de litio"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1198",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Que significa una etiqueta de manipulación con un imán y una brújula?",
+    "options": [
+      "Mercancía de la clase 5",
+      "Almacenar siempre orientado al Norte Magnético",
+      "Material magnético que puede influir en la navegación",
+      "Almacenar cerca de la cabina de mando"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1199",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El músculo esquelético es…",
+    "options": [
+      "Músculo muy delgado y alargado",
+      "Músculos intercostales",
+      "Músculo estriado voluntario",
+      "Musculo liso del abdomen"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1200",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La línea señalada en el mapa para ir de un punto a otro es…",
+    "options": [
+      "Rumbo",
+      "Deriva",
+      "Derrota",
+      "Ruta"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1201",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se llama la visibilidad respecto a la pista en la maniobra de aproximación?",
+    "options": [
+      "Visibilidad de pista",
+      "Oblicua",
+      "Horizontal",
+      "ILS"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1202",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué documento tiene carácter obligatorio para un TCP?",
+    "options": [
+      "DNI en vigor",
+      "Pasaporte en vigor",
+      "Documento de la compañía",
+      "Certificado de vacuna"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1203",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En mercancías peligrosas, la etiqueta blanca corresponde a…",
+    "options": [
+      "Tóxicos o infecciosos",
+      "Gases no tóxicos",
+      "Peróxidos orgánicos",
+      "Inflamables"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1204",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La maniobra en la que se invierte el flujo del motor se llama…",
+    "options": [
+      "Flare",
+      "Retard",
+      "Reversa",
+      "Overshoot"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1205",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los incendios clase C corresponden a…",
+    "options": [
+      "Solidos químicos combustibles",
+      "Gases en estado natural",
+      "Fuegos eléctricos",
+      "Papel, tapicería y cortinas"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1206",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cual de las siguientes características NO corresponde a un extintor de BCF o Halón:",
+    "options": [
+      "Tiene una duración de 8 a 10 segundos",
+      "Es más pesado que el aire",
+      "Enfría los rescoldos",
+      "Recomendado en fuegos eléctrico"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1207",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Pueden los TCPs usar una capucha anti-humo PBE después de una descompresión explosiva, para revisar la cabina de pasajeros, baños y cockpit?",
+    "options": [
+      "No, su uso es solo para protegernos del humo",
+      "No, esos equipos son para los pilotos solamente",
+      "Si, si la altura de presión de la cabina no es suficientemente segura",
+      "No, está contraindicado"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1208",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Pueden los pasajeros, durante un vuelo, recibir oxígeno 100% a demanda?",
+    "options": [
+      "No, solo los pilotos pueden",
+      "No, solo pueden los pilotos y los TCP en sus asientos",
+      "Si, de las máscaras de oxígeno de emergencia de los PSU",
+      "Si, de las botellas portátiles de Oxigeno de Primeros Auxilios"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1209",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En un amaraje con una aeronave que no está provista con rampas/balsas ¿podemos utilizar las rampas sencillas como balsas salvavidas?",
+    "options": [
+      "Si, pero la capacidad se reduce a la mitad",
+      "No, solo se usarán las rampas/balsas si las hubiera",
+      "No, aunque una vez desprendida de la puerta servirán para que los pasajeros se mantengan a flote, pudiendo colocar sobre ella menores y/o PMR",
+      "Si, solo por el borde de ataque"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1210",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Aparece el número de TCPs a bordo en la hoja de Carga y Centrado de un determinado vuelo?",
+    "options": [
+      "Solo en vuelos Ferry",
+      "No, solo viene reflejada la carga",
+      "Sí",
+      "No"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1211",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Se puede reducir el número de la tripulación mínima en un vuelo?",
+    "options": [
+      "No, en ningún caso",
+      "Solo en caso de que este reflejado en le AOC del avión",
+      "Sí, si se ha reducido el número de pasajeros y se ha entregado un informe a la autoridad competente",
+      "Siempre que se haya reducido el número de pasajeros a 50 por TCP"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1212",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los requisitos de la OACI para la operación aérea internacional y para la tripulación de cabina de pasajeros se pueden encontrar en:",
+    "options": [
+      "Anexo 1.",
+      "Anexo 6",
+      "Anexo 17",
+      "Anexo 18"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1213",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Se llama ‘polizón’",
+    "options": [
+      "Al que se embarca clandestinamente en una aeronave",
+      "Al que se embarca con un billete de menor precio en una aeronave",
+      "Al que se apodera ilícitamente de una aeronave en vuelo",
+      "Al que no hace caso de los reglamentos de seguridad"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1214",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "El Centro de Control de Tránsito Aéreo ATC suministra los siguientes servicios:",
+    "options": [
+      "Servicio de control de tránsito aéreo, servicio de información de vuelo, servicio de alerta y servicio de rescate",
+      "Servicio de control de tránsito aéreo, servicio de información de vuelo, servicio de alerta",
+      "Servicio de control de tránsito aéreo y servicio de información de vuelo",
+      "Servicio de control de tránsito aéreo y servicio de alerta"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1215",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Los miembros de la tripulación no deberán consumir alcohol desde cuantas horas antes del vuelo?",
+    "options": [
+      "12 horas",
+      "8 horas",
+      "10 horas",
+      "24 horas"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1216",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cuando un tripulante de cabina de pasajeros se somete a un proceso de entrenamiento de cualquier tipo:",
+    "options": [
+      "No tiene obligaciones ulteriores",
+      "Debe someterse a un proceso de verificación",
+      "Ha de ser examinado nuevamente",
+      "Se debe retirar del trabajo"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1217",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Un avión realiza un trayecto en el que viajan 87 pasajeros. La aeronave cuenta con 137 asientos de pasajero, en un solo piso. Lleva 5 tripulantes de cabina de pasajeros, pero únicamente cuenta con 3 asientos para tripulación. ¿Dónde se sentarán los otros 2 tripulantes?",
+    "options": [
+      "En ningún caso podrán ir más de 3 tripulantes en una aeronave que no cuenta con más de 3 asientos específicos de tripulación",
+      "Sólo podrá volar uno de ellos y lo hará en la cabina de vuelo",
+      "Podrán ocupar asientos de pasajeros.",
+      "Este avión no podría volar ya que requiere como tripulación mínima 4 tripulantes y no tiene asientos para todos ellos"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1218",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "A un pasajero que está completamente inmóvil (parapléjicos, etc.) y necesita ser trasladado desde el mostrador de facturación hasta su asiento del avión se le denomina:",
+    "options": [
+      "WCHR",
+      "WCHS",
+      "WCHP",
+      "WCHC"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-1219",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Según el código AIRIMP un pasajero DEPU significa:",
+    "options": [
+      "Diputado al Congreso",
+      "Deportado que no necesita ser acompañado por las autoridades",
+      "Deportado que debe ser acompañado a bordo por cuerpos de seguridad",
+      "Inadmitido en el país de destino y dejado en cuarentena"
+    ],
+    "correct": 1,
+    "explanation": ""
   }
 ]
