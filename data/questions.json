@@ -9114,19 +9114,19 @@
     "explanation": ""
   },
   {
-  "id": "TCP-0652",
-  "subject": "general",
-  "topic": "tcp",
-  "question": "¿En qué categoría de pasajeros será clasificado aquel que no puede moverse por sí mismo, requiere silla de ruedas para desplazarse a/desde el avión/autobús de pasaje y ha de ser subido y bajado por escalones y a/desde su butaca en la cabina de pasaje?",
-  "options": [
-    "WCHS",
-    "BLND",
-    "UM",
-    "WCHC"
-  ],
-  "correct": 3,
-  "explanation": ""
-},
+    "id": "TCP-0652",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En qué categoría de pasajeros será clasificado aquel que no puede moverse por sí mismo, requiere silla de ruedas para desplazarse a/desde el avión/autobús de pasaje y ha de ser subido y bajado por escalones y a/desde su butaca en la cabina de pasaje?",
+    "options": [
+      "WCHS",
+      "BLND",
+      "UM",
+      "WCHC"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
   {
     "id": "TCP-0653",
     "subject": "general",
@@ -9240,19 +9240,19 @@
     "explanation": ""
   },
   {
-  "id": "TCP-0661",
-  "subject": "general",
-  "topic": "tcp",
-  "question": "En una situación de humo negro en cabina de pasaje los TCPs deben:",
-  "options": [
-    "Echarse al suelo, taparse nariz y boca.",
-    "Informar al CMTE, coger botella de oxígeno con mascarilla en toma HI.",
-    "Informar al CMTE, utilizar PBE, cerrar aireadores, gritar a los pax si posible: “agáchense y tápense la nariz y la boca”.",
-    "Solicitar al comandante el despliegue de las máscaras de O2 de los PSUs."
-  ],
-  "correct": 2,
-  "explanation": ""
-},
+    "id": "TCP-0661",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En una situación de humo negro en cabina de pasaje los TCPs deben:",
+    "options": [
+      "Echarse al suelo, taparse nariz y boca.",
+      "Informar al CMTE, coger botella de oxígeno con mascarilla en toma HI.",
+      "Informar al CMTE, utilizar PBE, cerrar aireadores, gritar a los pax si posible: “agáchense y tápense la nariz y la boca”.",
+      "Solicitar al comandante el despliegue de las máscaras de O2 de los PSUs."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
   {
     "id": "TCP-0662",
     "subject": "general",
@@ -9912,19 +9912,19 @@
     "explanation": ""
   },
   {
-  "id": "TCP-0709",
-  "subject": "general",
-  "topic": "tcp",
-  "question": "Ante un derrame de una sustancia química desconocida o sospechosa en la cabina de pasajeros, el tripulante que intervenga para mitigar el riesgo:",
-  "options": [
-    "Limpiará el líquido directamente con las manos desnudas.",
-    "Utilizará una manta de lana seca para extender el líquido por el pasillo.",
-    "Se colocará una PBE, utilizará guantes protectores del kit de emergencia y cubrirá la zona con bolsas y papel absorbente según la guía de emergencia.",
-    "Esperará a que el líquido se evapore solo sin avisar a nadie."
-  ],
-  "correct": 2,
-  "explanation": ""
-},
+    "id": "TCP-0709",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Ante un derrame de una sustancia química desconocida o sospechosa en la cabina de pasajeros, el tripulante que intervenga para mitigar el riesgo:",
+    "options": [
+      "Limpiará el líquido directamente con las manos desnudas.",
+      "Utilizará una manta de lana seca para extender el líquido por el pasillo.",
+      "Se colocará una PBE, utilizará guantes protectores del kit de emergencia y cubrirá la zona con bolsas y papel absorbente según la guía de emergencia.",
+      "Esperará a que el líquido se evapore solo sin avisar a nadie."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
   {
     "id": "TCP-0710",
     "subject": "general",
@@ -11489,6 +11489,1042 @@
       "Un aumento exagerado de las pulsaciones del corazón.",
       "Una presión sanguínea anormalmente baja, lo que puede provocar mareos, visión borrosa o desmayos (síncope).",
       "Un aumento de los niveles de azúcar en la sangre."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0822",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las hojas de carga y centrado del avión nos proporcionan…",
+    "options": [
+      "El mejor perfil alar.",
+      "El centro de gravedad más óptimo.",
+      "Una menor pérdida de sustentación.",
+      "La mejor distribución de la carga en las bodegas."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0823",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué se entiende por atalaje?",
+    "options": [
+      "Cinturón de seguridad de un asiento de servicio.",
+      "Conjunto de cinturón y tirantes de seguridad unidos en un solo cierre.",
+      "Conjunto de cinturón, tirantes y reposa cabezas.",
+      "Todo lo que sirva para unirse al asiento."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0824",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué edad mínima deben tener los niños para que puedan viajar solos (UM)?",
+    "options": [
+      "2 años",
+      "5 años.",
+      "8 años.",
+      "6 años."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0825",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En aeronáutica qué son los Nudos (Kt):",
+    "options": [
+      "Las unidades empleadas para medir el régimen de ascenso y de descenso.",
+      "Las unidades empleadas para medir la velocidad.",
+      "Las unidades empleadas para medir la altura.",
+      "Las unidades empleadas para medir la presión"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0826",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Las matrículas de avión, en España según RD 2876/1982, comienzan con las letras…",
+    "options": [
+      "EC- seguida de una combinación de 3 números.",
+      "ES- seguida de una combinación de 3 números y/o letras.",
+      "EC- seguida de una combinación de 3 letras.",
+      "ES- seguida de una combinación de 3 letras."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0827",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EASA es una agencia de…",
+    "options": [
+      "La Unión Europea que empezó a operar en el año 2003.",
+      "Ámbito mundial que empezó a operar en 1944.",
+      "La Unión Europea que empezó operar en el año 2018.",
+      "Los Estados Unidos, con sede en Chicago que empezó a operar en el año 2003."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0828",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Nuestro avión tiene 183 asientos, pero viajan solamente 75 pasajeros. Cuantos TCPs deben estar a bordo de la aeronave?",
+    "options": [
+      "6.",
+      "3.",
+      "4.",
+      "2."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0829",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Un pasajero que muestra labio y uñas azulados por falta de oxígeno padece:",
+    "options": [
+      "Ictericia.",
+      "Hiperglucemia.",
+      "Cinetosis.",
+      "Cianosis."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0830",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de tener a un pasajero con fiebre abordo, el medicamento adecuado que encontraremos en el FAK para estos casos será:",
+    "options": [
+      "Un antibiótico",
+      "Un antipirético",
+      "Antihistamínico",
+      "Antiemético"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0831",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué sistema reconoce los agentes de la vacuna como extraños, distribuyéndolos “recordándolos”, de manera que cuando una versión realmente nociva de la infección lleva al organismo, está ya preparado para responder?",
+    "options": [
+      "El sistema inmunológico.",
+      "El sistema nervioso.",
+      "El sistema cardio-respiratorio.",
+      "El sistema psico-motriz"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0832",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de fallecimiento abordo, ¿De quién es la responsabilidad de comunicar lo sucedido a la compañía para que contacte con sus familiares más próximos y solicitar instrucciones sobre qué hacer con el cadáver?",
+    "options": [
+      "De los agentes de handling.",
+      "Del comandante de la aeronave.",
+      "Del sobrecargo",
+      "Del personal de operaciones."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0833",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En todos los aviones de pasajeros existen espacio concedidos para guardar equipajes de mano de forma segura. Si un pasajero embarca con un bulto que no cupiera en estos lugares:",
+    "options": [
+      "Se colocará en un lavabo, pues ahí no molesta.",
+      "Se colocará en un rack o bin equipo de emergencia puesto que son amplios y no suelen estar demasiado ocupados.",
+      "Se retirará y se bajará a bodega convenientemente equipado.",
+      "Lo llevará en pasajero sobre sus rodillas durante las maniobras de despegue y aterrizaje, y una vez en crucero se colocará en una galley o lavabo."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0834",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipo de información no verbal se ofrece a los pasajeros en la cabina?",
+    "options": [
+      "La información que transmite la tripulación a través del interfono.",
+      "La información que transmite el comandante.",
+      "La información que transmite la tripulación a través del megáfono.",
+      "La señal de abrocharse el cinturón de seguridad."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0835",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Es obligatorio controlar el acceso y chequear las identidades de toda persona que quiera subir al avión durante una escala, como por ejemplo el personal de limpieza y empleados de catering?",
+    "options": [
+      "No es obligatorio, las personas ya son controladas por el personal del aeropuerto.",
+      "No es obligatorio, se hará según criterio de la tripulación.",
+      "Es obligatorio y no se dejará subir a ninguna persona que no porte visiblemente su tarjeta de identificación.",
+      "Es obligatorio, pero se pueden hacer excepciones con el personal de la limpieza y el catering."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0836",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Un TCP que no ha ejercido funciones relacionadas con el vuelo en los seis meses precedentes, en un tipo de aeronave concreto, antes de volver a ser asignado de nuevo a dichas funciones debe superar:",
+    "options": [
+      "Un Curso de Conversión.",
+      "Un Curso de Entrenamiento Periódico.",
+      "Un Curso de Refresco.",
+      "Un entrenamiento y verificaciones de refresco o dos vuelos de familiarización."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0837",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué resulta fundamental e imprescindible en la detección de posibles fueg os a bordo?",
+    "options": [
+      "Conocer bien las prestaciones del material que se ha de utilizar para poder apagarlo.",
+      "Un buen entrenamiento es garantía de éxito asegurado.",
+      "Escoger al tripulante con más experiencia para que sea él quién lo combata.",
+      "Vigilancia continua, detección precoz y actuación inmediata."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0838",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Al conjunto de regulaciones, prácticas y procedimientos adoptados por España, en virtud de lo requerido a los Estados miembros en el Artículo 10 del Reglamento (CE) 300/2008 sobre medidas de seguridad de la aviación civil se le denomina:",
+    "options": [
+      "Ley Penal y Procesal de Navegación Aérea.",
+      "Normativa AIR OPS de Circulación Aérea Europea.",
+      "Programa Nacional de Seguridad (PNS).",
+      "Ley de Seguridad Aérea 2004/193."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0839",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si sufrimos un derrame de mercancía peligrosa en la cabina de pasajeros durante el vuelo y de acuerdo con el Doc. 9481 de la OACI ¿dónde deberíamos introducir todos los desechos tras limpiarlo?",
+    "options": [
+      "En bolsas de mareo.",
+      "En bolsas de polietileno.",
+      "Tiraríamos todos los restos de papel por el inodoro.",
+      "En las papeleras de los lavabos o de los galleys."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0840",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Ante un incidente con MMPP una PBE puede ser de utilidad para:",
+    "options": [
+      "No respirar emanaciones nocivas.",
+      "Para recoger los residuos.",
+      "Para apagar el fuego.",
+      "Para proteger nuestra piel."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0841",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿A qué llamamos triaje?",
+    "options": [
+      "Al conjunto de procedimientos asistenciales a los heridos supervivientes sobre el terreno que, ejecutados sobre una víctima, orientan sobre sus posibilidades de supervivencia inmediata.",
+      "A la selección de los instrumentos quirúrgicos necesarios para una determinada operación.",
+      "A la clasificación de enfermos por especialidades médicas tras un accidente aéreo.",
+      "A la secuenciación de los factores genéticos."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0842",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Un dispositivo electrónico arde durante un vuelo, apagamos el fuego y queremos bajar la temperatura para asegurarnos de que no se reinicie ¿Qué no deberemos usar nunca para ello?",
+    "options": [
+      "Té.",
+      "Zumos.",
+      "Hielo.",
+      "Café."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0843",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se actuaría en el caso de fuego considerable sobre un pasajero?",
+    "options": [
+      "Avisar inmediatamente al comandante y esperar sus instrucciones.",
+      "Rociar inmediatamente a la víctima con cualquier líquido que tengamos a mano para apagar el fuego.",
+      "Intentar impedir que la víctima se mueva o corra, apagar el fuego con mantas o abrigos y avisar a cockpit.",
+      "Descargar lo más rápido posible el extintor de BCF sobre la víctima, apagar el fuego que le envuelve y quitarle la ropa quemada."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0844",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Para limpiar un posible derrame de Mercancía Peligrosa durante el vuelo, los TCPs emplearían:",
+    "options": [
+      "Guantes de plástico, bolsas de papel y algodón.",
+      "Monos de tela y sustancias inhibidoras contra derrames de Mercancías Peligrosas.",
+      "Guantes pirorresistentes o de goma tipo cocina, bolsas de polietileno, papel secante.",
+      "Guantes de piel, gasas absorbentes y gafas protectoras."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0845",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En MMPP qué uso le damos a la tabla 2.3 A:",
+    "options": [
+      "Conocer las MMPP que pueden ser transportadas a bordo de una aeronave por pasajeros o tripulación.",
+      "Conocer cómo actuar en caso de incidente con MMPP.",
+      "Clasificar las MMPP.",
+      "Conocer cómo deben ser empaquetadas las MMPP."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0846",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La hiperextensión del cuello que se realiza durante una RCP no deberá practicarse a:",
+    "options": [
+      "Ningún niño que tenga 12 años o más.",
+      "Será realizada siempre, sin excepciones.",
+      "A los bebés.",
+      "Personas de más de 80 años."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0847",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Para medir la altitud en las operaciones aéreas ¿Qué referencia de medida se emplea mayoritariamente?",
+    "options": [
+      "Millas náuticas.",
+      "Millas terrestres.",
+      "Pies.",
+      "Metro."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0848",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es un GPU?",
+    "options": [
+      "Un sistema de aproximación.",
+      "Un sistema de presurización.",
+      "Una unidad de potencia para el aeropuerto.",
+      "Una unidad de potencia eléctrica auxiliar de tierra."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0849",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de un amerizaje, sin que el avión haya sufrido daños estructurales, las salidas más aconsejables para evacuar serían por…",
+    "options": [
+      "Todas las salidas de emergencia delanteras que estén por encima del nivel de flotación.",
+      "Todas las salidas de emergencia que estén operativas y provistas de tobogán/balsa.",
+      "Todas las puertas provistas de tobogán/rampa.",
+      "Las ventanillas de las alas por la parte de los flaps."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0850",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cómo se denomina al conjunto de regulaciones, prácticas y procedimientos adoptados por España, en virtud de lo requerido a los Estados miembros en el Artículo 10 del Reglamento (CE) 300/2008 sobre medidas de seguridad de la aviación civil?",
+    "options": [
+      "Ley de Seguridad Aérea del 7 de julio de 2004",
+      "Ley Penal y Procesal de Navegación Aérea",
+      "Reglamento de Circulación Aérea",
+      "Programa Nacional de Seguridad (PNS)"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0851",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Señala el tratamiento apropiado en caso de mareo:",
+    "options": [
+      "Tumbar al paciente en el suelo y elevar las piernas para facilitar el riego sanguíneo.",
+      "Administrar medicación.",
+      "Colocar al paciente en la posición lateral de seguridad.",
+      "Aplicar la maniobra de Heimlich"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0852",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Dónde se sitúa la Ozonosfera?",
+    "options": [
+      "Troposfera.",
+      "Estratosfera.",
+      "Termosfera.",
+      "Ionosfera."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0853",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En las operaciones aéreas, al referirnos a distancia, lo hacemos en:",
+    "options": [
+      "Millas terrestres.",
+      "Millas Náuticas.",
+      "Kilómetros.",
+      "Hectómetros."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0854",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuándo está contraindicado el vómito en el tratamiento generalizado de las intoxicaciones?",
+    "options": [
+      "Cuando el enfermo está consciente.",
+      "En toda intoxicación etílica.",
+      "Si se han ingerido sustancias corrosivas (acido, lejía, amoniaco, etc.).",
+      "En todo caso está contraindicado."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0855",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Dónde se sitúan los alveolos?",
+    "options": [
+      "En la lengua.",
+      "En el riñón.",
+      "En el pulmón.",
+      "En el corazón."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0856",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Se considera que la rampa esta armada cuando:",
+    "options": [
+      "La puerta está cerrada.",
+      "Se ha operado el mecanismo de armado de la rampa.",
+      "La puerta está abierta y blocada.",
+      "Se ha retirado la escalera o pasarela telescópica."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0857",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué debemos hacer en caso de fuego en la ropa de un pasajero?",
+    "options": [
+      "Rociarle con mucha agua o zumos inmediatamente para sofocar el fuego de su ropa.",
+      "Descargar inmediatamente el extintor de halón sobre la ropa que arda.",
+      "Impedir que la víctima se mueva o corra, apagarlo con mantas y abrigos y avisar a la cabina de vuelo.",
+      "Avisar a la cabina de vuelo y esperar instrucciones."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0858",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es lo primero que haremos si en un vuelo llegasen a embarcar, sin conocimiento previo por parte de ningún miembro de la tripulación, pasajeros no admitidos en un país, deportados o personas bajo custodia?",
+    "options": [
+      "No haremos absolutamente nada en especial, todo será igual que con el resto.",
+      "Les solicitaremos la tarjeta de embarque y comprobaremos que realmente son pasajeros de nuestro vuelo.",
+      "Les daremos la bienvenida y les atenderemos lo mejor posible.",
+      "Lo pondremos en conocimiento inmediato del Comandante."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0859",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La matrícula EC-HFP corresponde a una aeronave:",
+    "options": [
+      "Francesa.",
+      "Alemana.",
+      "Portuguesa.",
+      "Española."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0860",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "EI articulo CC.TRA.22S del Reglamento (UE) 290/2012, Calificaciones par Tipo o por Variante de Aeronave, determina que los titulares de un certificado de miembro de tripulación de cabina de pasajeros valido, que no hayan volado en los últimos 6 meses, podrán operar de nuevo en una aeronave si:",
+    "options": [
+      "Han realizado el curso de diferencias correspondiente.",
+      "Han completado el curso de refresco y la verificación correspondiente.",
+      "Han recibido el curso inicial.",
+      "Han sido autorizados por la dirección de operaciones de su compañía."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0861",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Cómo se denomina la habilidad de los seres vivos de registrar, retener y recuperar la información?",
+    "options": [
+      "Memoria.",
+      "Rencor.",
+      "Obsesión.",
+      "Determinación."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0862",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipo de nube asociamos generalmente a una tormento?",
+    "options": [
+      "Nimboestratos",
+      "Cirroestratos",
+      "Estratocúmulos",
+      "Cumulonimbos."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0863",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La disminución de la coordinación y de la capacidad de atención, así como la posible deshidratación, pueden ser consecuencia del ambiente seco en cabina de pasajeros y de vuelo, para prevenirlo es conveniente:",
+    "options": [
+      "Tomar café solo bien cargado.",
+      "Tomar líquidos no gaseosos.",
+      "Tomar refrescos gaseosos en abundancia.",
+      "Tomar cerveza."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0864",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Podría señalar que productos además del café contienen excitantes tipo cafeína?",
+    "options": [
+      "El agua.",
+      "El té.",
+      "El zumo de frutas tropicales.",
+      "Los refrescos de frutas."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0865",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué factores predisponen a la aerocolia?",
+    "options": [
+      "Mascar chicle.",
+      "Ingerir bebidas sin gas.",
+      "Comer despacio.",
+      "Haber ingerido poca cantidad de alimentos."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0866",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Puede viajar un niño de 4 años?",
+    "options": [
+      "Sí, si lleva la documentación necesaria.",
+      "Sí, no necesita documentación.",
+      "No, tiene que tener como mínimo 6 años.",
+      "No, tiene que tener como mínimo 5 años."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0867",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Se considera que una puerta está cerrada cuando:",
+    "options": [
+      "La rampa esta armada.",
+      "Han retirado la escalera o pasarela telescópica.",
+      "Se ha operado el mecanismo de cierre de puerta.",
+      "Lo ordena el Comandante."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0868",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Sumergir un miembro congelado en un recipiente con alguna bebida alcohólica como whisky o vodka es :",
+    "options": [
+      "Conveniente.",
+      "Si es vodka es conveniente, si es whisky no.",
+      "No es aconsejable.",
+      "Si es whisky sí, pero si es vodka no."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0869",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Protegerse del sol y reducir al máximo la perdida corporal de agua, es imprescindible en caso de supervivencia en:",
+    "options": [
+      "En el desierto",
+      "En la jungla",
+      "Las regiones polares",
+      "La montaña."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0870",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En caso de detectar humo saliendo del contenedor de desperdicios tenemos que:",
+    "options": [
+      "Avisar a cockpit",
+      "Protegernos con una PBE",
+      "Coger el extintor adecuado",
+      "Todas son correctas"
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0871",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si se activa la alarma indicadora de humo en el lavabo con la puerta del baño cerrada, esta nos estará indicando que:",
+    "options": [
+      "Hay condiciones de humo en el lavabo.",
+      "Hay condiciones de fuego en el lavabo.",
+      "No nos indica nada, si la puerta está fría.",
+      "Hay más de una persona metido en el baño."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0872",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Sabría establecer cuantas clases de MMPP existen?",
+    "options": [
+      "8 clases",
+      "9 clases",
+      "10 clases",
+      "12 clases"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0873",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿En función de que se establece la división de los embalajes en los grupos 1, 2 y 3?",
+    "options": [
+      "Del volumen y composición de la mercancía a transportar",
+      "Del peso y tamaño de la mercancía a transportar",
+      "De la peligrosidad de la mercancía a transportar",
+      "De la aeronave que podría transportar"
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0874",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál de las siguientes palabras encajaría mejor en la frase:” Gracias a la …. sabemos si el receptor ha entendido nuestro mensaje”?",
+    "options": [
+      "Retroalimentación o feedback",
+      "Resonancia",
+      "Sintetizacion",
+      "Disuasión"
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0875",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿ Cómo se denomina al mecanismo central de capacidad limitada cuya función primordial es controlar y orientar la actividad consciente del organismo de acuerdo con un objetivo determinado:",
+    "options": [
+      "Premonición.",
+      "Percepción.",
+      "Atención.",
+      "Fijación."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0876",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué mide el anemómetro?",
+    "options": [
+      "Rumbo.",
+      "Altura.",
+      "Régimen de descenso o ascenso.",
+      "Velocidad."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0877",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es un INFANT?",
+    "options": [
+      "Un pasajero entre 2 y 12 años sin cumplir.",
+      "Un pasajero entre 0 y 2 años sin cumplir.",
+      "Un pasajero entre 2 y 5 años sin cumplir.",
+      "Un pasajero mayor de 12 años."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0878",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Si estamos sentados en un asiento en sentido contrario a la marcha ‚cuál será la posición",
+    "options": [
+      "Entrelazaremos las manos por detrás de la cabeza tirando de ésta hacia el pecho.",
+      "Empujaremos la cabeza firmemente hacia atrás.",
+      "Apoyaremos la cabeza sobre las rodillas.",
+      "Inclinaremos el tronco hacia delante."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0879",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Para valorar la temperatura de una puerta de lavabo si sospechamos que hay un fuego tras ella, utilizaremos siempre:",
+    "options": [
+      "Los guantes protectores.",
+      "La palma de la mano.",
+      "Las dos manos.",
+      "El dorso de la mano."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0880",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Es obligatorio controlar el acceso y chequear las identidades de toda aquella persona que quiera subir al avión durante una escala?",
+    "options": [
+      "No es necesario ya que el personal del aeropuerto ya lo ha hecho.",
+      "Se hará solo según criterio de la tripulación.",
+      "Es obligatorio, no se dejará subir a nadie que no porte su identificación correspondiente.",
+      "Es obligatorio, pero a veces se pueden hacer excepciones según la normativa del aeropuerto."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0881",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Según la tabla 2.3A, ¿puede un pasajero transportar aerosoles que contengan sustancias discapacitadoras o irritantes?",
+    "options": [
+      "Sí, si son transportados como equipaje facturado.",
+      "No podría, ya que es una mercancía peligrosa prohibida.",
+      "Sí, si no hay ninguna limitación expresa a este respecto por parte de la compañía.",
+      "Sí, si los líquidos son de venta legal, tiene menos de 100 mililitros y van en una bolsa de plástico transparente de 20cm x 20 cm."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0882",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "En la exploración A, B y C, ¿qué parámetros valoramos?",
+    "options": [
+      "Vías aéreas permeables.",
+      "Estado de consciencia, vías aéreas permeables y respiración.",
+      "Estado de consciencia, respiración, heridas y fracturas.",
+      "Estado de consciencia, vías aéreas permeables, respiración, presencia de hemorragias graves y circulación."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0883",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Definición de Altitud:",
+    "options": [
+      "\"...Distancia entre el avión y la superficie terrestre...",
+      "\"...Distancia entre el avión y el nivel del mar...\"",
+      "\"...Altura entre dos puntos...",
+      "\"...Distancia entre el mar y un punto en la superficie terrestre...\""
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0884",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La explicación sobre: \"...un fluido en movimiento dentro de un conducto cerrado disminuye su presión cuando aumenta la velocidad al pasar por una zona de sección menor...\" corresponde a:",
+    "options": [
+      "El Efecto Venturi.",
+      "Principio de Bernoulli.",
+      "Efecto de contaminación de superficie.",
+      "Empuje."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0885",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Teniendo en cuenta esta imagen, ¿qué parte del ala está desplegado?",
+    "options": [
+      "Flap.",
+      "Spoiler.",
+      "Estabilizador.",
+      "Slat."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0886",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los dos primeros caracteres de los aviones con matrícula española son:",
+    "options": [
+      "ED-",
+      "EN-",
+      "EC-",
+      "EG-"
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0887",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué tipo de nube asociamos generalmente a la tormenta?",
+    "options": [
+      "Nimbostratos.",
+      "Cirrostratos.",
+      "Estratocúmulos.",
+      "Cumulonimbos."
+    ],
+    "correct": 3,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0888",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Según la normativa las smoke hoods (PBE's) deben tener una duración mínima de:",
+    "options": [
+      "5 minutos.",
+      "10 minutos.",
+      "15 minutos.",
+      "20 minutos."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0889",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Qué es un PET?",
+    "options": [
+      "Es un instrumento del avión.",
+      "Es un aparato electrónico.",
+      "Animal vivo transportado en cabina.",
+      "Es un pasajero deportado."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0890",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Los UM's pueden desembarcar:",
+    "options": [
+      "Cuando un agente de handling venga a recogerlos al final del desembarque.",
+      "Con un pasajero, si es mayor de edad y conoce al niño.",
+      "Cuando un agente de handling venga a recogerlos al principio del desembarque.",
+      "Acompañado por un TCP."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0891",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "¿Cuál es el primer paso a seguir cuando salta un C/B?:",
+    "options": [
+      "Resetear 1 vez.",
+      "Resetear 2 veces.",
+      "Informar al comandante antes de resetear.",
+      "Resetear tantas veces como sea necesario."
+    ],
+    "correct": 2,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0892",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Según la tabla 2.3A, ¿puede un pasajero transportar aerosoles que contengan sustancias discapacitadoras o irritantes?:",
+    "options": [
+      "Sí, si son transportados como equipaje facturado.",
+      "No podría, ya que es una mercancía peligrosa prohibida.",
+      "Sí, si no hay ninguna limitación expresa a este respecto por parte de la compañía.",
+      "Sí, si los líquidos son de venta legal, tiene menos de 100 mililitros y van en una bolsa de plástico transparente de 20cm x 20 cm."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0893",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "\"...Aquellas acciones, hechos o tentativas, destinados a comprometer la seguridad de la aviación civil y del transporte aéreo…\" corresponde con la definición de:",
+    "options": [
+      "Programa Nacional de Seguridad.",
+      "Actos de interferencia ilícita.",
+      "Zona restringida de seguridad.",
+      "Aviation Security."
+    ],
+    "correct": 1,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0894",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "La disminución de la coordinación y de la capacidad de atención, así como la posible deshidratación, puede ser consecuencia del ambiente seco de la cabina de pasajeros. Para prevenirla es conveniente:",
+    "options": [
+      "Tomar café.",
+      "Tomar líquidos no gaseosos.",
+      "Tomar refrescos gaseosos en abundancia.",
+      "Tomar alguna bebida alcohólica de baja graduación."
+    ],
+    "correct": 0,
+    "explanation": ""
+  },
+  {
+    "id": "TCP-0895",
+    "subject": "general",
+    "topic": "tcp",
+    "question": "Al efectuar el masaje cardiaco, el talón de nuestra mano se colocará:",
+    "options": [
+      "Entre el esternón y el ombligo.",
+      "Dos dedos por debajo del apéndice xifoides.",
+      "En el centro del tórax, sobre el esternón.",
+      "En cualquier parte de la región torácica."
     ],
     "correct": 2,
     "explanation": ""
