@@ -11098,7 +11098,7 @@
       "WCHC.",
       "DEAF."
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": ""
   },
   {
@@ -11518,7 +11518,7 @@
       "Conjunto de cinturón, tirantes y reposa cabezas.",
       "Todo lo que sirva para unirse al asiento."
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": ""
   },
   {
@@ -16796,7 +16796,7 @@
       "Derrota",
       "Ruta"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": ""
   },
   {
