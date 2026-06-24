@@ -526,8 +526,21 @@ function showQuestion() {
 
     document.getElementById(
         'question'
-    ).innerText =
-        q.question;
+    ).innerHTML =
+    `
+    <div class="question-header">
+
+        <div class="question-text">
+            ${q.question}
+        </div>
+
+        <button
+            id="favoriteBtn"
+            class="favorite-btn"
+        ></button>
+
+    </div>
+    `;
 
     updateFavoriteButton(q);
 
