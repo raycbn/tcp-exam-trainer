@@ -1,12 +1,15 @@
-const CACHE_NAME = "tcp-trainer-v2";
+const CACHE_NAME = "tcp-trainer-v3";
 
 const STATIC_FILES = [
     "./",
     "./index.html",
+    "./favorites.html",
+    "./smart.html",
     "./css/styles.css",
     "./js/app.js",
     "./js/stats.js",
     "./manifest.json",
+    "./version.json",
     "./icons/icon-192.png",
     "./icons/icon-512.png"
 ];
