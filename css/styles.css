@@ -849,3 +849,32 @@ h3 {
         grid-template-columns: 1fr;
     }
 }
+
+#favoriteBtn {
+
+    display: block;
+
+    max-width: 920px;
+
+    width: 100%;
+
+    margin: 15px auto;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #fbbf24,
+        #f59e0b
+    );
+
+    color: #111827;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
