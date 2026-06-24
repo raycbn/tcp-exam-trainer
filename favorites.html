@@ -2,72 +2,128 @@
 <html lang="es">
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Favoritas</title>
+    <title>Preguntas favoritas</title>
 
-<link
-rel="stylesheet"
-href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
-
 <body>
 
-<h1>⭐ Preguntas favoritas</h1>
+    <h1>⭐ Preguntas favoritas</h1>
 
-<a href="index.html">
-← Volver
-</a>
+    <div class="tools-menu">
+        <a href="index.html" class="tool-card">
+            ← Volver al inicio
+        </a>
+    </div>
 
-<div id="favoritesList"></div>
+    <div id="favoritesList"></div>
 
-<script>
+    <script>
+        const FAVORITES_KEY = "tcp_favorites";
 
-const favorites =
-    JSON.parse(
-        localStorage.getItem(
-            "tcp_favorites"
-        ) || "[]"
-    );
+        function loadFavorites() {
+            try {
+                return JSON.parse(
+                    localStorage.getItem(FAVORITES_KEY) || "[]"
+                );
+            } catch {
+                return [];
+            }
+        }
 
-const container =
-    document.getElementById(
-        "favoritesList"
-    );
-
-if (
-    favorites.length === 0
-) {
-
-    container.innerHTML =
-        "<h2>No tienes favoritas</h2>";
-
-} else {
-
-    favorites.forEach(q => {
-
-        const card =
-            document.createElement(
-                "div"
+        function saveFavorites(favorites) {
+            localStorage.setItem(
+                FAVORITES_KEY,
+                JSON.stringify(favorites)
             );
+        }
 
-        card.className =
-            "info-card";
+        function escapeHtml(text) {
+            return String(text)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        }
 
-        card.innerHTML =
-        `
-        <h3>${q.topic || ''}</h3>
+        function renderFavorites() {
+            const container = document.getElementById("favoritesList");
+            const favorites = loadFavorites();
 
-        <h2>${q.question}</h2>
-        `;
+            if (!container) return;
 
-        container.appendChild(card);
-    });
-}
+            if (favorites.length === 0) {
+                container.innerHTML = `
+                    <div class="info-card favorite-empty">
+                        <h2>No tienes preguntas favoritas todavía</h2>
+                        <p>Marca una pregunta con la estrella para guardarla aquí.</p>
+                    </div>
+                `;
+                return;
+            }
 
-</script>
+            container.innerHTML = "";
+
+            favorites.forEach(q => {
+                const card = document.createElement("div");
+                card.className = "info-card favorite-card";
+
+                const topic = q.topic
+                    ? q.topic.toUpperCase()
+                    : "GENERAL";
+
+                card.innerHTML = `
+                    <div class="favorite-card-top">
+                        <div class="favorite-card-body">
+                            <div class="favorite-topic">Tema: ${escapeHtml(topic)}</div>
+                            <h2>${escapeHtml(q.question)}</h2>
+                        </div>
+
+                        <button
+                            class="favorite-btn is-favorite favorite-remove"
+                            type="button"
+                            data-id="${escapeHtml(q.id)}"
+                        >
+                            <span class="favorite-star">★</span>
+                            <span>Quitar de favoritas</span>
+                        </button>
+                    </div>
+
+                    ${
+                        q.image
+                            ? `
+                            <div class="favorite-image-container">
+                                <img
+                                    class="favorite-image"
+                                    src="${escapeHtml(q.image)}"
+                                    alt="${escapeHtml(q.question)}"
+                                >
+                            </div>
+                            `
+                            : ""
+                    }
+                `;
+
+                container.appendChild(card);
+            });
+
+            container.querySelectorAll(".favorite-remove").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const id = btn.dataset.id;
+                    const updated = loadFavorites().filter(q => q.id !== id);
+                    saveFavorites(updated);
+                    renderFavorites();
+                });
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", renderFavorites);
+    </script>
 
 </body>
 </html>
