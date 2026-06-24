@@ -908,3 +908,98 @@ h3 {
 
     color: #fbbf24;
 }
+
+#favoritesList {
+
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    gap: 16px;
+}
+
+.favorite-card {
+
+    margin-bottom: 0;
+}
+
+.favorite-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+.favorite-topic {
+
+    color: var(--accent);
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    font-size: .78rem;
+
+    margin-bottom: 8px;
+}
+
+.favorite-card h2 {
+
+    margin: 0;
+}
+
+.favorite-image-container {
+
+    margin-top: 14px;
+}
+
+.favorite-image {
+
+    width: 100%;
+
+    max-height: 360px;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(15,23,42,.95);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.favorite-empty {
+
+    text-align: center;
+
+    padding: 26px;
+}
+
+.favorite-remove {
+
+    min-width: 180px;
+}
+
+@media (max-width: 768px) {
+
+    .favorite-card-top {
+
+        flex-direction: column;
+    }
+
+    .favorite-remove {
+
+        width: 100%;
+        min-width: 0;
+    }
+}
