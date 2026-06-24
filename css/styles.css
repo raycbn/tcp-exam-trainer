@@ -1003,3 +1003,28 @@ h3 {
         min-width: 0;
     }
 }
+
+.question-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.question-text {
+
+    flex: 1;
+
+    line-height: 1.45;
+}
+
+.favorite-btn {
+
+    flex-shrink: 0;
+
+    margin: 0 !important;
+}
