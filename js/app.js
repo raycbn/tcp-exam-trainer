@@ -18,6 +18,7 @@ let examSeconds = 3600;
 const EXAM_HISTORY_KEY = "tcp_exam_history";
 const STATS_KEY = "tcp_practice_stats";
 const ERRORS_KEY = "tcp_error_questions";
+const FAVORITES_KEY = "tcp_favorites";
 
 let stats = loadStats();
 
@@ -53,6 +54,23 @@ function loadErrors() {
         localStorage.getItem(
             ERRORS_KEY
         ) || '[]'
+    );
+}
+
+function loadFavorites() {
+
+    return JSON.parse(
+        localStorage.getItem(
+            FAVORITES_KEY
+        ) || '[]'
+    );
+}
+
+function saveFavorites(favorites) {
+
+    localStorage.setItem(
+        FAVORITES_KEY,
+        JSON.stringify(favorites)
     );
 }
 
@@ -438,6 +456,54 @@ function showQuestion() {
         'question'
     ).innerText =
         q.question;
+
+    let favoriteBtn =
+        document.getElementById(
+            'favoriteBtn'
+        );
+
+    if (favoriteBtn) {
+
+        const favorites =
+            loadFavorites();
+
+        const isFavorite =
+            favorites.some(
+                f => f.id === q.id
+            );
+
+        favoriteBtn.innerText =
+            isFavorite
+                ? '⭐ Quitar favorita'
+                : '⭐ Guardar favorita';
+
+        favoriteBtn.onclick = () => {
+
+            let favorites =
+                loadFavorites();
+
+            const exists =
+                favorites.some(
+                    f => f.id === q.id
+                );
+
+            if (exists) {
+
+                favorites =
+                    favorites.filter(
+                        f => f.id !== q.id
+                    );
+
+            } else {
+
+                favorites.push(q);
+            }
+
+            saveFavorites(favorites);
+
+            showQuestion();
+        };
+    }
 
     const imageContainer =
         document.getElementById(
