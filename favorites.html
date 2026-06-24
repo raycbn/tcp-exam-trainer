@@ -3,41 +3,71 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Favoritas</title>
 
 <link
-    rel="stylesheet"
-    href="css/styles.css"
->
+rel="stylesheet"
+href="css/styles.css">
 
 </head>
 
 <body>
 
-<h1>⭐ Preguntas Favoritas</h1>
+<h1>⭐ Preguntas favoritas</h1>
 
-<div class="tools-menu">
+<a href="index.html">
+← Volver
+</a>
 
-    <a
-        href="index.html"
-        class="tool-card"
-    >
-        ← Volver
-    </a>
+<div id="favoritesList"></div>
 
-</div>
+<script>
 
-<div id="favoritesContainer">
+const favorites =
+    JSON.parse(
+        localStorage.getItem(
+            "tcp_favorites"
+        ) || "[]"
+    );
 
-    Próximamente...
+const container =
+    document.getElementById(
+        "favoritesList"
+    );
 
-</div>
+if (
+    favorites.length === 0
+) {
+
+    container.innerHTML =
+        "<h2>No tienes favoritas</h2>";
+
+} else {
+
+    favorites.forEach(q => {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+        card.className =
+            "info-card";
+
+        card.innerHTML =
+        `
+        <h3>${q.topic || ''}</h3>
+
+        <h2>${q.question}</h2>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+</script>
 
 </body>
 </html>
