@@ -466,6 +466,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa de forma romboidal con fondo de color blanco que muestra en su mitad inferior un número 8 impreso y en su mitad superior el dibujo de dos líquidos saliendo de tubos de ensayo corroyendo un metal identifica a la:",
+    "image": "images/tcp-0034.png",
     "options": [
       "Clase 3 (Líquidos inflamables).",
       "Clase 6 (Sustancias infecciosas).",
@@ -1166,6 +1167,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa de forma romboidal con fondo blanco que muestra el dibujo de un trébol de tres hojas de color negro rodeado de líneas y la palabra \"INFECTIOUS SUBSTANCE\" corresponde a las materias de:",
+    "image": "images/tcp-0084.png",
     "options": [
       "Clase 3 (Líquidos inflamables).",
       "Clase 5 (Sustancias comburentes).",
@@ -1866,6 +1868,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa de forma romboidal de color blanco con el dibujo de tres tréboles negros concéntricos y la palabra \"RADIOACTIVE\" impresa corresponde a las sustancias peligrosas de:",
+    "image": "images/tcp-0134.png",
     "options": [
       "Clase 1 (Explosivos).",
       "Clase 4 (Sólidos inflamables).",
@@ -2566,6 +2569,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa de forma romboidal de color blanco en su mitad superior con el dibujo de siete líneas verticales negras y una mitad inferior blanca con el número 9 impreso corresponde a la categoría de:",
+    "image": "images/tcp-0184.png",
     "options": [
       "Clase 1 (Explosivos de seguridad).",
       "Clase 6 (Sustancias infecciosas).",
@@ -3266,6 +3270,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa con forma de rombo de color amarillo vivo con el dibujo de un círculo en llamas o un símbolo de fuego sobre una línea horizontal corresponde a la:",
+    "image": "images/tcp-0234.png",
     "options": [
       "Clase 5 (Sustancias comburentes y peróxidos orgánicos).",
       "Clase 2 (Gases inflamables).",
@@ -5366,6 +5371,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Un bulto o caja de carga que presente la etiqueta con el dibujo de un líquido saliendo de dos tubos de ensayo y corroyendo una superficie metálica y una mano humana pertenece a las mercancías peligrosas de:",
+    "image": "images/tcp-0384.png",
     "options": [
       "Clase 3 (Líquidos inflamables).",
       "Clase 6 (Tóxicos).",
@@ -6066,6 +6072,7 @@
     "subject": "general",
     "topic": "mercancias_peligrosas",
     "question": "Una etiqueta de Mercancía Peligrosa con forma de rombo que muestra el dibujo de una calavera y dos tibias cruzadas sobre fondo blanco corresponde a la:",
+    "image": "images/tcp-0434.png",
     "options": [
       "Clase 3 (Líquidos inflamables).",
       "Clase 6 (Sustancias tóxicas y materias infecciosas).",
