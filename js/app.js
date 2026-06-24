@@ -439,6 +439,29 @@ function showQuestion() {
     ).innerText =
         q.question;
 
+    const imageContainer =
+        document.getElementById(
+            'questionImageContainer'
+        );
+
+    const imageElement =
+        document.getElementById(
+            'questionImage'
+        );
+
+    if (q.image) {
+
+        imageElement.src = q.image;
+        imageElement.alt = q.question;
+        imageContainer.style.display = 'block';
+
+    } else {
+
+        imageElement.src = '';
+        imageElement.alt = '';
+        imageContainer.style.display = 'none';
+    }
+
     if (mode === "practice") {
 
         document.getElementById(
@@ -898,6 +921,11 @@ function finishExam() {
     
     document.getElementById(
         'explanation'
+    ).style.display =
+        'none';
+
+    document.getElementById(
+        'questionImageContainer'
     ).style.display =
         'none';
 
