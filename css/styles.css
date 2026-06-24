@@ -771,3 +771,20 @@ h3 {
     transform:
         translateY(-2px);
 }
+
+#questionImageContainer {
+    max-width: 920px;
+    margin: 20px auto 0;
+    display: none;
+    text-align: center;
+}
+
+#questionImage {
+    max-width: 100%;
+    max-height: 360px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    object-fit: contain;
+    background: rgba(15, 23, 42, .95);
+}
