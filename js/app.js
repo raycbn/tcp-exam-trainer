@@ -74,6 +74,78 @@ function saveFavorites(favorites) {
     );
 }
 
+function updateFavoriteButton(question) {
+
+    const favoriteBtn =
+        document.getElementById(
+            'favoriteBtn'
+        );
+
+    if (!favoriteBtn || !question) return;
+
+    const favorites =
+        loadFavorites();
+
+    const isFavorite =
+        favorites.some(
+            f => f.id === question.id
+        );
+
+    favoriteBtn.classList.add('favorite-btn');
+    favoriteBtn.classList.toggle(
+        'is-favorite',
+        isFavorite
+    );
+
+    favoriteBtn.innerHTML =
+        isFavorite
+            ? `
+                <span class="favorite-star">★</span>
+                <span>Favorita</span>
+              `
+            : `
+                <span class="favorite-star">☆</span>
+                <span>Guardar favorita</span>
+              `;
+
+    favoriteBtn.setAttribute(
+        'aria-pressed',
+        isFavorite ? 'true' : 'false'
+    );
+
+    favoriteBtn.title =
+        isFavorite
+            ? 'Quitar de favoritas'
+            : 'Guardar en favoritas';
+
+    favoriteBtn.onclick = () => {
+
+        let favorites =
+            loadFavorites();
+
+        const exists =
+            favorites.some(
+                f => f.id === question.id
+            );
+
+        if (exists) {
+
+            favorites =
+                favorites.filter(
+                    f => f.id !== question.id
+                );
+
+        } else {
+
+            favorites.push(question);
+        }
+
+        saveFavorites(favorites);
+
+        updateFavoriteButton(question);
+    };
+}
+
 function saveErrors(errors) {
 
     localStorage.setItem(
@@ -457,54 +529,9 @@ function showQuestion() {
     ).innerText =
         q.question;
 
-    let favoriteBtn =
-        document.getElementById(
-            'favoriteBtn'
-        );
+    updateFavoriteButton(q);
 
-    if (favoriteBtn) {
-
-        const favorites =
-            loadFavorites();
-
-        const isFavorite =
-            favorites.some(
-                f => f.id === q.id
-            );
-
-        favoriteBtn.innerText =
-            isFavorite
-                ? '⭐ Quitar favorita'
-                : '⭐ Guardar favorita';
-
-        favoriteBtn.onclick = () => {
-
-            let favorites =
-                loadFavorites();
-
-            const exists =
-                favorites.some(
-                    f => f.id === q.id
-                );
-
-            if (exists) {
-
-                favorites =
-                    favorites.filter(
-                        f => f.id !== q.id
-                    );
-
-            } else {
-
-                favorites.push(q);
-            }
-
-            saveFavorites(favorites);
-
-            showQuestion();
-        };
-    }
-
+    
     const imageContainer =
         document.getElementById(
             'questionImageContainer'
