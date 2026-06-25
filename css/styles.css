@@ -383,7 +383,7 @@ h3 {
     }
 
     #question {
-        padding: 20px;
+        padding: 18px;
     }
 
     #stats {
@@ -397,6 +397,34 @@ h3 {
     .mode-selector {
         flex-direction: column;
     }
+
+    /* ---------- Pregunta + Favoritos ---------- */
+
+    .question-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+    }
+
+    .question-text {
+
+        font-size: 1.9rem;
+
+        line-height: 1.35;
+    }
+
+    .favorite-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 0 !important;
+    }
+
 }
 /* =========================
    HISTORIAL SIMULACROS
@@ -1020,6 +1048,10 @@ h3 {
     flex: 1;
 
     line-height: 1.45;
+
+    font-size: inherit;
+
+    overflow-wrap: break-word;
 }
 
 .favorite-btn {
