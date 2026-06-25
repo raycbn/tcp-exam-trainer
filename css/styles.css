@@ -400,31 +400,35 @@ h3 {
 
     /* ---------- Pregunta + Favoritos ---------- */
 
-    .question-header {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 14px;
-    }
-
     .question-text {
 
-        font-size: 1.9rem;
+    font-size: 1.9rem;
 
-        line-height: 1.35;
-    }
+    line-height: 1.35;
 
-    .favorite-btn {
+    padding-right: 48px;
+}
 
-        width: 100%;
+.favorite-btn {
 
-        justify-content: center;
+    position: absolute;
 
-        margin: 0 !important;
-    }
+    top: 0;
 
+    right: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    justify-content: center;
+}
+
+.favorite-btn span:last-child {
+
+    display: none;
 }
 /* =========================
    HISTORIAL SIMULACROS
@@ -1034,29 +1038,37 @@ h3 {
 
 .question-header {
 
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 20px;
+    position: relative;
 }
 
 .question-text {
-
-    flex: 1;
 
     line-height: 1.45;
 
     font-size: inherit;
 
     overflow-wrap: break-word;
+
+    padding-right: 165px;
 }
 
 .favorite-btn {
 
-    flex-shrink: 0;
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
 
     margin: 0 !important;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
 }
