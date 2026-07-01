@@ -1,3 +1,4 @@
+
 // --- ESTADO GLOBAL DE LA APLICACIÓN ---
 
 let questions = [];
@@ -20,7 +21,28 @@ const STATS_KEY = "tcp_practice_stats";
 const ERRORS_KEY = "tcp_error_questions";
 const FAVORITES_KEY = "tcp_favorites";
 
+const PAGE_MODE = document.body?.dataset?.page || "";
+
 let stats = loadStats();
+
+function $(id) {
+    return document.getElementById(id);
+}
+
+function setDisplay(id, value) {
+    const el = $(id);
+    if (el) el.style.display = value;
+}
+
+function setText(id, value) {
+    const el = $(id);
+    if (el) el.innerText = value;
+}
+
+function safeDisable(id, disabled) {
+    const el = $(id);
+    if (el) el.disabled = disabled;
+}
 
 
 // --- LOCAL STORAGE ---
@@ -77,9 +99,7 @@ function saveFavorites(favorites) {
 function updateFavoriteButton(question) {
 
     const favoriteBtn =
-        document.getElementById(
-            'favoriteBtn'
-        );
+        $("favoriteBtn");
 
     if (!favoriteBtn || !question) return;
 
@@ -88,7 +108,7 @@ function updateFavoriteButton(question) {
 
     const isFavorite =
         favorites.some(
-            f => f.id === question.id
+            f => String(f.id) === String(question.id)
         );
 
     favoriteBtn.classList.add('favorite-btn');
@@ -125,14 +145,14 @@ function updateFavoriteButton(question) {
 
         const exists =
             favorites.some(
-                f => f.id === question.id
+                f => String(f.id) === String(question.id)
             );
 
         if (exists) {
 
             favorites =
                 favorites.filter(
-                    f => f.id !== question.id
+                    f => String(f.id) !== String(question.id)
                 );
 
         } else {
@@ -162,9 +182,7 @@ function updateErrorCounter() {
         loadErrors().length;
 
     const el =
-        document.getElementById(
-            'errorCount'
-        );
+        $("errorCount");
 
     if (el)
         el.innerText = count;
@@ -180,13 +198,11 @@ function saveStats(newStats) {
 
 function updateStatsUI(currentStats) {
 
-    document.getElementById(
-        'correctCount'
-    ).innerText = currentStats.correct;
+    const correctEl = $("correctCount");
+    const wrongEl = $("wrongCount");
 
-    document.getElementById(
-        'wrongCount'
-    ).innerText = currentStats.wrong;
+    if (correctEl) correctEl.innerText = currentStats.correct;
+    if (wrongEl) wrongEl.innerText = currentStats.wrong;
 }
 
 
@@ -202,9 +218,7 @@ function renderExamHistory() {
         );
 
     const historyList =
-        document.getElementById(
-            'historyList'
-        );
+        $("historyList");
 
     if (!historyList) return;
 
@@ -276,18 +290,27 @@ async function loadQuestions() {
         filteredQuestions = questions;
 
         updateStatsUI(stats);
+        updateErrorCounter();
 
-        showQuestion();
+        autoStartPageMode();
 
     } catch (error) {
 
         console.error(error);
 
-        document.getElementById(
-            'question'
-        ).innerText =
-            'Error cargando preguntas';
+        const q = $("question");
+        if (q) q.innerText = 'Error cargando preguntas';
 
+    }
+}
+
+function autoStartPageMode() {
+    if (PAGE_MODE === "practice") {
+        startPracticeMode();
+    } else if (PAGE_MODE === "exam") {
+        startExamMode();
+    } else if (PAGE_MODE === "review") {
+        startReviewErrorsMode();
     }
 }
 
@@ -300,47 +323,24 @@ function startPracticeMode() {
 
     stopTimer();
 
-    document.getElementById(
-        'timer'
-    ).innerHTML =
-        '⏱️ --:--';
+    setDisplay('timer', 'inline-block');
+    setText('timer', '⏱️ --:--');
 
-    document.getElementById(
-        'examResult'
-    ).style.display =
-        'none';
+    setDisplay('examResult', 'none');
 
-    document.getElementById(
-        'nextBtn'
-    ).style.display =
-        'block';
-    
-    document.getElementById(
-        'prevBtn'
-    ).style.display =
-        'none';
+    setDisplay('nextBtn', 'block');
+    setDisplay('prevBtn', 'none');
 
     currentQuestion = 0;
-    document.getElementById(
-        'finishExamBtn'
-    ).style.display =
-        'none';
+    setDisplay('finishExamBtn', 'none');
 
-    const progressElement =
-        document.getElementById(
-            'examProgress'
-        );
+    const progressElement = $("examProgress");
+    const missingElement = $("examMissing");
+    const historyElement = $("examHistory");
 
-    const missingElement =
-        document.getElementById(
-            'examMissing'
-        );
-
-    if (progressElement)
-        progressElement.innerText = '';
-
-    if (missingElement)
-        missingElement.innerText = '';
+    if (progressElement) progressElement.innerText = '';
+    if (missingElement) missingElement.innerText = '';
+    if (historyElement) historyElement.style.display = 'none';
 
     showQuestion();
 }
@@ -369,25 +369,14 @@ function startExamMode() {
 
     startTimer();
 
-    document.getElementById(
-        'examResult'
-    ).style.display =
-        'none';
+    setDisplay('examResult', 'none');
 
-    document.getElementById(
-        'nextBtn'
-    ).style.display =
-        'block';
-    
-    document.getElementById(
-        'finishExamBtn'
-    ).style.display =
-        'block';
+    setDisplay('nextBtn', 'block');
+    setDisplay('finishExamBtn', 'block');
+    setDisplay('prevBtn', 'block');
 
-    document.getElementById(
-        'prevBtn'
-    ).style.display =
-        'block';
+    const historyElement = $("examHistory");
+    if (historyElement) historyElement.style.display = 'block';
 
     showQuestion();
 }
@@ -410,33 +399,18 @@ function startReviewErrorsMode() {
     stopTimer();
 
     filteredQuestions = errors;
-
     currentQuestion = 0;
 
-    document.getElementById(
-        'examResult'
-    ).style.display =
-        'none';
+    setDisplay('examResult', 'none');
+    setDisplay('nextBtn', 'block');
+    setDisplay('finishExamBtn', 'none');
+    setDisplay('prevBtn', 'none');
 
-    document.getElementById(
-        'nextBtn'
-    ).style.display =
-        'block';
+    const historyElement = $("examHistory");
+    if (historyElement) historyElement.style.display = 'none';
 
-    document.getElementById(
-        'finishExamBtn'
-    ).style.display =
-        'none';
-
-    document.getElementById(
-        'prevBtn'
-    ).style.display =
-        'none';
-
-    document.getElementById(
-        'timer'
-    ).innerHTML =
-        '🧠 Repaso de errores';
+    setText('timer', '🧠 Repaso de errores');
+    setDisplay('timer', 'inline-block');
 
     showQuestion();
 }
@@ -488,10 +462,10 @@ function updateTimer() {
     const seconds =
         examSeconds % 60;
 
-    document.getElementById(
-        'timer'
-    ).innerHTML =
-        `⏱️ ${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+    setText(
+        'timer',
+        `⏱️ ${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`
+    );
 }
 
 
@@ -519,98 +493,71 @@ function showQuestion() {
 
     if (!q) return;
 
-    document.getElementById(
-        'counter'
-    ).innerText =
-        `Pregunta ${currentQuestion + 1} / ${source.length}`;
+    setText(
+        'counter',
+        `Pregunta ${currentQuestion + 1} / ${source.length}`
+    );
 
-    document.getElementById(
-        'question'
-    ).innerHTML =
-    `
-    <div class="question-header">
-
-        <div class="question-text">
-            ${q.question}
+    const questionEl = $("question");
+    if (questionEl) {
+        questionEl.innerHTML = `
+        <div class="question-header">
+            <div class="question-text">${q.question}</div>
+            <button id="favoriteBtn" class="favorite-btn"></button>
         </div>
-
-        <button
-            id="favoriteBtn"
-            class="favorite-btn"
-        ></button>
-
-    </div>
-    `;
+        `;
+    }
 
     updateFavoriteButton(q);
 
-    
     const imageContainer =
-        document.getElementById(
-            'questionImageContainer'
-        );
+        $("questionImageContainer");
 
     const imageElement =
-        document.getElementById(
-            'questionImage'
-        );
+        $("questionImage");
 
-    if (q.image) {
-
-        imageElement.src = q.image;
-        imageElement.alt = q.question;
-        imageContainer.style.display = 'block';
-
-    } else {
-
-        imageElement.src = '';
-        imageElement.alt = '';
-        imageContainer.style.display = 'none';
+    if (imageContainer && imageElement) {
+        if (q.image) {
+            imageElement.src = q.image;
+            imageElement.alt = q.question;
+            imageContainer.style.display = 'block';
+        } else {
+            imageElement.src = '';
+            imageElement.alt = '';
+            imageContainer.style.display = 'none';
+        }
     }
 
     if (mode === "practice") {
 
-        document.getElementById(
-            'topic'
-        ).innerText =
-            `Tema: ${(q.topic || 'General').toUpperCase()}`;
+        setText(
+            'topic',
+            `Tema: ${(q.topic || 'General').toUpperCase()}`
+        );
 
     } else if (mode === "review") {
 
-        document.getElementById(
-            'topic'
-        ).innerText =
-            '🧠 Repaso de errores';
+        setText('topic', '🧠 Repaso de errores');
 
     } else {
 
-        document.getElementById(
-            'topic'
-        ).innerText =
-            '📝 Simulacro AESA';
+        setText('topic', '📝 Simulacro AESA');
     }
 
     const progress =
         ((currentQuestion + 1) /
             source.length) * 100;
 
-    document.getElementById(
-        'progress-bar'
-    ).style.width =
-        progress + '%';
+    const progressBar = $("progress-bar");
+    if (progressBar) progressBar.style.width = progress + '%';
 
-    document.getElementById(
-        'result'
-    ).innerHTML = '';
+    const resultEl = $("result");
+    if (resultEl) resultEl.innerHTML = '';
 
-    document.getElementById(
-        'explanation'
-    ).style.display =
-        'none';
+    const explanationEl = $("explanation");
+    if (explanationEl) explanationEl.style.display = 'none';
 
-    document.getElementById(
-        'nextBtn'
-    ).disabled = true;
+    safeDisable('nextBtn', true);
 
     if (
         mode === "exam"
@@ -622,14 +569,10 @@ function showQuestion() {
             ).length;
 
         const progressElement =
-            document.getElementById(
-                'examProgress'
-            );
+            $("examProgress");
 
         const missingElement =
-            document.getElementById(
-                'examMissing'
-            );
+            $("examMissing");
 
         if (progressElement) {
 
@@ -648,9 +591,9 @@ function showQuestion() {
     }
 
     const answersDiv =
-        document.getElementById(
-            'answers'
-        );
+        $("answers");
+
+    if (!answersDiv) return;
 
     answersDiv.innerHTML = '';
 
@@ -674,9 +617,7 @@ function showQuestion() {
                     'selected-answer'
                 );
 
-                document.getElementById(
-                    'nextBtn'
-                ).disabled = false;
+                safeDisable('nextBtn', false);
             }
 
             btn.onclick = () => {
@@ -714,11 +655,8 @@ function showQuestion() {
 
                         updateStatsUI(stats);
 
-                        document.getElementById(
-                            'result'
-                        ).innerHTML =
-                            '✅ Correcto';
-                        
+                        if (resultEl) resultEl.innerHTML = '✅ Correcto';
+
                         if (mode === "review") {
 
                             let errors =
@@ -726,7 +664,7 @@ function showQuestion() {
 
                             errors =
                                 errors.filter(
-                                    e => e.id !== q.id
+                                    e => String(e.id) !== String(q.id)
                                 );
 
                             saveErrors(errors);
@@ -738,10 +676,11 @@ function showQuestion() {
                             'wrong'
                         );
 
-                        buttons[q.correct]
-                            .classList.add(
+                        if (buttons[q.correct]) {
+                            buttons[q.correct].classList.add(
                                 'correct'
                             );
+                        }
 
                         stats.wrong++;
 
@@ -749,32 +688,18 @@ function showQuestion() {
 
                         updateStatsUI(stats);
 
-                        document.getElementById(
-                            'result'
-                        ).innerHTML =
-                            '❌ Incorrecto';
+                        if (resultEl) resultEl.innerHTML = '❌ Incorrecto';
                     }
 
-                    document.getElementById(
-                        'explanation'
-                    ).style.display =
-                        'block';
+                    if (explanationEl) {
+                        explanationEl.style.display = 'block';
+                        explanationEl.innerHTML = `
+                            <span id="explanation-title">ℹ️ Explicación</span>
+                            ${q.explanation || 'Sin explicación'}
+                        `;
+                    }
 
-                    document.getElementById(
-                        'explanation'
-                    ).innerHTML =
-                    `
-                    <span id="explanation-title">
-                        ℹ️ Explicación
-                    </span>
-
-                    ${q.explanation || 'Sin explicación'}
-                    `;
-
-                    document.getElementById(
-                        'nextBtn'
-                    ).disabled =
-                        false;
+                    safeDisable('nextBtn', false);
 
                 } else {
 
@@ -795,10 +720,7 @@ function showQuestion() {
                         'selected-answer'
                     );
 
-                    document.getElementById(
-                        'nextBtn'
-                    ).disabled =
-                        false;
+                    safeDisable('nextBtn', false);
                 }
             };
 
@@ -846,7 +768,7 @@ function finishExam() {
 
     const passed =
         percent >= 75;
-    
+
     let failedQuestionsHtml = '';
 
     examQuestions.forEach((question, idx) => {
@@ -870,21 +792,11 @@ function finishExam() {
 
             failedQuestionsHtml += `
                 <div class="failed-question">
-
-                    <strong>
-                        ${question.question}
-                    </strong>
-
+                    <strong>${question.question}</strong>
                     <br><br>
-
-                    ❌ Tu respuesta:
-                    ${selectedAnswer}
-
+                    ❌ Tu respuesta: ${selectedAnswer}
                     <br>
-
-                    ✅ Correcta:
-                    ${correctAnswer}
-
+                    ✅ Correcta: ${correctAnswer}
                 </div>
             `;
         }
@@ -935,7 +847,7 @@ function finishExam() {
 
                 if (
                     !savedErrors.some(
-                        q => q.id === question.id
+                        q => String(q.id) === String(question.id)
                     )
                 ) {
 
@@ -951,225 +863,163 @@ function finishExam() {
 
     renderExamHistory();
 
-    document.getElementById(
-        'examScore'
-    ).innerHTML =
-    `
-    Correctas: ${examCorrect}<br>
-    Incorrectas: ${examWrong}<br>
-    Nota: ${percent.toFixed(1)}%<br><br>
+    const examScoreEl = $("examScore");
+    if (examScoreEl) {
+        examScoreEl.innerHTML =
+        `
+        Correctas: ${examCorrect}<br>
+        Incorrectas: ${examWrong}<br>
+        Nota: ${percent.toFixed(1)}%<br><br>
 
-    <strong class="${
-        passed
-            ? 'apto'
-            : 'no-apto'
-    }">
-        ${
+        <strong class="${
             passed
-                ? '✅ APTO'
-                : '❌ NO APTO'
+                ? 'apto'
+                : 'no-apto'
+        }">
+            ${
+                passed
+                    ? '✅ APTO'
+                    : '❌ NO APTO'
+            }
+        </strong>
+
+        ${
+            examWrong > 0
+                ? `
+                <hr>
+                <h3>Preguntas falladas</h3>
+                ${failedQuestionsHtml}
+                `
+                : `
+                <hr>
+                <h3>🎉 No has cometido errores</h3>
+                `
         }
-    </strong>
-
-    ${
-        examWrong > 0
-            ? `
-            <hr>
-
-            <h3>
-                Preguntas falladas
-            </h3>
-
-            ${failedQuestionsHtml}
-            `
-            : `
-            <hr>
-
-            <h3>
-                🎉 No has cometido errores
-            </h3>
-            `
+        `;
     }
-    `;
 
-    document.getElementById(
-        'examResult'
-    ).style.display =
-        'block';
+    setDisplay('examResult', 'block');
 
-    document.getElementById(
-        'answers'
-    ).innerHTML = '';
+    const answers = $("answers");
+    if (answers) answers.innerHTML = '';
 
-    document.getElementById(
-        'question'
-    ).innerHTML =
-        'Simulacro finalizado';
+    setText('question', 'Simulacro finalizado');
+    setText('counter', '');
+    setDisplay('nextBtn', 'none');
+    setDisplay('finishExamBtn', 'none');
+    setDisplay('prevBtn', 'none');
 
-    document.getElementById(
-        'counter'
-    ).innerHTML = '';
+    const explanationEl = $("explanation");
+    if (explanationEl) explanationEl.style.display = 'none';
 
-    document.getElementById(
-        'nextBtn'
-    ).style.display =
-        'none';
-    
-    document.getElementById(
-        'finishExamBtn'
-    ).style.display =
-        'none';
-    
-    document.getElementById(
-        'prevBtn'
-    ).style.display =
-        'none';
-    
-    document.getElementById(
-        'explanation'
-    ).style.display =
-        'none';
+    const imageContainer = $("questionImageContainer");
+    if (imageContainer) imageContainer.style.display = 'none';
 
-    document.getElementById(
-        'questionImageContainer'
-    ).style.display =
-        'none';
+    setText('timer', '⏱️ --:--');
 
-    document.getElementById(
-        'timer'
-    ).innerHTML =
-        '⏱️ --:--';
+    const progressElement = $("examProgress");
+    const missingElement = $("examMissing");
 
-    document.getElementById(
-        'examProgress'
-    ).innerText = '';
+    if (progressElement) progressElement.innerText = '';
+    if (missingElement) missingElement.innerText = '';
 
-    document.getElementById(
-        'examMissing'
-    ).innerText = '';
-
-    document.getElementById(
-        'result'
-    ).innerHTML = '';
+    const resultEl = $("result");
+    if (resultEl) resultEl.innerHTML = '';
 }
 
 
 // --- EVENTOS ---
 
-document.getElementById(
-    'nextBtn'
-).onclick = () => {
+const nextBtn = $("nextBtn");
+if (nextBtn) {
+    nextBtn.onclick = () => {
 
-    currentQuestion++;
+        currentQuestion++;
 
-    const source =
-        getCurrentQuestions();
-
-    if (
-        currentQuestion >=
-        source.length
-    ) {
+        const source =
+            getCurrentQuestions();
 
         if (
-            mode === "exam"
+            currentQuestion >=
+            source.length
         ) {
 
-            finishExam();
-            return;
+            if (
+                mode === "exam"
+            ) {
+
+                finishExam();
+                return;
+            }
+
+            currentQuestion = 0;
         }
 
-        currentQuestion = 0;
-    }
-
-    showQuestion();
-};
-
-document.getElementById(
-    'prevBtn'
-).onclick = () => {
-
-    if (
-        currentQuestion > 0
-    ) {
-
-        currentQuestion--;
-
         showQuestion();
-    }
-};
+    };
+}
 
-document.getElementById(
-    'finishExamBtn'
-).onclick = () => {
-
-    if (
-        mode !== "exam"
-    ) return;
-
-    const unanswered =
-        examQuestions.length -
-        Object.keys(
-            examAnswers
-        ).length;
-
-    if (
-        unanswered > 0
-    ) {
-
-        const confirmFinish =
-            confirm(
-                `Todavía quedan ${unanswered} preguntas sin responder.\n\n¿Deseas finalizar igualmente?`
-            );
+const prevBtn = $("prevBtn");
+if (prevBtn) {
+    prevBtn.onclick = () => {
 
         if (
-            !confirmFinish
+            currentQuestion > 0
+        ) {
+
+            currentQuestion--;
+
+            showQuestion();
+        }
+    };
+}
+
+const finishExamBtn = $("finishExamBtn");
+if (finishExamBtn) {
+    finishExamBtn.onclick = () => {
+
+        if (
+            mode !== "exam"
         ) return;
-    }
 
-    finishExam();
-};
+        const unanswered =
+            examQuestions.length -
+            Object.keys(
+                examAnswers
+            ).length;
 
+        if (
+            unanswered > 0
+        ) {
 
-document
-.getElementById(
-    'practiceMode'
-)
-.addEventListener(
-    'click',
-    startPracticeMode
-);
+            const confirmFinish =
+                confirm(
+                    `Todavía quedan ${unanswered} preguntas sin responder.\n\n¿Deseas finalizar igualmente?`
+                );
 
-document
-.getElementById(
-    'examMode'
-)
-.addEventListener(
-    'click',
-    startExamMode
-);
+            if (
+                !confirmFinish
+            ) return;
+        }
 
-document
-.getElementById(
-    'restartExam'
-)
-.addEventListener(
-    'click',
-    startExamMode
-);
+        finishExam();
+    };
+}
 
-document
-.getElementById(
-    'reviewErrorsMode'
-)
-.addEventListener(
-    'click',
-    startReviewErrorsMode
-);
+const practiceModeBtn = $("practiceMode");
+if (practiceModeBtn) practiceModeBtn.addEventListener('click', startPracticeMode);
+
+const examModeBtn = $("examMode");
+if (examModeBtn) examModeBtn.addEventListener('click', startExamMode);
+
+const restartExamBtn = $("restartExam");
+if (restartExamBtn) restartExamBtn.addEventListener('click', startExamMode);
+
+const reviewErrorsModeBtn = $("reviewErrorsMode");
+if (reviewErrorsModeBtn) reviewErrorsModeBtn.addEventListener('click', startReviewErrorsMode);
 
 const subjectFilter =
-    document.getElementById(
-        'subjectFilter'
-    );
+    $("subjectFilter");
 
 if (
     subjectFilter
@@ -1202,7 +1052,9 @@ if (
 
             currentQuestion = 0;
 
-            showQuestion();
+            if (PAGE_MODE) {
+                showQuestion();
+            }
         }
     );
 }
