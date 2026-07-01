@@ -1,17 +1,33 @@
-const CACHE_NAME = "tcp-trainer-v8";
+const CACHE_NAME = "tcp-trainer-v9";
 
 const STATIC_FILES = [
     "./",
+
+    // Páginas
     "./index.html",
+    "./practice.html",
+    "./exam.html",
+    "./review.html",
     "./favorites.html",
     "./smart.html",
+
+    // CSS
     "./css/styles.css",
+
+    // JS
     "./js/app.js",
     "./js/stats.js",
+
+    // Configuración
     "./manifest.json",
     "./version.json",
+
+    // Iconos PWA
     "./icons/icon-192.png",
-    "./icons/icon-512.png"
+    "./icons/icon-512.png",
+
+    // Logo
+    "./images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
 ];
 
 
@@ -19,176 +35,200 @@ const STATIC_FILES = [
 // INSTALL
 // =========================
 
-self.addEventListener(
-    "install",
-    event => {
+self.addEventListener("install", event => {
 
-        self.skipWaiting();
+    self.skipWaiting();
 
-        event.waitUntil(
+    event.waitUntil(
 
-            caches.open(CACHE_NAME)
-                .then(cache =>
-                    cache.addAll(STATIC_FILES)
-                )
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(STATIC_FILES))
 
-        );
+    );
 
-    }
-);
+});
 
 
 // =========================
 // ACTIVATE
 // =========================
 
-self.addEventListener(
-    "activate",
-    event => {
+self.addEventListener("activate", event => {
 
-        event.waitUntil(
+    event.waitUntil(
 
-            caches.keys()
-                .then(keys => {
+        caches.keys()
 
-                    return Promise.all(
+            .then(keys =>
 
-                        keys.map(key => {
+                Promise.all(
 
-                            if (
-                                key !== CACHE_NAME
-                            ) {
+                    keys.map(key => {
 
-                                console.log(
-                                    "Eliminando caché antigua:",
-                                    key
-                                );
+                        if (key !== CACHE_NAME) {
 
-                                return caches.delete(key);
-                            }
+                            console.log("Eliminando caché:", key);
 
-                        })
+                            return caches.delete(key);
 
-                    );
+                        }
 
-                })
-                .then(() =>
-                    self.clients.claim()
+                    })
+
                 )
 
-        );
+            )
 
-    }
-);
+            .then(() => self.clients.claim())
+
+    );
+
+});
 
 
 // =========================
 // FETCH
 // =========================
 
-self.addEventListener(
-    "fetch",
-    event => {
+self.addEventListener("fetch", event => {
 
-        const url =
-            event.request.url;
+    const url = event.request.url;
 
 
-        // =====================
-        // QUESTIONS.JSON
-        // SIEMPRE DESDE RED
-        // =====================
+    // =========================
+    // QUESTIONS.JSON
+    // Siempre desde Internet
+    // =========================
 
-        if (
-            url.includes(
-                "questions.json"
-            )
-        ) {
-
-            event.respondWith(
-
-                fetch(event.request, {
-                    cache: "no-store"
-                })
-
-            );
-
-            return;
-        }
-
-
-        // =====================
-        // HTML / CSS / JS
-        // NETWORK FIRST
-        // =====================
-
-        if (
-
-            url.endsWith(".html") ||
-            url.endsWith(".css") ||
-            url.endsWith(".js")
-
-        ) {
-
-            event.respondWith(
-
-                fetch(event.request)
-
-                    .then(response => {
-
-                        const responseClone =
-                            response.clone();
-
-                        caches.open(
-                            CACHE_NAME
-                        )
-                        .then(cache => {
-
-                            cache.put(
-                                event.request,
-                                responseClone
-                            );
-
-                        });
-
-                        return response;
-
-                    })
-
-                    .catch(() =>
-                        caches.match(
-                            event.request
-                        )
-                    )
-
-            );
-
-            return;
-        }
-
-
-        // =====================
-        // RESTO
-        // CACHE FIRST
-        // =====================
+    if (url.includes("questions.json")) {
 
         event.respondWith(
 
-            caches.match(
-                event.request
-            )
-            .then(response => {
-
-                return (
-                    response ||
-                    fetch(
-                        event.request
-                    )
-                );
-
+            fetch(event.request, {
+                cache: "no-store"
             })
 
         );
 
+        return;
+
     }
-);
+
+
+    // =========================
+    // HTML / CSS / JS
+    // Network First
+    // =========================
+
+    if (
+
+        url.endsWith(".html") ||
+        url.endsWith(".css") ||
+        url.endsWith(".js")
+
+    ) {
+
+        event.respondWith(
+
+            fetch(event.request, {
+                cache: "no-store"
+            })
+
+            .then(response => {
+
+                const clone = response.clone();
+
+                caches.open(CACHE_NAME)
+                    .then(cache => {
+
+                        cache.put(
+                            event.request,
+                            clone
+                        );
+
+                    });
+
+                return response;
+
+            })
+
+            .catch(() =>
+                caches.match(event.request)
+            )
+
+        );
+
+        return;
+
+    }
+
+
+    // =========================
+    // Imágenes
+    // Cache First
+    // =========================
+
+    if (
+
+        event.request.destination === "image"
+
+    ) {
+
+        event.respondWith(
+
+            caches.match(event.request)
+
+                .then(response => {
+
+                    return response ||
+
+                        fetch(event.request)
+
+                        .then(networkResponse => {
+
+                            const clone =
+                                networkResponse.clone();
+
+                            caches.open(CACHE_NAME)
+                                .then(cache => {
+
+                                    cache.put(
+                                        event.request,
+                                        clone
+                                    );
+
+                                });
+
+                            return networkResponse;
+
+                        });
+
+                })
+
+        );
+
+        return;
+
+    }
+
+
+    // =========================
+    // Resto de recursos
+    // Cache First
+    // =========================
+
+    event.respondWith(
+
+        caches.match(event.request)
+
+            .then(response => {
+
+                return response ||
+
+                    fetch(event.request);
+
+            })
+
+    );
+
+});
