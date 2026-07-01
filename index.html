@@ -1,92 +1,387 @@
-
 <!DOCTYPE html>
-
 <html lang="es">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TCP Exam Trainer</title>
-<meta content="#08111e" name="theme-color"/>
-<link href="manifest.json" rel="manifest"/>
-<link href="css/styles.css" rel="stylesheet"/>
-</head>
-<body data-page="dashboard">
-<main class="page-shell">
-<header class="brand-hero">
-<img alt="Elite Aircrew" class="brand-logo" src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"/>
-<div class="brand-copy">
-<p class="brand-kicker">TCP Exam Trainer</p>
-<h1>Practica, repasa y domina el banco de preguntas</h1>
-<p class="brand-subtitle">
-                    Simulacros, favoritas y estudio inteligente para preparar el examen TCP.
-                </p>
-</div>
-</header>
-<section class="dashboard-actions dashboard-menu">
-<a class="tool-card" href="practice.html">📚 Práctica</a>
-<a class="tool-card" href="exam.html">📝 Simulacro AESA</a>
-<a class="tool-card" href="review.html">❌ Repasar errores</a>
-</section>
-<section class="dashboard-actions dashboard-menu" style="margin-top: 0;">
-<a class="tool-card" href="favorites.html">⭐ Favoritas</a>
-<a class="tool-card" href="smart.html">🧠 Modo Inteligente</a>
-<a class="tool-card" href="#dashboard-stats">📊 Ver progreso</a>
-</section>
-<section class="metric-grid" id="dashboard-stats">
-<article class="metric-card">
-<span class="metric-label">Aciertos</span>
-<span class="metric-value" id="dashCorrect">0</span>
-<span class="metric-note">Total acumulado en práctica.</span>
-</article>
-<article class="metric-card">
-<span class="metric-label">Errores</span>
-<span class="metric-value" id="dashWrong">0</span>
-<span class="metric-note">Lo que aún queda por pulir.</span>
-</article>
-<article class="metric-card">
-<span class="metric-label">Favoritas</span>
-<span class="metric-value" id="dashFavorites">0</span>
-<span class="metric-note">Preguntas guardadas para repasar.</span>
-</article>
-<article class="metric-card">
-<span class="metric-label">Errores pendientes</span>
-<span class="metric-value" id="dashErrors">0</span>
-<span class="metric-note">Preguntas a repasar ahora.</span>
-</article>
-</section>
-<section class="dashboard-panel">
-<h2>¡Bienvenido de nuevo!</h2>
-<p class="brand-subtitle" style="margin:0;max-width:none;">
-Continúa desde donde lo dejaste. Desde esta portada podrás acceder rápidamente a todos los modos de estudio, consultar tu progreso y comenzar un nuevo entrenamiento inteligente.
-</p>
-</section><section class="dashboard-summary">
-<div class="dashboard-panel">
-<h2>Último simulacro</h2>
-<div class="activity-line">
-<span class="activity-label">Nota</span>
-<span class="activity-value" id="dashLastScore">—</span>
-</div>
-<div class="activity-line">
-<span class="activity-label">Fecha</span>
-<span class="activity-value" id="dashLastDate">Aún no has completado ningún simulacro</span>
-</div>
-<div class="activity-line">
-<span class="activity-label">Mejor nota</span>
-<span class="activity-value" id="dashBestScore">—</span>
-</div>
-</div>
-<div class="dashboard-panel">
-<h2>Actividad reciente</h2>
-<div class="dashboard-activity" id="dashRecent">
-<div class="activity-line">
-<span class="activity-label">Actividad</span>
-<span class="activity-value">Cargando...</span>
-</div>
-</div>
-</div>
-</section>
 
-</main>
-<script src="js/dashboard.js"></script>
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>TCP Exam Trainer</title>
+
+    <meta
+        name="theme-color"
+        content="#08111e">
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
+
+</head>
+
+<body data-page="dashboard">
+
+    <main class="page-shell">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <header class="brand-hero">
+
+            <img
+                src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
+                alt="Elite Aircrew"
+                class="brand-logo">
+
+            <div class="brand-copy">
+
+                <p class="brand-kicker">
+                    TCP Exam Trainer
+                </p>
+
+                <h1>
+                    Practica, repasa y domina el banco de preguntas
+                </h1>
+
+                <p class="brand-subtitle">
+                    Simulacros, favoritas y estudio inteligente para preparar el examen oficial TCP.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             MENÚ PRINCIPAL
+        ========================== -->
+
+        <section class="dashboard-actions dashboard-menu">
+
+            <a
+                class="tool-card"
+                href="practice.html">
+
+                📚
+                <span>Práctica</span>
+
+            </a>
+
+            <a
+                class="tool-card"
+                href="exam.html">
+
+                📝
+                <span>Simulacro AESA</span>
+
+            </a>
+
+            <a
+                class="tool-card"
+                href="review.html">
+
+                ❌
+                <span>Repasar errores</span>
+
+            </a>
+
+        </section>
+
+        <section
+            class="dashboard-actions dashboard-menu"
+            style="margin-top:0;">
+
+            <a
+                class="tool-card"
+                href="favorites.html">
+
+                ⭐
+                <span>Favoritas</span>
+
+            </a>
+
+            <a
+                class="tool-card"
+                href="smart.html">
+
+                🧠
+                <span>Modo Inteligente</span>
+
+            </a>
+
+            <a
+                class="tool-card"
+                href="#dashboard-stats">
+
+                📊
+                <span>Ver progreso</span>
+
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             ESTADÍSTICAS
+        ========================== -->
+
+        <section
+            class="metric-grid"
+            id="dashboard-stats">
+
+            <article class="metric-card">
+
+                <span class="metric-label">
+                    Aciertos
+                </span>
+
+                <span
+                    class="metric-value"
+                    id="dashCorrect">
+
+                    0
+
+                </span>
+
+                <span class="metric-note">
+                    Total acumulado en práctica.
+                </span>
+
+            </article>
+
+            <article class="metric-card">
+
+                <span class="metric-label">
+                    Errores
+                </span>
+
+                <span
+                    class="metric-value"
+                    id="dashWrong">
+
+                    0
+
+                </span>
+
+                <span class="metric-note">
+                    Lo que aún queda por mejorar.
+                </span>
+
+            </article>
+
+            <article class="metric-card">
+
+                <span class="metric-label">
+                    Favoritas
+                </span>
+
+                <span
+                    class="metric-value"
+                    id="dashFavorites">
+
+                    0
+
+                </span>
+
+                <span class="metric-note">
+                    Guardadas para repasar.
+                </span>
+
+            </article>
+
+            <article class="metric-card">
+
+                <span class="metric-label">
+                    Errores pendientes
+                </span>
+
+                <span
+                    class="metric-value"
+                    id="dashErrors">
+
+                    0
+
+                </span>
+
+                <span class="metric-note">
+                    Preguntas pendientes.
+                </span>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             OBJETIVO DEL DÍA
+        ========================== -->
+
+        <section class="dashboard-panel">
+
+            <h2>
+                🎯 Objetivo de hoy
+            </h2>
+
+            <div class="daily-goal">
+
+                <div class="daily-progress">
+
+                    <div id="dashProgressBar"></div>
+
+                </div>
+
+                <div id="dashProgressText">
+
+                    0% completado
+
+                </div>
+
+            </div>
+
+            <div
+                id="dashRecommendation"
+                class="dashboard-recommendation">
+
+                Calculando recomendación...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BIENVENIDA
+        ========================== -->
+
+        <section class="dashboard-panel">
+
+            <h2>
+                👋 ¡Bienvenido de nuevo!
+            </h2>
+
+            <p
+                class="brand-subtitle"
+                style="margin:0;max-width:none;">
+
+                Continúa donde lo dejaste. Desde esta portada puedes acceder rápidamente a todos los modos de estudio y consultar tu progreso.
+
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             RESUMEN
+        ========================== -->
+
+        <section class="dashboard-summary">
+
+            <div class="dashboard-panel">
+
+                <h2>
+                    Último simulacro
+                </h2>
+
+                <div class="activity-line">
+
+                    <span class="activity-label">
+
+                        Nota
+
+                    </span>
+
+                    <span
+                        class="activity-value"
+                        id="dashLastScore">
+
+                        —
+
+                    </span>
+
+                </div>
+
+                <div class="activity-line">
+
+                    <span class="activity-label">
+
+                        Fecha
+
+                    </span>
+
+                    <span
+                        class="activity-value"
+                        id="dashLastDate">
+
+                        Aún no has realizado ningún simulacro.
+
+                    </span>
+
+                </div>
+
+                <div class="activity-line">
+
+                    <span class="activity-label">
+
+                        Mejor nota
+
+                    </span>
+
+                    <span
+                        class="activity-value"
+                        id="dashBestScore">
+
+                        —
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-panel">
+
+                <h2>
+                    Actividad reciente
+                </h2>
+
+                <div
+                    class="dashboard-activity"
+                    id="dashRecent">
+
+                    <div class="activity-line">
+
+                        <span class="activity-label">
+
+                            Actividad
+
+                        </span>
+
+                        <span class="activity-value">
+
+                            Cargando...
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/dashboard.js"></script>
+
 </body>
+
 </html>
