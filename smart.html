@@ -1,67 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modo Inteligente | TCP Exam Trainer</title>
-    <meta name="theme-color" content="#08111e">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modo Inteligente | TCP Exam Trainer</title>
+<meta name="theme-color" content="#08111e">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="smart">
 
-    <main class="page-shell trainer-shell">
+<main class="page-shell trainer-shell">
 
-        <header class="page-topbar">
-            <a class="brand-mini" href="index.html" aria-label="Ir al inicio">
-                <img src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png" alt="Elite Aircrew">
-                <div class="brand-mini-copy">
-                    <strong>TCP Exam Trainer</strong>
-                    <span>Modo Inteligente</span>
-                </div>
-            </a>
+<header class="page-topbar">
+<a class="brand-mini" href="index.html">
+<img src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png" alt="Elite Aircrew">
+<div class="brand-mini-copy">
+<strong>TCP Exam Trainer</strong>
+<span>Modo Inteligente</span>
+</div>
+</a>
 
-            <nav class="top-links" aria-label="Navegación principal">
-                <a class="top-link" href="index.html">Inicio</a>
-                <a class="top-link" href="practice.html">Práctica</a>
-                <a class="top-link" href="exam.html">Simulacro</a>
-                <a class="top-link" href="review.html">Errores</a>
-                <a class="top-link" href="favorites.html">Favoritas</a>
-                <a class="top-link is-active" href="smart.html">Inteligente</a>
-            </nav>
-        </header>
+<nav class="top-links">
+<a class="top-link" href="index.html">Inicio</a>
+<a class="top-link" href="practice.html">Práctica</a>
+<a class="top-link" href="exam.html">Simulacro</a>
+<a class="top-link" href="review.html">Errores</a>
+<a class="top-link" href="favorites.html">Favoritas</a>
+<a class="top-link is-active" href="smart.html">Inteligente</a>
+</nav>
+</header>
 
-        <section class="page-intro">
-            <p class="brand-kicker">En desarrollo</p>
-            <h1>Entrenamiento adaptativo</h1>
-            <p>El modo inteligente priorizará las preguntas que más fallas y reducirá la frecuencia de las que ya dominas.</p>
-        </section>
+<section class="page-intro">
+<p class="brand-kicker">Modo Inteligente</p>
+<h1>Tu entrenador personal TCP</h1>
+<p>
+Este modo analiza tu progreso para recomendar automáticamente
+qué estudiar primero y ayudarte a aprobar antes el examen AESA.
+</p>
+</section>
 
-        <div class="feature-grid">
-            <article class="feature-card">
-                <h3>Más falladas</h3>
-                <p>El sistema subirá la frecuencia de las preguntas que te cuestan más.</p>
-            </article>
+<section class="metric-grid">
+<article class="metric-card">
+<span class="metric-label">Nivel de dominio</span>
+<span class="metric-value" id="smartLevel">--%</span>
+<span class="metric-note">Calculado automáticamente.</span>
+</article>
 
-            <article class="feature-card">
-                <h3>Menos repetición</h3>
-                <p>Las preguntas dominadas aparecerán con menos frecuencia para optimizar el tiempo.</p>
-            </article>
+<article class="metric-card">
+<span class="metric-label">Asignatura más fuerte</span>
+<span class="metric-value" id="bestSubject">--</span>
+<span class="metric-note">Tu mejor rendimiento.</span>
+</article>
 
-            <article class="feature-card">
-                <h3>Estudio más fino</h3>
-                <p>Una experiencia más parecida a un entrenador que a un simple banco aleatorio.</p>
-            </article>
-        </div>
+<article class="metric-card">
+<span class="metric-label">Asignatura más débil</span>
+<span class="metric-value" id="worstSubject">--</span>
+<span class="metric-note">Prioridad de estudio.</span>
+</article>
 
-        <div class="coming-soon dashboard-panel">
-            <h2>Próximo paso</h2>
-            <p class="brand-subtitle" style="margin: 0; max-width: none;">
-                Cuando lo activemos, este modo usará tu historial para decidir qué preguntas mostrar en cada sesión.
-            </p>
-        </div>
+<article class="metric-card">
+<span class="metric-label">Errores pendientes</span>
+<span class="metric-value" id="pendingErrors">0</span>
+<span class="metric-note">Listos para repasar.</span>
+</article>
+</section>
 
-    </main>
+<section class="dashboard-panel">
+<h2>🧠 Recomendación personalizada</h2>
+
+<div id="smartRecommendation" class="coming-soon">
+<p>
+Todavía no hay suficientes datos para generar recomendaciones.
+Empieza respondiendo preguntas en modo práctica o simulacro.
+</p>
+</div>
+
+<div style="margin-top:24px;text-align:center;">
+<a href="practice.html" class="tool-card" style="display:inline-flex;max-width:320px;">
+🚀 Entrenar ahora
+</a>
+</div>
+
+</section>
+
+<section class="feature-grid">
+
+<article class="feature-card">
+<h3>📈 Aprendizaje adaptativo</h3>
+<p>Las preguntas difíciles aparecerán con mayor frecuencia.</p>
+</article>
+
+<article class="feature-card">
+<h3>🎯 Prioridad automática</h3>
+<p>El sistema elegirá primero los temas donde tienes peor rendimiento.</p>
+</article>
+
+<article class="feature-card">
+<h3>🏆 Objetivo</h3>
+<p>Conseguir un dominio superior al 80% antes del simulacro.</p>
+</article>
+
+</section>
+
+<section class="dashboard-panel">
+<h2>Próximamente</h2>
+<ul>
+<li>🔥 Rachas de estudio.</li>
+<li>📅 Objetivos diarios.</li>
+<li>📊 Evolución semanal.</li>
+<li>🤖 IA para detectar puntos débiles.</li>
+<li>⭐ Plan de estudio automático.</li>
+</ul>
+</section>
+
+</main>
+
+<script src="js/smart.js"></script>
+
 </body>
 </html>
