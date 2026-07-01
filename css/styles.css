@@ -190,7 +190,8 @@ h3,
 }
 
 .dashboard-panel {
-    padding: 22px;
+    height:100%;
+    padding: 26px;
     border-radius: var(--radius);
     background: var(--card);
     border: 1px solid var(--card-border);
@@ -200,8 +201,9 @@ h3,
 
 .dashboard-summary {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 18px;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    align-items: stretch;
+    gap: 24px;
 }
 
 .dashboard-summary .dashboard-panel {
@@ -1078,4 +1080,36 @@ h3 {
         align-items: flex-start;
         gap: 6px;
     }
+}
+
+
+/* ===== V2 Dashboard polish ===== */
+
+.dashboard-actions .tool-card{
+    min-height:82px;
+    border-radius:22px;
+    font-size:1.05rem;
+    font-weight:800;
+}
+
+.dashboard-actions .tool-card:hover{
+    transform:translateY(-4px) scale(1.01);
+}
+
+.metric-card{
+    transition:.25s ease;
+}
+
+.metric-card:hover{
+    transform:translateY(-4px);
+}
+
+.activity-line{
+    align-items:center;
+}
+
+.activity-value{
+    text-align:right;
+    max-width:55%;
+    word-break:break-word;
 }
