@@ -20,6 +20,7 @@ const EXAM_HISTORY_KEY = "tcp_exam_history";
 const STATS_KEY = "tcp_practice_stats";
 const ERRORS_KEY = "tcp_error_questions";
 const FAVORITES_KEY = "tcp_favorites";
+const QUESTION_STATS_KEY = "tcp_question_stats";
 
 const PAGE_MODE = document.body?.dataset?.page || "";
 
@@ -86,6 +87,61 @@ function loadFavorites() {
             FAVORITES_KEY
         ) || '[]'
     );
+}
+
+function loadQuestionStats() {
+
+    return JSON.parse(
+        localStorage.getItem(
+            QUESTION_STATS_KEY
+        ) || "{}"
+    );
+
+}
+
+function saveQuestionStats(stats) {
+
+    localStorage.setItem(
+        QUESTION_STATS_KEY,
+        JSON.stringify(stats)
+    );
+
+}
+
+function registerAnswer(questionId, correct) {
+
+    const stats =
+        loadQuestionStats();
+
+    if (!stats[questionId]) {
+
+        stats[questionId] = {
+
+            seen: 0,
+            correct: 0,
+            wrong: 0,
+            lastSeen: Date.now()
+
+        };
+
+    }
+
+    stats[questionId].seen++;
+
+    stats[questionId].lastSeen = Date.now();
+
+    if (correct) {
+
+        stats[questionId].correct++;
+
+    } else {
+
+        stats[questionId].wrong++;
+
+    }
+
+    saveQuestionStats(stats);
+
 }
 
 function saveFavorites(favorites) {
@@ -642,6 +698,10 @@ function showQuestion() {
 
                     const correct =
                         index === q.correct;
+                    registerAnswer(
+                        q.id,
+                        correct
+                    );
 
                     if (correct) {
 
