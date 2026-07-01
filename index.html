@@ -2,38 +2,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCP Exam Trainer</title>
-
-    <meta
-        name="theme-color"
-        content="#08111e"
-    >
-
-    <link
-        rel="manifest"
-        href="manifest.json"
-    >
-
-    <link
-        rel="stylesheet"
-        href="css/styles.css"
-    >
-
+    <meta name="theme-color" content="#08111e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-page="dashboard">
 
     <main class="page-shell">
 
         <header class="brand-hero">
-
             <img
                 class="brand-logo"
                 src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
@@ -41,243 +21,91 @@
             >
 
             <div class="brand-copy">
+                <p class="brand-kicker">TCP Exam Trainer</p>
 
-                <p class="brand-kicker">
-                    TCP Exam Trainer
-                </p>
-
-                <h1>
-                    Practica, repasa y domina el banco de preguntas
-                </h1>
+                <h1>Practica, repasa y domina el banco de preguntas</h1>
 
                 <p class="brand-subtitle">
                     Simulacros, favoritas y estudio inteligente para preparar el examen TCP.
                 </p>
-
             </div>
-
         </header>
 
-        <div class="mode-selector">
+        <section class="dashboard-actions">
+            <a class="tool-card" href="practice.html">📚 Práctica</a>
+            <a class="tool-card" href="exam.html">📝 Simulacro AESA</a>
+            <a class="tool-card" href="review.html">❌ Repasar errores</a>
+        </section>
 
-            <button id="practiceMode">
-                📚 Práctica
-            </button>
+        <section class="dashboard-actions" style="margin-top: 0;">
+            <a class="tool-card" href="favorites.html">⭐ Favoritas</a>
+            <a class="tool-card" href="smart.html">🧠 Modo Inteligente</a>
+            <a class="tool-card" href="#dashboard-stats">📊 Ver progreso</a>
+        </section>
 
-            <button id="examMode">
-                📝 Simulacro AESA
-            </button>
+        <section class="metric-grid" id="dashboard-stats">
+            <article class="metric-card">
+                <span class="metric-label">Aciertos</span>
+                <span class="metric-value" id="dashCorrect">0</span>
+                <span class="metric-note">Total acumulado en práctica.</span>
+            </article>
 
-            <button id="reviewErrorsMode">
-                ❌ Repasar errores
-                (<span id="errorCount">0</span>)
-            </button>
+            <article class="metric-card">
+                <span class="metric-label">Errores</span>
+                <span class="metric-value" id="dashWrong">0</span>
+                <span class="metric-note">Lo que aún queda por pulir.</span>
+            </article>
 
-        </div>
+            <article class="metric-card">
+                <span class="metric-label">Favoritas</span>
+                <span class="metric-value" id="dashFavorites">0</span>
+                <span class="metric-note">Preguntas guardadas para repasar.</span>
+            </article>
 
-        <div class="tools-menu">
+            <article class="metric-card">
+                <span class="metric-label">Errores pendientes</span>
+                <span class="metric-value" id="dashErrors">0</span>
+                <span class="metric-note">Preguntas a repasar ahora.</span>
+            </article>
+        </section>
 
-            <a
-                href="favorites.html"
-                class="tool-card"
-            >
-                ⭐ Favoritas
-            </a>
-
-            <a
-                href="smart.html"
-                class="tool-card"
-            >
-                🧠 Modo Inteligente
-            </a>
-
-        </div>
-
-        <div class="info-card">
-
-            <div id="topic">
-                Tema
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Último simulacro</h2>
+                <div class="activity-line">
+                    <span class="activity-label">Nota</span>
+                    <span class="activity-value" id="dashLastScore">—</span>
+                </div>
+                <div class="activity-line">
+                    <span class="activity-label">Fecha</span>
+                    <span class="activity-value" id="dashLastDate">Aún no has completado ningún simulacro</span>
+                </div>
+                <div class="activity-line">
+                    <span class="activity-label">Mejor nota</span>
+                    <span class="activity-value" id="dashBestScore">—</span>
+                </div>
             </div>
 
-            <div id="stats">
-
-                <span>
-                    ✅ <span id="correctCount">0</span>
-                </span>
-
-                <span>
-                    ❌ <span id="wrongCount">0</span>
-                </span>
-
+            <div class="dashboard-panel">
+                <h2>Actividad reciente</h2>
+                <div id="dashRecent" class="dashboard-activity">
+                    <div class="activity-line">
+                        <span class="activity-label">Actividad</span>
+                        <span class="activity-value">Cargando...</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div id="timer">
-                ⏱️ --:--
-            </div>
-
-            <div id="examProgress"></div>
-
-            <div id="examMissing"></div>
-
-            <select id="subjectFilter">
-
-                <option value="all">
-                    Todas las asignaturas
-                </option>
-
-                <option value="normativa">
-                    Normativa
-                </option>
-
-                <option value="crm">
-                    CRM
-                </option>
-
-                <option value="mercancias_peligrosas">
-                    Mercancías Peligrosas
-                </option>
-
-                <option value="seguridad">
-                    Seguridad
-                </option>
-
-                <option value="emergencias">
-                    Emergencias
-                </option>
-
-                <option value="primeros_auxilios">
-                    Primeros Auxilios
-                </option>
-
-                <option value="factores_humanos">
-                    Factores Humanos
-                </option>
-
-                <option value="supervivencia">
-                    Supervivencia
-                </option>
-
-            </select>
-
-            <div class="progress-container">
-
-                <div id="progress-bar"></div>
-
-            </div>
-
-        </div>
-
-        <h3 id="counter">
-            Cargando...
-        </h3>
-
-        <h2 id="question">
-            Cargando pregunta...
-        </h2>
-
-        <div id="questionImageContainer">
-
-            <img
-                id="questionImage"
-                src=""
-                alt="Imagen de la pregunta"
-            >
-
-        </div>
-
-        <div id="answers"></div>
-
-        <div class="navigation-buttons">
-
-            <button
-                id="prevBtn"
-                style="display:none;"
-            >
-                ← Anterior
-            </button>
-
-            <button id="nextBtn">
-                Siguiente →
-            </button>
-
-        </div>
-
-        <button
-            id="finishExamBtn"
-            style="display:none;"
-        >
-            🏁 Finalizar examen
-        </button>
-
-        <div id="result"></div>
-
-        <div id="explanation"></div>
-
-        <div id="examResult">
-
-            <h2>
-                Simulacro finalizado
-            </h2>
-
-            <div id="examScore"></div>
-
-            <button id="restartExam">
-                Nuevo simulacro
-            </button>
-
-        </div>
-
-        <div id="examHistory">
-
-            <h2>
-                Historial de simulacros
-            </h2>
-
-            <div id="historyList">
-                No hay simulacros realizados.
-            </div>
-
-        </div>
+        <section class="dashboard-panel">
+            <h2>Cómo está organizada la app</h2>
+            <p class="brand-subtitle" style="margin: 0; max-width: none;">
+                La portada actúa como centro de control. Cada modo tiene su propia página para que el estudio esté más limpio, más ordenado y más rápido en móvil.
+            </p>
+        </section>
 
     </main>
 
-    <script src="js/stats.js"></script>
-    <script src="js/app.js"></script>
-
-    <script>
-
-        if (
-            'serviceWorker' in navigator
-        ) {
-
-            window.addEventListener(
-                'load',
-                () => {
-
-                    navigator.serviceWorker
-                        .register(
-                            './service-worker.js'
-                        )
-                        .then(() => {
-
-                            console.log(
-                                'PWA registrada'
-                            );
-
-                        })
-                        .catch(error => {
-
-                            console.error(
-                                'Error registrando PWA:',
-                                error
-                            );
-
-                        });
-                }
-            );
-        }
-
-    </script>
-
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
