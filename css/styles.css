@@ -40,6 +40,10 @@ body {
         linear-gradient(180deg, var(--bg), #07101a 38%, #060b12 100%);
 }
 
+a {
+    color: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -51,7 +55,12 @@ h3,
 #examResult,
 #examHistory,
 .tools-menu,
-.brand-hero {
+.brand-hero,
+.page-topbar,
+.page-intro,
+.dashboard-panel,
+.metric-grid,
+.feature-grid {
     max-width: 920px;
     margin-left: auto;
     margin-right: auto;
@@ -115,6 +124,204 @@ h3,
     max-width: 62ch;
     color: var(--muted);
     font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* Dashboard */
+.dashboard-actions {
+    max-width: 920px;
+    margin: 0 auto 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.dashboard-actions .tool-card {
+    min-height: 64px;
+}
+
+.dashboard-section {
+    max-width: 920px;
+    margin: 0 auto 18px;
+}
+
+.dashboard-section h2 {
+    margin: 0 0 12px;
+}
+
+.metric-grid {
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0 auto 18px;
+}
+
+.metric-card {
+    padding: 18px;
+    border-radius: 20px;
+    background: rgba(10, 20, 35, 0.90);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.metric-label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.metric-note {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.dashboard-panel {
+    padding: 22px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    margin-bottom: 18px;
+}
+
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 18px;
+}
+
+.dashboard-summary .dashboard-panel {
+    margin-bottom: 0;
+}
+
+.dashboard-activity {
+    display: grid;
+    gap: 10px;
+}
+
+.activity-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.activity-line:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.activity-label {
+    color: var(--muted);
+}
+
+.activity-value {
+    font-weight: 800;
+}
+
+/* Top bar for study pages */
+.page-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: rgba(10, 20, 35, 0.74);
+    border: 1px solid rgba(185, 217, 235, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.page-topbar .brand-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.brand-mini img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+.brand-mini-copy {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.brand-mini-copy strong {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.brand-mini-copy span {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.top-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.top-link {
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(10, 21, 38, 0.96);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-weight: 800;
+    font-size: 0.92rem;
+}
+
+.top-link.is-active {
+    border-color: rgba(241,180,52,.50);
+    background: rgba(241,180,52,.10);
+    color: #fff;
+}
+
+.page-intro {
+    padding: 18px 0 14px;
+}
+
+.page-intro .brand-kicker {
+    margin-bottom: 10px;
+}
+
+.page-intro h1 {
+    margin: 0;
+    max-width: 12ch;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.02;
+}
+
+.page-intro p {
+    max-width: 68ch;
+    color: var(--muted);
+    margin: 12px 0 0;
     line-height: 1.6;
 }
 
@@ -585,6 +792,49 @@ h3 {
 }
 
 /* =========================
+   SMART / FEATURE CARDS
+========================= */
+
+.feature-grid {
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0 auto 18px;
+}
+
+.feature-card {
+    padding: 18px;
+    border-radius: 20px;
+    background: rgba(10, 20, 35, 0.90);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.feature-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+
+.feature-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.coming-soon {
+    padding: 22px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
    V0.8 NUEVAS FUNCIONES
 ========================= */
 
@@ -729,6 +979,35 @@ h3 {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .dashboard-actions,
+    .metric-grid,
+    .feature-grid,
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .page-topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-topbar .brand-mini {
+        justify-content: center;
+    }
+
+    .top-links {
+        justify-content: center;
+    }
+
+    .page-intro h1 {
+        text-align: center;
+        max-width: none;
+    }
+
+    .page-intro p {
+        text-align: center;
     }
 
     h1 {
