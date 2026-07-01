@@ -1,43 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>Modo Inteligente</title>
-
-<link
-    rel="stylesheet"
-    href="css/styles.css"
->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Inteligente | TCP Exam Trainer</title>
+    <meta name="theme-color" content="#08111e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body data-page="smart">
 
-<body>
+    <main class="page-shell trainer-shell">
 
-<h1>🧠 Entrenamiento Inteligente</h1>
+        <header class="page-topbar">
+            <a class="brand-mini" href="index.html" aria-label="Ir al inicio">
+                <img src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png" alt="Elite Aircrew">
+                <div class="brand-mini-copy">
+                    <strong>TCP Exam Trainer</strong>
+                    <span>Modo Inteligente</span>
+                </div>
+            </a>
 
-<div class="tools-menu">
+            <nav class="top-links" aria-label="Navegación principal">
+                <a class="top-link" href="index.html">Inicio</a>
+                <a class="top-link" href="practice.html">Práctica</a>
+                <a class="top-link" href="exam.html">Simulacro</a>
+                <a class="top-link" href="review.html">Errores</a>
+                <a class="top-link" href="favorites.html">Favoritas</a>
+                <a class="top-link is-active" href="smart.html">Inteligente</a>
+            </nav>
+        </header>
 
-    <a
-        href="index.html"
-        class="tool-card"
-    >
-        ← Volver
-    </a>
+        <section class="page-intro">
+            <p class="brand-kicker">En desarrollo</p>
+            <h1>Entrenamiento adaptativo</h1>
+            <p>El modo inteligente priorizará las preguntas que más fallas y reducirá la frecuencia de las que ya dominas.</p>
+        </section>
 
-</div>
+        <div class="feature-grid">
+            <article class="feature-card">
+                <h3>Más falladas</h3>
+                <p>El sistema subirá la frecuencia de las preguntas que te cuestan más.</p>
+            </article>
 
-<div class="info-card">
+            <article class="feature-card">
+                <h3>Menos repetición</h3>
+                <p>Las preguntas dominadas aparecerán con menos frecuencia para optimizar el tiempo.</p>
+            </article>
 
-    Próximamente...
+            <article class="feature-card">
+                <h3>Estudio más fino</h3>
+                <p>Una experiencia más parecida a un entrenador que a un simple banco aleatorio.</p>
+            </article>
+        </div>
 
-</div>
+        <div class="coming-soon dashboard-panel">
+            <h2>Próximo paso</h2>
+            <p class="brand-subtitle" style="margin: 0; max-width: none;">
+                Cuando lo activemos, este modo usará tu historial para decidir qué preguntas mostrar en cada sesión.
+            </p>
+        </div>
 
+    </main>
 </body>
 </html>
