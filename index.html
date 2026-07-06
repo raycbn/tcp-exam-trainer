@@ -25,30 +25,67 @@
 
 </head>
 
-
 <body data-page="dashboard">
-
-
-    <!-- =========================
-         USER BAR
-    ========================== -->
 
     <header class="top-user-bar">
 
-        <button
-            class="logout-link"
-            onclick="logout()">
+        <div class="user-menu" id="userMenu">
 
-            Cerrar sesión
+            <button
+                class="user-trigger"
+                id="userMenuButton"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false">
 
-        </button>
+                <span
+                    class="user-avatar"
+                    id="userAvatar">
+                    A
+                </span>
+
+                <span class="user-text">
+
+                    <span
+                        class="user-name"
+                        id="userDisplayName">
+                        Alumno
+                    </span>
+
+                    <span
+                        class="user-email"
+                        id="userDisplayEmail">
+                        Cargando...
+                    </span>
+
+                </span>
+
+                <span class="user-chevron">▾</span>
+
+            </button>
+
+            <div
+                class="user-dropdown"
+                id="userDropdown">
+
+                <a href="profile.html">Ver perfil</a>
+
+                <a href="account.html">Ajustes de cuenta</a>
+
+                <button
+                    type="button"
+                    class="user-dropdown-logout"
+                    onclick="logout()">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+        </div>
 
     </header>
 
-
-
     <main class="page-shell">
-
 
         <!-- =========================
              HERO
@@ -56,474 +93,368 @@
 
         <header class="brand-hero">
 
-
             <img
                 src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
                 alt="Elite Aircrew"
                 class="brand-logo">
 
-
             <div class="brand-copy">
 
-
                 <p class="brand-kicker">
-
                     TCP Exam Trainer
-
                 </p>
-
 
                 <h1>
-
                     Practica, repasa y domina el banco de preguntas
-
                 </h1>
 
-
                 <p class="brand-subtitle">
-
                     Simulacros, favoritas y estudio inteligente para preparar el examen oficial TCP.
-
                 </p>
-
 
             </div>
 
-
         </header>
-
 
 
         <!-- =========================
              MENÚ PRINCIPAL
         ========================== -->
 
-
         <section class="dashboard-actions dashboard-menu">
 
-
             <a class="tool-card" href="practice.html">
-
                 📚
                 <span>Práctica</span>
-
             </a>
-
 
             <a class="tool-card" href="exam.html">
-
                 📝
                 <span>Simulacro AESA</span>
-
             </a>
-
 
             <a class="tool-card" href="review.html">
-
                 ❌
                 <span>Repasar errores</span>
-
             </a>
 
-
         </section>
-
-
 
         <section
             class="dashboard-actions dashboard-menu"
             style="margin-top:0;">
 
-
             <a class="tool-card" href="favorites.html">
-
                 ⭐
                 <span>Favoritas</span>
-
             </a>
-
 
             <a class="tool-card" href="smart.html">
-
                 🧠
                 <span>Modo Inteligente</span>
-
             </a>
-
 
             <a class="tool-card" href="#dashboard-stats">
-
                 📊
                 <span>Ver progreso</span>
-
             </a>
 
-
         </section>
-
 
 
         <!-- =========================
              BIENVENIDA
         ========================== -->
 
-
         <section class="dashboard-panel">
 
-
             <h2>
-
                 👋 ¡Bienvenido de nuevo!
-
             </h2>
-
 
             <p
                 class="brand-subtitle"
                 style="margin:0;max-width:none;">
 
-
                 Continúa donde lo dejaste. Desde aquí puedes acceder rápidamente a todos los modos de estudio, consultar tu progreso y seguir avanzando hacia el aprobado.
-
 
             </p>
 
-
         </section>
-
 
 
         <!-- =========================
              ESTADÍSTICAS
         ========================== -->
 
-
         <section
             class="metric-grid"
             id="dashboard-stats">
 
-
             <article class="metric-card">
 
-
                 <span class="metric-label">
-
                     Aciertos
-
                 </span>
-
 
                 <span
                     class="metric-value"
                     id="dashCorrect">
-
                     0
-
                 </span>
-
 
                 <span class="metric-note">
-
                     Total acumulado en práctica.
-
                 </span>
-
 
             </article>
 
-
-
             <article class="metric-card">
 
-
                 <span class="metric-label">
-
                     Errores
-
                 </span>
-
 
                 <span
                     class="metric-value"
                     id="dashWrong">
-
                     0
-
                 </span>
-
 
                 <span class="metric-note">
-
                     Lo que aún queda por mejorar.
-
                 </span>
-
 
             </article>
 
-
-
             <article class="metric-card">
 
-
                 <span class="metric-label">
-
                     Favoritas
-
                 </span>
-
 
                 <span
                     class="metric-value"
                     id="dashFavorites">
-
                     0
-
                 </span>
-
 
                 <span class="metric-note">
-
                     Guardadas para repasar.
-
                 </span>
-
 
             </article>
 
-
-
             <article class="metric-card">
 
-
                 <span class="metric-label">
-
                     Errores pendientes
-
                 </span>
-
 
                 <span
                     class="metric-value"
                     id="dashErrors">
-
                     0
-
                 </span>
-
 
                 <span class="metric-note">
-
                     Preguntas pendientes.
-
                 </span>
-
 
             </article>
 
-
         </section>
-
 
 
         <!-- =========================
              OBJETIVO DEL DÍA
         ========================== -->
 
-
         <section class="dashboard-panel">
 
-
             <h2>
-
                 🎯 Objetivo de hoy
-
             </h2>
-
 
             <div class="daily-goal">
 
-
                 <div class="daily-progress">
-
 
                     <div id="dashProgressBar"></div>
 
-
                 </div>
-
 
                 <div id="dashProgressText">
-
                     0% completado
-
                 </div>
 
-
             </div>
-
 
             <div
                 id="dashRecommendation"
                 class="dashboard-recommendation">
 
-
                 Calculando recomendación...
-
 
             </div>
 
-
         </section>
-
 
 
         <!-- =========================
              RESUMEN
         ========================== -->
 
-
         <section class="dashboard-summary">
-
 
             <div class="dashboard-panel">
 
-
                 <h2>
-
                     Último simulacro
-
                 </h2>
-
 
                 <div class="activity-line">
 
-
                     <span class="activity-label">
-
                         Nota
-
                     </span>
-
 
                     <span
                         class="activity-value"
                         id="dashLastScore">
-
                         —
-
                     </span>
-
 
                 </div>
 
-
                 <div class="activity-line">
 
-
                     <span class="activity-label">
-
                         Fecha
-
                     </span>
-
 
                     <span
                         class="activity-value"
                         id="dashLastDate">
-
-
                         Aún no has realizado ningún simulacro.
-
-
                     </span>
-
 
                 </div>
 
-
-
                 <div class="activity-line">
 
-
                     <span class="activity-label">
-
                         Mejor nota
-
                     </span>
-
 
                     <span
                         class="activity-value"
                         id="dashBestScore">
-
                         —
-
                     </span>
-
 
                 </div>
 
-
             </div>
-
-
 
             <div class="dashboard-panel">
 
-
                 <h2>
-
                     Actividad reciente
-
                 </h2>
-
 
                 <div
                     class="dashboard-activity"
                     id="dashRecent">
 
-
                     <div class="activity-line">
 
-
                         <span class="activity-label">
-
                             Actividad
-
                         </span>
-
 
                         <span class="activity-value">
-
                             Cargando...
-
                         </span>
-
 
                     </div>
 
-
                 </div>
-
 
             </div>
 
-
         </section>
-
 
     </main>
 
-
-
     <script src="js/dashboard.js"></script>
 
-    <script
-        type="module"
-        src="js/guard.js">
-    </script>
+    <script type="module" src="js/guard.js"></script>
 
+    <script type="module">
+        import { auth } from "./js/firebase.js";
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+        const menu = document.getElementById("userMenu");
+        const btn = document.getElementById("userMenuButton");
+        const avatar = document.getElementById("userAvatar");
+        const nameEl = document.getElementById("userDisplayName");
+        const emailEl = document.getElementById("userDisplayEmail");
+
+        function getInitials(user) {
+            const source =
+                user?.displayName ||
+                user?.email ||
+                "A";
+
+            const clean = source
+                .split("@")[0]
+                .replace(/[._-]+/g, " ")
+                .trim();
+
+            const parts = clean.split(/\s+/).filter(Boolean);
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+
+            return (clean.slice(0, 2) || "A").toUpperCase();
+        }
+
+        function prettyName(user) {
+            if (user?.displayName) return user.displayName;
+
+            if (!user?.email) return "Alumno";
+
+            const local = user.email.split("@")[0];
+            return local
+                .replace(/[._-]+/g, " ")
+                .trim()
+                .replace(/\b\w/g, c => c.toUpperCase());
+        }
+
+        onAuthStateChanged(auth, user => {
+            if (!user) return;
+
+            const displayName = prettyName(user);
+            const email = user.email || "Sin correo";
+
+            nameEl.textContent = displayName;
+            emailEl.textContent = email;
+            avatar.textContent = getInitials(user);
+        });
+
+        btn.addEventListener("click", () => {
+            const open = menu.classList.toggle("open");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        document.addEventListener("click", e => {
+            if (!menu.contains(e.target)) {
+                menu.classList.remove("open");
+                btn.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
 
 </body>
 
