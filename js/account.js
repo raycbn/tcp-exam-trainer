@@ -1,5 +1,4 @@
 import { auth } from "./firebase.js";
-
 import {
     onAuthStateChanged,
     sendPasswordResetEmail,
@@ -13,22 +12,17 @@ function $(id) {
 function prettyName(user) {
     if (user?.displayName) return user.displayName;
     if (!user?.email) return "Alumno";
-    const local = user.email.split("@")[0];
-    return local.replace(/[._-]+/g, " ").trim().replace(/\b\w/g, c => c.toUpperCase());
-}
 
-function getInitials(user) {
-    const source = user?.displayName || user?.email || "A";
-    const clean = source.split("@")[0].replace(/[._-]+/g, " ").trim();
-    const parts = clean.split(/\s+/).filter(Boolean);
-    if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
-    return (clean.slice(0, 2) || "A").toUpperCase();
+    return user.email
+        .split("@")[0]
+        .replace(/[._-]+/g, " ")
+        .trim()
+        .replace(/\b\w/g, c => c.toUpperCase());
 }
 
 onAuthStateChanged(auth, user => {
     if (!user) return;
 
-    $("accountAvatar").textContent = getInitials(user);
     $("accountEmail").textContent = user.email || "Sin correo";
     $("accountEmailValue").textContent = user.email || "—";
     $("accountUid").textContent = user.uid || "—";
@@ -53,7 +47,7 @@ if (resetPasswordBtn) {
 
             await sendPasswordResetEmail(auth, user.email);
             message.textContent = "📩 Hemos enviado un correo para cambiar la contraseña.";
-        } catch (error) {
+        } catch {
             message.textContent = "No se pudo enviar el correo de recuperación.";
         }
     };
