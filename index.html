@@ -3,25 +3,21 @@
 
 <head>
 
-    <meta charset="utf-8">
+<meta charset="utf-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>TCP Exam Trainer</title>
+<title>TCP Exam Trainer</title>
 
-    <meta
-        name="theme-color"
-        content="#08111e">
+<meta
+name="theme-color"
+content="#08111e">
 
-    <link
-        rel="manifest"
-        href="manifest.json">
+<link rel="manifest" href="manifest.json">
 
-    <link
-        rel="stylesheet"
-        href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -29,70 +25,84 @@
 <body data-page="dashboard">
 
 
+
 <!-- =========================
      HAMBURGER MENU
 ========================== -->
 
+
 <header class="top-site-bar">
 
-    <div
-        class="site-menu"
-        id="siteMenu">
+
+<div
+class="site-menu"
+id="siteMenu">
 
 
-        <button
-            class="site-menu-button"
-            id="siteMenuButton"
-            type="button">
-
-            <span class="site-menu-lines">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </span>
-
-        </button>
+<button
+class="site-menu-button"
+id="siteMenuButton"
+type="button"
+aria-label="Abrir menú">
 
 
-        <div
-            class="site-menu-panel"
-            id="siteMenuPanel">
+<span class="site-menu-lines">
+
+<span></span>
+<span></span>
+<span></span>
+
+</span>
 
 
-            <a class="site-menu-link" href="practice.html">
-                📚 Práctica
-            </a>
-
-            <a class="site-menu-link" href="exam.html">
-                📝 Simulacro AESA
-            </a>
-
-            <a class="site-menu-link" href="review.html">
-                ❌ Repasar errores
-            </a>
-
-            <a class="site-menu-link" href="favorites.html">
-                ⭐ Favoritas
-            </a>
-
-            <a class="site-menu-link" href="smart.html">
-                🧠 Modo Inteligente
-            </a>
-
-            <a class="site-menu-link" href="profile.html">
-                👨‍✈️ Ver perfil
-            </a>
+</button>
 
 
-        </div>
+
+<div
+class="site-menu-panel"
+id="siteMenuPanel">
 
 
-    </div>
+<a class="site-menu-link" href="practice.html">
+📚 Práctica
+</a>
+
+
+<a class="site-menu-link" href="exam.html">
+📝 Simulacro AESA
+</a>
+
+
+<a class="site-menu-link" href="review.html">
+❌ Repasar errores
+</a>
+
+
+<a class="site-menu-link" href="favorites.html">
+⭐ Favoritas
+</a>
+
+
+<a class="site-menu-link" href="smart.html">
+🧠 Modo Inteligente
+</a>
+
+
+<a class="site-menu-link" href="profile.html">
+👨‍✈️ Ver perfil
+</a>
+
+
+</div>
+
+
+</div>
 
 
 </header>
+
+
 
 
 
@@ -101,95 +111,98 @@
      USER MENU
 ========================== -->
 
+
 <header class="top-user-bar">
 
 
-    <div
-        class="user-menu"
-        id="userMenu">
+<div
+class="user-menu"
+id="userMenu">
 
 
-        <button
-            class="user-trigger"
-            id="userMenuButton"
-            type="button">
+<button
+class="user-trigger"
+id="userMenuButton"
+type="button">
 
 
-            <img
-                src="images/pilot-avatar.png"
-                class="user-photo"
-                id="userAvatar"
-                alt="Perfil">
+<img
+src="images/pilot-avatar.png"
+class="user-photo"
+id="userAvatar"
+alt="Perfil">
 
 
-            <span class="user-text">
+<span class="user-text">
 
 
-                <span
-                    class="user-name"
-                    id="userDisplayName">
+<span
+class="user-name"
+id="userDisplayName">
 
-                    Alumno
+Alumno
 
-                </span>
-
-
-                <span
-                    class="user-email"
-                    id="userDisplayEmail">
-
-                    Cargando...
-
-                </span>
+</span>
 
 
-            </span>
+<span
+class="user-email"
+id="userDisplayEmail">
+
+Cargando...
+
+</span>
 
 
-            <span class="user-chevron">
-
-                ▾
-
-            </span>
+</span>
 
 
-        </button>
+<span class="user-chevron">
+
+▾
+
+</span>
+
+
+</button>
 
 
 
-        <div
-            class="user-dropdown"
-            id="userDropdown">
+
+<div
+class="user-dropdown"
+id="userDropdown">
 
 
-            <a href="profile.html">
+<a href="profile.html">
 
-                👨‍✈️ Ver perfil
+👨‍✈️ Ver perfil
 
-            </a>
-
-
-            <a href="account.html">
-
-                ⚙️ Ajustes de cuenta
-
-            </a>
+</a>
 
 
-            <button
-                type="button"
-                class="user-dropdown-logout"
-                onclick="logout()">
+<a href="account.html">
 
-                ⏻ Cerrar sesión
+⚙️ Ajustes de cuenta
 
-            </button>
+</a>
 
 
-        </div>
+
+<button
+type="button"
+class="user-dropdown-logout"
+onclick="logout()">
+
+⏻ Cerrar sesión
+
+</button>
 
 
-    </div>
+</div>
+
+
+</div>
 
 
 </header>
@@ -198,7 +211,12 @@
 
 
 
+
+
+
 <main class="page-shell">
+
+
 
 
 
@@ -233,6 +251,7 @@ Practica, repasa y domina el banco de preguntas
 </h1>
 
 
+
 <p class="brand-subtitle">
 
 Simulacros, favoritas y estudio inteligente para preparar el examen oficial TCP.
@@ -246,6 +265,14 @@ Simulacros, favoritas y estudio inteligente para preparar el examen oficial TCP.
 </header>
 
 
+
+
+
+
+
+<!-- =========================
+     BIENVENIDA
+========================== -->
 
 
 <section class="dashboard-panel">
@@ -275,7 +302,10 @@ Continúa donde lo dejaste. Consulta tu progreso y sigue preparando tu examen TC
 
 
 
+
+
 <section class="dashboard-summary">
+
 
 
 <div class="dashboard-panel">
@@ -308,6 +338,7 @@ Continúa donde lo dejaste. Consulta tu progreso y sigue preparando tu examen TC
 </div>
 
 
+
 <div
 id="dashRecommendation"
 class="dashboard-recommendation">
@@ -323,6 +354,7 @@ Calculando recomendación...
 
 
 
+
 <div class="dashboard-panel">
 
 
@@ -333,10 +365,13 @@ Calculando recomendación...
 </h2>
 
 
+
 <div class="activity-line">
 
 <span class="activity-label">
+
 Nota
+
 </span>
 
 
@@ -352,10 +387,15 @@ id="dashLastScore">
 
 
 
+
+
 <div class="activity-line">
 
+
 <span class="activity-label">
+
 Fecha
+
 </span>
 
 
@@ -367,14 +407,20 @@ Aún no has realizado ningún simulacro.
 
 </span>
 
+
 </div>
+
+
 
 
 
 <div class="activity-line">
 
+
 <span class="activity-label">
+
 Mejor nota
+
 </span>
 
 
@@ -386,11 +432,14 @@ id="dashBestScore">
 
 </span>
 
+
+</div>
+
+
 </div>
 
 
 
-</div>
 
 
 
@@ -404,6 +453,7 @@ id="dashBestScore">
 Actividad reciente
 
 </h2>
+
 
 
 <div
@@ -448,6 +498,10 @@ Cargando...
 
 
 
+
+
+
+
 <script src="js/dashboard.js"></script>
 
 
@@ -458,6 +512,118 @@ src="js/guard.js">
 
 
 
+
+
+
+
+<!-- =========================
+     MENUS JS INDEPENDIENTES
+========================== -->
+
+
+<script>
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+
+const siteMenu =
+document.getElementById("siteMenu");
+
+
+const siteButton =
+document.getElementById("siteMenuButton");
+
+
+
+siteButton.onclick = e=>{
+
+
+e.preventDefault();
+
+e.stopPropagation();
+
+
+siteMenu.classList.toggle("open");
+
+
+};
+
+
+
+
+
+const userMenu =
+document.getElementById("userMenu");
+
+
+const userButton =
+document.getElementById("userMenuButton");
+
+
+
+userButton.onclick = e=>{
+
+
+e.preventDefault();
+
+e.stopPropagation();
+
+
+userMenu.classList.toggle("open");
+
+
+};
+
+
+
+
+
+document.onclick = e=>{
+
+
+if(!siteMenu.contains(e.target)){
+
+
+siteMenu.classList.remove("open");
+
+
+}
+
+
+
+if(!userMenu.contains(e.target)){
+
+
+userMenu.classList.remove("open");
+
+
+}
+
+
+};
+
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FIREBASE USER DATA
+========================== -->
 
 
 <script type="module">
@@ -475,23 +641,14 @@ onAuthStateChanged
 
 
 
-// USER DATA
-
-
-const userMenu =
-document.getElementById("userMenu");
-
-
-const userButton =
-document.getElementById("userMenuButton");
-
-
 const nameEl =
 document.getElementById("userDisplayName");
 
 
 const emailEl =
 document.getElementById("userDisplayEmail");
+
+
 
 
 
@@ -524,6 +681,8 @@ return user.email
 
 
 
+
+
 onAuthStateChanged(auth,user=>{
 
 
@@ -537,89 +696,13 @@ nameEl.textContent =
 prettyName(user);
 
 
+
 emailEl.textContent =
 user.email || "Sin correo";
 
 
 });
 
-
-
-
-// USER MENU
-
-
-userButton.addEventListener("click", e=>{
-
-
-e.preventDefault();
-
-e.stopPropagation();
-
-
-userMenu.classList.toggle("open");
-
-
-});
-
-
-
-
-// HAMBURGER MENU
-
-
-const siteMenu =
-document.getElementById("siteMenu");
-
-
-const siteMenuButton =
-document.getElementById("siteMenuButton");
-
-
-
-siteMenuButton.addEventListener("click", e=>{
-
-
-e.preventDefault();
-
-e.stopPropagation();
-
-
-siteMenu.classList.toggle("open");
-
-
-});
-
-
-
-
-
-// CLICK FUERA
-
-
-document.addEventListener("click", e=>{
-
-
-if(!siteMenu.contains(e.target)){
-
-
-siteMenu.classList.remove("open");
-
-
-}
-
-
-
-if(!userMenu.contains(e.target)){
-
-
-userMenu.classList.remove("open");
-
-
-}
-
-
-});
 
 
 </script>
