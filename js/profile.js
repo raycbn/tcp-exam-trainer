@@ -1,74 +1,389 @@
 import { auth } from "./firebase.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-const STATS_KEY = "tcp_practice_stats";
-const ERRORS_KEY = "tcp_error_questions";
-const FAVORITES_KEY = "tcp_favorites";
-const EXAM_HISTORY_KEY = "tcp_exam_history";
-const QUESTION_STATS_KEY = "tcp_question_stats";
+import {
 
-function $(id) {
+    onAuthStateChanged
+
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+
+
+// =========================
+// KEYS
+// =========================
+
+
+const STATS_KEY =
+"tcp_practice_stats";
+
+
+const FAVORITES_KEY =
+"tcp_favorites";
+
+
+const EXAM_HISTORY_KEY =
+"tcp_exam_history";
+
+
+const QUESTION_STATS_KEY =
+"tcp_question_stats";
+
+
+
+
+// =========================
+// HELPERS
+// =========================
+
+
+function $(id){
+
     return document.getElementById(id);
+
 }
 
-function loadJSON(key, fallback) {
-    try {
-        return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
-    } catch {
+
+
+
+function setText(id,value){
+
+
+    const el = $(id);
+
+
+    if(el){
+
+        el.textContent = value;
+
+    }
+
+
+}
+
+
+
+
+function loadJSON(key,fallback){
+
+
+    try{
+
+
+        return JSON.parse(
+
+            localStorage.getItem(key)
+
+            ||
+
+            JSON.stringify(fallback)
+
+        );
+
+
+    }catch{
+
+
         return fallback;
+
+
     }
+
+
 }
 
-function formatDate(value) {
-    if (!value) return "—";
-    try {
-        return new Date(value).toLocaleString();
-    } catch {
-        return "—";
-    }
-}
 
-function prettyName(user) {
-    if (user?.displayName) return user.displayName;
-    if (!user?.email) return "Alumno";
+
+
+
+function prettyName(user){
+
+
+    if(user?.displayName)
+
+        return user.displayName;
+
+
+
+    if(!user?.email)
+
+        return "Alumno";
+
+
 
     return user.email
+
         .split("@")[0]
-        .replace(/[._-]+/g, " ")
+
+        .replace(/[._-]+/g," ")
+
         .trim()
-        .replace(/\b\w/g, c => c.toUpperCase());
+
+        .replace(/\b\w/g,c=>c.toUpperCase());
+
+
 }
 
-onAuthStateChanged(auth, user => {
-    if (!user) return;
 
-    const stats = loadJSON(STATS_KEY, { correct: 0, wrong: 0 });
-    const favorites = loadJSON(FAVORITES_KEY, []);
-    const history = loadJSON(EXAM_HISTORY_KEY, []);
-    const qStats = loadJSON(QUESTION_STATS_KEY, {});
 
-    const best = history.length
-        ? Math.max(...history.map(h => Number(h.score) || 0))
-        : 0;
 
-    const last = history.length ? history[0] : null;
-    const seenQuestions = Object.values(qStats).reduce((acc, item) => acc + (Number(item.seen) || 0), 0);
+function formatDate(date){
 
-    $("profileName").textContent = prettyName(user);
-    $("profileEmail").textContent = user.email || "Sin correo";
 
-    $("profileCorrect").textContent = stats.correct ?? 0;
-    $("profileWrong").textContent = stats.wrong ?? 0;
-    $("profileFavorites").textContent = favorites.length;
-    $("profileSimulations").textContent = history.length;
+    if(!date)
 
-    $("profileEmailValue").textContent = user.email || "—";
-    $("profileUid").textContent = user.uid || "—";
-    $("profileCreated").textContent = formatDate(user.metadata?.creationTime);
-    $("profileVerified").textContent = user.emailVerified ? "Sí" : "No";
+        return "—";
 
-    $("profileBestScore").textContent = history.length ? `${best.toFixed(1)}%` : "—";
-    $("profileLastScore").textContent = last ? `${Number(last.score).toFixed(1)}%` : "—";
-    $("profileLastDate").textContent = last ? last.date : "—";
-    $("profileSeenQuestions").textContent = seenQuestions || 0;
+
+
+    return new Date(date)
+
+    .toLocaleString("es-ES",{
+
+        day:"2-digit",
+
+        month:"2-digit",
+
+        year:"numeric",
+
+        hour:"2-digit",
+
+        minute:"2-digit"
+
+    });
+
+
+}
+
+
+
+
+
+
+
+// =========================
+// PROFILE LOAD
+// =========================
+
+
+onAuthStateChanged(auth,user=>{
+
+
+    if(!user)
+
+        return;
+
+
+
+
+    // USER DATA
+
+
+    setText(
+        "profileName",
+        prettyName(user)
+    );
+
+
+
+    setText(
+        "profileEmail",
+        user.email || "Sin correo"
+    );
+
+
+
+
+    setText(
+        "profileEmailValue",
+        user.email || "—"
+    );
+
+
+
+    setText(
+        "profileUid",
+        user.uid || "—"
+    );
+
+
+
+    setText(
+        "profileCreated",
+        formatDate(
+            user.metadata?.creationTime
+        )
+    );
+
+
+
+    setText(
+        "profileVerified",
+        user.emailVerified
+        ? "Sí"
+        : "No"
+    );
+
+
+
+
+
+
+    // STATS
+
+
+    const stats =
+    loadJSON(
+        STATS_KEY,
+        {
+            correct:0,
+            wrong:0
+        }
+    );
+
+
+
+    const favorites =
+    loadJSON(
+        FAVORITES_KEY,
+        []
+    );
+
+
+
+    const exams =
+    loadJSON(
+        EXAM_HISTORY_KEY,
+        []
+    );
+
+
+
+    const questions =
+    loadJSON(
+        QUESTION_STATS_KEY,
+        {}
+    );
+
+
+
+
+
+    setText(
+        "profileCorrect",
+        stats.correct ?? 0
+    );
+
+
+
+    setText(
+        "profileWrong",
+        stats.wrong ?? 0
+    );
+
+
+
+    setText(
+        "profileFavorites",
+        favorites.length
+    );
+
+
+
+    setText(
+        "profileSimulations",
+        exams.length
+    );
+
+
+
+
+
+
+
+    // PERFORMANCE
+
+
+    const best =
+    exams.length
+
+    ?
+
+    Math.max(
+        ...exams.map(
+            e=>Number(e.score)||0
+        )
+    )
+
+    :
+
+    null;
+
+
+
+
+    const last =
+    exams.length
+
+    ?
+
+    exams[0]
+
+    :
+
+    null;
+
+
+
+
+    const seen =
+
+    Object.values(questions)
+
+    .reduce(
+
+        (total,item)=>
+
+        total +
+
+        (Number(item.seen)||0)
+
+    ,0);
+
+
+
+
+
+
+    setText(
+        "profileBestScore",
+        best!==null
+        ? best.toFixed(1)+"%"
+        : "—"
+    );
+
+
+
+    setText(
+        "profileLastScore",
+        last
+        ? Number(last.score).toFixed(1)+"%"
+        : "—"
+    );
+
+
+
+    setText(
+        "profileLastDate",
+        last?.date || "—"
+    );
+
+
+
+    setText(
+        "profileSeenQuestions",
+        seen
+    );
+
+
+
 });
