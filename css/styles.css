@@ -1681,3 +1681,118 @@ body[data-page="dashboard"] {
         width: min(250px, calc(100vw - 24px));
     }
 }
+
+/* =========================
+   FIX MENU HAMBURGUESA
+========================= */
+
+.site-menu {
+
+    position: relative;
+
+}
+
+
+.site-menu-panel {
+
+    display: none;
+
+    position: fixed;
+
+    top: 95px;
+    left: 30px;
+
+    width: 300px;
+
+    padding: 18px;
+
+
+    background:
+
+        rgba(7,18,34,.96);
+
+
+    border:
+
+        1px solid rgba(120,180,255,.25);
+
+
+    border-radius: 24px;
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+    box-shadow:
+
+        0 25px 70px rgba(0,0,0,.55);
+
+
+    z-index: 99999;
+
+}
+
+
+
+
+.site-menu.open .site-menu-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+
+
+.site-menu-link {
+
+
+    padding:
+
+        18px 22px;
+
+
+    border-radius:
+
+        18px;
+
+
+    color:
+
+        white;
+
+
+    text-decoration:
+
+        none;
+
+
+    font-size:
+
+        18px;
+
+
+    font-weight:
+
+        800;
+
+
+}
+
+
+
+.site-menu-link:hover {
+
+
+    background:
+
+        rgba(255,255,255,.08);
+
+
+}
