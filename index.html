@@ -388,7 +388,6 @@
     </main>
 
     <script src="js/dashboard.js"></script>
-
     <script type="module" src="js/guard.js"></script>
 
     <script type="module">
@@ -402,17 +401,10 @@
         const emailEl = document.getElementById("userDisplayEmail");
 
         function getInitials(user) {
-            const source =
-                user?.displayName ||
-                user?.email ||
-                "A";
-
-            const clean = source
-                .split("@")[0]
-                .replace(/[._-]+/g, " ")
-                .trim();
-
+            const source = user?.displayName || user?.email || "A";
+            const clean = source.split("@")[0].replace(/[._-]+/g, " ").trim();
             const parts = clean.split(/\s+/).filter(Boolean);
+
             if (parts.length >= 2) {
                 return (parts[0][0] + parts[1][0]).toUpperCase();
             }
@@ -422,7 +414,6 @@
 
         function prettyName(user) {
             if (user?.displayName) return user.displayName;
-
             if (!user?.email) return "Alumno";
 
             const local = user.email.split("@")[0];
