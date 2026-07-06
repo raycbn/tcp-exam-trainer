@@ -1,3 +1,8 @@
+import {
+
+loadQuestionBank
+
+} from "./questions-loader.js";
 
 // --- ESTADO GLOBAL DE LA APLICACIÓN ---
 
