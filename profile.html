@@ -2,53 +2,37 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | TCP Exam Trainer</title>
-
-    <meta
-        name="theme-color"
-        content="#08111e">
-
-    <link
-        rel="stylesheet"
-        href="css/styles.css">
-
+    <meta name="theme-color" content="#08111e">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body data-page="profile">
 
     <main class="page-shell">
 
-        <section class="dashboard-panel profile-header">
-
-            <div class="profile-avatar" id="profileAvatar">A</div>
+        <section class="dashboard-panel profile-hero">
+            <img
+                src="images/pilot-avatar.png"
+                id="profileAvatar"
+                class="profile-avatar-large"
+                alt="Avatar del alumno">
 
             <div class="profile-head-copy">
-
                 <p class="brand-kicker">Perfil del alumno</p>
-
                 <h1 id="profileName">Alumno</h1>
-
                 <p class="brand-subtitle" id="profileEmail">Cargando correo...</p>
-
             </div>
 
             <div class="profile-actions">
-
-                <a class="tool-card" href="index.html">← Volver al inicio</a>
-                <a class="tool-card" href="account.html">Ajustes de cuenta</a>
-
+                <a class="profile-action-link" href="index.html">← Volver al inicio</a>
+                <a class="profile-action-link" href="account.html">⚙️ Ajustes de cuenta</a>
             </div>
-
         </section>
 
         <section class="metric-grid">
-
             <article class="metric-card">
                 <span class="metric-label">Aciertos</span>
                 <span class="metric-value" id="profileCorrect">0</span>
@@ -72,13 +56,10 @@
                 <span class="metric-value" id="profileSimulations">0</span>
                 <span class="metric-note">Exámenes completados.</span>
             </article>
-
         </section>
 
         <section class="dashboard-summary">
-
             <div class="dashboard-panel">
-
                 <h2>Datos de cuenta</h2>
 
                 <div class="activity-line">
@@ -100,11 +81,9 @@
                     <span class="activity-label">Verificado</span>
                     <span class="activity-value" id="profileVerified">—</span>
                 </div>
-
             </div>
 
             <div class="dashboard-panel">
-
                 <h2>Rendimiento</h2>
 
                 <div class="activity-line">
@@ -126,16 +105,12 @@
                     <span class="activity-label">Preguntas vistas</span>
                     <span class="activity-value" id="profileSeenQuestions">—</span>
                 </div>
-
             </div>
-
         </section>
 
     </main>
 
     <script type="module" src="js/guard.js"></script>
     <script type="module" src="js/profile.js"></script>
-
 </body>
-
 </html>
