@@ -17,40 +17,59 @@ import {
 
 const currentPage =
     window.location.pathname
-    .split("/")
-    .pop();
+        .split("/")
+        .pop();
 
 
 
 // =========================
-// PROTEGER PÁGINAS
+// CONTROL DE SESIÓN
 // =========================
 
 
-onAuthStateChanged(auth, user => {
+onAuthStateChanged(
+
+    auth,
+
+    user => {
 
 
-    if (!user && currentPage !== "login.html") {
+        // NO LOGUEADO
+        if (
+
+            !user &&
+            currentPage !== "login.html"
+
+        ) {
 
 
-        window.location.href =
-        "login.html";
+            window.location.href =
+            "login.html";
+
+
+        }
+
+
+
+        // YA LOGUEADO
+        if (
+
+            user &&
+            currentPage === "login.html"
+
+        ) {
+
+
+            window.location.href =
+            "index.html";
+
+
+        }
 
 
     }
 
-
-    if (user && currentPage === "login.html") {
-
-
-        window.location.href =
-        "index.html";
-
-
-    }
-
-
-});
+);
 
 
 
@@ -66,8 +85,10 @@ window.logout = function(){
 
         .then(() => {
 
+
             window.location.href =
             "login.html";
+
 
         });
 
