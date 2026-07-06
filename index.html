@@ -157,56 +157,227 @@
     </main>
 
     <script src="js/dashboard.js"></script>
-    <script type="module" src="js/guard.js"></script>
 
-    <script type="module">
-        import { auth } from "./js/firebase.js";
-        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+<script
+    type="module"
+    src="js/guard.js">
+</script>
 
-        const menu = document.getElementById("siteMenu");
-        const menuButton = document.getElementById("siteMenuButton");
 
-        const userMenu = document.getElementById("userMenu");
-        const userButton = document.getElementById("userMenuButton");
-        const nameEl = document.getElementById("userDisplayName");
-        const emailEl = document.getElementById("userDisplayEmail");
 
-        function prettyName(user) {
-            if (user?.displayName) return user.displayName;
-            if (!user?.email) return "Alumno";
-            return user.email
-                .split("@")[0]
-                .replace(/[._-]+/g, " ")
-                .replace(/\b\w/g, c => c.toUpperCase());
-        }
+<!-- =========================
+     FIREBASE USER INFO
+========================== -->
 
-        onAuthStateChanged(auth, user => {
-            if (!user) return;
-            nameEl.textContent = prettyName(user);
-            emailEl.textContent = user.email || "Sin correo";
-        });
+<script type="module">
 
-        menuButton.addEventListener("click", () => {
-            const open = menu.classList.toggle("open");
-            menuButton.setAttribute("aria-expanded", open ? "true" : "false");
-        });
+import { auth } from "./js/firebase.js";
 
-        userButton.addEventListener("click", () => {
-            const open = userMenu.classList.toggle("open");
-            userButton.setAttribute("aria-expanded", open ? "true" : "false");
-        });
 
-        document.addEventListener("click", e => {
-            if (!menu.contains(e.target)) {
-                menu.classList.remove("open");
-                menuButton.setAttribute("aria-expanded", "false");
-            }
-            if (!userMenu.contains(e.target)) {
-                userMenu.classList.remove("open");
-                userButton.setAttribute("aria-expanded", "false");
-            }
-        });
-    </script>
+import {
+
+    onAuthStateChanged
+
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+
+
+const userMenu =
+document.getElementById("userMenu");
+
+
+const userButton =
+document.getElementById("userMenuButton");
+
+
+const nameEl =
+document.getElementById("userDisplayName");
+
+
+const emailEl =
+document.getElementById("userDisplayEmail");
+
+
+
+function prettyName(user){
+
+
+    if(user?.displayName)
+
+        return user.displayName;
+
+
+
+    if(!user?.email)
+
+        return "Alumno";
+
+
+
+    return user.email
+
+        .split("@")[0]
+
+        .replace(/[._-]+/g," ")
+
+        .replace(/\b\w/g,c=>c.toUpperCase());
+
+
+}
+
+
+
+
+onAuthStateChanged(auth,user=>{
+
+
+    if(!user)
+
+        return;
+
+
+
+    nameEl.textContent =
+    prettyName(user);
+
+
+
+    emailEl.textContent =
+    user.email || "Sin correo";
+
+
+});
+
+
+
+
+
+userButton.addEventListener("click", e=>{
+
+
+    e.stopPropagation();
+
+
+    const open =
+
+    userMenu.classList.toggle("open");
+
+
+
+    userButton.setAttribute(
+
+        "aria-expanded",
+
+        open ? "true" : "false"
+
+    );
+
+
+});
+
+
+
+document.addEventListener("click", e=>{
+
+
+    if(!userMenu.contains(e.target)){
+
+
+        userMenu.classList.remove("open");
+
+
+        userButton.setAttribute(
+
+            "aria-expanded",
+
+            "false"
+
+        );
+
+
+    }
+
+
+});
+
+
+</script>
+
+
+
+
+
+<!-- =========================
+     HAMBURGER MENU
+========================== -->
+
+<script>
+
+
+const siteMenu =
+document.getElementById("siteMenu");
+
+
+
+const siteMenuButton =
+document.getElementById("siteMenuButton");
+
+
+
+siteMenuButton.addEventListener("click", e=>{
+
+
+    e.stopPropagation();
+
+
+    const open =
+
+    siteMenu.classList.toggle("open");
+
+
+
+    siteMenuButton.setAttribute(
+
+        "aria-expanded",
+
+        open ? "true" : "false"
+
+    );
+
+
+});
+
+
+
+
+document.addEventListener("click", e=>{
+
+
+    if(!siteMenu.contains(e.target)){
+
+
+        siteMenu.classList.remove("open");
+
+
+        siteMenuButton.setAttribute(
+
+            "aria-expanded",
+
+            "false"
+
+        );
+
+
+    }
+
+
+});
+
+
+</script>
+
+
 
 </body>
+
 </html>
