@@ -1796,3 +1796,165 @@ body[data-page="dashboard"] {
 
 
 }
+
+/* =========================
+   FIX DEFINITIVO MENU TOP
+========================= */
+
+
+/* barra izquierda */
+.top-site-bar {
+
+    position: fixed;
+
+    top: 14px;
+
+    left: 18px;
+
+    z-index: 999999;
+
+    pointer-events: auto;
+
+}
+
+
+/* contenedor */
+.site-menu {
+
+    position: relative;
+
+    z-index: 999999;
+
+}
+
+
+
+/* botón hamburguesa */
+.site-menu-button {
+
+    position: relative;
+
+    z-index: 999999;
+
+    pointer-events: auto;
+
+}
+
+
+
+/* desplegable */
+.site-menu-panel {
+
+    display: none;
+
+    position: absolute;
+
+    top: 62px;
+
+    left: 0;
+
+
+    width: 280px;
+
+
+    padding: 14px;
+
+
+    background:
+
+        rgba(7,18,34,.98);
+
+
+    border:
+
+        1px solid rgba(120,180,255,.25);
+
+
+    border-radius: 22px;
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+    box-shadow:
+
+        0 25px 70px rgba(0,0,0,.55);
+
+
+    z-index: 999999;
+
+}
+
+
+
+.site-menu.open .site-menu-panel {
+
+    display:flex !important;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+
+.site-menu-link {
+
+
+    padding:
+
+        15px 18px;
+
+
+    border-radius:
+
+        14px;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+.site-menu-link:hover {
+
+
+    background:
+
+        rgba(255,255,255,.1);
+
+
+}
+
+
+
+/* evita que el contenido tape */
+.brand-hero,
+.page-shell,
+.dashboard-panel {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+
+/* usuario siempre encima */
+.top-user-bar {
+
+    z-index:999998;
+
+}
