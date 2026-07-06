@@ -1242,20 +1242,24 @@ h3 {
 
 
 /* =========================
-   USER MENU PRO
+   USER MENU PREMIUM
 ========================= */
+
 
 .top-user-bar {
 
     position: fixed;
 
-    top: 22px;
-    right: 34px;
+    top: 18px;
+    right: 28px;
 
     z-index: 9999;
 
 }
 
+
+
+/* CONTENEDOR */
 
 .user-menu {
 
@@ -1264,7 +1268,14 @@ h3 {
 }
 
 
+
+/* BOTON PRINCIPAL */
+
 .user-trigger {
+
+
+    height: 52px;
+
 
     display:flex;
 
@@ -1273,54 +1284,202 @@ h3 {
     gap:12px;
 
 
-    background:transparent;
+    padding:
 
-    border:none;
+        6px 14px
+
+        6px 8px;
+
+
+
+    background:
+
+        rgba(5,15,30,.72);
+
+
+
+    border:
+
+        1px solid rgba(130,190,255,.20);
+
+
+
+    border-radius:
+
+        999px;
+
+
 
     color:white;
 
 
-    font-size:18px;
 
-    font-weight:700;
+    backdrop-filter:
+
+        blur(18px);
+
+
+
+    box-shadow:
+
+        0 12px 35px
+
+        rgba(0,0,0,.35);
+
 
 
     cursor:pointer;
+
+
+
+    transition:.25s ease;
 
 }
 
 
 
+.user-trigger:hover {
+
+
+    background:
+
+        rgba(12,30,55,.9);
+
+
+    transform:
+
+        translateY(-1px);
+
+}
+
+
+
+
+/* AVATAR */
+
 .user-photo {
 
-    width:64px;
 
-    height:64px;
+    width:42px;
+
+    height:42px;
+
 
 
     border-radius:50%;
 
 
+
     object-fit:cover;
 
 
-    border:2px solid rgba(255,255,255,.45);
+
+    border:
+
+        2px solid
+
+        rgba(120,210,255,.45);
+
 
 
     box-shadow:
 
-        0 8px 30px rgba(0,0,0,.45);
+        0 0 18px
+
+        rgba(80,180,255,.25);
 
 }
+
+
+
+/* TEXTOS */
+
+.user-text {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+
+
+    line-height:1.1;
+
+}
+
+
+
+.user-name {
+
+
+    font-size:14px;
+
+    font-weight:800;
+
+
+
+    max-width:120px;
+
+
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+
+
+.user-email {
+
+
+    margin-top:3px;
+
+
+
+    font-size:11px;
+
+
+
+    color:
+
+    rgba(210,230,255,.65);
+
+
+
+    max-width:130px;
+
+
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
 
 
 
 .user-chevron {
 
-    opacity:.7;
+
+    font-size:12px;
+
+    opacity:.6;
 
 }
 
+
+
+/* =========================
+   DROPDOWN
+========================= */
 
 
 .user-dropdown {
@@ -1334,34 +1493,46 @@ h3 {
 
     right:0;
 
-    top:82px;
+    top:65px;
 
 
-    width:260px;
+
+    width:230px;
+
+
+
+    padding:8px;
+
 
 
     background:
 
-        rgba(7,18,34,.96);
+        rgba(5,15,30,.96);
+
 
 
     border:
 
-        1px solid rgba(120,180,255,.25);
+        1px solid rgba(130,190,255,.22);
+
 
 
     border-radius:18px;
 
 
-    overflow:hidden;
 
+    backdrop-filter:
 
-    backdrop-filter:blur(20px);
+        blur(22px);
+
 
 
     box-shadow:
 
-        0 20px 60px rgba(0,0,0,.5);
+        0 20px 60px
+
+        rgba(0,0,0,.55);
+
 
 }
 
@@ -1369,40 +1540,58 @@ h3 {
 
 .user-menu.open .user-dropdown {
 
-
     display:block;
 
 }
 
 
 
+/* OPCIONES */
+
 .user-dropdown a,
 
 .user-dropdown button {
 
 
-    display:flex;
-
 
     width:100%;
 
 
-    padding:18px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+
+
+    padding:
+
+        13px 14px;
+
+
+
+    border-radius:12px;
+
 
 
     color:white;
 
 
-    text-decoration:none;
-
 
     background:none;
-
 
     border:none;
 
 
-    font-size:16px;
+
+    text-decoration:none;
+
+
+
+    font-size:14px;
+
+    font-weight:600;
+
 
 
     cursor:pointer;
@@ -1419,20 +1608,70 @@ h3 {
 
     background:
 
-    rgba(255,255,255,.08);
+        rgba(120,200,255,.12);
 
 }
 
 
 
+
+/* CERRAR SESION */
+
 .user-dropdown-logout {
+
+
+    margin-top:6px;
+
 
 
     border-top:
 
-    1px solid rgba(255,255,255,.1)!important;
+        1px solid
+
+        rgba(255,255,255,.08)!important;
 
 
-    color:#8fd3ff!important;
+
+    color:
+
+        #75d6ff!important;
+
+}
+
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:700px){
+
+
+    .top-user-bar {
+
+        top:10px;
+
+        right:12px;
+
+    }
+
+
+    .user-email {
+
+        display:none;
+
+    }
+
+
+    .user-name {
+
+        max-width:80px;
+
+    }
+
 
 }
