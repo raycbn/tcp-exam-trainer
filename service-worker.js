@@ -1,4 +1,4 @@
-const CACHE_NAME = "tcp-trainer-v29";
+const CACHE_NAME = "tcp-trainer-v30";
 
 const STATIC_FILES = [
     "./",
@@ -43,6 +43,11 @@ const STATIC_FILES = [
 
     "./images/pilot-avatar.png",
     "./js/questions-loader.js",
+    "admin.html",
+    
+    "js/admin.js",
+    
+    "js/user-sync.js",
 ];
 
 
