@@ -11,124 +11,89 @@
 
     <title>Login - TCP Exam Trainer</title>
 
-    <link
-        rel="stylesheet"
-        href="css/styles.css">
-
     <meta
         name="theme-color"
         content="#08111e">
 
-</head>
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
 
+</head>
 
 <body>
 
+    <main class="page-shell">
 
-<main class="page-shell">
+        <section class="brand-hero">
 
+            <img
+                src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
+                class="brand-logo"
+                alt="Elite Aircrew">
 
-    <section class="brand-hero">
+            <div class="brand-copy">
 
+                <p class="brand-kicker">
+                    TCP EXAM TRAINER
+                </p>
 
-        <img
-            src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
-            class="brand-logo"
-            alt="Elite Aircrew">
+                <h1>
+                    Acceso alumnos
+                </h1>
 
+                <p class="brand-subtitle">
+                    Inicia sesión para guardar tu progreso, simulacros, errores y estadísticas.
+                </p>
 
-        <div class="brand-copy">
+            </div>
 
+        </section>
 
-            <p class="brand-kicker">
-                TCP EXAM TRAINER
-            </p>
+        <section class="dashboard-panel auth-panel">
 
+            <h2>
+                🔐 Iniciar sesión
+            </h2>
 
-            <h1>
-                Acceso alumnos
-            </h1>
+            <input
+                id="email"
+                class="auth-input"
+                type="email"
+                placeholder="Correo electrónico">
 
+            <input
+                id="password"
+                class="auth-input"
+                type="password"
+                placeholder="Contraseña">
 
-            <p class="brand-subtitle">
+            <button
+                id="loginBtn"
+                class="tool-card">
 
-                Inicia sesión para guardar tu progreso,
-                simulacros, errores y estadísticas.
+                🔓 Entrar
 
-            </p>
+            </button>
 
+            <button
+                id="resetBtn"
+                class="tool-card">
 
-        </div>
+                🔑 Recuperar contraseña
 
+            </button>
 
-    </section>
+            <p id="authMessage"></p>
 
+        </section>
 
+    </main>
 
-    <section class="dashboard-panel auth-panel">
-
-
-        <h2>
-            🔐 Iniciar sesión
-        </h2>
-
-
-        <input
-            id="email"
-            class="auth-input"
-            type="email"
-            placeholder="Correo electrónico">
-
-
-        <input
-            id="password"
-            class="auth-input"
-            type="password"
-            placeholder="Contraseña">
-
-
-        <button
-            id="loginBtn"
-            class="tool-card">
-
-            Entrar
-
-        </button>
-
-
-        <button
-            id="registerBtn"
-            class="tool-card">
-
-            Crear cuenta
-
-        </button>
-
-
-        <button
-            id="resetBtn"
-            class="tool-card">
-
-            Recuperar contraseña
-
-        </button>
-
-
-        <p id="authMessage"></p>
-
-
-    </section>
-
-
-</main>
-
-
-
-<script
-    type="module"
-    src="js/auth.js">
-</script>
-
+    <script
+        type="module"
+        src="js/auth.js">
+    </script>
 
 </body>
 
