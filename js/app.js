@@ -332,65 +332,22 @@ function renderExamHistory() {
 // --- CARGAR PREGUNTAS ---
 
 async function loadQuestions() {
+  try {
+    questions = await loadQuestionBank();
+    filteredQuestions = questions;
 
+    console.log("Banco total cargado:", questions.length, "preguntas");
 
-try{
-
-
-questions =
-
-await loadQuestionBank();
-
-
-
-filteredQuestions =
-
-questions;
-
-
-
-console.log(
-
-"Preguntas cargadas:",
-
-questions.length
-
-);
-
-
-
-updateStatsUI(stats);
-
-
-updateErrorCounter();
-
-
-
-autoStartPageMode();
-
-
-
-}catch(error){
-
-
-
-console.error(error);
-
-
-
-const q =
-$("question");
-
-
-if(q)
-
-q.innerText =
-"Error cargando preguntas";
-
-
-}
-
-
+    updateStatsUI(stats);
+    updateErrorCounter();
+    autoStartPageMode();
+  } catch (error) {
+    console.error("Error cargando banco", error);
+    const q = $("question");
+    if (q) {
+      q.innerText = "Error cargando preguntas";
+    }
+  }
 }
 
 function autoStartPageMode() {
