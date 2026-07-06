@@ -1,65 +1,342 @@
 import { auth } from "./firebase.js";
+
+
 import {
+
     onAuthStateChanged,
+
     sendPasswordResetEmail,
+
     signOut
+
+
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-function $(id) {
+
+
+
+
+
+function $(id){
+
     return document.getElementById(id);
+
 }
 
-function prettyName(user) {
-    if (user?.displayName) return user.displayName;
-    if (!user?.email) return "Alumno";
 
-    return user.email
-        .split("@")[0]
-        .replace(/[._-]+/g, " ")
-        .trim()
-        .replace(/\b\w/g, c => c.toUpperCase());
+
+function setText(id,value){
+
+
+    const el=$(id);
+
+
+    if(el){
+
+        el.textContent=value;
+
+    }
+
 }
 
-onAuthStateChanged(auth, user => {
-    if (!user) return;
 
-    $("accountEmail").textContent = user.email || "Sin correo";
-    $("accountEmailValue").textContent = user.email || "—";
-    $("accountUid").textContent = user.uid || "—";
-    $("accountCreated").textContent = user.metadata?.creationTime
-        ? new Date(user.metadata.creationTime).toLocaleString()
-        : "—";
-    $("accountVerified").textContent = user.emailVerified ? "Sí" : "No";
+
+
+
+function formatDate(date){
+
+
+    if(!date)
+
+    return "—";
+
+
+
+    return new Date(date)
+
+    .toLocaleString("es-ES",{
+
+        day:"2-digit",
+
+        month:"2-digit",
+
+        year:"numeric",
+
+        hour:"2-digit",
+
+        minute:"2-digit"
+
+    });
+
+
+}
+
+
+
+
+
+
+// =========================
+// LOAD ACCOUNT
+// =========================
+
+
+
+onAuthStateChanged(auth,user=>{
+
+
+    if(!user)
+
+    return;
+
+
+
+
+    setText(
+
+        "accountEmail",
+
+        user.email || "Sin correo"
+
+    );
+
+
+
+
+    setText(
+
+        "accountEmailValue",
+
+        user.email || "—"
+
+    );
+
+
+
+
+
+    setText(
+
+        "accountUid",
+
+        user.uid || "—"
+
+    );
+
+
+
+
+
+    setText(
+
+        "accountCreated",
+
+        formatDate(
+
+            user.metadata?.creationTime
+
+        )
+
+    );
+
+
+
+
+
+
+    setText(
+
+        "accountVerified",
+
+        user.emailVerified
+
+        ?
+
+        "Sí"
+
+        :
+
+        "No"
+
+    );
+
+
+
+
 });
 
-const resetPasswordBtn = $("resetPasswordBtn");
-const accountLogoutBtn = $("accountLogoutBtn");
-const message = $("accountMessage");
 
-if (resetPasswordBtn) {
-    resetPasswordBtn.onclick = async () => {
-        try {
-            const user = auth.currentUser;
-            if (!user?.email) {
-                message.textContent = "No se ha podido detectar el correo.";
-                return;
-            }
 
-            await sendPasswordResetEmail(auth, user.email);
-            message.textContent = "📩 Hemos enviado un correo para cambiar la contraseña.";
-        } catch {
-            message.textContent = "No se pudo enviar el correo de recuperación.";
+
+
+
+
+// =========================
+// RESET PASSWORD
+// =========================
+
+
+
+const resetBtn =
+
+$("resetPasswordBtn");
+
+
+
+const logoutBtn =
+
+$("accountLogoutBtn");
+
+
+
+const message =
+
+$("accountMessage");
+
+
+
+
+
+
+
+if(resetBtn){
+
+
+
+resetBtn.onclick = async()=>{
+
+
+
+    try{
+
+
+
+        const user = auth.currentUser;
+
+
+
+        if(!user?.email){
+
+
+            setText(
+
+                "accountMessage",
+
+                "No se encontró correo asociado."
+
+
+            );
+
+
+            return;
+
+
         }
-    };
+
+
+
+
+
+        await sendPasswordResetEmail(
+
+            auth,
+
+            user.email
+
+        );
+
+
+
+
+
+        setText(
+
+            "accountMessage",
+
+            "📩 Correo enviado correctamente."
+
+        );
+
+
+
+
+
+    }catch(error){
+
+
+
+        setText(
+
+            "accountMessage",
+
+            "❌ No se pudo enviar el correo."
+
+
+        );
+
+
+
+    }
+
+
+
+};
+
+
+
 }
 
-if (accountLogoutBtn) {
-    accountLogoutBtn.onclick = async () => {
-        try {
-            await signOut(auth);
-            window.location.href = "login.html";
-        } catch {
-            message.textContent = "No se pudo cerrar la sesión.";
-        }
-    };
+
+
+
+
+
+
+
+// =========================
+// LOGOUT
+// =========================
+
+
+if(logoutBtn){
+
+
+
+logoutBtn.onclick = async()=>{
+
+
+    try{
+
+
+        await signOut(auth);
+
+
+        window.location.href =
+
+        "login.html";
+
+
+
+    }catch{
+
+
+
+        setText(
+
+            "accountMessage",
+
+            "❌ Error cerrando sesión."
+
+        );
+
+
+
+    }
+
+
+
+};
+
+
+
 }
