@@ -187,6 +187,15 @@ id="userDropdown">
 
 </a>
 
+<a
+href="admin.html"
+id="adminLink"
+style="display:none;">
+
+🛡️ Panel admin
+
+</a>
+
 
 
 <button
@@ -297,6 +306,8 @@ Continúa donde lo dejaste. Consulta tu progreso y sigue preparando tu examen TC
 
 
 </section>
+
+
 
 
 
@@ -543,6 +554,7 @@ document.addEventListener("click", function(e){
 
 
 
+
     /* HAMBURGUESA */
 
 
@@ -652,12 +664,17 @@ onAuthStateChanged
 
 
 
+
 const nameEl =
 document.getElementById("userDisplayName");
 
 
 const emailEl =
 document.getElementById("userDisplayEmail");
+
+
+const adminLink =
+document.getElementById("adminLink");
 
 
 
@@ -710,6 +727,17 @@ prettyName(user);
 
 emailEl.textContent =
 user.email || "Sin correo";
+
+
+
+if(adminLink){
+
+    adminLink.style.display =
+        user.email === "rayvf2002@gmail.com"
+            ? "block"
+            : "none";
+
+}
 
 
 });
