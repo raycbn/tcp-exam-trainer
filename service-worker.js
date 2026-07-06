@@ -29,7 +29,7 @@ const STATIC_FILES = [
     "./icons/icon-512.png",
 
     // Logo
-    "./images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
+    "./images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png",
 
     "./login.html",
     "./js/firebase.js",
