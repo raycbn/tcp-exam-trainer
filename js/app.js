@@ -333,36 +333,64 @@ function renderExamHistory() {
 
 async function loadQuestions() {
 
-    try {
 
-        const response = await fetch(
-            './data/questions.json?ts=' + Date.now()
-        );
+try{
 
-        if (!response.ok) {
 
-            throw new Error(
-                'HTTP ' + response.status
-            );
+questions =
 
-        }
+await loadQuestionBank();
 
-        questions = await response.json();
-        filteredQuestions = questions;
 
-        updateStatsUI(stats);
-        updateErrorCounter();
 
-        autoStartPageMode();
+filteredQuestions =
 
-    } catch (error) {
+questions;
 
-        console.error(error);
 
-        const q = $("question");
-        if (q) q.innerText = 'Error cargando preguntas';
 
-    }
+console.log(
+
+"Preguntas cargadas:",
+
+questions.length
+
+);
+
+
+
+updateStatsUI(stats);
+
+
+updateErrorCounter();
+
+
+
+autoStartPageMode();
+
+
+
+}catch(error){
+
+
+
+console.error(error);
+
+
+
+const q =
+$("question");
+
+
+if(q)
+
+q.innerText =
+"Error cargando preguntas";
+
+
+}
+
+
 }
 
 function autoStartPageMode() {
