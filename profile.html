@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil | TCP Exam Trainer</title>
+
+    <meta
+        name="theme-color"
+        content="#08111e">
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
+
+</head>
+
+<body data-page="profile">
+
+    <main class="page-shell">
+
+        <section class="dashboard-panel profile-header">
+
+            <div class="profile-avatar" id="profileAvatar">A</div>
+
+            <div class="profile-head-copy">
+
+                <p class="brand-kicker">Perfil del alumno</p>
+
+                <h1 id="profileName">Alumno</h1>
+
+                <p class="brand-subtitle" id="profileEmail">Cargando correo...</p>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <a class="tool-card" href="index.html">← Volver al inicio</a>
+                <a class="tool-card" href="account.html">Ajustes de cuenta</a>
+
+            </div>
+
+        </section>
+
+        <section class="metric-grid">
+
+            <article class="metric-card">
+                <span class="metric-label">Aciertos</span>
+                <span class="metric-value" id="profileCorrect">0</span>
+                <span class="metric-note">Total acumulado en práctica.</span>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-label">Errores</span>
+                <span class="metric-value" id="profileWrong">0</span>
+                <span class="metric-note">Lo que queda por pulir.</span>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-label">Favoritas</span>
+                <span class="metric-value" id="profileFavorites">0</span>
+                <span class="metric-note">Preguntas guardadas.</span>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-label">Simulacros</span>
+                <span class="metric-value" id="profileSimulations">0</span>
+                <span class="metric-note">Exámenes completados.</span>
+            </article>
+
+        </section>
+
+        <section class="dashboard-summary">
+
+            <div class="dashboard-panel">
+
+                <h2>Datos de cuenta</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Correo</span>
+                    <span class="activity-value" id="profileEmailValue">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">UID</span>
+                    <span class="activity-value" id="profileUid">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Alta</span>
+                    <span class="activity-value" id="profileCreated">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Verificado</span>
+                    <span class="activity-value" id="profileVerified">—</span>
+                </div>
+
+            </div>
+
+            <div class="dashboard-panel">
+
+                <h2>Rendimiento</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Mejor nota</span>
+                    <span class="activity-value" id="profileBestScore">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Última nota</span>
+                    <span class="activity-value" id="profileLastScore">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Último simulacro</span>
+                    <span class="activity-value" id="profileLastDate">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Preguntas vistas</span>
+                    <span class="activity-value" id="profileSeenQuestions">—</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/profile.js"></script>
+
+</body>
+
+</html>
