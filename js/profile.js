@@ -1,8 +1,5 @@
 import { auth } from "./firebase.js";
-
-import {
-    onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 const STATS_KEY = "tcp_practice_stats";
 const ERRORS_KEY = "tcp_error_questions";
@@ -34,23 +31,18 @@ function formatDate(value) {
 function prettyName(user) {
     if (user?.displayName) return user.displayName;
     if (!user?.email) return "Alumno";
-    const local = user.email.split("@")[0];
-    return local.replace(/[._-]+/g, " ").trim().replace(/\b\w/g, c => c.toUpperCase());
-}
 
-function getInitials(user) {
-    const source = user?.displayName || user?.email || "A";
-    const clean = source.split("@")[0].replace(/[._-]+/g, " ").trim();
-    const parts = clean.split(/\s+/).filter(Boolean);
-    if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
-    return (clean.slice(0, 2) || "A").toUpperCase();
+    return user.email
+        .split("@")[0]
+        .replace(/[._-]+/g, " ")
+        .trim()
+        .replace(/\b\w/g, c => c.toUpperCase());
 }
 
 onAuthStateChanged(auth, user => {
     if (!user) return;
 
     const stats = loadJSON(STATS_KEY, { correct: 0, wrong: 0 });
-    const errors = loadJSON(ERRORS_KEY, []);
     const favorites = loadJSON(FAVORITES_KEY, []);
     const history = loadJSON(EXAM_HISTORY_KEY, []);
     const qStats = loadJSON(QUESTION_STATS_KEY, {});
@@ -60,10 +52,8 @@ onAuthStateChanged(auth, user => {
         : 0;
 
     const last = history.length ? history[0] : null;
-
     const seenQuestions = Object.values(qStats).reduce((acc, item) => acc + (Number(item.seen) || 0), 0);
 
-    $("profileAvatar").textContent = getInitials(user);
     $("profileName").textContent = prettyName(user);
     $("profileEmail").textContent = user.email || "Sin correo";
 
