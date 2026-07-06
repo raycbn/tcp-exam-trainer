@@ -9,42 +9,67 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 
+
 // =========================
-// COMPROBAR LOGIN
+// PÁGINA ACTUAL
 // =========================
 
 
-onAuthStateChanged(
-
-    auth,
-
-    user => {
-
-
-        if (!user) {
+const currentPage =
+    window.location.pathname
+    .split("/")
+    .pop();
 
 
-            window.location.href =
-            "login.html";
+
+// =========================
+// PROTEGER PÁGINAS
+// =========================
 
 
-        }
+onAuthStateChanged(auth, user => {
+
+
+    if (!user && currentPage !== "login.html") {
+
+
+        window.location.href =
+        "login.html";
 
 
     }
 
-);
+
+    if (user && currentPage === "login.html") {
+
+
+        window.location.href =
+        "index.html";
+
+
+    }
+
+
+});
+
 
 
 // =========================
-// LOGOUT GLOBAL
+// CERRAR SESIÓN
 // =========================
 
 
 window.logout = function(){
 
 
-    signOut(auth);
+    signOut(auth)
+
+        .then(() => {
+
+            window.location.href =
+            "login.html";
+
+        });
 
 
 };
