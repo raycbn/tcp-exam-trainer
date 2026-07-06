@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | TCP Exam Trainer</title>
+    <meta name="theme-color" content="#08111e">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="admin">
+
+    <main class="page-shell">
+
+        <section class="dashboard-panel profile-main-card">
+            <img
+                src="images/pilot-avatar.png"
+                class="profile-avatar-large"
+                alt="Panel admin">
+
+            <div>
+                <p class="brand-kicker">Panel administrador</p>
+                <h1>Gestión de preguntas</h1>
+                <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
+                <p class="profile-mini-info">Solo acceso interno</p>
+            </div>
+
+            <div class="profile-actions">
+                <a class="profile-action-link" href="index.html">← Volver al inicio</a>
+                <a class="profile-action-link" href="profile.html">👨‍✈️ Ver perfil</a>
+            </div>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Resumen</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios registrados</span>
+                    <span class="activity-value" id="adminUsersCount">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Preguntas en Firestore</span>
+                    <span class="activity-value" id="adminQuestionsCount">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Preguntas JSON</span>
+                    <span class="activity-value" id="adminJsonCount">1219</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Total combinado</span>
+                    <span class="activity-value" id="adminTotalCount">—</span>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Acciones rápidas</h2>
+
+                <button class="account-action-btn" id="reloadStatsBtn" type="button">
+                    🔄 Recargar estadísticas
+                </button>
+
+                <button class="account-action-btn logout-btn" id="adminLogoutBtn" type="button">
+                    🚪 Cerrar sesión
+                </button>
+
+                <p id="adminMessage" class="brand-subtitle" style="margin-top:20px;max-width:none;"></p>
+            </div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Agregar pregunta nueva</h2>
+
+            <form id="questionForm" class="admin-form">
+                <div class="admin-form-grid">
+                    <label>
+                        <span>Tema</span>
+                        <input id="qTopic" type="text" placeholder="normativa" required>
+                    </label>
+
+                    <label>
+                        <span>ID interno</span>
+                        <input id="qId" type="text" placeholder="FIR-001">
+                    </label>
+                </div>
+
+                <label>
+                    <span>Pregunta</span>
+                    <textarea id="qQuestion" rows="4" placeholder="Escribe la pregunta completa..." required></textarea>
+                </label>
+
+                <div class="admin-form-grid">
+                    <label>
+                        <span>Respuesta A</span>
+                        <input id="qA" type="text" required>
+                    </label>
+
+                    <label>
+                        <span>Respuesta B</span>
+                        <input id="qB" type="text" required>
+                    </label>
+
+                    <label>
+                        <span>Respuesta C</span>
+                        <input id="qC" type="text" required>
+                    </label>
+
+                    <label>
+                        <span>Respuesta D</span>
+                        <input id="qD" type="text" required>
+                    </label>
+                </div>
+
+                <div class="admin-form-grid">
+                    <label>
+                        <span>Correcta</span>
+                        <select id="qCorrect" required>
+                            <option value="0">A</option>
+                            <option value="1">B</option>
+                            <option value="2">C</option>
+                            <option value="3">D</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Imagen (opcional)</span>
+                        <input id="qImage" type="text" placeholder="images/pregunta.png">
+                    </label>
+                </div>
+
+                <label>
+                    <span>Explicación</span>
+                    <textarea id="qExplanation" rows="4" placeholder="Explicación de la respuesta..." required></textarea>
+                </label>
+
+                <label>
+                    <span>Fuente</span>
+                    <input id="qSource" type="text" value="firestore">
+                </label>
+
+                <button class="account-action-btn" type="submit">
+                    💾 Guardar pregunta
+                </button>
+            </form>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Últimas preguntas añadidas</h2>
+            <div id="recentQuestions" class="admin-list">
+                <div class="activity-line">
+                    <span class="activity-label">Estado</span>
+                    <span class="activity-value">Cargando...</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
