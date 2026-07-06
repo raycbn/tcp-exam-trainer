@@ -48,6 +48,7 @@ const STATIC_FILES = [
     "js/admin.js",
     
     "js/user-sync.js",
+    "js/admin-guard.js",
 ];
 
 
