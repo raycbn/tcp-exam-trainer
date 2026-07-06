@@ -30,6 +30,11 @@ const STATIC_FILES = [
 
     // Logo
     "./images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
+
+    "./login.html",
+    "./js/firebase.js",
+    "./js/auth.js",
+    "./js/guard.js",
 ];
 
 
