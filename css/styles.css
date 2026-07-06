@@ -1252,7 +1252,7 @@ body[data-page="dashboard"] {
 .top-user-bar {
     position: fixed;
     top: 8px;
-    right: 28px;
+    right: 38px;
     z-index: 9999;
 }
 
