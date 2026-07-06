@@ -1182,3 +1182,60 @@ h3 {
 
 
 }
+
+/* =========================
+   USER BAR
+========================= */
+
+
+.top-user-bar {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding:
+
+        24px
+
+        48px
+
+        0
+
+        48px;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.logout-link {
+
+    background: none;
+
+    border: none;
+
+    color: #9fc9ff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+
+.logout-link:hover {
+
+    color: white;
+
+    text-decoration: underline;
+
+}
