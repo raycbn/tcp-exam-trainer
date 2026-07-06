@@ -2,41 +2,49 @@
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TCP Exam Trainer</title>
+    <meta name="theme-color" content="#08111e">
 
-    <meta
-        name="theme-color"
-        content="#08111e">
-
-    <link
-        rel="manifest"
-        href="manifest.json">
-
-    <link
-        rel="stylesheet"
-        href="css/styles.css">
-
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body data-page="dashboard">
 
-    <!-- =========================
-         USER MENU
-    ========================== -->
+    <!-- MENÚ PRINCIPAL -->
+    <header class="top-site-bar">
+        <div class="site-menu" id="siteMenu">
+            <button
+                class="site-menu-button"
+                id="siteMenuButton"
+                type="button"
+                aria-label="Abrir menú principal"
+                aria-expanded="false"
+                aria-haspopup="true">
+                <span class="site-menu-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
 
+            <div class="site-menu-panel" id="siteMenuPanel">
+                <a class="site-menu-link" href="practice.html">📚 Práctica</a>
+                <a class="site-menu-link" href="exam.html">📝 Simulacro AESA</a>
+                <a class="site-menu-link" href="review.html">❌ Repasar errores</a>
+                <a class="site-menu-link" href="favorites.html">⭐ Favoritas</a>
+                <a class="site-menu-link" href="smart.html">🧠 Modo Inteligente</a>
+                <a class="site-menu-link" href="profile.html">👨‍✈️ Ver perfil</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- USER MENU -->
     <header class="top-user-bar">
-
-        <div
-            class="user-menu"
-            id="userMenu">
-
+        <div class="user-menu" id="userMenu">
             <button
                 class="user-trigger"
                 id="userMenuButton"
@@ -51,235 +59,99 @@
                     alt="Perfil">
 
                 <span class="user-text">
-
-                    <span
-                        class="user-name"
-                        id="userDisplayName">
-                        Alumno
-                    </span>
-
-                    <span
-                        class="user-email"
-                        id="userDisplayEmail">
-                        Cargando...
-                    </span>
-
+                    <span class="user-name" id="userDisplayName">Alumno</span>
+                    <span class="user-email" id="userDisplayEmail">Cargando...</span>
                 </span>
 
-                <span class="user-chevron">
-                    ▾
-                </span>
-
+                <span class="user-chevron">▾</span>
             </button>
 
-            <div
-                class="user-dropdown"
-                id="userDropdown">
-
-                <a href="profile.html">
-                    👨‍✈️ Ver perfil
-                </a>
-
-                <a href="account.html">
-                    ⚙️ Ajustes de cuenta
-                </a>
-
+            <div class="user-dropdown" id="userDropdown">
+                <a href="profile.html">👨‍✈️ Ver perfil</a>
+                <a href="account.html">⚙️ Ajustes de cuenta</a>
                 <button
                     type="button"
                     class="user-dropdown-logout"
                     onclick="logout()">
                     ⏻ Cerrar sesión
                 </button>
-
             </div>
-
         </div>
-
     </header>
 
     <main class="page-shell">
 
-        <!-- =========================
-             HERO
-        ========================== -->
-
         <header class="brand-hero">
-
             <img
                 src="images/elite_aircrew_logo_horizontal_1tinta_positivo_SIN_TAGLINE.png"
                 alt="Elite Aircrew"
                 class="brand-logo">
 
             <div class="brand-copy">
+                <p class="brand-kicker">TCP Exam Trainer</p>
 
-                <p class="brand-kicker">
-                    TCP Exam Trainer
-                </p>
-
-                <h1>
-                    Practica, repasa y domina el banco de preguntas
-                </h1>
+                <h1>Practica, repasa y domina el banco de preguntas</h1>
 
                 <p class="brand-subtitle">
                     Simulacros, favoritas y estudio inteligente para preparar el examen oficial TCP.
                 </p>
-
             </div>
-
         </header>
 
-        <!-- =========================
-             MENÚ PRINCIPAL
-        ========================== -->
-
-        <section class="dashboard-actions dashboard-menu">
-
-            <a class="tool-card" href="practice.html">
-                📚
-                <span>Práctica</span>
-            </a>
-
-            <a class="tool-card" href="exam.html">
-                📝
-                <span>Simulacro AESA</span>
-            </a>
-
-            <a class="tool-card" href="review.html">
-                ❌
-                <span>Repasar errores</span>
-            </a>
-
-        </section>
-
-        <section
-            class="dashboard-actions dashboard-menu"
-            style="margin-top:0;">
-
-            <a class="tool-card" href="favorites.html">
-                ⭐
-                <span>Favoritas</span>
-            </a>
-
-            <a class="tool-card" href="smart.html">
-                🧠
-                <span>Modo Inteligente</span>
-            </a>
-
-            <a class="tool-card" href="#dashboard-stats">
-                📊
-                <span>Ver progreso</span>
-            </a>
-
-        </section>
-
-        <!-- =========================
-             BIENVENIDA
-        ========================== -->
-
         <section class="dashboard-panel">
+            <h2>👋 ¡Bienvenido de nuevo!</h2>
 
-            <h2>
-                👋 ¡Bienvenido de nuevo!
-            </h2>
-
-            <p
-                class="brand-subtitle"
-                style="margin:0;max-width:none;">
-
+            <p class="brand-subtitle" style="margin:0;max-width:none;">
                 Continúa donde lo dejaste. Desde aquí puedes acceder rápidamente a todos los modos de estudio, consultar tu progreso y seguir avanzando hacia el aprobado.
-
             </p>
-
         </section>
 
-        <!-- =========================
-             ESTADÍSTICAS
-        ========================== -->
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>🎯 Objetivo de hoy</h2>
 
-        <section
-            class="metric-grid"
-            id="dashboard-stats">
+                <div class="daily-goal">
+                    <div class="daily-progress">
+                        <div id="dashProgressBar"></div>
+                    </div>
 
-            <article class="metric-card">
-                <span class="metric-label">Aciertos</span>
-                <span
-                    class="metric-value"
-                    id="dashCorrect">
-                    0
-                </span>
-                <span class="metric-note">
-                    Total acumulado en práctica.
-                </span>
-            </article>
-
-            <article class="metric-card">
-                <span class="metric-label">Errores</span>
-                <span
-                    class="metric-value"
-                    id="dashWrong">
-                    0
-                </span>
-                <span class="metric-note">
-                    Lo que aún queda por mejorar.
-                </span>
-            </article>
-
-            <article class="metric-card">
-                <span class="metric-label">Favoritas</span>
-                <span
-                    class="metric-value"
-                    id="dashFavorites">
-                    0
-                </span>
-                <span class="metric-note">
-                    Guardadas para repasar.
-                </span>
-            </article>
-
-            <article class="metric-card">
-                <span class="metric-label">Errores pendientes</span>
-                <span
-                    class="metric-value"
-                    id="dashErrors">
-                    0
-                </span>
-                <span class="metric-note">
-                    Preguntas pendientes.
-                </span>
-            </article>
-
-        </section>
-
-        <!-- =========================
-             OBJETIVO DEL DÍA
-        ========================== -->
-
-        <section class="dashboard-panel">
-
-            <h2>
-                🎯 Objetivo de hoy
-            </h2>
-
-            <div class="daily-goal">
-
-                <div class="daily-progress">
-                    <div id="dashProgressBar"></div>
+                    <div id="dashProgressText">0% completado</div>
                 </div>
 
-                <div id="dashProgressText">
-                    0% completado
+                <div id="dashRecommendation" class="dashboard-recommendation">
+                    Calculando recomendación...
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Último simulacro</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Nota</span>
+                    <span class="activity-value" id="dashLastScore">—</span>
                 </div>
 
+                <div class="activity-line">
+                    <span class="activity-label">Fecha</span>
+                    <span class="activity-value" id="dashLastDate">Aún no has realizado ningún simulacro.</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Mejor nota</span>
+                    <span class="activity-value" id="dashBestScore">—</span>
+                </div>
             </div>
 
-            <div
-                id="dashRecommendation"
-                class="dashboard-recommendation">
+            <div class="dashboard-panel">
+                <h2>Actividad reciente</h2>
 
-                Calculando recomendación...
-
+                <div class="dashboard-activity" id="dashRecent">
+                    <div class="activity-line">
+                        <span class="activity-label">Actividad</span>
+                        <span class="activity-value">Cargando...</span>
+                    </div>
+                </div>
             </div>
-
         </section>
 
     </main>
@@ -291,16 +163,17 @@
         import { auth } from "./js/firebase.js";
         import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-        const menu = document.getElementById("userMenu");
-        const btn = document.getElementById("userMenuButton");
+        const menu = document.getElementById("siteMenu");
+        const menuButton = document.getElementById("siteMenuButton");
+
+        const userMenu = document.getElementById("userMenu");
+        const userButton = document.getElementById("userMenuButton");
         const nameEl = document.getElementById("userDisplayName");
         const emailEl = document.getElementById("userDisplayEmail");
-        const avatarEl = document.getElementById("userAvatar");
 
         function prettyName(user) {
             if (user?.displayName) return user.displayName;
             if (!user?.email) return "Alumno";
-
             return user.email
                 .split("@")[0]
                 .replace(/[._-]+/g, " ")
@@ -309,24 +182,31 @@
 
         onAuthStateChanged(auth, user => {
             if (!user) return;
-
             nameEl.textContent = prettyName(user);
             emailEl.textContent = user.email || "Sin correo";
         });
 
-        btn.addEventListener("click", () => {
+        menuButton.addEventListener("click", () => {
             const open = menu.classList.toggle("open");
-            btn.setAttribute("aria-expanded", open ? "true" : "false");
+            menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        userButton.addEventListener("click", () => {
+            const open = userMenu.classList.toggle("open");
+            userButton.setAttribute("aria-expanded", open ? "true" : "false");
         });
 
         document.addEventListener("click", e => {
             if (!menu.contains(e.target)) {
                 menu.classList.remove("open");
-                btn.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+            if (!userMenu.contains(e.target)) {
+                userMenu.classList.remove("open");
+                userButton.setAttribute("aria-expanded", "false");
             }
         });
     </script>
 
 </body>
-
 </html>
