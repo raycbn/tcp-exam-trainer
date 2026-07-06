@@ -2,115 +2,367 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
     <title>Perfil | TCP Exam Trainer</title>
-    <meta name="theme-color" content="#08111e">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <meta
+        name="theme-color"
+        content="#08111e">
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
+
 </head>
+
 
 <body data-page="profile">
 
-    <main class="page-shell">
 
-        <section class="dashboard-panel profile-hero">
-            <img
-                src="images/pilot-avatar.png"
-                id="profileAvatar"
-                class="profile-avatar-large"
-                alt="Avatar del alumno">
+<main class="page-shell">
 
-            <div class="profile-head-copy">
-                <p class="brand-kicker">Perfil del alumno</p>
-                <h1 id="profileName">Alumno</h1>
-                <p class="brand-subtitle" id="profileEmail">Cargando correo...</p>
-            </div>
 
-            <div class="profile-actions">
-                <a class="profile-action-link" href="index.html">← Volver al inicio</a>
-                <a class="profile-action-link" href="account.html">⚙️ Ajustes de cuenta</a>
-            </div>
-        </section>
+<!-- =========================
+     PROFILE HERO
+========================== -->
 
-        <section class="metric-grid">
-            <article class="metric-card">
-                <span class="metric-label">Aciertos</span>
-                <span class="metric-value" id="profileCorrect">0</span>
-                <span class="metric-note">Total acumulado en práctica.</span>
-            </article>
 
-            <article class="metric-card">
-                <span class="metric-label">Errores</span>
-                <span class="metric-value" id="profileWrong">0</span>
-                <span class="metric-note">Lo que queda por pulir.</span>
-            </article>
+<section class="dashboard-panel profile-main-card">
 
-            <article class="metric-card">
-                <span class="metric-label">Favoritas</span>
-                <span class="metric-value" id="profileFavorites">0</span>
-                <span class="metric-note">Preguntas guardadas.</span>
-            </article>
 
-            <article class="metric-card">
-                <span class="metric-label">Simulacros</span>
-                <span class="metric-value" id="profileSimulations">0</span>
-                <span class="metric-note">Exámenes completados.</span>
-            </article>
-        </section>
+    <img
+        src="images/pilot-avatar.png"
+        class="profile-avatar-large"
+        alt="Alumno">
 
-        <section class="dashboard-summary">
-            <div class="dashboard-panel">
-                <h2>Datos de cuenta</h2>
 
-                <div class="activity-line">
-                    <span class="activity-label">Correo</span>
-                    <span class="activity-value" id="profileEmailValue">—</span>
-                </div>
+    <div>
 
-                <div class="activity-line">
-                    <span class="activity-label">UID</span>
-                    <span class="activity-value" id="profileUid">—</span>
-                </div>
 
-                <div class="activity-line">
-                    <span class="activity-label">Alta</span>
-                    <span class="activity-value" id="profileCreated">—</span>
-                </div>
+        <p class="brand-kicker">
 
-                <div class="activity-line">
-                    <span class="activity-label">Verificado</span>
-                    <span class="activity-value" id="profileVerified">—</span>
-                </div>
-            </div>
+            Perfil del alumno
 
-            <div class="dashboard-panel">
-                <h2>Rendimiento</h2>
+        </p>
 
-                <div class="activity-line">
-                    <span class="activity-label">Mejor nota</span>
-                    <span class="activity-value" id="profileBestScore">—</span>
-                </div>
 
-                <div class="activity-line">
-                    <span class="activity-label">Última nota</span>
-                    <span class="activity-value" id="profileLastScore">—</span>
-                </div>
+        <h1 id="profileName">
 
-                <div class="activity-line">
-                    <span class="activity-label">Último simulacro</span>
-                    <span class="activity-value" id="profileLastDate">—</span>
-                </div>
+            Alumno
 
-                <div class="activity-line">
-                    <span class="activity-label">Preguntas vistas</span>
-                    <span class="activity-value" id="profileSeenQuestions">—</span>
-                </div>
-            </div>
-        </section>
+        </h1>
 
-    </main>
 
-    <script type="module" src="js/guard.js"></script>
-    <script type="module" src="js/profile.js"></script>
+        <p
+            class="brand-subtitle"
+            id="profileEmail">
+
+            Cargando...
+
+        </p>
+
+
+        <p class="profile-mini-info">
+
+            👨‍✈️ Alumno TCP · Elite Aircrew
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="profile-actions">
+
+
+        <a
+            class="profile-action-link"
+            href="index.html">
+
+            ← Volver al inicio
+
+        </a>
+
+
+        <a
+            class="profile-action-link"
+            href="account.html">
+
+            ⚙️ Ajustes de cuenta
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+     STATS
+========================== -->
+
+
+<section class="metric-grid">
+
+
+<article class="metric-card">
+
+<span class="metric-label">
+Aciertos
+</span>
+
+<span
+class="metric-value"
+id="profileCorrect">
+
+0
+
+</span>
+
+<span class="metric-note">
+
+Total acumulado.
+
+</span>
+
+</article>
+
+
+
+
+<article class="metric-card">
+
+<span class="metric-label">
+
+Errores
+
+</span>
+
+<span
+class="metric-value"
+id="profileWrong">
+
+0
+
+</span>
+
+<span class="metric-note">
+
+A mejorar.
+
+</span>
+
+</article>
+
+
+
+
+
+<article class="metric-card">
+
+<span class="metric-label">
+
+Favoritas
+
+</span>
+
+
+<span
+class="metric-value"
+id="profileFavorites">
+
+0
+
+</span>
+
+
+<span class="metric-note">
+
+Guardadas.
+
+</span>
+
+</article>
+
+
+
+
+
+<article class="metric-card">
+
+<span class="metric-label">
+
+Simulacros
+
+</span>
+
+
+<span
+class="metric-value"
+id="profileSimulations">
+
+0
+
+</span>
+
+
+<span class="metric-note">
+
+Realizados.
+
+</span>
+
+</article>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+     PERFORMANCE
+========================== -->
+
+
+<section class="dashboard-panel">
+
+
+<h2>
+
+🏆 Rendimiento
+
+</h2>
+
+
+
+<div class="activity-line">
+
+<span class="activity-label">
+
+Mejor nota
+
+</span>
+
+
+<span
+class="activity-value"
+id="profileBestScore">
+
+—
+
+</span>
+
+</div>
+
+
+
+
+<div class="activity-line">
+
+<span class="activity-label">
+
+Última nota
+
+</span>
+
+
+<span
+class="activity-value"
+id="profileLastScore">
+
+—
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="activity-line">
+
+
+<span class="activity-label">
+
+Último simulacro
+
+</span>
+
+
+<span
+class="activity-value"
+id="profileLastDate">
+
+—
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="activity-line">
+
+
+<span class="activity-label">
+
+Preguntas vistas
+
+</span>
+
+
+<span
+class="activity-value"
+id="profileSeenQuestions">
+
+0
+
+</span>
+
+
+</div>
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+<script
+type="module"
+src="js/guard.js">
+</script>
+
+
+<script
+type="module"
+src="js/profile.js">
+</script>
+
+
+
 </body>
+
 </html>
