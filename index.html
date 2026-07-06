@@ -520,91 +520,102 @@ src="js/guard.js">
      MENUS JS INDEPENDIENTES
 ========================== -->
 
-
 <script>
 
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("click", function(e){
 
 
-
-const siteMenu =
-document.getElementById("siteMenu");
-
-
-const siteButton =
-document.getElementById("siteMenuButton");
+    const siteMenu =
+    document.getElementById("siteMenu");
 
 
-
-siteButton.onclick = e=>{
-
-
-e.preventDefault();
-
-e.stopPropagation();
+    const siteButton =
+    document.getElementById("siteMenuButton");
 
 
-siteMenu.classList.toggle("open");
+    const userMenu =
+    document.getElementById("userMenu");
 
 
-};
+    const userButton =
+    document.getElementById("userMenuButton");
 
 
 
 
-
-const userMenu =
-document.getElementById("userMenu");
+    /* HAMBURGUESA */
 
 
-const userButton =
-document.getElementById("userMenuButton");
+    if(
+        siteButton &&
+        siteButton.contains(e.target)
+    ){
+
+        e.preventDefault();
+
+        e.stopPropagation();
 
 
-
-userButton.onclick = e=>{
-
-
-e.preventDefault();
-
-e.stopPropagation();
+        siteMenu.classList.toggle("open");
 
 
-userMenu.classList.toggle("open");
+        console.log("MENU ABIERTO");
 
 
-};
+        return;
+
+    }
 
 
 
 
 
-document.onclick = e=>{
+    /* USUARIO */
 
 
-if(!siteMenu.contains(e.target)){
+    if(
+        userButton &&
+        userButton.contains(e.target)
+    ){
+
+        e.preventDefault();
+
+        e.stopPropagation();
 
 
-siteMenu.classList.remove("open");
+        userMenu.classList.toggle("open");
 
 
-}
+        return;
+
+    }
 
 
 
-if(!userMenu.contains(e.target)){
 
 
-userMenu.classList.remove("open");
+    /* CERRAR FUERA */
 
 
-}
+    if(
+        siteMenu &&
+        !siteMenu.contains(e.target)
+    ){
+
+        siteMenu.classList.remove("open");
+
+    }
 
 
-};
+
+    if(
+        userMenu &&
+        !userMenu.contains(e.target)
+    ){
+
+        userMenu.classList.remove("open");
+
+    }
 
 
 
