@@ -35,6 +35,11 @@ const STATIC_FILES = [
     "./js/firebase.js",
     "./js/auth.js",
     "./js/guard.js",
+
+    "./profile.html",
+    "./account.html",
+    "./js/profile.js",
+    "./js/account.js",
 ];
 
 
