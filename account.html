@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Ajustes de cuenta | TCP Exam Trainer</title>
+
+    <meta
+        name="theme-color"
+        content="#08111e">
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css">
+
+</head>
+
+<body data-page="account">
+
+    <main class="page-shell">
+
+        <section class="dashboard-panel profile-header">
+
+            <div class="profile-avatar" id="accountAvatar">A</div>
+
+            <div class="profile-head-copy">
+
+                <p class="brand-kicker">Cuenta</p>
+
+                <h1>Ajustes de cuenta</h1>
+
+                <p class="brand-subtitle" id="accountEmail">Cargando correo...</p>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <a class="tool-card" href="index.html">← Volver al inicio</a>
+                <a class="tool-card" href="profile.html">Ver perfil</a>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-summary">
+
+            <div class="dashboard-panel">
+
+                <h2>Información de acceso</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Correo</span>
+                    <span class="activity-value" id="accountEmailValue">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">UID</span>
+                    <span class="activity-value" id="accountUid">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Alta</span>
+                    <span class="activity-value" id="accountCreated">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Verificado</span>
+                    <span class="activity-value" id="accountVerified">—</span>
+                </div>
+
+            </div>
+
+            <div class="dashboard-panel">
+
+                <h2>Acciones</h2>
+
+                <button class="tool-card" id="resetPasswordBtn">
+                    🔑 Enviar correo para cambiar contraseña
+                </button>
+
+                <button class="tool-card" id="accountLogoutBtn">
+                    🚪 Cerrar sesión
+                </button>
+
+                <p id="accountMessage" class="brand-subtitle" style="margin-top:18px; max-width:none;"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/account.js"></script>
+
+</body>
+
+</html>
