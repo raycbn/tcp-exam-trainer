@@ -2284,3 +2284,37 @@ width:100%;
         align-items: flex-start;
     }
 }
+
+.admin-quick-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(120, 180, 255, 0.16);
+    background: rgba(8, 25, 45, 0.82);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    margin-top: 12px;
+}
+
+.admin-quick-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(16, 40, 66, 0.9);
+    border-color: rgba(120, 180, 255, 0.28);
+}
+
+.admin-quick-btn.logout-btn {
+    color: #ff7f92;
+}
+
+@media (max-width: 900px) {
+    .admin-quick-btn {
+        font-size: 16px;
+    }
+}
