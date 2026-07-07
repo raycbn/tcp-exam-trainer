@@ -63,6 +63,16 @@
                     🔄 Recargar estadísticas
                 </button>
 
+                <button class="account-action-btn" id="importQuestionsBtn" type="button">
+                    📤 Importar preguntas
+                </button>
+
+                <input
+                    id="importQuestionsInput"
+                    type="file"
+                    accept=".json,application/json"
+                    style="display:none;">
+
                 <button class="account-action-btn logout-btn" id="adminLogoutBtn" type="button">
                     🚪 Cerrar sesión
                 </button>
@@ -74,16 +84,21 @@
         <section class="dashboard-panel">
             <h2>Agregar pregunta nueva</h2>
 
+            <div class="admin-editing-banner" id="editingBanner" style="display:none;">
+                <span>✏️ Editando pregunta: <strong id="editingLabel"></strong></span>
+                <button type="button" class="admin-mini-btn" id="cancelEditBtn">Cancelar edición</button>
+            </div>
+
             <form id="questionForm" class="admin-form">
+                <div class="admin-next-id">
+                    <span>Siguiente ID automático</span>
+                    <strong id="nextQuestionId">FIR-001</strong>
+                </div>
+
                 <div class="admin-form-grid">
                     <label>
                         <span>Tema</span>
                         <input id="qTopic" type="text" placeholder="normativa" required>
-                    </label>
-
-                    <label>
-                        <span>ID interno</span>
-                        <input id="qId" type="text" placeholder="FIR-001">
                     </label>
                 </div>
 
@@ -141,7 +156,7 @@
                     <input id="qSource" type="text" value="firestore">
                 </label>
 
-                <button class="account-action-btn" type="submit">
+                <button class="account-action-btn" id="saveQuestionBtn" type="submit">
                     💾 Guardar pregunta
                 </button>
             </form>
@@ -160,10 +175,7 @@
     </main>
 
     <script type="module" src="js/guard.js"></script>
-    <script
-    type="module"
-    src="js/admin-guard.js">
-    </script>
+    <script type="module" src="js/admin-guard.js"></script>
     <script type="module" src="js/admin.js"></script>
 </body>
 </html>
