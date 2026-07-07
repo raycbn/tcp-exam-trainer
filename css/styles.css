@@ -2183,3 +2183,104 @@ width:100%;
         grid-template-columns: 1fr;
     }
 }
+
+.admin-next-id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(120, 180, 255, 0.18);
+    background: rgba(8, 18, 34, 0.55);
+    color: #bfd3ea;
+    font-weight: 700;
+}
+
+.admin-next-id strong {
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.admin-editing-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 203, 71, 0.25);
+    background: rgba(255, 203, 71, 0.08);
+    color: #ffd76b;
+    font-weight: 700;
+}
+
+.admin-list {
+    display: grid;
+    gap: 12px;
+}
+
+.admin-question-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(120, 180, 255, 0.16);
+    background: rgba(10, 20, 35, 0.6);
+}
+
+.admin-question-meta {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+}
+
+.admin-question-title {
+    font-weight: 800;
+    color: #fff;
+}
+
+.admin-question-text {
+    color: #bfd3ea;
+    line-height: 1.4;
+}
+
+.admin-question-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.admin-mini-btn {
+    border: 1px solid rgba(120, 180, 255, 0.18);
+    background: rgba(8, 25, 45, 0.85);
+    color: #fff;
+    border-radius: 14px;
+    padding: 12px 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-mini-btn.danger {
+    color: #ff7f92;
+}
+
+@media (max-width: 900px) {
+    .admin-question-item {
+        flex-direction: column;
+    }
+
+    .admin-question-actions {
+        justify-content: flex-start;
+    }
+
+    .admin-editing-banner,
+    .admin-next-id {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
