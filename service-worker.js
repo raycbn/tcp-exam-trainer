@@ -1,4 +1,4 @@
-const CACHE_NAME = "tcp-trainer-v33";
+const CACHE_NAME = "tcp-trainer-v34";
 
 const STATIC_FILES = [
     "./",
