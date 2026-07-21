@@ -23,12 +23,6 @@ import {
 
 const ADMIN_EMAIL = "rayvf2002@gmail.com";
 const PAGE = document.body?.dataset?.page || "";
-const functions = getFunctions(auth.app, "us-central1");
-
-const createUserAdminFn = httpsCallable(functions, "createUserAdmin");
-const bulkCreateUsersAdminFn = httpsCallable(functions, "bulkCreateUsersAdmin");
-const setUserRoleAdminFn = httpsCallable(functions, "setUserRoleAdmin");
-const setUserDisabledAdminFn = httpsCallable(functions, "setUserDisabledAdmin");
 
 let nextFirNumber = 1;
 let editingDocId = null;
@@ -195,6 +189,19 @@ function questionMetrics(question) {
     return { attempts, wrong, failRate, hasMetrics };
 }
 
+function getFunctionsInstance() {
+    const app = auth?.app || db?.app || null;
+    if (!app) {
+        throw new Error("No se pudo obtener la instancia de Firebase App.");
+    }
+    return getFunctions(app, "us-central1");
+}
+
+function callAdminFunction(name, data) {
+    const fn = httpsCallable(getFunctionsInstance(), name);
+    return fn(data);
+}
+
 async function loadJsonQuestions() {
     try {
         const response = await fetch("./data/questions.json?ts=" + Date.now());
@@ -239,7 +246,8 @@ function parseCsvLine(line) {
 }
 
 function parseCsvText(text) {
-    const lines = String(text || "")
+    const cleaned = String(text || "").replace(/^\uFEFF/, "");
+    const lines = cleaned
         .split(/\r?\n/)
         .map(line => line.trim())
         .filter(Boolean);
@@ -342,7 +350,7 @@ function renderUsersList(users) {
             const role = select ? select.value : "student";
 
             try {
-                await setUserRoleAdminFn({ uid, role });
+                await callAdminFunction("setUserRoleAdmin", { uid, role });
                 setMessage(`✅ Rol actualizado para ${uid}`);
                 await loadAdminUsersPage();
             } catch (error) {
@@ -373,7 +381,7 @@ function renderUsersList(users) {
             const disabled = btn.getAttribute("data-disabled") === "1";
 
             try {
-                await setUserDisabledAdminFn({ uid, disabled: !disabled });
+                await callAdminFunction("setUserDisabledAdmin", { uid, disabled: !disabled });
                 setMessage(disabled ? `✅ Usuario habilitado: ${uid}` : `⛔ Usuario desactivado: ${uid}`);
                 await loadAdminUsersPage();
             } catch (error) {
@@ -513,7 +521,7 @@ async function loadJsonQuestions() {
     }
 }
 
-async function loadCounts() {
+async function loadAdminCounts() {
     const [questionsSnap, usersSnap, jsonQuestions] = await Promise.all([
         getDocs(collection(db, "questions")),
         getDocs(collection(db, "users")),
@@ -533,7 +541,6 @@ async function loadCounts() {
     });
 
     nextFirNumber = computeNextFirNumber(allIds);
-    setText("nextQuestionId", buildFirId(nextFirNumber));
 
     return {
         usersCount: usersSnap.size,
@@ -545,14 +552,21 @@ async function loadCounts() {
     };
 }
 
+function renderQuestionStats(stats) {
+    setText("adminQuestionsCount", stats.questionsCount);
+    setText("adminJsonCount", stats.jsonCount);
+    setText("adminTotalCount", stats.questionsCount + stats.jsonCount);
+    setText("nextQuestionId", buildFirId(nextFirNumber));
+    renderRecentQuestions(stats.questions);
+}
+
 async function loadAdminHub() {
-    const stats = await loadCounts();
+    const stats = await loadAdminCounts();
     renderHubSummary(stats.usersCount, stats.questionsCount, stats.jsonCount);
 }
 
 async function loadAdminUsersPage() {
-    const stats = await loadCounts();
-
+    const stats = await loadAdminCounts();
     const admins = stats.users.filter(u => u.role === "admin").length;
     const active = stats.users.filter(u => !u.disabled).length;
 
@@ -564,16 +578,8 @@ async function loadAdminUsersPage() {
     renderUsersList(stats.users);
 }
 
-function renderQuestionStats(stats) {
-    setText("adminQuestionsCount", stats.questionsCount);
-    setText("adminJsonCount", stats.jsonCount);
-    setText("adminTotalCount", stats.questionsCount + stats.jsonCount);
-    setText("nextQuestionId", buildFirId(nextFirNumber));
-    renderRecentQuestions(stats.questions);
-}
-
 async function loadAdminQuestionsPage() {
-    const stats = await loadCounts();
+    const stats = await loadAdminCounts();
     renderQuestionStats(stats);
     renderRecentQuestions(stats.questions);
 }
@@ -694,35 +700,6 @@ async function importQuestionsFromFile(file) {
     }
 }
 
-async function createSingleUser(event) {
-    event.preventDefault();
-
-    const displayName = normalizeText($("newUserName")?.value);
-    const email = normalizeText($("newUserEmail")?.value).toLowerCase();
-    const password = normalizeText($("newUserPassword")?.value);
-    const role = $("newUserRole")?.value || "student";
-
-    if (!displayName || !email) {
-        setBulkMessage("❌ Faltan nombre o correo.");
-        return;
-    }
-
-    try {
-        const result = await createUserAdminFn({ displayName, email, password, role });
-        const data = result.data || {};
-
-        setBulkMessage(`✅ Usuario creado: ${data.displayName || displayName} (${data.email || email}) · contraseña: ${data.password || "(autogenerada)"}`);
-
-        const form = $("createUserForm");
-        if (form) form.reset();
-
-        await loadAdminUsersPage();
-    } catch (error) {
-        console.error(error);
-        setBulkMessage(`❌ No se pudo crear el usuario: ${error?.message || "error desconocido"}`);
-    }
-}
-
 async function importUsersFromCsvFile(file) {
     const raw = await file.text();
     const rows = parseCsvText(raw);
@@ -738,11 +715,40 @@ async function importUsersFromCsvFile(file) {
         role: row.role || "student"
     }));
 
-    const result = await bulkCreateUsersAdminFn({ users: payload });
+    const result = await callAdminFunction("bulkCreateUsersAdmin", { users: payload });
     const data = result.data || {};
 
     setBulkMessage(`✅ Importación finalizada. Creados: ${data.summary?.created ?? 0} · Existentes: ${data.summary?.skipped ?? 0} · Errores: ${data.summary?.failed ?? 0}`);
     await loadAdminUsersPage();
+}
+
+async function createSingleUser(event) {
+    event.preventDefault();
+
+    const displayName = normalizeText($("newUserName")?.value);
+    const email = normalizeText($("newUserEmail")?.value).toLowerCase();
+    const password = normalizeText($("newUserPassword")?.value);
+    const role = $("newUserRole")?.value || "student";
+
+    if (!displayName || !email) {
+        setBulkMessage("❌ Faltan nombre o correo.");
+        return;
+    }
+
+    try {
+        const result = await callAdminFunction("createUserAdmin", { displayName, email, password, role });
+        const data = result.data || {};
+
+        setBulkMessage(`✅ Usuario creado: ${data.displayName || displayName} (${data.email || email}) · contraseña: ${data.password || "(autogenerada)"}`);
+
+        const form = $("createUserForm");
+        if (form) form.reset();
+
+        await loadAdminUsersPage();
+    } catch (error) {
+        console.error(error);
+        setBulkMessage(`❌ No se pudo crear el usuario: ${error?.message || "error desconocido"}`);
+    }
 }
 
 async function wireCommonButtons() {
@@ -762,18 +768,22 @@ async function wireCommonButtons() {
 
 async function wireHubPage() {
     const reloadBtn = $("reloadStatsBtn");
-    if (reloadBtn) reloadBtn.onclick = async () => {
-        await loadAdminHub();
-        setMessage("🔄 Estadísticas actualizadas.");
-    };
+    if (reloadBtn) {
+        reloadBtn.onclick = async () => {
+            await loadAdminHub();
+            setMessage("🔄 Estadísticas actualizadas.");
+        };
+    }
 }
 
 async function wireUsersPage() {
     const reloadBtn = $("reloadUsersBtn");
-    if (reloadBtn) reloadBtn.onclick = async () => {
-        await loadAdminUsersPage();
-        setMessage("🔄 Usuarios actualizados.");
-    };
+    if (reloadBtn) {
+        reloadBtn.onclick = async () => {
+            await loadAdminUsersPage();
+            setMessage("🔄 Usuarios actualizados.");
+        };
+    }
 
     const createUserForm = $("createUserForm");
     if (createUserForm) createUserForm.onsubmit = createSingleUser;
@@ -800,10 +810,12 @@ async function wireUsersPage() {
 
 async function wireQuestionsPage() {
     const reloadBtn = $("reloadQuestionsBtn");
-    if (reloadBtn) reloadBtn.onclick = async () => {
-        await loadAdminQuestionsPage();
-        setMessage("🔄 Preguntas actualizadas.");
-    };
+    if (reloadBtn) {
+        reloadBtn.onclick = async () => {
+            await loadAdminQuestionsPage();
+            setMessage("🔄 Preguntas actualizadas.");
+        };
+    }
 
     const form = $("questionForm");
     if (form) form.onsubmit = saveQuestionFromForm;
@@ -841,19 +853,24 @@ onAuthStateChanged(auth, async user => {
         return;
     }
 
-    const emailLabel = `${prettyName(user)} · ${user.email}`;
-    setText("adminUserEmail", emailLabel);
+    setText("adminUserEmail", `${prettyName(user)} · ${user.email}`);
 
     await wireCommonButtons();
 
-    if (PAGE === "admin") {
-        await loadAdminHub();
-        await wireHubPage();
-    } else if (PAGE === "admin-users") {
-        await loadAdminUsersPage();
-        await wireUsersPage();
-    } else if (PAGE === "admin-questions") {
-        await loadAdminQuestionsPage();
-        await wireQuestionsPage();
+    try {
+        if (PAGE === "admin") {
+            await loadAdminHub();
+            await wireHubPage();
+        } else if (PAGE === "admin-users") {
+            await loadAdminUsersPage();
+            await wireUsersPage();
+        } else if (PAGE === "admin-questions") {
+            await loadAdminQuestionsPage();
+            await wireQuestionsPage();
+        }
+    } catch (error) {
+        console.error(error);
+        setMessage("❌ Error cargando el panel de administración.");
+        setBulkMessage("❌ Error cargando el panel de administración.");
     }
 });
