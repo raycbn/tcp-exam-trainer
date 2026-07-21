@@ -20,7 +20,7 @@
 
             <div>
                 <p class="brand-kicker">Panel administrador</p>
-                <h1>Gestión de preguntas</h1>
+                <h1>Gestión de preguntas y usuarios</h1>
                 <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
                 <p class="profile-mini-info">Solo acceso interno</p>
             </div>
@@ -47,7 +47,7 @@
 
                 <div class="activity-line">
                     <span class="activity-label">Preguntas JSON</span>
-                    <span class="activity-value" id="adminJsonCount">1219</span>
+                    <span class="activity-value" id="adminJsonCount">—</span>
                 </div>
 
                 <div class="activity-line">
@@ -82,15 +82,78 @@
         </section>
 
         <section class="dashboard-panel">
+            <h2>Administración de usuarios</h2>
+
+            <div class="dashboard-summary">
+                <div class="dashboard-panel">
+                    <h3 style="margin-top:0;">Alta individual</h3>
+
+                    <form id="createUserForm" class="admin-form">
+                        <label>
+                            <span>Nombre</span>
+                            <input id="newUserName" type="text" placeholder="Nombre y apellidos" required>
+                        </label>
+
+                        <label>
+                            <span>Correo</span>
+                            <input id="newUserEmail" type="email" placeholder="alumno@email.com" required>
+                        </label>
+
+                        <label>
+                            <span>Contraseña</span>
+                            <input id="newUserPassword" type="text" placeholder="Opcional. Si lo dejas vacío se generará automáticamente">
+                        </label>
+
+                        <label>
+                            <span>Rol</span>
+                            <select id="newUserRole" required>
+                                <option value="student">Alumno</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </label>
+
+                        <button class="account-action-btn" id="createUserBtn" type="submit">
+                            ➕ Crear usuario
+                        </button>
+                    </form>
+                </div>
+
+                <div class="dashboard-panel">
+                    <h3 style="margin-top:0;">Alta masiva</h3>
+
+                    <p class="brand-subtitle" style="margin:0 0 14px;max-width:none;">
+                        CSV con columnas: <strong>displayName,email,password,role</strong>
+                    </p>
+
+                    <input
+                        id="usersCsvInput"
+                        type="file"
+                        accept=".csv,text/csv">
+
+                    <button class="account-action-btn" id="bulkUsersBtn" type="button" style="margin-top:14px;">
+                        📥 Importar CSV de usuarios
+                    </button>
+
+                    <p id="bulkUsersMessage" class="brand-subtitle" style="margin-top:18px;max-width:none;"></p>
+                </div>
+            </div>
+
+            <div style="margin-top:18px;">
+                <h3>Usuarios sincronizados</h3>
+                <div id="adminUserManagementList" class="admin-compact-list"></div>
+            </div>
+        </section>
+
+        <section class="dashboard-panel">
             <h2>Usuarios</h2>
             <div id="adminUsersList" class="admin-compact-list"></div>
         </section>
-        
+
         <section class="dashboard-panel">
             <h2>Preguntas difíciles</h2>
             <div id="adminHardQuestionsList" class="admin-compact-list"></div>
         </section>
-        
+
         <section class="dashboard-panel">
             <h2>Ranking alumnos</h2>
             <div id="adminRankingList" class="admin-compact-list"></div>
