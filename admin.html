@@ -20,14 +20,14 @@
 
             <div>
                 <p class="brand-kicker">Panel administrador</p>
-                <h1>Gestión de preguntas y usuarios</h1>
+                <h1>Administración</h1>
                 <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
                 <p class="profile-mini-info">Solo acceso interno</p>
             </div>
 
             <div class="profile-actions">
-                <a class="profile-action-link" href="index.html">← Volver al inicio</a>
-                <a class="profile-action-link" href="profile.html">👨‍✈️ Ver perfil</a>
+                <a class="profile-action-link" href="admin-users.html">👥 Gestión de usuarios</a>
+                <a class="profile-action-link" href="admin-questions.html">❓ Gestión de preguntas</a>
             </div>
         </section>
 
@@ -63,16 +63,6 @@
                     🔄 Recargar estadísticas
                 </button>
 
-                <button class="admin-quick-btn" id="importQuestionsBtn" type="button">
-                    📤 Importar preguntas
-                </button>
-
-                <input
-                    id="importQuestionsInput"
-                    type="file"
-                    accept=".json,application/json"
-                    style="display:none;">
-
                 <button class="admin-quick-btn logout-btn" id="adminLogoutBtn" type="button">
                     🚪 Cerrar sesión
                 </button>
@@ -82,171 +72,11 @@
         </section>
 
         <section class="dashboard-panel">
-            <h2>Administración de usuarios</h2>
+            <h2>Acceso rápido</h2>
 
-            <div class="dashboard-summary">
-                <div class="dashboard-panel">
-                    <h3 style="margin-top:0;">Alta individual</h3>
-
-                    <form id="createUserForm" class="admin-form">
-                        <label>
-                            <span>Nombre</span>
-                            <input id="newUserName" type="text" placeholder="Nombre y apellidos" required>
-                        </label>
-
-                        <label>
-                            <span>Correo</span>
-                            <input id="newUserEmail" type="email" placeholder="alumno@email.com" required>
-                        </label>
-
-                        <label>
-                            <span>Contraseña</span>
-                            <input id="newUserPassword" type="text" placeholder="Opcional. Si lo dejas vacío se generará automáticamente">
-                        </label>
-
-                        <label>
-                            <span>Rol</span>
-                            <select id="newUserRole" required>
-                                <option value="student">Alumno</option>
-                                <option value="admin">Admin</option>
-                            </select>
-                        </label>
-
-                        <button class="account-action-btn" id="createUserBtn" type="submit">
-                            ➕ Crear usuario
-                        </button>
-                    </form>
-                </div>
-
-                <div class="dashboard-panel">
-                    <h3 style="margin-top:0;">Alta masiva</h3>
-
-                    <p class="brand-subtitle" style="margin:0 0 14px;max-width:none;">
-                        CSV con columnas: <strong>displayName,email,password,role</strong>
-                    </p>
-
-                    <input
-                        id="usersCsvInput"
-                        type="file"
-                        accept=".csv,text/csv">
-
-                    <button class="account-action-btn" id="bulkUsersBtn" type="button" style="margin-top:14px;">
-                        📥 Importar CSV de usuarios
-                    </button>
-
-                    <p id="bulkUsersMessage" class="brand-subtitle" style="margin-top:18px;max-width:none;"></p>
-                </div>
-            </div>
-
-            <div style="margin-top:18px;">
-                <h3>Usuarios sincronizados</h3>
-                <div id="adminUserManagementList" class="admin-compact-list"></div>
-            </div>
-        </section>
-
-        <section class="dashboard-panel">
-            <h2>Usuarios</h2>
-            <div id="adminUsersList" class="admin-compact-list"></div>
-        </section>
-
-        <section class="dashboard-panel">
-            <h2>Preguntas difíciles</h2>
-            <div id="adminHardQuestionsList" class="admin-compact-list"></div>
-        </section>
-
-        <section class="dashboard-panel">
-            <h2>Ranking alumnos</h2>
-            <div id="adminRankingList" class="admin-compact-list"></div>
-        </section>
-
-        <section class="dashboard-panel">
-            <h2>Agregar pregunta nueva</h2>
-
-            <div class="admin-editing-banner" id="editingBanner" style="display:none;">
-                <span>✏️ Editando pregunta: <strong id="editingLabel"></strong></span>
-                <button type="button" class="admin-mini-btn" id="cancelEditBtn">Cancelar edición</button>
-            </div>
-
-            <form id="questionForm" class="admin-form">
-                <div class="admin-next-id">
-                    <span>Siguiente ID automático</span>
-                    <strong id="nextQuestionId">FIR-001</strong>
-                </div>
-
-                <div class="admin-form-grid">
-                    <label>
-                        <span>Tema</span>
-                        <input id="qTopic" type="text" placeholder="normativa" required>
-                    </label>
-                </div>
-
-                <label>
-                    <span>Pregunta</span>
-                    <textarea id="qQuestion" rows="4" placeholder="Escribe la pregunta completa..." required></textarea>
-                </label>
-
-                <div class="admin-form-grid">
-                    <label>
-                        <span>Respuesta A</span>
-                        <input id="qA" type="text" required>
-                    </label>
-
-                    <label>
-                        <span>Respuesta B</span>
-                        <input id="qB" type="text" required>
-                    </label>
-
-                    <label>
-                        <span>Respuesta C</span>
-                        <input id="qC" type="text" required>
-                    </label>
-
-                    <label>
-                        <span>Respuesta D</span>
-                        <input id="qD" type="text" required>
-                    </label>
-                </div>
-
-                <div class="admin-form-grid">
-                    <label>
-                        <span>Correcta</span>
-                        <select id="qCorrect" required>
-                            <option value="0">A</option>
-                            <option value="1">B</option>
-                            <option value="2">C</option>
-                            <option value="3">D</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        <span>Imagen (opcional)</span>
-                        <input id="qImage" type="text" placeholder="images/pregunta.png">
-                    </label>
-                </div>
-
-                <label>
-                    <span>Explicación</span>
-                    <textarea id="qExplanation" rows="4" placeholder="Explicación de la respuesta..." required></textarea>
-                </label>
-
-                <label>
-                    <span>Fuente</span>
-                    <input id="qSource" type="text" value="firestore">
-                </label>
-
-                <button class="account-action-btn" id="saveQuestionBtn" type="submit">
-                    💾 Guardar pregunta
-                </button>
-            </form>
-        </section>
-
-        <section class="dashboard-panel">
-            <h2>Últimas preguntas añadidas</h2>
-            <div id="recentQuestions" class="admin-list">
-                <div class="activity-line">
-                    <span class="activity-label">Estado</span>
-                    <span class="activity-value">Cargando...</span>
-                </div>
+            <div class="profile-actions">
+                <a class="profile-action-link" href="admin-users.html">👥 Ir a usuarios</a>
+                <a class="profile-action-link" href="admin-questions.html">❓ Ir a preguntas</a>
             </div>
         </section>
 
