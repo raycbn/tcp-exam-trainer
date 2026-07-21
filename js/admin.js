@@ -1,7 +1,8 @@
 import { auth, db } from "./firebase.js";
 import {
     onAuthStateChanged,
-    signOut
+    signOut,
+    sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 import {
@@ -10,11 +11,23 @@ import {
     setDoc,
     deleteDoc,
     doc,
+    getDoc,
     serverTimestamp,
     writeBatch
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
+import {
+    getFunctions,
+    httpsCallable
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-functions.js";
+
 const ADMIN_EMAIL = "rayvf2002@gmail.com";
+const functions = getFunctions(auth.app, "us-central1");
+
+const createUserAdminFn = httpsCallable(functions, "createUserAdmin");
+const bulkCreateUsersAdminFn = httpsCallable(functions, "bulkCreateUsersAdmin");
+const setUserRoleAdminFn = httpsCallable(functions, "setUserRoleAdmin");
+const setUserDisabledAdminFn = httpsCallable(functions, "setUserDisabledAdmin");
 
 let nextFirNumber = 1;
 let editingDocId = null;
@@ -35,6 +48,10 @@ function setText(id, value) {
 
 function setMessage(value) {
     setText("adminMessage", value);
+}
+
+function setBulkMessage(value) {
+    setText("bulkUsersMessage", value);
 }
 
 function escapeHtml(value) {
@@ -150,9 +167,10 @@ function mapUserRecord(docSnap) {
         docId: docSnap.id,
         uid: data.uid || docSnap.id,
         email: data.email || "",
-        name: data.name || "",
-        role: data.role || "",
+        name: data.displayName || data.name || "",
+        role: data.role || "student",
         verified: Boolean(data.verified),
+        disabled: Boolean(data.disabled),
         createdAt: data.createdAt || null,
         lastLogin,
         lastLoginMs: timestampToMs(lastLogin),
@@ -446,11 +464,133 @@ function renderHardQuestions(questions) {
     });
 }
 
+function renderManagedUsers(users) {
+    const wrap = $("adminUserManagementList");
+    if (!wrap) return;
+
+    if (!users || users.length === 0) {
+        wrap.innerHTML = `
+            <div class="admin-compact-card">
+                <div class="admin-compact-title">Sin usuarios</div>
+                <div class="admin-compact-sub">Todavía no hay usuarios sincronizados.</div>
+            </div>
+        `;
+        return;
+    }
+
+    const sorted = [...users].sort((a, b) => {
+        const ta = timestampToMs(a.createdAt || a.lastLogin);
+        const tb = timestampToMs(b.createdAt || b.lastLogin);
+        return tb - ta;
+    });
+
+    wrap.innerHTML = "";
+
+    sorted.forEach(user => {
+        const card = document.createElement("div");
+        card.className = "admin-compact-card";
+
+        const roleLabel = user.role === "admin" ? "Admin" : "Alumno";
+        const disabledLabel = user.disabled ? "Desactivado" : "Activo";
+
+        card.innerHTML = `
+            <div class="admin-compact-head">
+                <div>
+                    <div class="admin-compact-title">${escapeHtml(user.name || user.email || user.uid || "Sin nombre")}</div>
+                    <div class="admin-compact-sub">${escapeHtml(user.email || "Sin correo")} · UID ${escapeHtml(user.uid || user.docId)}</div>
+                </div>
+                <div class="admin-pill ${user.role === "admin" ? "good" : "warn"}">${roleLabel}</div>
+            </div>
+
+            <div class="admin-compact-pills">
+                <span class="admin-pill">🕒 Alta ${formatDate(user.createdAt)}</span>
+                <span class="admin-pill">👁️ Último ${formatDate(user.lastLogin)}</span>
+                <span class="admin-pill ${user.disabled ? "bad" : "good"}">${disabledLabel}</span>
+                <span class="admin-pill">📊 Media ${formatPercent(user.stats.averageScore || 0)}</span>
+            </div>
+
+            <div style="display:grid;gap:10px;margin-top:14px;">
+                <label style="display:grid;gap:6px;">
+                    <span style="font-size:14px;opacity:.8;">Rol</span>
+                    <select class="admin-role-select" data-uid="${escapeHtml(user.uid)}">
+                        <option value="student" ${user.role !== "admin" ? "selected" : ""}>student</option>
+                        <option value="admin" ${user.role === "admin" ? "selected" : ""}>admin</option>
+                    </select>
+                </label>
+
+                <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                    <button type="button" class="admin-mini-btn" data-action="save-role" data-uid="${escapeHtml(user.uid)}">
+                        💾 Guardar rol
+                    </button>
+
+                    <button type="button" class="admin-mini-btn" data-action="reset-pass" data-email="${escapeHtml(user.email)}">
+                        🔑 Enviar reset
+                    </button>
+
+                    <button type="button" class="admin-mini-btn ${user.disabled ? "good" : "danger"}" data-action="toggle-disabled" data-uid="${escapeHtml(user.uid)}" data-disabled="${user.disabled ? "1" : "0"}">
+                        ${user.disabled ? "✅ Habilitar" : "⛔ Desactivar"}
+                    </button>
+                </div>
+            </div>
+        `;
+
+        wrap.appendChild(card);
+    });
+
+    wrap.querySelectorAll('button[data-action="save-role"]').forEach(btn => {
+        btn.onclick = async () => {
+            const uid = btn.getAttribute("data-uid");
+            const select = wrap.querySelector(`.admin-role-select[data-uid="${CSS.escape(uid)}"]`);
+            const role = select ? select.value : "student";
+
+            try {
+                await setUserRoleAdminFn({ uid, role });
+                setMessage(`✅ Rol actualizado para ${uid}`);
+                await loadStats();
+            } catch (error) {
+                console.error(error);
+                setMessage("❌ No se pudo cambiar el rol.");
+            }
+        };
+    });
+
+    wrap.querySelectorAll('button[data-action="reset-pass"]').forEach(btn => {
+        btn.onclick = async () => {
+            const email = btn.getAttribute("data-email");
+            if (!email) return;
+
+            try {
+                await sendPasswordResetEmail(auth, email);
+                setMessage(`📩 Enviado correo de recuperación a ${email}`);
+            } catch (error) {
+                console.error(error);
+                setMessage("❌ No se pudo enviar el correo de recuperación.");
+            }
+        };
+    });
+
+    wrap.querySelectorAll('button[data-action="toggle-disabled"]').forEach(btn => {
+        btn.onclick = async () => {
+            const uid = btn.getAttribute("data-uid");
+            const disabled = btn.getAttribute("data-disabled") === "1";
+
+            try {
+                await setUserDisabledAdminFn({ uid, disabled: !disabled });
+                setMessage(disabled ? `✅ Usuario habilitado: ${uid}` : `⛔ Usuario desactivado: ${uid}`);
+                await loadStats();
+            } catch (error) {
+                console.error(error);
+                setMessage("❌ No se pudo cambiar el estado del usuario.");
+            }
+        };
+    });
+}
+
 function buildNextQuestionId() {
     return buildFirId(nextFirNumber);
 }
 
-function resetForm() {
+function resetQuestionForm() {
     const form = $("questionForm");
     if (form) form.reset();
 
@@ -550,10 +690,11 @@ async function saveQuestionFromForm(event) {
             nextFirNumber += 1;
         }
 
-        resetForm();
-        setMessage(isEditing
-            ? `✅ Pregunta actualizada (${payloadId}).`
-            : `✅ Pregunta guardada correctamente (${payloadId}).`
+        resetQuestionForm();
+        setMessage(
+            isEditing
+                ? `✅ Pregunta actualizada (${payloadId}).`
+                : `✅ Pregunta guardada correctamente (${payloadId}).`
         );
 
         await loadStats();
@@ -641,108 +782,69 @@ async function importQuestionsFromFile(file) {
     }
 }
 
-async function loadStats() {
-    try {
-        const [questionsSnap, usersSnap, jsonQuestions] = await Promise.all([
-            getDocs(collection(db, "questions")),
-            getDocs(collection(db, "users")),
-            loadJsonQuestions()
-        ]);
+function splitCsvLine(line) {
+    const out = [];
+    let current = "";
+    let inQuotes = false;
 
-        cachedQuestions = questionsSnap.docs.map(d => ({
-            docId: d.id,
-            ...d.data()
-        }));
+    for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
 
-        cachedUsers = usersSnap.docs.map(mapUserRecord);
-
-        const allIds = [];
-
-        cachedQuestions.forEach(q => {
-            if (q.id) allIds.push(String(q.id));
-            if (q.docId) allIds.push(String(q.docId));
-        });
-
-        jsonQuestions.forEach(q => {
-            if (q?.id) allIds.push(String(q.id));
-        });
-
-        nextFirNumber = computeNextFirNumber(allIds);
-        setText("nextQuestionId", buildNextQuestionId());
-
-        setText("adminUsersCount", usersSnap.size);
-        setText("adminQuestionsCount", questionsSnap.size);
-        setText("adminJsonCount", jsonQuestions.length);
-        setText("adminTotalCount", jsonQuestions.length + questionsSnap.size);
-
-        renderRecentQuestions(cachedQuestions);
-        renderUsersList(cachedUsers);
-        renderHardQuestions(cachedQuestions);
-        renderRanking(cachedUsers);
-    } catch (error) {
-        console.error(error);
-        setMessage("❌ No se pudieron cargar las estadísticas.");
-    }
-}
-
-async function reloadStats() {
-    await loadStats();
-    setMessage("🔄 Estadísticas actualizadas.");
-}
-
-onAuthStateChanged(auth, async user => {
-    if (!user) return;
-
-    if (user.email !== ADMIN_EMAIL) {
-        window.location.href = "index.html";
-        return;
-    }
-
-    setText("adminUserEmail", `${prettyName(user)} · ${user.email}`);
-    await loadStats();
-});
-
-const reloadBtn = $("reloadStatsBtn");
-if (reloadBtn) {
-    reloadBtn.onclick = reloadStats;
-}
-
-const logoutBtn = $("adminLogoutBtn");
-if (logoutBtn) {
-    logoutBtn.onclick = async () => {
-        try {
-            await signOut(auth);
-            window.location.href = "login.html";
-        } catch {
-            setMessage("❌ No se pudo cerrar la sesión.");
+        if (ch === '"' ) {
+            if (inQuotes && line[i + 1] === '"') {
+                current += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
+            continue;
         }
-    };
+
+        if (ch === "," && !inQuotes) {
+            out.push(current.trim());
+            current = "";
+            continue;
+        }
+
+        current += ch;
+    }
+
+    out.push(current.trim());
+    return out;
 }
 
-const form = $("questionForm");
-if (form) {
-    form.onsubmit = saveQuestionFromForm;
+function parseCsvText(text) {
+    const lines = String(text || "")
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(Boolean);
+
+    if (!lines.length) return [];
+
+    const headers = splitCsvLine(lines[0]).map(h => h.trim());
+
+    return lines.slice(1).map(line => {
+        const cols = splitCsvLine(line);
+        const row = {};
+
+        headers.forEach((header, index) => {
+            row[header] = (cols[index] || "").trim();
+        });
+
+        return row;
+    });
 }
 
-const cancelEditBtn = $("cancelEditBtn");
-if (cancelEditBtn) {
-    cancelEditBtn.onclick = () => {
-        resetForm();
-        setMessage("Edición cancelada.");
-    };
-}
+async function importUsersFromCsvFile(file) {
+    const raw = await file.text();
+    const rows = parseCsvText(raw);
 
-const importBtn = $("importQuestionsBtn");
-const importInput = $("importQuestionsInput");
+    if (!rows.length) {
+        throw new Error("El CSV está vacío.");
+    }
 
-if (importBtn && importInput) {
-    importBtn.onclick = () => importInput.click();
-
-    importInput.onchange = async () => {
-        const file = importInput.files?.[0];
-        if (!file) return;
-
-        await importQuestionsFromFile(file);
-        importInput.value = "";
-    };
-}
+    const payload = rows.map(row => ({
+        displayName: row.displayName || row.name || row.nombre || "",
+        email: row.email || row.mail || "",
+        password: row.password || "",
+        role: row.role || "student
