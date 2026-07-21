@@ -3,8 +3,16 @@
     "public": ".",
     "ignore": [
       "firebase.json",
+      "firestore.rules",
+      "functions/**",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   }
 }
