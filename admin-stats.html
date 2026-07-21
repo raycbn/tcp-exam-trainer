@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas | TCP Exam Trainer</title>
+    <meta name="theme-color" content="#08111e">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="admin-stats">
+
+    <main class="page-shell">
+
+        <section class="dashboard-panel profile-main-card">
+            <img
+                src="images/pilot-avatar.png"
+                class="profile-avatar-large"
+                alt="Estadísticas de alumnos">
+
+            <div>
+                <p class="brand-kicker">Panel administrador</p>
+                <h1>Estadísticas de alumnos</h1>
+                <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
+                <p class="profile-mini-info">Resumen analítico de la base de alumnos</p>
+            </div>
+
+            <div class="profile-actions">
+                <a class="profile-action-link" href="admin.html">← Volver al panel</a>
+                <a class="profile-action-link" href="admin-users.html">👥 Gestión de usuarios</a>
+            </div>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Resumen general</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios totales</span>
+                    <span class="activity-value" id="statUsersTotal">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Alumnos activos</span>
+                    <span class="activity-value" id="statUsersActive">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Admins</span>
+                    <span class="activity-value" id="statUsersAdmin">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Verificados</span>
+                    <span class="activity-value" id="statUsersVerified">—</span>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Rendimiento global</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Aciertos</span>
+                    <span class="activity-value" id="statCorrect">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Errores</span>
+                    <span class="activity-value" id="statWrong">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Simulacros</span>
+                    <span class="activity-value" id="statExams">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Media global</span>
+                    <span class="activity-value" id="statAvgScore">—</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Actividad y acceso</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Último acceso</span>
+                    <span class="activity-value" id="statLastAccess">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Primer acceso</span>
+                    <span class="activity-value" id="statFirstAccess">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios desactivados</span>
+                    <span class="activity-value" id="statDisabledUsers">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Favoritas totales</span>
+                    <span class="activity-value" id="statFavorites">—</span>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Preguntas</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Preguntas Firestore</span>
+                    <span class="activity-value" id="statQuestionsFs">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Preguntas JSON</span>
+                    <span class="activity-value" id="statQuestionsJson">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Total preguntas</span>
+                    <span class="activity-value" id="statQuestionsTotal">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Más repetida</span>
+                    <span class="activity-value" id="statMostSeenQuestion">—</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Top alumnos</h2>
+            <div id="topUsersList" class="admin-compact-list"></div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Usuarios con peor rendimiento</h2>
+            <div id="worstUsersList" class="admin-compact-list"></div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Preguntas más falladas</h2>
+            <div id="worstQuestionsList" class="admin-compact-list"></div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Mensaje</h2>
+            <p id="adminMessage" class="brand-subtitle" style="margin:0;max-width:none;">Cargando...</p>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/admin-guard.js"></script>
+    <script type="module" src="js/admin-stats.js"></script>
+</body>
+</html>
