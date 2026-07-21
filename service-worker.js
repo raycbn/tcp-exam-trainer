@@ -12,6 +12,7 @@ const STATIC_FILES = [
     "./smart.html",
     "./admin-users.html",
     "./admin-questions.html",
+    "./admin-stats.html",
 
     // CSS
     "./css/styles.css",
