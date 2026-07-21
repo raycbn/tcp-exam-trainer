@@ -22,6 +22,7 @@ const STATIC_FILES = [
     "./js/stats.js",
     "./js/dashboard.js",
     "./js/smart.js",
+    "./js/admin-stats.js",
 
     // Configuración
     "./manifest.json",
