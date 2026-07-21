@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios | TCP Exam Trainer</title>
+    <meta name="theme-color" content="#08111e">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="admin-users">
+
+    <main class="page-shell">
+
+        <section class="dashboard-panel profile-main-card">
+            <img
+                src="images/pilot-avatar.png"
+                class="profile-avatar-large"
+                alt="Panel usuarios">
+
+            <div>
+                <p class="brand-kicker">Administración de usuarios</p>
+                <h1>Altas y gestión</h1>
+                <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
+                <p class="profile-mini-info">Altas individual y masiva</p>
+            </div>
+
+            <div class="profile-actions">
+                <a class="profile-action-link" href="admin.html">← Volver al panel</a>
+                <a class="profile-action-link" href="admin-questions.html">❓ Gestión de preguntas</a>
+            </div>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Resumen</h2>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios registrados</span>
+                    <span class="activity-value" id="adminUsersCount">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios admin</span>
+                    <span class="activity-value" id="adminAdminsCount">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Usuarios activos</span>
+                    <span class="activity-value" id="adminActiveUsersCount">—</span>
+                </div>
+
+                <div class="activity-line">
+                    <span class="activity-label">Última carga</span>
+                    <span class="activity-value" id="adminUsersLastUpdate">—</span>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Acciones rápidas</h2>
+
+                <button class="admin-quick-btn" id="reloadUsersBtn" type="button">
+                    🔄 Recargar usuarios
+                </button>
+
+                <button class="admin-quick-btn logout-btn" id="adminLogoutBtn" type="button">
+                    🚪 Cerrar sesión
+                </button>
+
+                <p id="adminMessage" class="brand-subtitle" style="margin-top:20px;max-width:none;"></p>
+            </div>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="dashboard-panel">
+                <h2>Alta individual</h2>
+
+                <form id="createUserForm" class="admin-form">
+                    <label>
+                        <span>Nombre</span>
+                        <input id="newUserName" type="text" placeholder="Nombre y apellidos" required>
+                    </label>
+
+                    <label>
+                        <span>Correo</span>
+                        <input id="newUserEmail" type="email" placeholder="alumno@email.com" required>
+                    </label>
+
+                    <label>
+                        <span>Contraseña</span>
+                        <input id="newUserPassword" type="text" placeholder="Opcional. Si lo dejas vacío se generará automáticamente">
+                    </label>
+
+                    <label>
+                        <span>Rol</span>
+                        <select id="newUserRole" required>
+                            <option value="student">Alumno</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </label>
+
+                    <button class="account-action-btn" id="createUserBtn" type="submit">
+                        ➕ Crear usuario
+                    </button>
+                </form>
+            </div>
+
+            <div class="dashboard-panel">
+                <h2>Alta masiva</h2>
+
+                <p class="brand-subtitle" style="margin:0 0 14px;max-width:none;">
+                    CSV con columnas: <strong>displayName,email,password,role</strong>
+                </p>
+
+                <input
+                    id="usersCsvInput"
+                    type="file"
+                    accept=".csv,text/csv">
+
+                <button class="account-action-btn" id="bulkUsersBtn" type="button" style="margin-top:14px;">
+                    📥 Importar CSV de usuarios
+                </button>
+
+                <p id="bulkUsersMessage" class="brand-subtitle" style="margin-top:18px;max-width:none;"></p>
+            </div>
+        </section>
+
+        <section class="dashboard-panel">
+            <h2>Usuarios sincronizados</h2>
+            <div id="adminUserManagementList" class="admin-compact-list"></div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/guard.js"></script>
+    <script type="module" src="js/admin-guard.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
