@@ -3,158 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadísticas | TCP Exam Trainer</title>
+    <title>Analytics | TCP Exam Trainer</title>
+
     <meta name="theme-color" content="#08111e">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body data-page="admin-stats">
 
-    <main class="page-shell">
+<main class="page-shell">
 
-        <section class="dashboard-panel profile-main-card">
-            <img
-                src="images/pilot-avatar.png"
-                class="profile-avatar-large"
-                alt="Estadísticas de alumnos">
+    <!-- ========================================================= -->
+    <!-- CABECERA -->
+    <!-- ========================================================= -->
 
-            <div>
-                <p class="brand-kicker">Panel administrador</p>
-                <h1>Estadísticas de alumnos</h1>
-                <p class="brand-subtitle" id="adminUserEmail">Cargando acceso...</p>
-                <p class="profile-mini-info">Resumen analítico de la base de alumnos</p>
+    <section class="dashboard-panel profile-main-card">
+
+        <img
+            src="images/pilot-avatar.png"
+            class="profile-avatar-large"
+            alt="Dashboard administrador">
+
+        <div>
+
+            <p class="brand-kicker">
+                Panel administrador
+            </p>
+
+            <h1>
+                Analytics
+            </h1>
+
+            <p
+                id="adminUserEmail"
+                class="brand-subtitle">
+
+                Cargando acceso...
+
+            </p>
+
+            <p class="profile-mini-info">
+
+                Centro analítico de TCP Exam Trainer
+
+            </p>
+
+        </div>
+
+        <div class="profile-actions">
+
+            <a
+                class="profile-action-link"
+                href="admin.html">
+
+                🏠 Dashboard
+
+            </a>
+
+            <a
+                class="profile-action-link"
+                href="admin-users.html">
+
+                👥 Usuarios
+
+            </a>
+
+            <a
+                class="profile-action-link"
+                href="admin-questions.html">
+
+                ❓ Preguntas
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- RESUMEN GLOBAL -->
+    <!-- ========================================================= -->
+
+    <section class="dashboard-summary">
+
+        <div class="dashboard-panel">
+
+            <h2>👥 Usuarios</h2>
+
+            <div class="activity-line">
+                <span class="activity-label">Usuarios registrados</span>
+                <span id="statUsersTotal" class="activity-value">—</span>
             </div>
 
-            <div class="profile-actions">
-                <a class="profile-action-link" href="admin.html">← Volver al panel</a>
-                <a class="profile-action-link" href="admin-users.html">👥 Gestión de usuarios</a>
-            </div>
-        </section>
-
-        <section class="dashboard-summary">
-            <div class="dashboard-panel">
-                <h2>Resumen general</h2>
-
-                <div class="activity-line">
-                    <span class="activity-label">Usuarios totales</span>
-                    <span class="activity-value" id="statUsersTotal">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Alumnos activos</span>
-                    <span class="activity-value" id="statUsersActive">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Admins</span>
-                    <span class="activity-value" id="statUsersAdmin">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Verificados</span>
-                    <span class="activity-value" id="statUsersVerified">—</span>
-                </div>
+            <div class="activity-line">
+                <span class="activity-label">Alumnos</span>
+                <span id="statStudents" class="activity-value">—</span>
             </div>
 
-            <div class="dashboard-panel">
-                <h2>Rendimiento global</h2>
-
-                <div class="activity-line">
-                    <span class="activity-label">Aciertos</span>
-                    <span class="activity-value" id="statCorrect">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Errores</span>
-                    <span class="activity-value" id="statWrong">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Simulacros</span>
-                    <span class="activity-value" id="statExams">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Media global</span>
-                    <span class="activity-value" id="statAvgScore">—</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="dashboard-summary">
-            <div class="dashboard-panel">
-                <h2>Actividad y acceso</h2>
-
-                <div class="activity-line">
-                    <span class="activity-label">Último acceso</span>
-                    <span class="activity-value" id="statLastAccess">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Primer acceso</span>
-                    <span class="activity-value" id="statFirstAccess">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Usuarios desactivados</span>
-                    <span class="activity-value" id="statDisabledUsers">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Favoritas totales</span>
-                    <span class="activity-value" id="statFavorites">—</span>
-                </div>
+            <div class="activity-line">
+                <span class="activity-label">Administradores</span>
+                <span id="statAdmins" class="activity-value">—</span>
             </div>
 
-            <div class="dashboard-panel">
-                <h2>Preguntas</h2>
-
-                <div class="activity-line">
-                    <span class="activity-label">Preguntas Firestore</span>
-                    <span class="activity-value" id="statQuestionsFs">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Preguntas JSON</span>
-                    <span class="activity-value" id="statQuestionsJson">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Total preguntas</span>
-                    <span class="activity-value" id="statQuestionsTotal">—</span>
-                </div>
-
-                <div class="activity-line">
-                    <span class="activity-label">Más repetida</span>
-                    <span class="activity-value" id="statMostSeenQuestion">—</span>
-                </div>
+            <div class="activity-line">
+                <span class="activity-label">Usuarios activos</span>
+                <span id="statActive" class="activity-value">—</span>
             </div>
-        </section>
 
-        <section class="dashboard-panel">
-            <h2>Top alumnos</h2>
-            <div id="topUsersList" class="admin-compact-list"></div>
-        </section>
+            <div class="activity-line">
+                <span class="activity-label">Deshabilitados</span>
+                <span id="statDisabled" class="activity-value">—</span>
+            </div>
 
-        <section class="dashboard-panel">
-            <h2>Usuarios con peor rendimiento</h2>
-            <div id="worstUsersList" class="admin-compact-list"></div>
-        </section>
+            <div class="activity-line">
+                <span class="activity-label">Con simulacros</span>
+                <span id="statWithExams" class="activity-value">—</span>
+            </div>
 
-        <section class="dashboard-panel">
-            <h2>Preguntas más falladas</h2>
-            <div id="worstQuestionsList" class="admin-compact-list"></div>
-        </section>
+            <div class="activity-line">
+                <span class="activity-label">Sin simulacros</span>
+                <span id="statWithoutExams" class="activity-value">—</span>
+            </div>
 
-        <section class="dashboard-panel">
-            <h2>Mensaje</h2>
-            <p id="adminMessage" class="brand-subtitle" style="margin:0;max-width:none;">Cargando...</p>
-        </section>
+            <div class="activity-line">
+                <span class="activity-label">Con favoritas</span>
+                <span id="statWithFavorites" class="activity-value">—</span>
+            </div>
 
-    </main>
+        </div>
 
-    <script type="module" src="js/guard.js"></script>
-    <script type="module" src="js/admin-guard.js"></script>
-    <script type="module" src="js/admin-stats.js"></script>
+        <div class="dashboard-panel">
+
+            <h2>📚 Rendimiento</h2>
+
+            <div class="activity-line">
+                <span class="activity-label">Simulacros realizados</span>
+                <span id="statExams" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Aciertos</span>
+                <span id="statCorrect" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Errores</span>
+                <span id="statWrong" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Favoritas</span>
+                <span id="statFavorites" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Media mejor nota</span>
+                <span id="statAverageScore" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Mejor nota registrada</span>
+                <span id="statBestScore" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Peor nota registrada</span>
+                <span id="statWorstScore" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Media simulacros / alumno</span>
+                <span id="statAverageExams" class="activity-value">—</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ACTIVIDAD -->
+    <!-- ========================================================= -->
+
+    <section class="dashboard-summary">
+
+        <div class="dashboard-panel">
+
+            <h2>📅 Actividad</h2>
+
+            <div class="activity-line">
+                <span class="activity-label">Primer alumno registrado</span>
+                <span id="statFirstUser" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Último alumno registrado</span>
+                <span id="statLastUser" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Altas hoy</span>
+                <span id="statTodayUsers" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Altas esta semana</span>
+                <span id="statWeekUsers" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Altas este mes</span>
+                <span id="statMonthUsers" class="activity-value">—</span>
+            </div>
+
+        </div>
+
+        <div class="dashboard-panel">
+
+            <h2>📖 Banco de preguntas</h2>
+
+            <div class="activity-line">
+                <span class="activity-label">Firestore</span>
+                <span id="statQuestionsFirestore" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">JSON</span>
+                <span id="statQuestionsJson" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Total</span>
+                <span id="statQuestionsTotal" class="activity-value">—</span>
+            </div>
+
+            <div class="activity-line">
+                <span class="activity-label">Temas diferentes</span>
+                <span id="statTopics" class="activity-value">—</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- DISTRIBUCIONES -->
+    <!-- ========================================================= -->
+
+    <section class="dashboard-panel">
+
+        <h2>📊 Distribución por temas</h2>
+
+        <div
+            id="topicsDistribution"
+            class="admin-compact-list">
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TOPS -->
+    <!-- ========================================================= -->
+
+    <section class="dashboard-panel">
+
+        <h2>🏆 Top alumnos</h2>
+
+        <div
+            id="topUsersList"
+            class="admin-compact-list">
+
+        </div>
+
+    </section>
+
+    <section class="dashboard-panel">
+
+        <h2>📉 Alumnos con menor rendimiento</h2>
+
+        <div
+            id="worstUsersList"
+            class="admin-compact-list">
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- MENSAJES -->
+    <!-- ========================================================= -->
+
+    <section class="dashboard-panel">
+
+        <h2>Sistema</h2>
+
+        <p
+            id="adminMessage"
+            class="brand-subtitle"
+            style="margin:0;max-width:none;">
+
+            Cargando estadísticas...
+
+        </p>
+
+    </section>
+
+</main>
+
+<script type="module" src="js/guard.js"></script>
+<script type="module" src="js/admin-guard.js"></script>
+<script type="module" src="js/admin-stats.js"></script>
+
 </body>
 </html>
