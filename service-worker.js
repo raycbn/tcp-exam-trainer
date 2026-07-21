@@ -1,4 +1,4 @@
-const CACHE_NAME = "tcp-trainer-v35";
+const CACHE_NAME = "tcp-trainer-v36";
 
 const STATIC_FILES = [
     "./",
@@ -10,6 +10,8 @@ const STATIC_FILES = [
     "./review.html",
     "./favorites.html",
     "./smart.html",
+    "./admin-users.html",
+    "./admin-questions.html",
 
     // CSS
     "./css/styles.css",
