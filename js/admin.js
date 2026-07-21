@@ -509,17 +509,6 @@ function resetQuestionForm() {
     setText("nextQuestionId", buildFirId(nextFirNumber));
 }
 
-async function loadJsonQuestions() {
-    try {
-        const response = await fetch("./data/questions.json?ts=" + Date.now());
-        if (!response.ok) return [];
-        const data = await response.json();
-        return Array.isArray(data) ? data : [];
-    } catch (error) {
-        console.error("Error leyendo questions.json", error);
-        return [];
-    }
-}
 
 async function loadAdminCounts() {
     const [questionsSnap, usersSnap, jsonQuestions] = await Promise.all([
